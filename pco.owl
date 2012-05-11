@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY pco "http://purl.obolibrary.org/obo/pco.owl/" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="&obo;pco.owl#"
+     xml:base="&obo;pco.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:pco="&obo;pco.owl/">
+    <owl:Ontology rdf:about="&obo;pco.owl">
+        <dc:creator>Ramona Walls</dc:creator>
+        <owl:imports rdf:resource="&obo;bfo.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pco.owl/PCO_0000006 -->
+
+    <owl:Class rdf:about="&obo;pco.owl/PCO_0000006">
+        <rdfs:label xml:lang="en">population birth rate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;pco.owl/pco_0000003"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pco.owl/PCO_0000007 -->
+
+    <owl:Class rdf:about="&obo;pco.owl/PCO_0000007">
+        <rdfs:label xml:lang="en">population death rate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;pco.owl/pco_0000003"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pco.owl/PCO_0000008 -->
+
+    <owl:Class rdf:about="&obo;pco.owl/PCO_0000008">
+        <rdfs:label xml:lang="en">population growth rate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;pco.owl/pco_0000003"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pco.owl/PCO_0000009 -->
+
+    <owl:Class rdf:about="&obo;pco.owl/PCO_0000009">
+        <rdfs:label xml:lang="en">carrying capacity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;pco.owl/pco_0000003"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pco.owl/PCO_0000010 -->
+
+    <owl:Class rdf:about="&obo;pco.owl/PCO_0000010">
+        <rdfs:label xml:lang="en">species richness</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;pco.owl/pco_0000004"/>
+        <obo:IAO_0000115 xml:lang="en">The number of species present in a communiity.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pco.owl/pco_0000000 -->
+
+    <owl:Class rdf:about="&obo;pco.owl/pco_0000000">
+        <rdfs:label xml:lang="en">collection of organisms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000040"/>
+        <rdfs:comment>May be of the same or different species. Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family.</rdfs:comment>
+        <obo:IAO_0000115>A group of two or more organisms.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pco.owl/pco_0000001 -->
+
+    <owl:Class rdf:about="&obo;pco.owl/pco_0000001">
+        <rdfs:label xml:lang="en">population</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;pco.owl/pco_0000000"/>
+        <obo:IAO_0000115 xml:lang="en">A group of organisms, all of the same species, that live in the same place.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. &#39;Community&#39;, as often used to describe a group of humans, is a type of population. Classes for population already  exist in IDO (&#39;organism population&#39;, IDO_0000509) and OBI (&#39;population&#39;, OBI_0000181). The definitions should be standardized across ontologies and only one term used.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pco.owl/pco_0000002 -->
+
+    <owl:Class rdf:about="&obo;pco.owl/pco_0000002">
+        <rdfs:label xml:lang="en">community</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;pco.owl/pco_0000000"/>
+        <obo:IAO_0000115 xml:lang="en">A collection of organisms of at least two different species, living in a particular area.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Community may be used to describe every organisms living in an area, but is often used to refer only to organisms of a particular taxon or guild (e.g., the plant community, the insect community, the herbivore community). “Community,” as often used to describe a group of humans, is a type of population (pco_0000001).</rdfs:comment>
+        <obo:IAO_0000118 xml:lang="en">ecological community</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">multispecies community</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pco.owl/pco_0000003 -->
+
+    <owl:Class rdf:about="&obo;pco.owl/pco_0000003">
+        <rdfs:label xml:lang="en">population quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
+        <obo:IAO_0000115 xml:lang="en">A quality that inheres in a population.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Includes qualities like population size, population growth rate, carrying capacity, immigration rate, emigration rate, fecundity, and death rate. A population quality may depend on the qualities of individual organisms in the population, but cannot be measured or described for a single organism.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pco.owl/pco_0000004 -->
+
+    <owl:Class rdf:about="&obo;pco.owl/pco_0000004">
+        <rdfs:label xml:lang="en">community quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
+        <obo:IAO_0000115 xml:lang="en">A quality that inheres in a community.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Includes qualities like diversity, species richness, stability, resilience, community structure, number of trophic levels. A community quality may depend on the qualities of individual organism in the community, but cannot be measured or described for a single individual.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pco.owl/pco_0000005 -->
+
+    <owl:Class rdf:about="&obo;pco.owl/pco_0000005">
+        <rdfs:label xml:lang="en">population process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000007"/>
+        <obo:IAO_0000115 xml:lang="en">A process that has as primary participant a population. </obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Includes processes such as population growth, extinction, evolution, selection, and adaptation. Population processes may depend on the processes of individual organisms {e.g., population growth reflects the cumulative multicellular organism reproduction (GO:0032504) and death (GO:0016265) of all individuals in a population}, but cannot be described for an individual organism. Some of these processes (e.g., evolution, extinction) can also occur at the species level, so PCO distiguishes between, for example, population extinction and species extinction. The GO has the terms &#39;multi-organism process&#39; (GO:0051704) and &#39;intraspecies interactions between organisms&#39; (GO:0051703), but these categories are only defined for interactions between two individuals. It is unclear at this point if &#39;biological process&#39; (GO:0008150) encompasses population processes. </rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
