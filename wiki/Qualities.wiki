@@ -1,0 +1,13 @@
+#summary Discussion of how to deal with quality terms.
+
+= Qualities of groups of organisms =
+
+PCO will have a number of terms for population qualities (e.g., growth rate, age structure), community qualities (e.g., species richness, number of trophic levels), and qualities of other collecitons of organisms. 
+
+The question is whether these terms should have PCO ids or PATO ids.
+
+= Phenotypic Quality Ontology (PATO) terms =
+
+population process (): def.
+
+behavior terms
