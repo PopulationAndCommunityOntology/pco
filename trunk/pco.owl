@@ -24,6 +24,7 @@
     <owl:Ontology rdf:about="&obo;pco.owl">
         <dc:creator>Ramona Walls</dc:creator>
         <owl:imports rdf:resource="&obo;bfo.owl"/>
+        <owl:imports rdf:resource="&obo;iao/dev/ontology-metadata.owl"/>
     </owl:Ontology>
     
 
@@ -58,6 +59,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <rdf:Description rdf:about="&obo;IAO_0000030">
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000031"/>
+    </rdf:Description>
     
 
 
