@@ -1,0 +1,14 @@
+#summary Discussion of how to deal with biological process terms.
+
+= Biological processes =
+
+PCO will have a number of terms for populations processes (e.g., immigration, population growth, population selection).
+
+The question is whether these terms should have PCO ids or GO ids.
+
+
+= Gene Ontology terms =
+
+biological process (): def.
+
+multi-organism process (): def.
