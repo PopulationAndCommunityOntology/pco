@@ -1,5 +1,5 @@
 #summary Discussion of how to deal with biological process terms.
-#labels GeneOntology,biologicalprocess,GO,populationsprocess
+#labels GeneOntology,biological_process,GO,population_process
 
 = Biological processes =
 
