@@ -3,3 +3,25 @@
 = Introduction =
 
 This page will provide organized links to the other wiki pages.
+
+= Interactions with other ontologies =
+
+The PCO currently imports the BFO and uses this for root nodes in the PCO. Other terms will be imported from IAO, CARO, PATO, and GO.
+
+See the Interactions_with_other_ontologies for more details.
+
+==BFO==
+
+The PCO currently imports the BFO and uses this for root nodes in the PCO.
+
+==IAO==
+
+==CARO==
+
+PCO will import organism and organism or virus or viroid from CARO. 
+
+CARO will import "population" from PCO.
+
+Logical definition of population will probably refer to "organism or virus or viroid", rather than organism, so it would not be appropriate to use "organism population as the primary name. Perhaps "biological population"?
+
+We are discussion the definitions of these terms with CARO curators.
