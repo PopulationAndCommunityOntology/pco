@@ -8,7 +8,7 @@ This page will provide organized links to the other wiki pages.
 
 The PCO currently imports the BFO and uses this for root nodes in the PCO. Other terms will be imported from IAO, CARO, PATO, and GO.
 
-See the Interactions_with_other_ontologies for more details.
+See the [WikiPage Interactions_with_other_ontologies] for more details.
 
 ==BFO==
 
