@@ -1,4 +1,5 @@
 #summary Discussion of how to deal with biological process terms.
+#labels GeneOntology,biologicalprocess,GO
 
 = Biological processes =
 
@@ -7,8 +8,17 @@ PCO will have a number of terms for populations processes (e.g., immigration, po
 The question is whether these terms should have PCO ids or GO ids.
 
 
-= Gene Ontology terms =
+= Important Gene Ontology terms =
+==Upper level terms==
 
-biological process (): def.
+*biological process (GO:0008150)* =def. Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end. 
 
-multi-organism process (): def.
+-A population or community could be considered an "integrated living unit". Population processes are not normally described as "a collection of molecular events", but perhaps at the most basic level they could be._
+
+*multi-organism process (GO:0051704)* =def. Any process in which an organism has an effect on another organism of the same or different species. 
+
+_This term (and many of its subclasses) were originally created to describe interactions with microbes. (add reference)_
+
+_The definition does not strictly limit this type process only one organism affecting or having an effect, so it seems like it could apply to groups of interacting organisms. Some of the subclasses, like flocculation (GO:0000128) or biofilm formation (GO:0042710) involve populations of microbes._
+
+_GO has avoided adding population processes for multicellular organism up to this point, but the need for new terms is likely to grow._
