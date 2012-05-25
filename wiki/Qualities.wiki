@@ -8,6 +8,14 @@ The question is whether these terms should have PCO ids or PATO ids.
 
 = Phenotypic Quality Ontology (PATO) terms =
 
-population process (): def.
+population quality (PATO:0002003) =def. A quality that inheres in an entire population or part of a population.
 
-behavior terms
+_I think saying that it inheres in part of a population is problematic, because it is too broad. A leaf is a part of one tree, which is part of a population. Population qualities should be confined to populations. If there is a need to define qualities of groups of organisms that are parts of populations, we can make classes for those groups, and define qualities specifically for them_
+
+-Has two subclasses: mixed sex (PATO:0001338) and morbidity (PATO:0001415)._
+
+=bahavior quality=
+
+PATO currently has a term for behavioral quality (PATO:0000186), which is confined to organisms. Some of these subclasses may be needed for PCO.
+
+Need to consider if there are behavioral qualities that involve more than one organism.
