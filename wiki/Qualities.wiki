@@ -11,10 +11,9 @@ PATO is the [http://bioportal.bioontology.org/ontologies/1107 Phenotypic Quality
 Ideally, PATO would have the general terms, and PCO would combine them with specific PCO entities. 
 
 For example: 
-
-*"population fecundity" would be a cross product if PCO:population and PATO:fecundity
-*"species richness of a community" would be a combination of PCO:community, PCO:species and PATO:count.
-*"population growth rate": PATO says "PATO:growth rate" will be obsoleted, and to use GO:growth and PATO:rate, but GO:growth only applies to organism. Need to define population growth rate using PCO terms (coupled with GO terms for birth and death) and PATO:rate.
+  *"population fecundity" would be a cross product if PCO:population and PATO:fecundity
+  *(species richness of a community" would be a combination of PCO:community, PCO:species and PATO:count.
+  *"population growth rate": PATO says "PATO:growth rate" will be obsoleted, and to use GO:growth and PATO:rate, but GO:growth only applies to organism. Need to define population growth rate using PCO terms (coupled with GO terms for birth and death) and PATO:rate.
 
 = Phenotypic Quality Ontology (PATO) terms =
 
@@ -44,7 +43,7 @@ _What about behavioral qualities that involve more than one organism?_
 
 ===Reproductive qualities===
 
-*Reproductive quality* (PATO:0001434) =def. An organismal quality inhering in a bearer by virtue of the bearer's ability to produce new life or offspring.
+*reproductive quality* (PATO:0001434) =def. An organismal quality inhering in a bearer by virtue of the bearer's ability to produce new life or offspring.
 
 _Some of the subclasses (e.g., brood quality, fecundity) are defined for multiple organisms._
 
