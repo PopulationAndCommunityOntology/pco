@@ -16,8 +16,8 @@ For example:
   *"population growth rate": PATO says "PATO:growth rate" will be obsoleted, and to use GO:growth and PATO:rate, but GO:growth only applies to organism. Need to define population growth rate using PCO terms (coupled with GO terms for birth and death) and PATO:rate.
 
 = Phenotypic Quality Ontology (PATO) terms =
-
-population quality (PATO:0002003) =def. A quality that inheres in an entire population or part of a population.
+==Population qualities==
+*population quality* (PATO:0002003) =def. A quality that inheres in an entire population or part of a population.
 
 _I think saying that it inheres in part of a population is problematic, because it is too inclusive. A leaf is a part of one tree, which is part of a population. Population qualities should be confined to populations. If there is a need to define qualities of groups of organisms that are parts of populations, we can make classes for those groups, and define qualities specifically for them_
 
