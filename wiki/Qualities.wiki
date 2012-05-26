@@ -8,15 +8,23 @@ The question is whether these terms should have PCO ids or PATO ids.
 
 PATO is the [http://bioportal.bioontology.org/ontologies/1107 Phenotypic Quality Ontology].
 
-Ideally, PATO would have the general terms, and PCO would combine them with specific PCO entities. For example: "population fecundity" would be a cross product if PCO:population and PATO:fecundity; "community species richness" would be a combination of PCO:community, PCO:species and PATO:count.
+Ideally, PATO would have the general terms, and PCO would combine them with specific PCO entities. 
+
+For example: 
+
+*"population fecundity" would be a cross product if PCO:population and PATO:fecundity
+*"species richness of a community" would be a combination of PCO:community, PCO:species and PATO:count.
+*"population growth rate": PATO says "PATO:growth rate" will be obsoleted, and to use GO:growth and PATO:rate, but GO:growth only applies to organism. Need to define population growth rate using PCO terms (coupled with GO terms for birth and death) and PATO:rate.
 
 = Phenotypic Quality Ontology (PATO) terms =
 
 population quality (PATO:0002003) =def. A quality that inheres in an entire population or part of a population.
 
-_I think saying that it inheres in part of a population is problematic, because it is too broad. A leaf is a part of one tree, which is part of a population. Population qualities should be confined to populations. If there is a need to define qualities of groups of organisms that are parts of populations, we can make classes for those groups, and define qualities specifically for them_
+_I think saying that it inheres in part of a population is problematic, because it is too inclusive. A leaf is a part of one tree, which is part of a population. Population qualities should be confined to populations. If there is a need to define qualities of groups of organisms that are parts of populations, we can make classes for those groups, and define qualities specifically for them_
 
 -Has two subclasses: mixed sex (PATO:0001338) and morbidity (PATO:0001415)._
+
+_Suggest that PATO redefine organismal quality (see below) and make these organismal qualities. Then ontologies like PCO and combine them with the entities in which they inhere._
 
 ==Organismal qualities==
 *organismal quality* (PATO:0001995) =def. A quality that inheres in an entire organism or part of an organism.
