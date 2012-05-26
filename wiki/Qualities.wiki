@@ -2,9 +2,13 @@
 
 = Qualities of groups of organisms =
 
-PCO will have a number of terms for population qualities (e.g., growth rate, age structure), community qualities (e.g., species richness, number of trophic levels), and qualities of other collecitons of organisms. 
+PCO will have a number of terms for population qualities (e.g., growth rate, age structure), community qualities (e.g., species richness, number of trophic levels), and qualities of other collections of organisms. 
 
 The question is whether these terms should have PCO ids or PATO ids.
+
+PATO is the [http://bioportal.bioontology.org/ontologies/1107 Phenotypic Quality Ontology].
+
+Ideally, PATO would have the general terms, and PCO would combine them with specific PCO entities. For example: "population fecundity" would be a cross product if PCO:population and PATO:fecundity; "community species richness" would be a combination of PCO:community, PCO:species and PATO:count.
 
 = Phenotypic Quality Ontology (PATO) terms =
 
@@ -14,8 +18,26 @@ _I think saying that it inheres in part of a population is problematic, because 
 
 -Has two subclasses: mixed sex (PATO:0001338) and morbidity (PATO:0001415)._
 
-=bahavior quality=
+==Organismal qualities==
+*organismal quality* (PATO:0001995) =def. A quality that inheres in an entire organism or part of an organism.
 
-PATO currently has a term for behavioral quality (PATO:0000186), which is confined to organisms. Some of these subclasses may be needed for PCO.
+_The definition suggests that it should not apply to groups of organism, but some of the subclasses (e.g., brood quality, fecundity) are defined for multiple organisms._
 
-Need to consider if there are behavioral qualities that involve more than one organism.
+_Propose a revised definition that will cover inidividual organism and collections of organism. No need to say "part of organism", because if it inheres in a part of an organism, it inheres in an organism._
+
+_proposed def.: A quality that inheres in an entire CARO:organism or a PCO:collection of organisms._
+
+===Bahavior qualities===
+*behavioral quality* (PATO:0000186) =def. An organismal quality inhering in a bearer by virtue of the bearer's behavior aggregate of the responses or reactions or movements in a given situation.
+
+_Some of these subclasses may be needed for PCO._
+
+_What about behavioral qualities that involve more than one organism?_
+
+===Reproductive qualities===
+
+*Reproductive quality* (PATO:0001434) =def. An organismal quality inhering in a bearer by virtue of the bearer's ability to produce new life or offspring.
+
+_Some of the subclasses (e.g., brood quality, fecundity) are defined for multiple organisms._
+
+For example, *fecundity* (PATO:0000273) =def. A reproductive quality inhering in an _organism or population_ by virtue of the bearer's potential reproductive capacity ad measured by the number of gametes.
