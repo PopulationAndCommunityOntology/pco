@@ -70,6 +70,33 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/pco_0000011 -->
+
+    <owl:Class rdf:about="&obo;pco_0000011">
+        <rdfs:label>population growth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;pco.owl/pco_0000005"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pco_0000012 -->
+
+    <owl:Class rdf:about="&obo;pco_0000012">
+        <rdfs:label>logistic population growth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;pco_0000011"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pco_0000013 -->
+
+    <owl:Class rdf:about="&obo;pco_0000013">
+        <rdfs:label>exponential population growth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;pco_0000011"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/pco.owl/PCO_0000006 -->
 
     <owl:Class rdf:about="&obo;pco.owl/PCO_0000006">
@@ -102,6 +129,8 @@
     <owl:Class rdf:about="&obo;pco.owl/PCO_0000009">
         <rdfs:label xml:lang="en">carrying capacity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;pco.owl/pco_0000003"/>
+        <obo:IAO_0000119>ISBN:0878932739</obo:IAO_0000119>
+        <obo:IAO_0000115>The maximum number of individuals that can be supported in  a population that is growing according to logistic growth.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -109,7 +138,7 @@
     <!-- http://purl.obolibrary.org/obo/pco.owl/PCO_0000010 -->
 
     <owl:Class rdf:about="&obo;pco.owl/PCO_0000010">
-        <rdfs:label xml:lang="en">species richness</rdfs:label>
+        <rdfs:label xml:lang="en">community species richness</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;pco.owl/pco_0000004"/>
         <obo:IAO_0000115 xml:lang="en">The number of species present in a communiity.</obo:IAO_0000115>
     </owl:Class>
@@ -121,8 +150,10 @@
     <owl:Class rdf:about="&obo;pco.owl/pco_0000000">
         <rdfs:label xml:lang="en">collection of organisms</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000040"/>
-        <rdfs:comment>May be of the same or different species. Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family.</rdfs:comment>
-        <obo:IAO_0000115>A group of two or more organisms.</obo:IAO_0000115>
+        <obo:IAO_0000118>group of organism</obo:IAO_0000118>
+        <rdfs:comment>May be of the same or different species. Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family.  This term will be defined using CARO_0001010 (organism, virus or viroid), as soon as CARO2 is released. In BFO2, this will be a subclass of &#39;object aggregate&#39;.</rdfs:comment>
+        <obo:IAO_0000118>organism collection</obo:IAO_0000118>
+        <obo:IAO_0000115 xml:lang="en">A material entity that has as parts two or more organisms, viruses, or viroids.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -130,9 +161,10 @@
     <!-- http://purl.obolibrary.org/obo/pco.owl/pco_0000001 -->
 
     <owl:Class rdf:about="&obo;pco.owl/pco_0000001">
-        <rdfs:label xml:lang="en">population</rdfs:label>
+        <rdfs:label xml:lang="en">biological population</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;pco.owl/pco_0000000"/>
-        <obo:IAO_0000115 xml:lang="en">A group of organisms, all of the same species, that live in the same place.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A collection of organisms, all of the same species, that live in the same place.</obo:IAO_0000115>
+        <obo:IAO_0000119>ISBN:0878932739</obo:IAO_0000119>
         <rdfs:comment xml:lang="en">It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. &#39;Community&#39;, as often used to describe a group of humans, is a type of population. Classes for population already  exist in IDO (&#39;organism population&#39;, IDO_0000509) and OBI (&#39;population&#39;, OBI_0000181). The definitions should be standardized across ontologies and only one term used.</rdfs:comment>
     </owl:Class>
     
@@ -141,11 +173,12 @@
     <!-- http://purl.obolibrary.org/obo/pco.owl/pco_0000002 -->
 
     <owl:Class rdf:about="&obo;pco.owl/pco_0000002">
-        <rdfs:label xml:lang="en">community</rdfs:label>
+        <rdfs:label xml:lang="en">ecological community</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;pco.owl/pco_0000000"/>
+        <obo:IAO_0000119>ISBN:0865423504</obo:IAO_0000119>
+        <obo:IAO_0000116>Should a community be defined as two or more populations? Does a community need to include all the individuals in a population?</obo:IAO_0000116>
         <obo:IAO_0000115 xml:lang="en">A collection of organisms of at least two different species, living in a particular area.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Community may be used to describe every organisms living in an area, but is often used to refer only to organisms of a particular taxon or guild (e.g., the plant community, the insect community, the herbivore community). “Community,” as often used to describe a group of humans, is a type of population (pco_0000001).</rdfs:comment>
-        <obo:IAO_0000118 xml:lang="en">ecological community</obo:IAO_0000118>
+        <rdfs:comment xml:lang="en">Ecological community is defined broadly here. It may be used to describe every organisms living in an area, but is often used to refer only to organisms of a particular taxon or guild (e.g., the plant community, the insect community, the herbivore community). “Community,” as often used to describe a group of humans, is a type of population (pco_0000001).</rdfs:comment>
         <obo:IAO_0000118 xml:lang="en">multispecies community</obo:IAO_0000118>
     </owl:Class>
     
@@ -155,9 +188,20 @@
 
     <owl:Class rdf:about="&obo;pco.owl/pco_0000003">
         <rdfs:label xml:lang="en">population quality</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;BFO_0000019"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;BFO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="&obo;pco.owl/pco_0000001"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
-        <obo:IAO_0000115 xml:lang="en">A quality that inheres in a population.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Includes qualities like population size, population growth rate, carrying capacity, immigration rate, emigration rate, fecundity, and death rate. A population quality may depend on the qualities of individual organisms in the population, but cannot be measured or described for a single organism.</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">A quality that inheres in a biological population.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Includes qualities like population size, population growth rate, carrying capacity, immigration rate, emigration rate, fecundity, and death rate. A population quality may depend on the qualities of individual organisms in the population, but cannot be measured or described for a single organism. This term may be replaced by a PATO term.</rdfs:comment>
     </owl:Class>
     
 
@@ -166,6 +210,17 @@
 
     <owl:Class rdf:about="&obo;pco.owl/pco_0000004">
         <rdfs:label xml:lang="en">community quality</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;BFO_0000019"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;BFO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="&obo;pco.owl/pco_0000002"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
         <obo:IAO_0000115 xml:lang="en">A quality that inheres in a community.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Includes qualities like diversity, species richness, stability, resilience, community structure, number of trophic levels. A community quality may depend on the qualities of individual organism in the community, but cannot be measured or described for a single individual.</rdfs:comment>
