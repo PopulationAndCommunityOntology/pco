@@ -19,4 +19,4 @@ Logical definition of population will probably refer to "organism or virus or vi
 We are discussion the definitions of these terms with CARO curators.
 
 ==EnvO==
-*Biome* and its subclasses are covered by the [http://www.environmentontology.org
+*Biome* and its subclasses are covered by the [http://www.environmentontology.org Environment Ontology] (EnvO).
