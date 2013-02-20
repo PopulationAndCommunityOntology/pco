@@ -97,7 +97,7 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo//PCO_0000000 -->
+    <!-- http://purl.obolibrary.org/obo/PCO_0000000 -->
 
     <owl:Class rdf:about="&obo;/PCO_0000000">
         <rdfs:label xml:lang="en">collection of organisms</rdfs:label>
@@ -110,7 +110,7 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo//PCO_0000001 -->
+    <!-- http://purl.obolibrary.org/obo/PCO_0000001 -->
 
     <owl:Class rdf:about="&obo;/PCO_0000001">
         <rdfs:label xml:lang="en">biological population</rdfs:label>
@@ -122,7 +122,7 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo//PCO_0000002 -->
+    <!-- http://purl.obolibrary.org/obo/PCO_0000002 -->
 
     <owl:Class rdf:about="&obo;/PCO_0000002">
         <rdfs:label xml:lang="en">ecological community</rdfs:label>
@@ -136,7 +136,7 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo//PCO_0000003 -->
+    <!-- http://purl.obolibrary.org/obo/PCO_0000003 -->
 
     <owl:Class rdf:about="&obo;/PCO_0000003">
         <rdfs:label xml:lang="en">population quality</rdfs:label>
@@ -158,7 +158,7 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo//PCO_0000004 -->
+    <!-- http://purl.obolibrary.org/obo/PCO_0000004 -->
 
     <owl:Class rdf:about="&obo;/PCO_0000004">
         <rdfs:label xml:lang="en">community quality</rdfs:label>
@@ -180,7 +180,7 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo//PCO_0000005 -->
+    <!-- http://purl.obolibrary.org/obo/PCO_0000005 -->
 
     <owl:Class rdf:about="&obo;/PCO_0000005">
         <rdfs:label xml:lang="en">population process</rdfs:label>
@@ -191,7 +191,7 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo//PCO_0000006 -->
+    <!-- http://purl.obolibrary.org/obo/PCO_0000006 -->
 
     <owl:Class rdf:about="&obo;/PCO_0000006">
         <rdfs:label xml:lang="en">population birth rate</rdfs:label>
@@ -200,7 +200,7 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo//PCO_0000007 -->
+    <!-- http://purl.obolibrary.org/obo/PCO_0000007 -->
 
     <owl:Class rdf:about="&obo;/PCO_0000007">
         <rdfs:label xml:lang="en">population death rate</rdfs:label>
@@ -209,7 +209,7 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo//PCO_0000008 -->
+    <!-- http://purl.obolibrary.org/obo/PCO_0000008 -->
 
     <owl:Class rdf:about="&obo;/PCO_0000008">
         <rdfs:label xml:lang="en">population growth rate</rdfs:label>
@@ -218,7 +218,7 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo//PCO_0000009 -->
+    <!-- http://purl.obolibrary.org/obo/PCO_0000009 -->
 
     <owl:Class rdf:about="&obo;/PCO_0000009">
         <rdfs:label xml:lang="en">carrying capacity</rdfs:label>
@@ -229,12 +229,39 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo//PCO_0000010 -->
+    <!-- http://purl.obolibrary.org/obo/PCO_0000010 -->
 
     <owl:Class rdf:about="&obo;/PCO_0000010">
         <rdfs:label xml:lang="en">community species richness</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;/PCO_0000004"/>
         <obo:IAO_0000115 xml:lang="en">The number of species present in a communiity.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000014 -->
+
+    <owl:Class rdf:about="&obo;pco/PCO_0000014">
+        <rdfs:label xml:lang="en">predator role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000015 -->
+
+    <owl:Class rdf:about="&obo;pco/PCO_0000015">
+        <rdfs:label xml:lang="en">prey role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000016 -->
+
+    <owl:Class rdf:about="&obo;pco/PCO_0000016">
+        <rdfs:label xml:lang="en">symbiont role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
     </owl:Class>
 </rdf:RDF>
 
