@@ -70,11 +70,37 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CARO_0001010 -->
+
+    <owl:Class rdf:about="&obo;CARO_0001010">
+        <rdfs:label rdf:datatype="&xsd;string">organism or virus or viroid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000040"/>
+        <obo:IAO_creation_date rdf:datatype="&xsd;string">9/18/11</obo:IAO_creation_date>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Material anatomical entity that is a member of an individual species or is a viral or viroid particle.</obo:IAO_0000115>
+        <obo:IAO_created_by rdf:datatype="&xsd;string">Melissa Haendel</obo:IAO_created_by>
+        <obo:IAO_0000589 xml:lang="en">organism or virus</obo:IAO_0000589>
+    </owl:Class>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/CARO_0010004 -->
+
+    <owl:Class rdf:about="&obo;CARO_0010004">
+        <rdfs:label rdf:datatype="&xsd;string">organism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CARO_0001010"/>
+        <obo:IAO_creation_date rdf:datatype="&xsd;string">7.16.2011</obo:IAO_creation_date>
+        <rdfs:comment rdf:datatype="&xsd;string">A general term for organism that is agnostic about single cell vs multi-cellular.  Note, that the definition refers to species, should we formalise a species concept?  Perhaps better to say: &#39;an individual member of a clade?&#39;</rdfs:comment>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">An individual member of a species.</obo:IAO_0000115>
+        <obo:IAO_created_by rdf:datatype="&xsd;string">mah</obo:IAO_created_by>
+        <obo:IAO_0000589 xml:lang="en">organism</obo:IAO_0000589>
+    </owl:Class>
+    
+
     <!-- http://purl.obolibrary.org/obo/PCO_0000011 -->
 
     <owl:Class rdf:about="&obo;PCO_0000011">
         <rdfs:label>population growth</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;/PCO_0000005"/>
+        <rdfs:subClassOf rdf:resource="&obo;PCO_0000005"/>
     </owl:Class>
     
 
@@ -99,7 +125,7 @@
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000000 -->
 
-    <owl:Class rdf:about="&obo;/PCO_0000000">
+    <owl:Class rdf:about="&obo;PCO_0000000">
         <rdfs:label xml:lang="en">collection of organisms</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000027"/>
         <obo:IAO_0000115 xml:lang="en">A material entity that has as parts two or more organisms, viruses, or viroids.</obo:IAO_0000115>
@@ -112,9 +138,9 @@
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000001 -->
 
-    <owl:Class rdf:about="&obo;/PCO_0000001">
+    <owl:Class rdf:about="&obo;PCO_0000001">
         <rdfs:label xml:lang="en">biological population</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;/PCO_0000000"/>
+        <rdfs:subClassOf rdf:resource="&obo;PCO_0000000"/>
         <obo:IAO_0000115 xml:lang="en">A collection of organisms, all of the same species, that live in the same place.</obo:IAO_0000115>
         <obo:IAO_0000119>ISBN:0878932739</obo:IAO_0000119>
         <rdfs:comment xml:lang="en">It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. &apos;Community&apos;, as often used to describe a group of humans, is a type of population. Classes for population already  exist in IDO (&apos;organism population&apos;, IDO_0000509) and OBI (&apos;population&apos;, OBI_0000181). The definitions should be standardized across ontologies and only one term used.</rdfs:comment>
@@ -124,9 +150,9 @@
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000002 -->
 
-    <owl:Class rdf:about="&obo;/PCO_0000002">
+    <owl:Class rdf:about="&obo;PCO_0000002">
         <rdfs:label xml:lang="en">ecological community</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;/PCO_0000000"/>
+        <rdfs:subClassOf rdf:resource="&obo;PCO_0000000"/>
         <obo:IAO_0000115 xml:lang="en">A collection of organisms of at least two different species, living in a particular area.</obo:IAO_0000115>
         <obo:IAO_0000116>Should a community be defined as two or more populations? Does a community need to include all the individuals in a population?</obo:IAO_0000116>
         <obo:IAO_0000119>ISBN:0865423504</obo:IAO_0000119>
@@ -138,7 +164,7 @@
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000003 -->
 
-    <owl:Class rdf:about="&obo;/PCO_0000003">
+    <owl:Class rdf:about="&obo;PCO_0000003">
         <rdfs:label xml:lang="en">population quality</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
@@ -146,7 +172,7 @@
                     <rdf:Description rdf:about="&obo;BFO_0000019"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;BFO_0000052"/>
-                        <owl:someValuesFrom rdf:resource="&obo;/PCO_0000001"/>
+                        <owl:someValuesFrom rdf:resource="&obo;PCO_0000001"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -160,7 +186,7 @@
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000004 -->
 
-    <owl:Class rdf:about="&obo;/PCO_0000004">
+    <owl:Class rdf:about="&obo;PCO_0000004">
         <rdfs:label xml:lang="en">community quality</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
@@ -168,7 +194,7 @@
                     <rdf:Description rdf:about="&obo;BFO_0000019"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;BFO_0000052"/>
-                        <owl:someValuesFrom rdf:resource="&obo;/PCO_0000002"/>
+                        <owl:someValuesFrom rdf:resource="&obo;PCO_0000002"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -182,7 +208,7 @@
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000005 -->
 
-    <owl:Class rdf:about="&obo;/PCO_0000005">
+    <owl:Class rdf:about="&obo;PCO_0000005">
         <rdfs:label xml:lang="en">population process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
         <obo:IAO_0000115 xml:lang="en">A process that has as primary participant a population. </obo:IAO_0000115>
@@ -193,36 +219,36 @@
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000006 -->
 
-    <owl:Class rdf:about="&obo;/PCO_0000006">
+    <owl:Class rdf:about="&obo;PCO_0000006">
         <rdfs:label xml:lang="en">population birth rate</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;/PCO_0000003"/>
+        <rdfs:subClassOf rdf:resource="&obo;PCO_0000003"/>
     </owl:Class>
     
 
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000007 -->
 
-    <owl:Class rdf:about="&obo;/PCO_0000007">
+    <owl:Class rdf:about="&obo;PCO_0000007">
         <rdfs:label xml:lang="en">population death rate</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;/PCO_0000003"/>
+        <rdfs:subClassOf rdf:resource="&obo;PCO_0000003"/>
     </owl:Class>
     
 
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000008 -->
 
-    <owl:Class rdf:about="&obo;/PCO_0000008">
+    <owl:Class rdf:about="&obo;PCO_0000008">
         <rdfs:label xml:lang="en">population growth rate</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;/PCO_0000003"/>
+        <rdfs:subClassOf rdf:resource="&obo;PCO_0000003"/>
     </owl:Class>
     
 
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000009 -->
 
-    <owl:Class rdf:about="&obo;/PCO_0000009">
+    <owl:Class rdf:about="&obo;PCO_0000009">
         <rdfs:label xml:lang="en">carrying capacity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;/PCO_0000003"/>
+        <rdfs:subClassOf rdf:resource="&obo;PCO_0000003"/>
         <obo:IAO_0000115>The maximum number of individuals that can be supported in  a population that is growing according to logistic growth.</obo:IAO_0000115>
         <obo:IAO_0000119>ISBN:0878932739</obo:IAO_0000119>
     </owl:Class>
@@ -231,9 +257,9 @@
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000010 -->
 
-    <owl:Class rdf:about="&obo;/PCO_0000010">
+    <owl:Class rdf:about="&obo;PCO_0000010">
         <rdfs:label xml:lang="en">community species richness</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;/PCO_0000004"/>
+        <rdfs:subClassOf rdf:resource="&obo;PCO_0000004"/>
         <obo:IAO_0000115 xml:lang="en">The number of species present in a communiity.</obo:IAO_0000115>
     </owl:Class>
     
@@ -241,7 +267,7 @@
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000014 -->
 
-    <owl:Class rdf:about="&obo;pco/PCO_0000014">
+    <owl:Class rdf:about="&obo;PCO_0000014">
         <rdfs:label xml:lang="en">predator role</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
     </owl:Class>
@@ -250,7 +276,7 @@
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000015 -->
 
-    <owl:Class rdf:about="&obo;pco/PCO_0000015">
+    <owl:Class rdf:about="&obo;PCO_0000015">
         <rdfs:label xml:lang="en">prey role</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
     </owl:Class>
@@ -259,7 +285,7 @@
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000016 -->
 
-    <owl:Class rdf:about="&obo;pco/PCO_0000016">
+    <owl:Class rdf:about="&obo;PCO_0000016">
         <rdfs:label xml:lang="en">symbiont role</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
     </owl:Class>
