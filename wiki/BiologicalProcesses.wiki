@@ -31,3 +31,8 @@ _GO has avoided adding population processes for multicellular organism up to thi
 *interspecies interaction between organisms (GO:0044419)* =def. Any process in which an organism has an effect on an organism of a different species. 
 
 *intraspecies interaction between organisms (GO:0051703)* =def. Any process in which an organism has an effect on an organism of the same species. 
+
+
+
+
+_What about when symbiotic relationships are long distance?_
