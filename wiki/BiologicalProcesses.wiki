@@ -9,6 +9,7 @@ Should these terms have PCO ids or GO ids?
 
 One option is for PCO curators to assume responsibility for creating and defining new GO term for populations and other groups of organism (communities, families, species), assign GO ids to those terms, and then import them to the PCO.
 
+IDO has also claimed some population processes (e.g., infectious disease epidemic)
 
 = Important Gene Ontology terms =
 ==Upper level terms==
