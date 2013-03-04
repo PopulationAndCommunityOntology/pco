@@ -15,6 +15,8 @@ For example:
   * species richness of a community would be a combination of PCO:community, PCO:species and PATO:count.
   * population growth rate: PATO says "PATO:growth rate" will be obsoleted, and to use GO:growth and PATO:rate, but GO:growth only applies to organism. Need to define population growth rate using PCO terms (coupled with GO terms for birth and death) and PATO:rate.
 
+Many qualities can inhere in many different types of entities, just as traits can be meausured at different levels (e.g., flower color as a trait of an individual, a population, or a species).
+
 = Phenotypic Quality Ontology (PATO) terms =
 The following terms are already in PATO. See comments for each term.
 ==Population qualities==
