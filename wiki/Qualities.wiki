@@ -35,7 +35,7 @@ _Propose a revised definition that will cover inidividual organism and collectio
 
 _proposed def.: A quality that inheres in an entire CARO:organism or a PCO:collection of organisms._
 
-===Bahavior qualities===
+===Behavior qualities===
 *behavioral quality* (PATO:0000186) =def. An organismal quality inhering in a bearer by virtue of the bearer's behavior aggregate of the responses or reactions or movements in a given situation.
 
 _Some of these subclasses may be needed for PCO._
