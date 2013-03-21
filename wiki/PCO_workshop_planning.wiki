@@ -1,0 +1,12 @@
+#summary This is a page for planning a possible face to face meeting to work on the PCO.
+
+= Google doc =
+
+Link to [https://docs.google.com/document/d/1Hi1vnRAt5mZfA8MUisvV7la2cWj3vFbShCNIL6KGfpM/edit Google doc] for planning notes. Access to this document is limited.
+
+
+= Details =
+
+The Phenotype RCN has some funding available for travel. Considering requesting support for a 2 day workshop to help jump-start development of the PCO.
+
+Will need input from both domain experts and ontology experts (someone who can advise on how to integrate with BFO and more advanced ontology modeling).
