@@ -24,6 +24,7 @@
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/">
         <dc:creator>Ramona Walls</dc:creator>
         <owl:imports rdf:resource="&obo;bfo.owl"/>
+        <owl:imports rdf:resource="&obo;pco.owl"/>
         <owl:imports rdf:resource="&obo;iao/dev/ontology-metadata.owl"/>
     </owl:Ontology>
     
@@ -105,6 +106,14 @@
         <obo:IAO_created_by rdf:datatype="&xsd;string">mah</obo:IAO_created_by>
         <obo:IAO_0000589 xml:lang="en">organism</obo:IAO_0000589>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0051704 -->
+
+    <rdf:Description rdf:about="&obo;GO_0051704">
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+    </rdf:Description>
     
 
 
