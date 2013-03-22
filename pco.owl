@@ -21,10 +21,10 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:pco="&obo;pco.owl/">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/">
+    <owl:Ontology rdf:about="&obo;pco.owl">
         <dc:creator>Ramona Walls</dc:creator>
         <owl:imports rdf:resource="&obo;bfo.owl"/>
-        <owl:imports rdf:resource="&obo;pco.owl"/>
+        <owl:imports rdf:resource="&obo;pco_go_imports.owl"/>
         <owl:imports rdf:resource="&obo;iao/dev/ontology-metadata.owl"/>
     </owl:Ontology>
     
