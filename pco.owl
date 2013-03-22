@@ -23,8 +23,8 @@
      xmlns:pco="&obo;pco.owl/">
     <owl:Ontology rdf:about="&obo;pco.owl">
         <dc:creator>Ramona Walls</dc:creator>
+        <owl:imports rdf:resource="http://popcomm-ontology.googlecode.com/svn/trunk/pco_go_imports.owl"/>
         <owl:imports rdf:resource="&obo;bfo.owl"/>
-        <owl:imports rdf:resource="&obo;pco_go_imports.owl"/>
         <owl:imports rdf:resource="&obo;iao/dev/ontology-metadata.owl"/>
     </owl:Ontology>
     
