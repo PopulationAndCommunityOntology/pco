@@ -295,6 +295,8 @@
     <owl:Class rdf:about="&obo;PCO_0000012">
         <rdfs:label>logistic population growth</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000011"/>
+        <obo:IAO_0000115 xml:lang="en">A change in the number of individuals in a populations.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Population growth may be positive or negative.</rdfs:comment>
     </owl:Class>
     
 
@@ -361,6 +363,38 @@
     <owl:Class rdf:about="&obo;PCO_0000019">
         <rdfs:label xml:lang="en">community species diversity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000004"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000020 -->
+
+    <owl:Class rdf:about="&obo;PCO_0000020">
+        <rdfs:label xml:lang="en">family</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;PCO_0000018"/>
+        <obo:IAO_0000119 xml:lang="en"> http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Family</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">A domestic group, or a number of domestic groups linked through descent (demonstrated or stipulated) from a common ancestor, marriage, or adoption.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000021 -->
+
+    <owl:Class rdf:about="&obo;PCO_0000021">
+        <rdfs:label xml:lang="en">population extinction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;PCO_0000005"/>
+        <obo:IAO_0000115 xml:lang="en">A population process that ultimately leads to the death of all individuals in a population.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000022 -->
+
+    <owl:Class rdf:about="&obo;PCO_0000022">
+        <rdfs:label xml:lang="en">species extinction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+        <obo:IAO_0000115 xml:lang="en">A process that ultimately leads to the death of all individuals in a population.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">needs a definition source</obo:IAO_0000116>
     </owl:Class>
 </rdf:RDF>
 
