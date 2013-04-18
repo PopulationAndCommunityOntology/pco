@@ -23,7 +23,7 @@
      xmlns:pco="&obo;pco.owl/">
     <owl:Ontology rdf:about="&obo;pco.owl">
         <dc:creator>Ramona Walls</dc:creator>
-        <owl:imports rdf:resource="http://popcomm-ontology.googlecode.com/svn/trunk/pco_go_imports.owl"/>
+        <owl:imports rdf:resource="http://popcomm-ontology.googlecode.com/svn/trunk/src/ontology/pco_go_imports.owl"/>
         <owl:imports rdf:resource="&obo;bfo.owl"/>
         <owl:imports rdf:resource="&obo;iao/dev/ontology-metadata.owl"/>
     </owl:Ontology>
@@ -111,9 +111,9 @@
 
     <!-- http://purl.obolibrary.org/obo/GO_0051704 -->
 
-    <rdf:Description rdf:about="&obo;GO_0051704">
+    <owl:Class rdf:about="&obo;GO_0051704">
         <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
