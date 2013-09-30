@@ -4,9 +4,10 @@
 
 ==BFO==
 
-The PCO currently imports the BFO and uses this for root nodes in the PCO.
+The PCO currently imports BFO from the OBO purl and uses this for root nodes in the PCO. May want to switch to BFO1.1
 
 ==IAO==
+PCO imports IAO's ontology_metadata.owl
 
 ==CARO==
 
@@ -20,3 +21,6 @@ We are discussion the definitions of these terms with CARO curators.
 
 ==EnvO==
 *Biome* and its subclasses are covered by the [http://www.environmentontology.org Environment Ontology] (EnvO).
+
+==EFO==
+The Experimental Factor Ontology has some terms for populations. Need to talk to them about it at some point.
