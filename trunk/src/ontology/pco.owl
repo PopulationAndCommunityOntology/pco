@@ -23,9 +23,11 @@
      xmlns:pco="&obo;pco.owl/">
     <owl:Ontology rdf:about="&obo;pco.owl">
         <dc:creator>Ramona Walls</dc:creator>
+        <dc:license>http://creativecommons.org/publicdomain/zero/1.0/</dc:license>
+        <rdfs:comment>The Biological Collections Ontology (BCO) is licensed under a Creative Commons zero (CC0) license - http://creativecommons.org/publicdomain/zero/1.0/. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. We ask that anyone using this ontology follow the standards of the scientific ontology community by re-using ontology identifiers whenever possible and properly citing the ontology and its creators.</rdfs:comment>
         <owl:imports rdf:resource="http://popcomm-ontology.googlecode.com/svn/trunk/src/ontology/pco_go_imports.owl"/>
-        <owl:imports rdf:resource="&obo;bfo.owl"/>
         <owl:imports rdf:resource="&obo;iao/dev/ontology-metadata.owl"/>
+        <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1"/>
     </owl:Ontology>
     
 
@@ -38,19 +40,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:AnnotationProperty rdf:about="&obo;IAO_creation_date"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_created_by -->
+
     <owl:AnnotationProperty rdf:about="&obo;IAO_created_by"/>
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+    <!-- http://purl.obolibrary.org/obo/IAO_creation_date -->
 
+    <owl:AnnotationProperty rdf:about="&obo;IAO_creation_date"/>
     
 
 
@@ -71,6 +72,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000052 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BFO_0000052"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -86,7 +93,7 @@
 
     <owl:Class rdf:about="&obo;CARO_0001010">
         <rdfs:label rdf:datatype="&xsd;string">organism or virus or viroid</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;BFO_0000040"/>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
         <obo:IAO_creation_date rdf:datatype="&xsd;string">9/18/11</obo:IAO_creation_date>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">Material anatomical entity that is a member of an individual species or is a viral or viroid particle.</obo:IAO_0000115>
         <obo:IAO_created_by rdf:datatype="&xsd;string">Melissa Haendel</obo:IAO_created_by>
@@ -112,7 +119,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0051704 -->
 
     <owl:Class rdf:about="&obo;GO_0051704">
-        <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
     </owl:Class>
     
 
@@ -120,7 +127,7 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
 
     <rdf:Description rdf:about="&obo;IAO_0000030">
-        <rdfs:subClassOf rdf:resource="&obo;BFO_0000031"/>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#GenericallyDependentContinuant"/>
     </rdf:Description>
     
 
@@ -129,7 +136,7 @@
 
     <owl:Class rdf:about="&obo;PCO_0000000">
         <rdfs:label xml:lang="en">collection of organisms</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;BFO_0000027"/>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
@@ -137,10 +144,10 @@
                 <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000118>organism collection</obo:IAO_0000118>
-        <obo:IAO_0000118>group of organism</obo:IAO_0000118>
-        <rdfs:comment>May be of the same or different species. Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family.  This term will be defined using CARO_0001010 (organism, virus or viroid), as soon as CARO2 is released. In BFO2, this will be a subclass of &apos;object aggregate&apos;.</rdfs:comment>
         <obo:IAO_0000115 xml:lang="en">A material entity that has as parts two or more organisms, viruses, or viroids.</obo:IAO_0000115>
+        <rdfs:comment>May be of the same or different species. Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family.  This term will be defined using CARO_0001010 (organism, virus or viroid), as soon as CARO2 is released. In BFO2, this will be a subclass of &apos;object aggregate&apos;.</rdfs:comment>
+        <obo:IAO_0000118>group of organism</obo:IAO_0000118>
+        <obo:IAO_0000118>organism collection</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -150,8 +157,8 @@
     <owl:Class rdf:about="&obo;PCO_0000001">
         <rdfs:label xml:lang="en">population</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000018"/>
-        <obo:IAO_0000119>ISBN:0878932739</obo:IAO_0000119>
         <obo:IAO_0000115 xml:lang="en">A collection of organisms, all of the same species, that live in the same place.</obo:IAO_0000115>
+        <obo:IAO_0000119>ISBN:0878932739</obo:IAO_0000119>
         <rdfs:comment xml:lang="en">It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. &apos;Community&apos;, as often used to describe a group of humans, is a type of population. Classes for population already  exist in IDO (&apos;organism population&apos;, IDO_0000509) and OBI (&apos;population&apos;, OBI_0000181). The definitions should be standardized across ontologies and only one term used.</rdfs:comment>
         <obo:IAO_0000116 xml:lang="en">Still uncertain if this should include every organism of a species living in an area or any subset of them. For now make this a general term (unspecified) and then subclasses can be more specific.</obo:IAO_0000116>
     </owl:Class>
@@ -163,10 +170,10 @@
     <owl:Class rdf:about="&obo;PCO_0000002">
         <rdfs:label xml:lang="en">ecological community</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000000"/>
-        <rdfs:comment xml:lang="en">Ecological community is defined broadly here. It may be used to describe every organisms living in an area, but is often used to refer only to organisms of a particular taxon or guild (e.g., the plant community, the insect community, the herbivore community). Community, as it often used to describe a group of humans, is a type of population (PCO_0000001).</rdfs:comment>
-        <obo:IAO_0000119>ISBN:0865423504</obo:IAO_0000119>
-        <obo:IAO_0000115 xml:lang="en">A collection of organisms of at least two different species, living in a particular area.</obo:IAO_0000115>
         <obo:IAO_0000116>Should a community be defined as two or more populations? Does a community need to include all the individuals in a population?</obo:IAO_0000116>
+        <obo:IAO_0000115 xml:lang="en">A collection of organisms of at least two different species, living in a particular area.</obo:IAO_0000115>
+        <obo:IAO_0000119>ISBN:0865423504</obo:IAO_0000119>
+        <rdfs:comment xml:lang="en">Ecological community is defined broadly here. It may be used to describe every organisms living in an area, but is often used to refer only to organisms of a particular taxon or guild (e.g., the plant community, the insect community, the herbivore community). Community, as it often used to describe a group of humans, is a type of population (PCO_0000001).</rdfs:comment>
         <obo:IAO_0000118 xml:lang="en">multispecies community</obo:IAO_0000118>
     </owl:Class>
     
@@ -179,7 +186,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;BFO_0000019"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;BFO_0000052"/>
                         <owl:someValuesFrom rdf:resource="&obo;PCO_0000001"/>
@@ -187,7 +194,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
         <obo:IAO_0000115 xml:lang="en">A quality that inheres in a biological population.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Includes qualities like population size, population growth rate, carrying capacity, immigration rate, emigration rate, fecundity, and death rate. A population quality may depend on the qualities of individual organisms in the population, but cannot be measured or described for a single organism. This term may be replaced by a PATO term.</rdfs:comment>
         <obo:IAO_0000116 xml:lang="en">See Chris&apos;s comments on population qualities at: http://code.google.com/p/popcomm-ontology/issues/detail?id=4. This branch may need major revision.</obo:IAO_0000116>
@@ -203,7 +209,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;BFO_0000019"/>
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;BFO_0000052"/>
                         <owl:someValuesFrom rdf:resource="&obo;PCO_0000002"/>
@@ -211,7 +217,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
         <obo:IAO_0000115 xml:lang="en">A quality that inheres in a community.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Includes qualities like diversity, species richness, stability, resilience, community structure, number of trophic levels. A community quality may depend on the qualities of individual organism in the community, but cannot be measured or described for a single individual.</rdfs:comment>
         <obo:IAO_0000116 xml:lang="en">These may not belong under BFO:quality.</obo:IAO_0000116>
@@ -223,7 +228,7 @@
 
     <owl:Class rdf:about="&obo;PCO_0000005">
         <rdfs:label xml:lang="en">population process</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
         <obo:IAO_0000115 xml:lang="en">A process that has as primary participant a population. </obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Includes processes such as population growth, extinction, evolution, selection, and adaptation. Population processes may depend on the processes of individual organisms {e.g., population growth reflects the cumulative multicellular organism reproduction (GO:0032504) and death (GO:0016265) of all individuals in a population}, but cannot be described for an individual organism. Some of these processes (e.g., evolution, extinction) can also occur at the species level, so PCO distinguishes between, for example, population extinction and species extinction. The GO has the terms &apos;multi-organism process&apos; (GO:0051704) and &apos;intraspecies interactions between organisms&apos; (GO:0051703), but tPCOhese categories are only defined for interactions between two individuals. It is unclear at this point if &apos;biological process&apos; (GO:0008150) encompasses population processes. </rdfs:comment>
     </owl:Class>
@@ -263,9 +268,9 @@
     <owl:Class rdf:about="&obo;PCO_0000009">
         <rdfs:label xml:lang="en">carrying capacity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000003"/>
+        <obo:IAO_0000115>The maximum number of individuals that can be supported in  a population that is growing according to logistic growth.</obo:IAO_0000115>
         <obo:IAO_0000119>ISBN:0878932739</obo:IAO_0000119>
         <obo:IAO_0000116 xml:lang="en">Might be better to add this as a data property.</obo:IAO_0000116>
-        <obo:IAO_0000115>The maximum number of individuals that can be supported in  a population that is growing according to logistic growth.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -314,7 +319,7 @@
 
     <owl:Class rdf:about="&obo;PCO_0000014">
         <rdfs:label xml:lang="en">predator role</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
     </owl:Class>
     
 
@@ -323,7 +328,7 @@
 
     <owl:Class rdf:about="&obo;PCO_0000015">
         <rdfs:label xml:lang="en">prey role</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
     </owl:Class>
     
 
@@ -332,7 +337,7 @@
 
     <owl:Class rdf:about="&obo;PCO_0000016">
         <rdfs:label xml:lang="en">symbiont role</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;BFO_0000023"/>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
     </owl:Class>
     
 
@@ -392,7 +397,7 @@
 
     <owl:Class rdf:about="&obo;PCO_0000022">
         <rdfs:label xml:lang="en">species extinction</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
         <obo:IAO_0000115 xml:lang="en">A process that ultimately leads to the death of all individuals in a population.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">needs a definition source</obo:IAO_0000116>
     </owl:Class>
@@ -400,5 +405,5 @@
 
 
 
-<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 
