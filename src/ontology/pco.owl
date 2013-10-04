@@ -138,15 +138,8 @@
     <owl:Class rdf:about="&obo;PCO_0000000">
         <rdfs:label xml:lang="en">collection of organisms</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:onClass rdf:resource="&obo;CARO_0001010"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A material entity that consists of two or more organisms, viruses, or viroids.</obo:IAO_0000115>
         <obo:IAO_0000112>Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family.</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">A material entity that has as parts two or more organisms, viruses, or viroids.</obo:IAO_0000115>
         <rdfs:comment>May be of the same or different species.</rdfs:comment>
         <obo:IAO_0000118>group of organism</obo:IAO_0000118>
         <obo:IAO_0000118>organism collection</obo:IAO_0000118>
