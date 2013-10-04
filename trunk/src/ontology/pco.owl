@@ -23,8 +23,8 @@
      xmlns:pco="&obo;pco.owl/">
     <owl:Ontology rdf:about="&obo;pco.owl">
         <dc:creator>Ramona Walls</dc:creator>
+        <rdfs:comment>The Population and Community Ontology (PCO) is licensed under a Creative Commons zero (CC0) license - http://creativecommons.org/publicdomain/zero/1.0/. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. We ask that anyone using this ontology follow the standards of the scientific ontology community by re-using ontology identifiers whenever possible and properly citing the ontology and its creators.</rdfs:comment>
         <dc:license>http://creativecommons.org/publicdomain/zero/1.0/</dc:license>
-        <rdfs:comment>The Biological Collections Ontology (BCO) is licensed under a Creative Commons zero (CC0) license - http://creativecommons.org/publicdomain/zero/1.0/. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. We ask that anyone using this ontology follow the standards of the scientific ontology community by re-using ontology identifiers whenever possible and properly citing the ontology and its creators.</rdfs:comment>
         <owl:imports rdf:resource="http://popcomm-ontology.googlecode.com/svn/trunk/src/ontology/pco_go_imports.owl"/>
         <owl:imports rdf:resource="http://popcomm-ontology.googlecode.com/svn/trunk/src/ontology/pco_ro_imports.owl"/>
         <owl:imports rdf:resource="&obo;iao/dev/ontology-metadata.owl"/>
