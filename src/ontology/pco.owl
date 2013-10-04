@@ -26,6 +26,7 @@
         <dc:license>http://creativecommons.org/publicdomain/zero/1.0/</dc:license>
         <rdfs:comment>The Biological Collections Ontology (BCO) is licensed under a Creative Commons zero (CC0) license - http://creativecommons.org/publicdomain/zero/1.0/. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. We ask that anyone using this ontology follow the standards of the scientific ontology community by re-using ontology identifiers whenever possible and properly citing the ontology and its creators.</rdfs:comment>
         <owl:imports rdf:resource="http://popcomm-ontology.googlecode.com/svn/trunk/src/ontology/pco_go_imports.owl"/>
+        <owl:imports rdf:resource="http://popcomm-ontology.googlecode.com/svn/trunk/src/ontology/pco_ro_imports.owl"/>
         <owl:imports rdf:resource="&obo;iao/dev/ontology-metadata.owl"/>
         <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1"/>
     </owl:Ontology>
@@ -144,10 +145,12 @@
                 <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000112>Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family.</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">A material entity that has as parts two or more organisms, viruses, or viroids.</obo:IAO_0000115>
-        <rdfs:comment>May be of the same or different species. Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family.  This term will be defined using CARO_0001010 (organism, virus or viroid), as soon as CARO2 is released. In BFO2, this will be a subclass of &apos;object aggregate&apos;.</rdfs:comment>
+        <rdfs:comment>May be of the same or different species.</rdfs:comment>
         <obo:IAO_0000118>group of organism</obo:IAO_0000118>
         <obo:IAO_0000118>organism collection</obo:IAO_0000118>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </owl:Class>
     
 
@@ -161,6 +164,7 @@
         <obo:IAO_0000119>ISBN:0878932739</obo:IAO_0000119>
         <rdfs:comment xml:lang="en">It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. &apos;Community&apos;, as often used to describe a group of humans, is a type of population. Classes for population already  exist in IDO (&apos;organism population&apos;, IDO_0000509) and OBI (&apos;population&apos;, OBI_0000181). The definitions should be standardized across ontologies and only one term used.</rdfs:comment>
         <obo:IAO_0000116 xml:lang="en">Still uncertain if this should include every organism of a species living in an area or any subset of them. For now make this a general term (unspecified) and then subclasses can be more specific.</obo:IAO_0000116>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </owl:Class>
     
 
@@ -170,11 +174,11 @@
     <owl:Class rdf:about="&obo;PCO_0000002">
         <rdfs:label xml:lang="en">ecological community</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000000"/>
-        <obo:IAO_0000116>Should a community be defined as two or more populations? Does a community need to include all the individuals in a population?</obo:IAO_0000116>
         <obo:IAO_0000115 xml:lang="en">A collection of organisms of at least two different species, living in a particular area.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Ecological community is defined broadly here. It may be used to describe every organisms living in an area, but is often used to refer only to organisms of a particular taxon or guild (e.g., the plant community, the insect community, the herbivore community). The work community, as it often used to describe a group of humans living together, is a type of population (PCO_0000001).</rdfs:comment>
         <obo:IAO_0000119>ISBN:0865423504</obo:IAO_0000119>
-        <rdfs:comment xml:lang="en">Ecological community is defined broadly here. It may be used to describe every organisms living in an area, but is often used to refer only to organisms of a particular taxon or guild (e.g., the plant community, the insect community, the herbivore community). Community, as it often used to describe a group of humans, is a type of population (PCO_0000001).</rdfs:comment>
         <obo:IAO_0000118 xml:lang="en">multispecies community</obo:IAO_0000118>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </owl:Class>
     
 
@@ -188,7 +192,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;BFO_0000052"/>
+                        <owl:onProperty rdf:resource="&obo;RO_0000052"/>
                         <owl:someValuesFrom rdf:resource="&obo;PCO_0000001"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -196,8 +200,8 @@
         </owl:equivalentClass>
         <obo:IAO_0000115 xml:lang="en">A quality that inheres in a biological population.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Includes qualities like population size, population growth rate, carrying capacity, immigration rate, emigration rate, fecundity, and death rate. A population quality may depend on the qualities of individual organisms in the population, but cannot be measured or described for a single organism. This term may be replaced by a PATO term.</rdfs:comment>
-        <obo:IAO_0000116 xml:lang="en">See Chris&apos;s comments on population qualities at: http://code.google.com/p/popcomm-ontology/issues/detail?id=4. This branch may need major revision.</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">These may not belong under BFO:quality.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">See Chris&apos;s comments on population qualities at: http://code.google.com/p/popcomm-ontology/issues/detail?id=4. These may not belong under BFO:quality.</obo:IAO_0000116>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000428"/>
     </owl:Class>
     
 
@@ -211,7 +215,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;BFO_0000052"/>
+                        <owl:onProperty rdf:resource="&obo;RO_0000052"/>
                         <owl:someValuesFrom rdf:resource="&obo;PCO_0000002"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -220,6 +224,7 @@
         <obo:IAO_0000115 xml:lang="en">A quality that inheres in a community.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Includes qualities like diversity, species richness, stability, resilience, community structure, number of trophic levels. A community quality may depend on the qualities of individual organism in the community, but cannot be measured or described for a single individual.</rdfs:comment>
         <obo:IAO_0000116 xml:lang="en">These may not belong under BFO:quality.</obo:IAO_0000116>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000428"/>
     </owl:Class>
     
 
@@ -231,6 +236,7 @@
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
         <obo:IAO_0000115 xml:lang="en">A process that has as primary participant a population. </obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Includes processes such as population growth, extinction, evolution, selection, and adaptation. Population processes may depend on the processes of individual organisms {e.g., population growth reflects the cumulative multicellular organism reproduction (GO:0032504) and death (GO:0016265) of all individuals in a population}, but cannot be described for an individual organism. Some of these processes (e.g., evolution, extinction) can also occur at the species level, so PCO distinguishes between, for example, population extinction and species extinction. The GO has the terms &apos;multi-organism process&apos; (GO:0051704) and &apos;intraspecies interactions between organisms&apos; (GO:0051703), but tPCOhese categories are only defined for interactions between two individuals. It is unclear at this point if &apos;biological process&apos; (GO:0008150) encompasses population processes. </rdfs:comment>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
@@ -240,6 +246,7 @@
     <owl:Class rdf:about="&obo;PCO_0000006">
         <rdfs:label xml:lang="en">population birth rate</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000003"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
@@ -249,6 +256,7 @@
     <owl:Class rdf:about="&obo;PCO_0000007">
         <rdfs:label xml:lang="en">population death rate</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000003"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
@@ -258,7 +266,8 @@
     <owl:Class rdf:about="&obo;PCO_0000008">
         <rdfs:label xml:lang="en">population growth rate</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000003"/>
-        <obo:IAO_0000116 xml:lang="en">Is a rate a quality? Is population growth rate a process profile.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Is a rate a quality? Population growth rate may be better classified as a process profile.</obo:IAO_0000116>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
@@ -271,6 +280,7 @@
         <obo:IAO_0000115>The maximum number of individuals that can be supported in  a population that is growing according to logistic growth.</obo:IAO_0000115>
         <obo:IAO_0000119>ISBN:0878932739</obo:IAO_0000119>
         <obo:IAO_0000116 xml:lang="en">Might be better to add this as a data property.</obo:IAO_0000116>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000428"/>
     </owl:Class>
     
 
@@ -280,8 +290,10 @@
     <owl:Class rdf:about="&obo;PCO_0000010">
         <rdfs:label xml:lang="en">community species richness</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000004"/>
-        <obo:IAO_0000115 xml:lang="en">The number of species present in a communiity.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">This term is specific to an ecological community (PCO_0000002). Species richness can also be measured for a geographical area or region. If your metric includes the abundances of species as well as the number, you should use community species diversity (PCO_0000019).</rdfs:comment>
+        <obo:IAO_0000119>adapted from http://en.wikipedia.org/wiki/Species_richness</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">The number of different species represented in an ecological community.</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </owl:Class>
     
 
@@ -291,6 +303,8 @@
     <owl:Class rdf:about="&obo;PCO_0000011">
         <rdfs:label>population growth</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000005"/>
+        <obo:IAO_0000115>A process that leads to a change in the number of individuals (positive or negative) in a population.</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
@@ -300,8 +314,8 @@
     <owl:Class rdf:about="&obo;PCO_0000012">
         <rdfs:label>logistic population growth</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000011"/>
-        <obo:IAO_0000115 xml:lang="en">A change in the number of individuals in a populations.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Population growth may be positive or negative.</rdfs:comment>
+        <obo:IAO_0000115>A population process that leads to an increase in the numbers of individuals in a population following a logistic (S-shaped) curve. Generally occurs when the population has a carrying capacity in a particular habitat.</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
@@ -311,6 +325,8 @@
     <owl:Class rdf:about="&obo;PCO_0000013">
         <rdfs:label>exponential population growth</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000011"/>
+        <obo:IAO_0000115>A population growth process that leads to an exponential increase in the number of individuals in a population.</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
@@ -320,6 +336,7 @@
     <owl:Class rdf:about="&obo;PCO_0000014">
         <rdfs:label xml:lang="en">predator role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </owl:Class>
     
 
@@ -329,6 +346,7 @@
     <owl:Class rdf:about="&obo;PCO_0000015">
         <rdfs:label xml:lang="en">prey role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </owl:Class>
     
 
@@ -338,6 +356,7 @@
     <owl:Class rdf:about="&obo;PCO_0000016">
         <rdfs:label xml:lang="en">symbiont role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/snap#Role"/>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000124"/>
     </owl:Class>
     
 
@@ -349,6 +368,7 @@
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000018"/>
         <obo:IAO_0000115 xml:lang="en">A collection of organisms that has as parts every organism of given species and no organisms of any other species.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">This term is neutral with respect to which organisms are included in a species. Membership will depend on the species concept and the taxonomic assertions used to define the species. These criteria must be specified by the user.</rdfs:comment>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
@@ -358,7 +378,9 @@
     <owl:Class rdf:about="&obo;PCO_0000018">
         <rdfs:label xml:lang="en">collection of organisms of the same species</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000000"/>
-        <obo:IAO_0000115 xml:lang="en">A material entity that has as parts two or more organisms, viruses, or viroids of the same species (need to add something for viruses) and no members of any other species.</obo:IAO_0000115>
+        <obo:IAO_0000116>need equivalentTo axiom</obo:IAO_0000116>
+        <obo:IAO_0000115 xml:lang="en">A material entity that has as parts two or more organisms, viruses, or viroids of the same species and no members of any other species.</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </owl:Class>
     
 
@@ -368,6 +390,11 @@
     <owl:Class rdf:about="&obo;PCO_0000019">
         <rdfs:label xml:lang="en">community species diversity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000004"/>
+        <rdfs:comment>This term is specific to an ecological community (PCO_0000002). Species diversity can also be measured for a geographical area or region. If your metric does not include the abundances of different species, you should use community species richness (PCO_0000010).</rdfs:comment>
+        <obo:IAO_0000115>The number of equally-abundant species needed to obtain the same mean proportional species abundance as that observed in a population (where all species may not be equally abundant). Species diversity consists of two components, species richness and species evenness. </obo:IAO_0000115>
+        <obo:IAO_0000116>add another definition source</obo:IAO_0000116>
+        <obo:IAO_0000119>adapted from http://en.wikipedia.org/wiki/Species_diversity</obo:IAO_0000119>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </owl:Class>
     
 
@@ -377,8 +404,10 @@
     <owl:Class rdf:about="&obo;PCO_0000020">
         <rdfs:label xml:lang="en">family</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000018"/>
-        <obo:IAO_0000119 xml:lang="en"> http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Family</obo:IAO_0000119>
         <obo:IAO_0000115 xml:lang="en">A domestic group, or a number of domestic groups linked through descent (demonstrated or stipulated) from a common ancestor, marriage, or adoption.</obo:IAO_0000115>
+        <rdfs:comment>Family membership through marriage or adoption apply primarily to human families. In most species, family membership is defined by common anscestry.</rdfs:comment>
+        <obo:IAO_0000119 xml:lang="en">http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25173</obo:IAO_0000119>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </owl:Class>
     
 
@@ -389,6 +418,7 @@
         <rdfs:label xml:lang="en">population extinction</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;PCO_0000005"/>
         <obo:IAO_0000115 xml:lang="en">A population process that ultimately leads to the death of all individuals in a population.</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
     </owl:Class>
     
 
@@ -399,7 +429,19 @@
         <rdfs:label xml:lang="en">species extinction</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1/span#Process"/>
         <obo:IAO_0000115 xml:lang="en">A process that ultimately leads to the death of all individuals in a population.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">needs a definition source</obo:IAO_0000116>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000023 -->
+
+    <owl:Class rdf:about="&obo;PCO_0000023">
+        <rdfs:label xml:lang="en">community species evenness</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;PCO_0000004"/>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Species_evenness</obo:IAO_0000119>
+        <obo:IAO_0000115>How close in numbers each species in a community are.</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
     </owl:Class>
 </rdf:RDF>
 
