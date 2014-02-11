@@ -50,11 +50,50 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/1314193d_d0c5_40de_bcee_6b0644e9f8bd -->
+
+    <owl:ObjectProperty rdf:about="&obo;1314193d_d0c5_40de_bcee_6b0644e9f8bd">
+        <rdfs:label xml:lang="en">mutualist symbiont of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;44941052_a360_435a_ab15_6f2b06a14686"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CARO_0001010"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;42dadadb_13b6_4401_aec9_f58ba3901eef"/>
+                        <owl:someValuesFrom rdf:resource="&obo;GO_0085030"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CARO_0010004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;42dadadb_13b6_4401_aec9_f58ba3901eef"/>
+                        <owl:someValuesFrom rdf:resource="&obo;GO_0085030"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/18d50434_5a18_4a58_839d_7bc4ddaf3163 -->
 
     <owl:ObjectProperty rdf:about="&obo;18d50434_5a18_4a58_839d_7bc4ddaf3163">
         <rdfs:label xml:lang="en">sibling of</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&obo;0cb51dea_4627_499d_8cc2_b4da12b2681e"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/25d3a4bb_e857_4a3b_8d5d_30b636ea84fc -->
+
+    <owl:ObjectProperty rdf:about="&obo;25d3a4bb_e857_4a3b_8d5d_30b636ea84fc">
+        <rdfs:label xml:lang="en">larger than</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -68,12 +107,42 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/42dadadb_13b6_4401_aec9_f58ba3901eef -->
+
+    <owl:ObjectProperty rdf:about="&obo;42dadadb_13b6_4401_aec9_f58ba3901eef">
+        <rdfs:label xml:lang="en">participating in</rdfs:label>
+        <rdfs:comment>Differs from participates in, by being restricted only to the times that participation occurs.  </rdfs:comment>
+        <obo:IAO_0000115>A relationship that applies between a continuant and a process that it is participating in - during the time that this participation lasts.</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0000056"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/44941052_a360_435a_ab15_6f2b06a14686 -->
 
     <owl:ObjectProperty rdf:about="&obo;44941052_a360_435a_ab15_6f2b06a14686">
-        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:label xml:lang="en">symbiont_of</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&obo;927f7473_045a_49cc_9a14_07628d39732a"/>
+        <obo:IAO_0000115>X symbiont_of Y iff:
+X is an &apos;organism virus or viroid&apos;
+Y is an &apos;organism&apos;
+exists some &apos;symbiosis, encompassing mutualism through parasitism&apos; SYM
+X &apos;actively participates in&apos; SYM
+Y &apos;actively participates in&apos; SYM
+X &apos;smaller than&apos; Y
+</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo;4fda4ab0_fe8e_4152_9f05_dfb9cd37a789"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;ad2788d9_828f_4c93_87c5_330eff117fa2"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CARO_0010004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0002217"/>
+                        <owl:someValuesFrom rdf:resource="&obo;GO_0044403"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -82,6 +151,7 @@
 
     <owl:ObjectProperty rdf:about="&obo;46326d85_4f1c_429d_81ee_0c38e809c349">
         <rdfs:label xml:lang="en">potential_symbiont_of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;25d3a4bb_e857_4a3b_8d5d_30b636ea84fc"/>
         <rdfs:subPropertyOf rdf:resource="&obo;ae9a9a11_739f_484c_b69a_f9b27955ad7b"/>
     </owl:ObjectProperty>
     
@@ -96,10 +166,20 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/4fda4ab0_fe8e_4152_9f05_dfb9cd37a789 -->
+
+    <owl:ObjectProperty rdf:about="&obo;4fda4ab0_fe8e_4152_9f05_dfb9cd37a789">
+        <rdfs:label xml:lang="en">smaller than</rdfs:label>
+        <owl:inverseOf rdf:resource="&obo;25d3a4bb_e857_4a3b_8d5d_30b636ea84fc"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/66a826ba_d556_4f5b_bfb4_c68c6c57036b -->
 
     <owl:ObjectProperty rdf:about="&obo;66a826ba_d556_4f5b_bfb4_c68c6c57036b">
         <rdfs:label xml:lang="en">potential_host_of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;4fda4ab0_fe8e_4152_9f05_dfb9cd37a789"/>
         <rdfs:subPropertyOf rdf:resource="&obo;ae9a9a11_739f_484c_b69a_f9b27955ad7b"/>
     </owl:ObjectProperty>
     
@@ -118,7 +198,7 @@
 
     <owl:ObjectProperty rdf:about="&obo;6b1dbd9c_c58a_4821_8ddc_ad13274d7d09">
         <rdfs:label xml:lang="en">mating with</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&obo;927f7473_045a_49cc_9a14_07628d39732a"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;cdf5d84c_7653_4b69_bbd2_4c59dceb2d20"/>
     </owl:ObjectProperty>
     
 
@@ -136,7 +216,27 @@
 
     <owl:ObjectProperty rdf:about="&obo;6edeba8d_b2b4_4484_b864_14b42a0f531e">
         <rdfs:label xml:lang="en">host_of</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&obo;44941052_a360_435a_ab15_6f2b06a14686"/>
+        <obo:IAO_0000115>X symbiont_of Y iff:
+X is an &apos;organism virus or viroid&apos;
+Y is an &apos;organism virus or viroid&apos;
+exists some &apos;symbiosis, encompassing mutualism through parasitism&apos; SYM
+X &apos;actively participates in&apos; SYM
+Y &apos;actively participates in&apos; SYM
+X &apos;larger than&apos; Y
+</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo;25d3a4bb_e857_4a3b_8d5d_30b636ea84fc"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;ad2788d9_828f_4c93_87c5_330eff117fa2"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CARO_0010004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;42dadadb_13b6_4401_aec9_f58ba3901eef"/>
+                        <owl:someValuesFrom rdf:resource="&obo;GO_0044403"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -156,7 +256,7 @@
     <owl:ObjectProperty rdf:about="&obo;927f7473_045a_49cc_9a14_07628d39732a">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:label xml:lang="en">physically_interacting_with</rdfs:label>
-        <obo:IAO_0000115>A relationship betweeen two organisms which involves physical contact leading to some exchange of material.  This relationship holds only for the duration that some bioligically relevant exchanged material from at least one organism is present in the other.</obo:IAO_0000115>
+        <obo:IAO_0000115>A relationship betweeen two organisms which involves physical contact leading to some exchange of material.  This relationship holds only for the duration that some biologically relevant exchanged material from at least one organism is present in the other.</obo:IAO_0000115>
         <rdfs:subPropertyOf rdf:resource="&obo;cdf5d84c_7653_4b69_bbd2_4c59dceb2d20"/>
     </owl:ObjectProperty>
     
@@ -191,6 +291,49 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ad2788d9_828f_4c93_87c5_330eff117fa2 -->
+
+    <owl:ObjectProperty rdf:about="&obo;ad2788d9_828f_4c93_87c5_330eff117fa2">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">in symbiotic interaction with</rdfs:label>
+        <rdfs:domain rdf:resource="&obo;81e19110_f373_4a9b_9f5d_be07886c905a"/>
+        <rdfs:range rdf:resource="&obo;81e19110_f373_4a9b_9f5d_be07886c905a"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;927f7473_045a_49cc_9a14_07628d39732a"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ae61b5e9_f322_4a12_9bf2_88a0ccd8afc7 -->
+
+    <owl:ObjectProperty rdf:about="&obo;ae61b5e9_f322_4a12_9bf2_88a0ccd8afc7">
+        <rdfs:label xml:lang="en">commensal_symbiont_of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;44941052_a360_435a_ab15_6f2b06a14686"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CARO_0001010"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;42dadadb_13b6_4401_aec9_f58ba3901eef"/>
+                        <owl:someValuesFrom rdf:resource="&obo;GO_0085031"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CARO_0010004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;42dadadb_13b6_4401_aec9_f58ba3901eef"/>
+                        <owl:someValuesFrom rdf:resource="&obo;GO_0085031"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ae9a9a11_739f_484c_b69a_f9b27955ad7b -->
 
     <owl:ObjectProperty rdf:about="&obo;ae9a9a11_739f_484c_b69a_f9b27955ad7b">
@@ -202,12 +345,21 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/b3d24230_c74d_45c8_b7ee_d0efc96f9262 -->
+
+    <owl:ObjectProperty rdf:about="&obo;b3d24230_c74d_45c8_b7ee_d0efc96f9262">
+        <rdfs:label xml:lang="en">has_disposition_to_transmit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/b5bd3727_e82b_41e4_a756_7e196ec7b1ee -->
 
     <owl:ObjectProperty rdf:about="&obo;b5bd3727_e82b_41e4_a756_7e196ec7b1ee">
         <rdfs:label xml:lang="en">vector_for</rdfs:label>
         <obo:IAO_0000115>A relationship that holds between two physically interacting organisms where one of those organisms has a disposition to transmit an organism to another organism as a step in the transmission of disease.  This relationship holds only during the period of physical interaction.</obo:IAO_0000115>
-        <rdfs:subPropertyOf rdf:resource="&obo;44941052_a360_435a_ab15_6f2b06a14686"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;6edeba8d_b2b4_4484_b864_14b42a0f531e"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;b3d24230_c74d_45c8_b7ee_d0efc96f9262"/>
     </owl:ObjectProperty>
     
 
@@ -217,6 +369,28 @@
     <owl:ObjectProperty rdf:about="&obo;c8a8e45c_f7eb_4822_aef0_6b5724f58e42">
         <rdfs:label xml:lang="en">parasite_of</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&obo;44941052_a360_435a_ab15_6f2b06a14686"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CARO_0010004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0002217"/>
+                        <owl:someValuesFrom rdf:resource="&obo;GO_0072519"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CARO_0001010"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0002217"/>
+                        <owl:someValuesFrom rdf:resource="&obo;GO_0072519"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -257,6 +431,218 @@
         <rdfs:label xml:lang="en">mate of</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&obo;cdf5d84c_7653_4b69_bbd2_4c59dceb2d20"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/44fd4d85_6ada_46c1_a9e8_deebd73ad0fc -->
+
+    <owl:Class rdf:about="&obo;44fd4d85_6ada_46c1_a9e8_deebd73ad0fc">
+        <rdfs:label xml:lang="en">host-symbiont pair</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0002351"/>
+                        <owl:allValuesFrom rdf:resource="&obo;CARO_0001010"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;42dadadb_13b6_4401_aec9_f58ba3901eef"/>
+                                <owl:onClass rdf:resource="&obo;GO_0044403"/>
+                                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0002351"/>
+                        <owl:onClass rdf:resource="&obo;CARO_0001010"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/81e19110_f373_4a9b_9f5d_be07886c905a -->
+
+    <owl:Class rdf:about="&obo;81e19110_f373_4a9b_9f5d_be07886c905a">
+        <rdfs:label xml:lang="en">symbiosis participant</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CARO_0001010"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;42dadadb_13b6_4401_aec9_f58ba3901eef"/>
+                        <owl:someValuesFrom rdf:resource="&obo;GO_0044403"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>An organism virus or viroid that is participating in a symbiotic interation.  Covers hosts, parasites, commensalist and mutualist symbionts.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000016 -->
+
+    <rdf:Description rdf:about="&obo;PCO_0000016">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000054"/>
+                <owl:someValuesFrom rdf:resource="&obo;GO_0044403"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000024 -->
+
+    <rdf:Description rdf:about="&obo;PCO_0000024">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000054"/>
+                <owl:someValuesFrom rdf:resource="&obo;GO_0044403"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000025 -->
+
+    <owl:Class rdf:about="&obo;PCO_0000025">
+        <rdfs:label xml:lang="en">host</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CARO_0010004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0000053"/>
+                        <owl:someValuesFrom rdf:resource="&obo;PCO_0000024"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0001000 -->
+
+    <rdf:Description rdf:about="&obo;PCO_0001000">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0002351"/>
+                        <owl:allValuesFrom rdf:resource="&obo;CARO_0001010"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;42dadadb_13b6_4401_aec9_f58ba3901eef"/>
+                                <owl:onClass rdf:resource="&obo;GO_0051704"/>
+                                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0002351"/>
+                        <owl:onClass rdf:resource="&obo;CARO_0001010"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_20f76a3e_2b8f_4830_8cdb_68155eaaa8b0 -->
+
+    <owl:Class rdf:about="&obo;PCO_20f76a3e_2b8f_4830_8cdb_68155eaaa8b0">
+        <rdfs:label xml:lang="en">active symbiont</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CARO_0010004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;44941052_a360_435a_ab15_6f2b06a14686"/>
+                        <owl:someValuesFrom rdf:resource="&obo;CARO_0001010"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0000053"/>
+                <owl:someValuesFrom rdf:resource="&obo;PCO_0000016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_27a61b54_2cf0_4cfd_a30f_099e687a7355 -->
+
+    <owl:Class rdf:about="&obo;PCO_27a61b54_2cf0_4cfd_a30f_099e687a7355">
+        <rdfs:label xml:lang="en">symbiont</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CARO_0001010"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0000053"/>
+                        <owl:someValuesFrom rdf:resource="&obo;PCO_0000016"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/b4e1a067_e9d4_40c2_aaac_6c016a83087a -->
+
+    <owl:Class rdf:about="&obo;b4e1a067_e9d4_40c2_aaac_6c016a83087a">
+        <rdfs:label xml:lang="en">active host</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CARO_0010004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;6edeba8d_b2b4_4484_b864_14b42a0f531e"/>
+                        <owl:someValuesFrom rdf:resource="&obo;CARO_0001010"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0000053"/>
+                <owl:someValuesFrom rdf:resource="&obo;PCO_0000024"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
 </rdf:RDF>
 
 
