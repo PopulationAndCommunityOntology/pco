@@ -55,17 +55,6 @@
     <owl:ObjectProperty rdf:about="&obo;1314193d_d0c5_40de_bcee_6b0644e9f8bd">
         <rdfs:label xml:lang="en">mutualist symbiont of</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&obo;44941052_a360_435a_ab15_6f2b06a14686"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;CARO_0001010"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;42dadadb_13b6_4401_aec9_f58ba3901eef"/>
-                        <owl:someValuesFrom rdf:resource="&obo;GO_0085030"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -77,6 +66,17 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CARO_0001010"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;42dadadb_13b6_4401_aec9_f58ba3901eef"/>
+                        <owl:someValuesFrom rdf:resource="&obo;GO_0085030"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -255,7 +255,7 @@ X &apos;larger than&apos; Y
 
     <owl:ObjectProperty rdf:about="&obo;927f7473_045a_49cc_9a14_07628d39732a">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
-        <rdfs:label xml:lang="en">physically_interacting_with</rdfs:label>
+        <rdfs:label xml:lang="en">physically interacting with other organism</rdfs:label>
         <obo:IAO_0000115>A relationship betweeen two organisms which involves physical contact leading to some exchange of material.  This relationship holds only for the duration that some biologically relevant exchanged material from at least one organism is present in the other.</obo:IAO_0000115>
         <rdfs:subPropertyOf rdf:resource="&obo;cdf5d84c_7653_4b69_bbd2_4c59dceb2d20"/>
     </owl:ObjectProperty>
@@ -308,17 +308,6 @@ X &apos;larger than&apos; Y
     <owl:ObjectProperty rdf:about="&obo;ae61b5e9_f322_4a12_9bf2_88a0ccd8afc7">
         <rdfs:label xml:lang="en">commensal_symbiont_of</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&obo;44941052_a360_435a_ab15_6f2b06a14686"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;CARO_0001010"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;42dadadb_13b6_4401_aec9_f58ba3901eef"/>
-                        <owl:someValuesFrom rdf:resource="&obo;GO_0085031"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -330,6 +319,17 @@ X &apos;larger than&apos; Y
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CARO_0001010"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;42dadadb_13b6_4401_aec9_f58ba3901eef"/>
+                        <owl:someValuesFrom rdf:resource="&obo;GO_0085031"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -369,17 +369,6 @@ X &apos;larger than&apos; Y
     <owl:ObjectProperty rdf:about="&obo;c8a8e45c_f7eb_4822_aef0_6b5724f58e42">
         <rdfs:label xml:lang="en">parasite_of</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&obo;44941052_a360_435a_ab15_6f2b06a14686"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;CARO_0010004"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;RO_0002217"/>
-                        <owl:someValuesFrom rdf:resource="&obo;GO_0072519"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -391,6 +380,17 @@ X &apos;larger than&apos; Y
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;CARO_0010004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0002217"/>
+                        <owl:someValuesFrom rdf:resource="&obo;GO_0072519"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -399,7 +399,7 @@ X &apos;larger than&apos; Y
 
     <owl:ObjectProperty rdf:about="&obo;cdf5d84c_7653_4b69_bbd2_4c59dceb2d20">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
-        <rdfs:label xml:lang="en">interacting_with</rdfs:label>
+        <rdfs:label xml:lang="en">interacting with other organism</rdfs:label>
         <rdfs:comment>A relationship between two organisms that holds only during the time that they interact.  An interaction may be physical or social.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -514,14 +514,14 @@ X &apos;larger than&apos; Y
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000024 -->
 
-    <rdf:Description rdf:about="&obo;PCO_0000024">
+    <owl:Class rdf:about="&obo;PCO_0000024">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000054"/>
                 <owl:someValuesFrom rdf:resource="&obo;GO_0044403"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -546,7 +546,7 @@ X &apos;larger than&apos; Y
 
     <!-- http://purl.obolibrary.org/obo/PCO_0001000 -->
 
-    <rdf:Description rdf:about="&obo;PCO_0001000">
+    <owl:Class rdf:about="&obo;PCO_0001000">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -573,7 +573,7 @@ X &apos;larger than&apos; Y
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-    </rdf:Description>
+    </owl:Class>
     
 
 
