@@ -10,6 +10,7 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/pco.owl>
+Import(<http://purl.obolibrary.org/obo/pco/pco_obo_imports.owl>)
 Import(<http://popcomm-ontology.googlecode.com/svn/trunk/src/ontology/pco_go_imports.owl>)
 Import(<http://popcomm-ontology.googlecode.com/svn/trunk/src/ontology/pco_ro_imports.owl>)
 Import(<http://www.ifomis.org/bfo/1.1>)
@@ -30,8 +31,8 @@ Declaration(Class(obo:CARO_0010004))
 AnnotationAssertion(obo:IAO_creation_date obo:CARO_0010004 "7.16.2011"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:CARO_0010004 "A general term for organism that is agnostic about single cell vs multi-cellular.  Note that this is a subclass of 'anatomical structure', meaning that an organism must be a connected structure.  So, if I take one plant and make a rooted cutting from a it, I now have two (clonally related) organisms. "^^xsd:string)
 AnnotationAssertion(obo:IAO_0000115 obo:CARO_0010004 "An individual member of a clade."^^xsd:string)
-AnnotationAssertion(obo:IAO_0000589 obo:CARO_0010004 "organism"@en)
 AnnotationAssertion(obo:IAO_created_by obo:CARO_0010004 "mah"^^xsd:string)
+AnnotationAssertion(obo:IAO_0000589 obo:CARO_0010004 "organism"@en)
 AnnotationAssertion(rdfs:label obo:CARO_0010004 "organism"^^xsd:string)
 SubClassOf(obo:CARO_0010004 obo:CARO_0001010)
 Declaration(Class(obo:GO_0051704))
@@ -186,6 +187,7 @@ AnnotationAssertion(obo:IAO_0000119 obo:PCO_0000024 "WEB: http://en.wikipedia.or
 AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000024 "A material entity that consists of one or more people who live in the same dwelling and also share at meals or living accommodation, and may consist of a single family or some other grouping of people.
 ")
 SubClassOf(obo:PCO_0000024 <http://www.ifomis.org/bfo/1.1/snap#MaterialEntity>)
+SubClassOf(obo:PCO_0000024 ObjectIntersectionOf(ObjectMinCardinality(1 obo:RO_0002351 obo:NCBITaxon_9606) ObjectAllValuesFrom(obo:RO_0002351 obo:NCBITaxon_9606)))
 Declaration(Class(obo:PCO_0001000))
 AnnotationAssertion(rdfs:label obo:PCO_0001000 "pair of interacting organisms"@en)
 SubClassOf(obo:PCO_0001000 <http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate>)
