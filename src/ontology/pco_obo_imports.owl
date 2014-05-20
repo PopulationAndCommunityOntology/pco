@@ -21,7 +21,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="&obo;pco/trunk/src/pco_obo_imports.owl"/>
+    <owl:Ontology rdf:about="&obo;pco/trunk/src/ontology/pco_obo_imports.owl"/>
     
 
 
