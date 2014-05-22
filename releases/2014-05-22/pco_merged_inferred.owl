@@ -18,10 +18,18 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pco.owl">
-        <dc:creator>Jie Zheng</dc:creator>
         <rdfs:comment>The Population and Community Ontology (PCO) is licensed under a Creative Commons zero (CC0) license - http://creativecommons.org/publicdomain/zero/1.0/. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. We ask that anyone using this ontology follow the standards of the scientific ontology community by re-using ontology identifiers whenever possible and properly citing the ontology and its creators.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This file is based on checkout of our SVN repository revision $Revision: 75 $</rdfs:comment>
         <dc:creator>David Osumi-Sutherland</dc:creator>
         <dc:creator>Ramona Walls</dc:creator>
+        <dc:creator>Jie Zheng</dc:creator>
+        <rdfs:comment xml:lang="en">Versions of ontologies used by PCO
+					BFO: version 1.1
+					PATO: 2013-10-10
+					GO: 2014-04-20
+					NCBITaxon: 2013-01-24       
+        </rdfs:comment>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pco/releases/2014-05-22/pco.owl"/>
     </owl:Ontology>
     
 
