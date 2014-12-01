@@ -167,6 +167,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+    <owl:Class rdf:about="&obo;BFO_0000019"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0000014 -->
 
     <owl:Class rdf:about="&obo;PATO_0000014">
@@ -218,7 +224,7 @@
 
     <owl:Class rdf:about="&obo;PATO_0001018">
         <rdfs:label rdf:datatype="&xsd;string">physical quality</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="&xsd;string">PATO:0001018</oboInOwl:id>
         <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">PATO:0002079</oboInOwl:hasAlternativeId>
@@ -235,7 +241,7 @@
 
     <owl:Class rdf:about="&obo;PATO_0001236">
         <rdfs:label rdf:datatype="&xsd;string">process quality</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A quality which inheres in an process.</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="&xsd;string">PATO:0001236</oboInOwl:id>
         <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">PATO:0001239</oboInOwl:hasAlternativeId>
@@ -248,12 +254,6 @@
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">relational quality of occurrent</oboInOwl:hasExactSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;pato.owl"/>
     </owl:Class>
-    
-
-
-    <!-- http://www.ifomis.org/bfo/1.1/snap#Quality -->
-
-    <owl:Class rdf:about="&snap;Quality"/>
 </rdf:RDF>
 
 
