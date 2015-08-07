@@ -81,10 +81,13 @@ AnnotationAssertion(obo:IAO_0000112 obo:PCO_0000000 "Examples include: populatio
 AnnotationAssertion(rdfs:label obo:PCO_0000000 "collection of organisms"@en)
 EquivalentClasses(obo:PCO_0000000 ObjectIntersectionOf(obo:BFO_0000027 ObjectAllValuesFrom(obo:RO_0002351 obo:CARO_0001010) ObjectMinCardinality(2 obo:RO_0002351 obo:CARO_0001010)))
 AnnotationAssertion(obo:IAO_0000119 obo:PCO_0000001 "ISBN:0878932739")
-AnnotationAssertion(rdfs:comment obo:PCO_0000001 "It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. 'Community', as often used to describe a group of humans, is a type of population. Classes for population already  exist in IDO ('organism population', IDO_0000509) and OBI ('population', OBI_0000181). The definitions should be standardized across ontologies and only one term used."@en)
 AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000001 "A collection of organisms, all of the same species, that live in the same place."@en)
 AnnotationAssertion(obo:IAO_0000116 obo:PCO_0000001 "Still uncertain if this should include every organism of a species living in an area or any subset of them. For now make this a general term (unspecified) and then subclasses can be more specific."@en)
 AnnotationAssertion(rdfs:label obo:PCO_0000001 "population of organisms"@en)
+AnnotationAssertion(rdfs:comment obo:PCO_0000001 "It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. 'Community', as often used to describe a group of humans, is a type of population. 
+
+Classes for population already  exist in IDO ('organism population', IDO_0000509) and OBI ('population', OBI_0000181). The definitions should be standardized across OBO Foundry ontologies and only one term used."@en)
+AnnotationAssertion(obo:IAO_0000112 obo:PCO_0000001 ""@en)
 AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000001 obo:IAO_0000125)
 SubClassOf(obo:PCO_0000001 obo:PCO_0000018)
 AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000002 obo:IAO_0000125)
