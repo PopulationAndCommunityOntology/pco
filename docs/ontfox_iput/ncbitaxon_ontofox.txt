@@ -1,0 +1,62 @@
+[URI of the OWL(RDF/XML) output file]
+https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/ncbitaxon_imports.owl
+
+[Source ontology]
+NCBITaxon
+
+[Low level source term URIs]
+http://purl.obolibrary.org/obo/NCBITaxon_2157 #Archaea
+http://purl.obolibrary.org/obo/NCBITaxon_2 #Bacteria
+http://purl.obolibrary.org/obo/NCBITaxon_12884 #Viroids
+http://purl.obolibrary.org/obo/NCBITaxon_10239 #Viruses
+http://purl.obolibrary.org/obo/NCBITaxon_2759 #Eukaryota
+http://purl.obolibrary.org/obo/NCBITaxon_33090 #Viridiplantae
+http://purl.obolibrary.org/obo/NCBITaxon_3041 #Chlorophyta
+http://purl.obolibrary.org/obo/NCBITaxon_35493 #Streptophyta
+http://purl.obolibrary.org/obo/NCBITaxon_3193 #Embryophyta
+http://purl.obolibrary.org/obo/NCBITaxon_58023 #Tracheophyta
+http://purl.obolibrary.org/obo/NCBITaxon_58024 #Spermatophyta
+http://purl.obolibrary.org/obo/NCBITaxon_3398 #Magnoliophyta
+http://purl.obolibrary.org/obo/NCBITaxon_1437180 #Acrogymnospermae
+http://purl.obolibrary.org/obo/NCBITaxon_33208 #Metazoa
+http://purl.obolibrary.org/obo/NCBITaxon_9606 #Homo sapiens
+
+[Top level source term URIs and target direct superclass URIs]
+http://purl.obolibrary.org/obo/NCBITaxon_2157 #Archaea
+subClassOf http://purl.obolibrary.org/obo/CARO_0010004
+http://purl.obolibrary.org/obo/NCBITaxon_2 #Bacteria
+subClassOf http://purl.obolibrary.org/obo/CARO_0010004
+http://purl.obolibrary.org/obo/NCBITaxon_12884 #Viroids
+subClassOf http://purl.obolibrary.org/obo/CARO_0001010
+http://purl.obolibrary.org/obo/NCBITaxon_10239 #Viruses
+subClassOf http://purl.obolibrary.org/obo/CARO_0001010
+http://purl.obolibrary.org/obo/NCBITaxon_2759 #Eukaryota
+subClassOf http://purl.obolibrary.org/obo/CARO_0010004
+http://purl.obolibrary.org/obo/NCBITaxon_33090 #Viridiplantae
+subClassOf http://purl.obolibrary.org/obo/NCBITaxon_2759 #Eukaryota
+http://purl.obolibrary.org/obo/NCBITaxon_3041 #Chlorophyta
+subClassOf http://purl.obolibrary.org/obo/NCBITaxon_33090 #Viridiplantae
+http://purl.obolibrary.org/obo/NCBITaxon_35493 #Streptophyta
+subClassOf http://purl.obolibrary.org/obo/NCBITaxon_33090 #Viridiplantae
+http://purl.obolibrary.org/obo/NCBITaxon_3193 #Embryophyta
+subClassOf http://purl.obolibrary.org/obo/NCBITaxon_35493 #Streptophyta
+http://purl.obolibrary.org/obo/NCBITaxon_58023 #Tracheophyta
+subClassOf http://purl.obolibrary.org/obo/NCBITaxon_3193 #Embryophyta
+http://purl.obolibrary.org/obo/NCBITaxon_58024 #Spermatophyta
+subClassOf http://purl.obolibrary.org/obo/NCBITaxon_58023 #Tracheophyta
+http://purl.obolibrary.org/obo/NCBITaxon_3398 #Magnoliophyta
+subClassOf http://purl.obolibrary.org/obo/NCBITaxon_58024 #Spermatophyta
+http://purl.obolibrary.org/obo/NCBITaxon_1437180 #Acrogymnospermae
+subClassOf http://purl.obolibrary.org/obo/NCBITaxon_58024 #Spermatophyta
+http://purl.obolibrary.org/obo/NCBITaxon_33208 #Metazoa
+subClassOf http://purl.obolibrary.org/obo/NCBITaxon_2759 #Eukaryota
+http://purl.obolibrary.org/obo/NCBITaxon_9606 #Homo sapiens
+subClassOf http://purl.obolibrary.org/obo/NCBITaxon_33208 #Metazoa
+
+[Source term retrieval setting]
+includeComputedIntermediates
+
+[Source annotation URIs]
+includeAllAxiomsRecursively
+
+[Source annotation URIs to be excluded]
