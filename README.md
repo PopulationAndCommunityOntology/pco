@@ -6,6 +6,6 @@ The PCO is complient with the Basic Formal Ontology (BFO). It is designed to be 
 
 # Comments or requests
 
-Please use the Issue tracker for comments, requests for new terms, and suggested changes to existing terms. Before submitting a new request, do a search to see if there is an existing issue on the same topic. Click the issues button on the side bar to reach the issue tracker.
+Please use the Issue tracker for comments, requests for new terms, and suggested changes to existing terms. Before submitting a new request, do a search to see if there is an existing issue on the same topic. Click the issues tab to reach the issue tracker.
 
 You can send an email to the PCO mailing list at popcomm-ontology@googlegroups.com. 
