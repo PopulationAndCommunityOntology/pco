@@ -1,4 +1,4 @@
-Prefix(:=<http://popcomm-ontology.googlecode.com/svn/trunk/src/ontology/pco_pato_imports.owl#>)
+Prefix(:=<https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/pato_imports.owl#>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
