@@ -1,101 +1,346 @@
-Prefix(:=<https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/pato_imports.owl#>)
-Prefix(obo:=<http://purl.obolibrary.org/obo/>)
-Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
-Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
-Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
-Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(pato:=<http://purl.obolibrary.org/obo/pato#>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-Prefix(snap:=<http://www.ifomis.org/bfo/1.1/snap#>)
-Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+<?xml version="1.0"?>
 
 
-Ontology(<https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/pato_imports.owl>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY pato "http://purl.obolibrary.org/obo/pato#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+]>
 
-Declaration(Class(obo:BFO_0000019))
-Declaration(Class(obo:PATO_0000014))
-Declaration(Class(obo:PATO_0000161))
-Declaration(Class(obo:PATO_0000322))
-Declaration(Class(obo:PATO_0001018))
-Declaration(Class(obo:PATO_0001236))
-Declaration(AnnotationProperty(obo:IAO_0000115))
-Declaration(AnnotationProperty(obo:IAO_0000412))
-Declaration(AnnotationProperty(pato:attribute_slim))
-Declaration(AnnotationProperty(pato:mpath_slim))
-Declaration(AnnotationProperty(pato:scalar_slim))
-Declaration(AnnotationProperty(pato:value_slim))
-Declaration(AnnotationProperty(oboInOwl:SubsetProperty))
-Declaration(AnnotationProperty(oboInOwl:created_by))
-Declaration(AnnotationProperty(oboInOwl:creation_date))
-Declaration(AnnotationProperty(oboInOwl:hasAlternativeId))
-Declaration(AnnotationProperty(oboInOwl:hasDbXref))
-Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
-Declaration(AnnotationProperty(oboInOwl:hasOBONamespace))
-Declaration(AnnotationProperty(oboInOwl:id))
-Declaration(AnnotationProperty(oboInOwl:inSubset))
-AnnotationAssertion(oboInOwl:hasAlternativeId obo:PATO_0000014 "PATO:0000020"^^xsd:string)
-AnnotationAssertion(obo:IAO_0000412 obo:PATO_0000014 obo:pato.owl)
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PATO_0000014 "quality"^^xsd:string)
-AnnotationAssertion(oboInOwl:id obo:PATO_0000014 "PATO:0000014"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:PATO_0000014 "color"^^xsd:string)
-AnnotationAssertion(obo:IAO_0000115 obo:PATO_0000014 "A composite chromatic quality composed of hue, saturation and intensity parts."^^xsd:string)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PATO_0000014 "relative color"^^xsd:string)
-AnnotationAssertion(oboInOwl:inSubset obo:PATO_0000014 pato:attribute_slim)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PATO_0000014 "colour"^^xsd:string)
-SubClassOf(obo:PATO_0000014 obo:PATO_0001018)
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PATO_0000161 "quality"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:PATO_0000161 "rate"^^xsd:string)
-AnnotationAssertion(oboInOwl:id obo:PATO_0000161 "PATO:0000161"^^xsd:string)
-AnnotationAssertion(oboInOwl:inSubset obo:PATO_0000161 pato:scalar_slim)
-AnnotationAssertion(obo:IAO_0000115 obo:PATO_0000161 "A quality of a single process inhering in a bearer by virtue of the bearer's occurrence per unit time."^^xsd:string)
-AnnotationAssertion(oboInOwl:inSubset obo:PATO_0000161 pato:attribute_slim)
-AnnotationAssertion(obo:IAO_0000412 obo:PATO_0000161 obo:pato.owl)
-SubClassOf(obo:PATO_0000161 obo:PATO_0001236)
-AnnotationAssertion(obo:IAO_0000412 obo:PATO_0000322 obo:pato.owl)
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PATO_0000322 "quality"^^xsd:string)
-AnnotationAssertion(oboInOwl:id obo:PATO_0000322 "PATO:0000322"^^xsd:string)
-AnnotationAssertion(oboInOwl:inSubset obo:PATO_0000322 pato:mpath_slim)
-AnnotationAssertion(oboInOwl:inSubset obo:PATO_0000322 pato:value_slim)
-AnnotationAssertion(rdfs:label obo:PATO_0000322 "red"^^xsd:string)
-AnnotationAssertion(obo:IAO_0000115 obo:PATO_0000322 "A color hue with high wavelength of the long-wave end of the visible spectrum, evoked in the human observer by radiant energy with wavelengths of approximately 630 to 750 nanometers."^^xsd:string)
-SubClassOf(obo:PATO_0000322 obo:PATO_0000014)
-AnnotationAssertion(oboInOwl:inSubset obo:PATO_0001018 pato:attribute_slim)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PATO_0001018 "relational physical quality"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:PATO_0001018 "physical quality"^^xsd:string)
-AnnotationAssertion(obo:IAO_0000115 obo:PATO_0001018 "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities."^^xsd:string)
-AnnotationAssertion(oboInOwl:hasDbXref obo:PATO_0001018 "Wikipedia:Physical_property"^^xsd:string)
-AnnotationAssertion(obo:IAO_0000412 obo:PATO_0001018 obo:pato.owl)
-AnnotationAssertion(oboInOwl:id obo:PATO_0001018 "PATO:0001018"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PATO_0001018 "quality"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasAlternativeId obo:PATO_0001018 "PATO:0002079"^^xsd:string)
-SubClassOf(obo:PATO_0001018 obo:BFO_0000019)
-AnnotationAssertion(oboInOwl:id obo:PATO_0001236 "PATO:0001236"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasAlternativeId obo:PATO_0001236 "PATO:0001239"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:PATO_0001236 "process quality"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PATO_0001236 "quality of process"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PATO_0001236 "quality of occurrent"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasAlternativeId obo:PATO_0001236 "PATO:0001240"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PATO_0001236 "quality"^^xsd:string)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PATO_0001236 "quality of a process"^^xsd:string)
-AnnotationAssertion(obo:IAO_0000412 obo:PATO_0001236 obo:pato.owl)
-AnnotationAssertion(rdfs:comment obo:PATO_0001236 "See comments of relational quality of a physical entity."^^xsd:string)
-AnnotationAssertion(obo:IAO_0000115 obo:PATO_0001236 "A quality which inheres in an process."^^xsd:string)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PATO_0001236 "relational quality of occurrent"^^xsd:string)
-SubClassOf(obo:PATO_0001236 obo:BFO_0000019)
-AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition"^^xsd:string)
-AnnotationAssertion(rdfs:label obo:IAO_0000412 "imported from"@en)
-AnnotationAssertion(rdfs:comment pato:attribute_slim "Attribute slim"^^xsd:string)
-SubAnnotationPropertyOf(pato:attribute_slim oboInOwl:SubsetProperty)
-AnnotationAssertion(rdfs:comment pato:mpath_slim "Pathology slim"^^xsd:string)
-SubAnnotationPropertyOf(pato:mpath_slim oboInOwl:SubsetProperty)
-AnnotationAssertion(rdfs:comment pato:scalar_slim "Scalar slim"^^xsd:string)
-SubAnnotationPropertyOf(pato:scalar_slim oboInOwl:SubsetProperty)
-AnnotationAssertion(rdfs:comment pato:value_slim "Value slim"^^xsd:string)
-SubAnnotationPropertyOf(pato:value_slim oboInOwl:SubsetProperty)
-AnnotationAssertion(rdfs:label oboInOwl:SubsetProperty "subset_property"^^xsd:string)
-AnnotationAssertion(rdfs:label oboInOwl:hasAlternativeId "has_alternative_id"^^xsd:string)
-AnnotationAssertion(rdfs:label oboInOwl:hasDbXref "database_cross_reference"^^xsd:string)
-AnnotationAssertion(rdfs:label oboInOwl:hasExactSynonym "has_exact_synonym"^^xsd:string)
-AnnotationAssertion(rdfs:label oboInOwl:hasOBONamespace "has_obo_namespace"^^xsd:string)
-AnnotationAssertion(rdfs:label oboInOwl:inSubset "in_subset"^^xsd:string)
-)
+
+<rdf:RDF xmlns="https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/pato_imports.owl#"
+     xml:base="https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/pato_imports.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:pato="&obo;pato#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/pato_imports.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115">
+        <rdfs:label rdf:datatype="&xsd;string">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000412">
+        <rdfs:label xml:lang="en">imported from</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pato#attribute_slim -->
+
+    <owl:AnnotationProperty rdf:about="&obo;pato#attribute_slim">
+        <rdfs:comment rdf:datatype="&xsd;string">Attribute slim</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pato#mpath_slim -->
+
+    <owl:AnnotationProperty rdf:about="&obo;pato#mpath_slim">
+        <rdfs:comment rdf:datatype="&xsd;string">Pathology slim</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pato#scalar_slim -->
+
+    <owl:AnnotationProperty rdf:about="&obo;pato#scalar_slim">
+        <rdfs:comment rdf:datatype="&xsd;string">Scalar slim</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pato#value_slim -->
+
+    <owl:AnnotationProperty rdf:about="&obo;pato#value_slim">
+        <rdfs:comment rdf:datatype="&xsd;string">Value slim</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#SubsetProperty -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;SubsetProperty">
+        <rdfs:label rdf:datatype="&xsd;string">subset_property</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;created_by"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;creation_date"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasAlternativeId">
+        <rdfs:label rdf:datatype="&xsd;string">has_alternative_id</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasDbXref">
+        <rdfs:label rdf:datatype="&xsd;string">database_cross_reference</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasExactSynonym">
+        <rdfs:label rdf:datatype="&xsd;string">has_exact_synonym</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasNarrowSynonym">
+        <rdfs:label rdf:datatype="&xsd;string">has_narrow_synonym</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasOBONamespace">
+        <rdfs:label rdf:datatype="&xsd;string">has_obo_namespace</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;id"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;inSubset">
+        <rdfs:label rdf:datatype="&xsd;string">in_subset</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000001 -->
+
+    <owl:Class rdf:about="&obo;PATO_0000001">
+        <rdfs:label rdf:datatype="&xsd;string">quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">PATO:0000001</oboInOwl:id>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">PATO:0000072</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">trait</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000412 rdf:resource="&obo;pato.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000014 -->
+
+    <owl:Class rdf:about="&obo;PATO_0000014">
+        <rdfs:label rdf:datatype="&xsd;string">color</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;PATO_0001018"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A composite chromatic quality composed of hue, saturation and intensity parts.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">PATO:0000014</oboInOwl:id>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">PATO:0000020</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">colour</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">relative color</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000412 rdf:resource="&obo;pato.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;pato#attribute_slim"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000161 -->
+
+    <owl:Class rdf:about="&obo;PATO_0000161">
+        <rdfs:label rdf:datatype="&xsd;string">rate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;PATO_0001236"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A quality of a single process inhering in a bearer by virtue of the bearer&apos;s occurrence per unit time.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">PATO:0000161</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">quality</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:resource="&obo;pato.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;pato#attribute_slim"/>
+        <oboInOwl:inSubset rdf:resource="&obo;pato#scalar_slim"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000322 -->
+
+    <owl:Class rdf:about="&obo;PATO_0000322">
+        <rdfs:label rdf:datatype="&xsd;string">red</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;PATO_0000014"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A color hue with high wavelength of the long-wave end of the visible spectrum, evoked in the human observer by radiant energy with wavelengths of approximately 630 to 750 nanometers.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">PATO:0000322</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">quality</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:resource="&obo;pato.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;pato#mpath_slim"/>
+        <oboInOwl:inSubset rdf:resource="&obo;pato#value_slim"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001018 -->
+
+    <owl:Class rdf:about="&obo;PATO_0001018">
+        <rdfs:label rdf:datatype="&xsd;string">physical quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;PATO_0001241"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">PATO:0001018</oboInOwl:id>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">PATO:0002079</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Physical_property</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">relational physical quality</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000412 rdf:resource="&obo;pato.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;pato#attribute_slim"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001236 -->
+
+    <owl:Class rdf:about="&obo;PATO_0001236">
+        <rdfs:label rdf:datatype="&xsd;string">process quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;PATO_0000001"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A quality which inheres in an process.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">PATO:0001236</oboInOwl:id>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">PATO:0001239</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">PATO:0001240</oboInOwl:hasAlternativeId>
+        <rdfs:comment rdf:datatype="&xsd;string">See comments of relational quality of a physical entity.</rdfs:comment>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">quality of a process</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">quality of occurrent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">quality of process</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">relational quality of occurrent</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000412 rdf:resource="&obo;pato.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001241 -->
+
+    <owl:Class rdf:about="&obo;PATO_0001241">
+        <rdfs:label rdf:datatype="&xsd;string">physical object quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;PATO_0000001"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A quality which inheres in a continuant.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">PATO:0001237</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="&xsd;string">PATO:0001238</oboInOwl:hasAlternativeId>
+        <oboInOwl:id rdf:datatype="&xsd;string">PATO:0001241</oboInOwl:id>
+        <rdfs:comment rdf:datatype="&xsd;string">Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles.</rdfs:comment>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">monadic quality of a continuant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">monadic quality of an object</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">monadic quality of continuant</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">multiply inhering quality of a physical entity </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">quality of a continuant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">quality of a single physical entity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">quality of an object</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">quality of continuant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">snap:Quality</oboInOwl:hasDbXref>
+        <obo:IAO_0000412 rdf:resource="&obo;pato.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001338 -->
+
+    <owl:Class rdf:about="&obo;PATO_0001338">
+        <rdfs:label rdf:datatype="&xsd;string">mixed sex</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;PATO_0002003"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A biological sex quality inhering in a population of multiple sexes.</obo:IAO_0000115>
+        <rdfs:comment rdf:datatype="&xsd;string">For example a mixture of females and male or males and hermaphrodites.</rdfs:comment>
+        <oboInOwl:id rdf:datatype="&xsd;string">PATO:0001338</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">quality</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:resource="&obo;pato.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;pato#value_slim"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001415 -->
+
+    <owl:Class rdf:about="&obo;PATO_0001415">
+        <rdfs:label rdf:datatype="&xsd;string">morbidity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;PATO_0002003"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A quality inhering in a population by virtue of the proportion of its members that are ill at a given time.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">PATO:0001415</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">quality</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:resource="&obo;pato.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;pato#attribute_slim"/>
+        <oboInOwl:inSubset rdf:resource="&obo;pato#scalar_slim"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0002003 -->
+
+    <owl:Class rdf:about="&obo;PATO_0002003">
+        <rdfs:label rdf:datatype="&xsd;string">population quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;PATO_0001241"/>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A quality that inheres in an entire population or part of a population.</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="&xsd;string">PATO:0002003</oboInOwl:id>
+        <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">quality</oboInOwl:hasOBONamespace>
+        <obo:IAO_0000412 rdf:resource="&obo;pato.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;pato#attribute_slim"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
