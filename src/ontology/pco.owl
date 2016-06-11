@@ -236,6 +236,7 @@ AnnotationAssertion(rdfs:label obo:PCO_0000029 "multi-species collection of orga
 AnnotationAssertion(rdfs:comment obo:PCO_0000029 ""@en)
 SubClassOf(obo:PCO_0000029 obo:PCO_0000000)
 AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000030 obo:IAO_0000123)
+AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000030 "A household in which the majority of the income of its members is derived from agricultural activities.")
 AnnotationAssertion(rdfs:label obo:PCO_0000030 "agricultural household"@en)
 SubClassOf(obo:PCO_0000030 obo:PCO_0000024)
 AnnotationAssertion(rdfs:label obo:PCO_0001000 "pair of interacting organisms"@en)
