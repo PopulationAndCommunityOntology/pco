@@ -1,0 +1,1106 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+]>
+
+
+<rdf:RDF xmlns="https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/ro_imports.owl#"
+     xml:base="https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/ro_imports.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/ro_imports.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000112">
+        <rdfs:label xml:lang="en">example of usage</rdfs:label>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000114 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000114">
+        <rdfs:label xml:lang="en">has curation status</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115">
+        <rdfs:label rdf:datatype="&xsd;string">definition</rdfs:label>
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000116">
+        <rdfs:label xml:lang="en">editor note</rdfs:label>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000117">
+        <rdfs:label xml:lang="en">term editor</rdfs:label>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000118">
+        <rdfs:label xml:lang="en">alternative term</rdfs:label>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000125"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000119">
+        <rdfs:label xml:lang="en">definition source</rdfs:label>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000232">
+        <rdfs:label xml:lang="en">curator note</rdfs:label>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000412">
+        <rdfs:label xml:lang="en">imported from</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002434 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;RO_0002434">
+        <rdfs:label>interacts with</rdfs:label>
+        <obo:IAO_0000116 rdf:datatype="&xsd;anyURI">Considering relabeling as &apos;pairwise interacts with&apos;</obo:IAO_0000116>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.obolibrary.org/obo/MI_0914</rdfs:seeAlso>
+        <foaf:page rdf:datatype="&xsd;anyURI">https://github.com/oborel/obo-relations/wiki/InteractionRelations</foaf:page>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000115>A relationship that holds between two entities in which the processes executed by the two entities are causally connected.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>in pairwise interaction with</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000116>This relation and all sub-relations can be applied to either (1) pairs of entities that are interacting at any moment of time (2) populations or species of entity whose members have the disposition to interact (3) classes whose members have the disposition to interact.</obo:IAO_0000116>
+        <obo:IAO_0000232>Note that this relationship type, and sub-relationship types may be redundant with process terms from other ontologies. For example, the symbiotic relationship hierarchy parallels GO. The relations are provided as a convenient shortcut. Consider using the more expressive processual form to capture your data. In the future, these relations will be linked to their cognate processes through rules.</obo:IAO_0000232>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002437 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;RO_0002437">
+        <rdfs:label>biotically interacts with</rdfs:label>
+        <obo:IAO_0000115>An interaction relationship in which at least one of the partners is an organism and the other is either an organism or an abiotic entity with which the organism interacts.</obo:IAO_0000115>
+        <rdfs:seeAlso>http://eol.org/schema/terms/interactsWith</rdfs:seeAlso>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000118>interacts with on organism level</obo:IAO_0000118>
+        <rdfs:seeAlso rdf:resource="http://dx.doi.org/10.1016/j.ecoinf.2014.08.005"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002560 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;RO_0002560">
+        <rdfs:label>is asymmetric relational form of process class</rdfs:label>
+        <foaf:page rdf:datatype="&xsd;anyURI">https://github.com/oborel/obo-relations/wiki/InteractionRelations</foaf:page>
+        <obo:IAO_0000115>If Rel is the relational form of a process Pr, then it follow that: Rel(x,y) &lt;-&gt; exists p : Pr(p), x subject-partner-in p, y object-partner-in p</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002562"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002561 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;RO_0002561">
+        <rdfs:label>is symmetric relational form of process class</rdfs:label>
+        <foaf:page rdf:datatype="&xsd;anyURI">https://github.com/oborel/obo-relations/wiki/InteractionRelations</foaf:page>
+        <obo:IAO_0000115>If Rel is the relational form of a process Pr, then it follow that: Rel(x,y) &lt;-&gt; exists p : Pr(p), x partner-in p, y partner-in p</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002562"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002562 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;RO_0002562"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasExactSynonym">
+        <rdfs:label rdf:datatype="&xsd;string">has_exact_synonym</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasRelatedSynonym">
+        <rdfs:label rdf:datatype="&xsd;string">has_related_synonym</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;inSubset">
+        <rdfs:label rdf:datatype="&xsd;string">in_subset</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/page -->
+
+    <owl:AnnotationProperty rdf:about="&foaf;page"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000056 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0000056"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002208 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002208">
+        <rdfs:label>parasitoid of</rdfs:label>
+        <obo:IAO_0000115>A parasite that kills or sterilizes its host</obo:IAO_0000115>
+        <owl:inverseOf rdf:resource="&obo;RO_0002209"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002444"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002209 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002209">
+        <rdfs:label>has parasitoid</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002445"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002227 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002227">
+        <rdfs:label>obligate parasite of</rdfs:label>
+        <obo:IAO_0000115>A sub-relation of parasite-of in which the parasite that cannot complete its life cycle without a host.</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002444"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002228 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002228">
+        <rdfs:label>facultative parasite of</rdfs:label>
+        <obo:IAO_0000115>A sub-relations of parasite-of in which the parasite that can complete its life cycle independent of a host.</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002444"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002235 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002235">
+        <rdfs:label>stem parasite of</rdfs:label>
+        <obo:IAO_0000115>A parasite-of relationship in which the host is a plant and the parasite that attaches to the host stem (PO:0009047)</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002444"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002236 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002236">
+        <rdfs:label>root parasite of</rdfs:label>
+        <obo:IAO_0000115>A parasite-of relationship in which the host is a plant and the parasite that attaches to the host root (PO:0009005)</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002444"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002237 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002237">
+        <rdfs:label>hemiparasite of</rdfs:label>
+        <obo:IAO_0000115>A sub-relation of parasite-of in which the parasite is a plant, and the parasite is parasitic under natural conditions and is also photosynthetic to some degree. Hemiparasites may just obtain water and mineral nutrients from the host plant. Many obtain at least part of their organic nutrients from the host as well.</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002444"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002434 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002434">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label>interacts with</rdfs:label>
+        <obo:IAO_0000116 rdf:datatype="&xsd;anyURI">Considering relabeling as &apos;pairwise interacts with&apos;</obo:IAO_0000116>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.obolibrary.org/obo/MI_0914</rdfs:seeAlso>
+        <foaf:page rdf:datatype="&xsd;anyURI">https://github.com/oborel/obo-relations/wiki/InteractionRelations</foaf:page>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>in pairwise interaction with</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000116>This relation and all sub-relations can be applied to either (1) pairs of entities that are interacting at any moment of time (2) populations or species of entity whose members have the disposition to interact (3) classes whose members have the disposition to interact.</obo:IAO_0000116>
+        <obo:IAO_0000115>A relationship that holds between two entities in which the processes executed by the two entities are causally connected.</obo:IAO_0000115>
+        <obo:IAO_0000232>Note that this relationship type, and sub-relationship types may be redundant with process terms from other ontologies. For example, the symbiotic relationship hierarchy parallels GO. The relations are provided as a convenient shortcut. Consider using the more expressive processual form to capture your data. In the future, these relations will be linked to their cognate processes through rules.</obo:IAO_0000232>
+        <rdfs:domain rdf:resource="&obo;BFO_0000040"/>
+        <rdfs:range rdf:resource="&obo;BFO_0000040"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002437 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002437">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label>biotically interacts with</rdfs:label>
+        <rdfs:seeAlso>http://eol.org/schema/terms/interactsWith</rdfs:seeAlso>
+        <obo:IAO_0000118>interacts with on organism level</obo:IAO_0000118>
+        <obo:IAO_0000115>An interaction relationship in which at least one of the partners is an organism and the other is either an organism or an abiotic entity with which the organism interacts.</obo:IAO_0000115>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:seeAlso rdf:resource="http://dx.doi.org/10.1016/j.ecoinf.2014.08.005"/>
+        <rdfs:range rdf:resource="&obo;BFO_0000040"/>
+        <rdfs:domain rdf:resource="&obo;BFO_0000040"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002434"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002438 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002438">
+        <rdfs:label>trophically interacts with</rdfs:label>
+        <obo:IAO_0000115>An interaction relationship in which the partners are related via a feeding relationship.</obo:IAO_0000115>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:seeAlso rdf:resource="http://dx.doi.org/10.1016/j.ecoinf.2014.08.005"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002574"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002439 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002439">
+        <rdfs:label>preys on</rdfs:label>
+        <obo:IAO_0000117>Katja Shulz</obo:IAO_0000117>
+        <obo:IAO_0000118>is subject of predation interaction with</obo:IAO_0000118>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000115>An interaction relationship involving a predation process, where the subject kills the target in order to eat it or to feed to siblings, offspring or group members</obo:IAO_0000115>
+        <obo:IAO_0000112>A wasp killing a Monarch larva in order to feed to offspring [http://www.inaturalist.org/observations/2942824]</obo:IAO_0000112>
+        <obo:IAO_0000118>preys upon</obo:IAO_0000118>
+        <rdfs:seeAlso>http://www.inaturalist.org/observations/2942824</rdfs:seeAlso>
+        <obo:IAO_0000112>Baleen whale preys on krill</obo:IAO_0000112>
+        <rdfs:seeAlso>http://eol.org/schema/terms/preysUpon</rdfs:seeAlso>
+        <obo:IAO_0000117>Jorrit Poelen</obo:IAO_0000117>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002438"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002458"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002440 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002440">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label>symbiotically interacts with</rdfs:label>
+        <obo:IAO_0000119 rdf:datatype="&xsd;anyURI">http://www.ncbi.nlm.nih.gov/pubmed/19278549</obo:IAO_0000119>
+        <obo:IAO_0000115>A biotic interaction in which the two organisms live together in more or less intimate association.</obo:IAO_0000115>
+        <obo:IAO_0000232>We follow GO and PAMGO in using &apos;symbiosis&apos; as the broad term encompassing mutualism through parasitism</obo:IAO_0000232>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:RO_0002561 rdf:resource="&obo;GO_0044403"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002574"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;RO_0002461"/>
+            <rdf:Description rdf:about="&obo;RO_0002465"/>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&obo;RO_0002461"/>
+            </rdf:Description>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002441 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002441">
+        <rdfs:label>commensually interacts with</rdfs:label>
+        <obo:IAO_0000119 rdf:datatype="&xsd;anyURI">http://www.ncbi.nlm.nih.gov/pubmed/19278549</obo:IAO_0000119>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000115>An interaction relationship between two organisms living together in more or less intimate association in a relationship in which one benefits and the other is unaffected (GO).</obo:IAO_0000115>
+        <obo:RO_0002561 rdf:resource="&obo;GO_0085031"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002440"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;RO_0002461"/>
+            <rdf:Description rdf:about="&obo;RO_0002466"/>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&obo;RO_0002461"/>
+            </rdf:Description>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002442 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002442">
+        <rdfs:label>mutualistically interacts with</rdfs:label>
+        <obo:IAO_0000119 rdf:datatype="&xsd;anyURI">http://www.ncbi.nlm.nih.gov/pubmed/19278549</obo:IAO_0000119>
+        <obo:IAO_0000115>An interaction relationship between two organisms living together in more or less intimate association in a relationship in which both organisms benefit from each other (GO).</obo:IAO_0000115>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:RO_0002561 rdf:resource="&obo;GO_0085030"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002440"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;RO_0002461"/>
+            <rdf:Description rdf:about="&obo;RO_0002467"/>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&obo;RO_0002461"/>
+            </rdf:Description>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002443 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002443">
+        <rdfs:label>interacts with via parasite-host interaction</rdfs:label>
+        <obo:IAO_0000119 rdf:datatype="&xsd;anyURI">http://www.ncbi.nlm.nih.gov/pubmed/19278549</obo:IAO_0000119>
+        <obo:IAO_0000232>This relation groups a pair of inverse relations, parasite of and parasitized by</obo:IAO_0000232>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000115>An interaction relationship between two organisms living together in more or less intimate association in a relationship in which association is disadvantageous or destructive to one of the organisms (GO).</obo:IAO_0000115>
+        <obo:RO_0002561 rdf:resource="&obo;GO_0072519"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002440"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;RO_0002461"/>
+            <rdf:Description rdf:about="&obo;RO_0002468"/>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&obo;RO_0002461"/>
+            </rdf:Description>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002444 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002444">
+        <rdfs:label>parasite of</rdfs:label>
+        <oboInOwl:hasExactSynonym>direct parasite of</oboInOwl:hasExactSynonym>
+        <rdfs:seeAlso>http://eol.org/schema/terms/parasitizes</rdfs:seeAlso>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000112>Pediculus humanus capitis parasite of human</obo:IAO_0000112>
+        <obo:IAO_0000118>parasitizes</obo:IAO_0000118>
+        <obo:RO_0002560 rdf:resource="&obo;GO_0072519"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002443"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002445"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002454"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;RO_0002462"/>
+            <rdf:Description rdf:about="&obo;RO_0002468"/>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&obo;RO_0002463"/>
+            </rdf:Description>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002445 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002445">
+        <rdfs:label>parasitized by</rdfs:label>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <oboInOwl:hasExactSynonym>directly parasitized by</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000118>has parasite</obo:IAO_0000118>
+        <rdfs:seeAlso>http://eol.org/schema/terms/hasParasite</rdfs:seeAlso>
+        <obo:IAO_0000118>parasitised by</obo:IAO_0000118>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002443"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002453"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002446 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002446">
+        <rdfs:label>participates in a abiotic-biotic interaction with</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>semibiotically interacts with</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000112>Porifiera attaches to substrate</obo:IAO_0000112>
+        <obo:IAO_0000115>A biotic interaction relationship in which one partner is an organism and the other partner is inorganic. For example, the relationship between a sponge and the substrate to which is it anchored.</obo:IAO_0000115>
+        <rdfs:seeAlso rdf:resource="http://dx.doi.org/10.1016/j.ecoinf.2014.08.005"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002437"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002453 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002453">
+        <rdfs:label>host of</rdfs:label>
+        <obo:IAO_0000232>The term host is usually used for the larger (macro) of the two members of a symbiosis (GO)</obo:IAO_0000232>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002440"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002454 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002454">
+        <rdfs:label>has host</rdfs:label>
+        <rdfs:seeAlso>http://eol.org/schema/terms/hasHost</rdfs:seeAlso>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002440"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002455 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002455">
+        <rdfs:label>pollinates</rdfs:label>
+        <obo:IAO_0000116>This relation is intended to be used for biotic pollination - e.g. a bee pollinating a flowering plant. Some kinds of pollination may be semibiotic - e.g. wind can have the role of pollinator. We would use a separate relation for this.</obo:IAO_0000116>
+        <rdfs:seeAlso>http://eol.org/schema/terms/pollinates</rdfs:seeAlso>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000112>Bees pollinate Flowers</obo:IAO_0000112>
+        <obo:IAO_0000118>is subject of pollination interaction with</obo:IAO_0000118>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002442"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002456"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002456 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002456">
+        <rdfs:label>pollinated by</rdfs:label>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:seeAlso>http://eol.org/schema/terms/hasPollinator</rdfs:seeAlso>
+        <obo:IAO_0000118>is target of pollination interaction with</obo:IAO_0000118>
+        <obo:IAO_0000118>has polinator</obo:IAO_0000118>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002442"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002457 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002457">
+        <rdfs:label>acquires nutrients from</rdfs:label>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000232>Intended to be used when the target of the relation is not itself consumed, and does not have integral parts consumed, but provided nutrients in some other fashion.</obo:IAO_0000232>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002438"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002469"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002458 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002458">
+        <rdfs:label>preyed upon by</rdfs:label>
+        <rdfs:seeAlso>http://eol.org/schema/terms/HasPredator</rdfs:seeAlso>
+        <obo:IAO_0000118>is target of predation interaction with</obo:IAO_0000118>
+        <obo:IAO_0000118>has predator</obo:IAO_0000118>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:seeAlso>http://polytraits.lifewatchgreece.eu/terms/PRED</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002438"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002459 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002459">
+        <rdfs:label>is vector for</rdfs:label>
+        <obo:IAO_0000119>a is a vector for b if a carries and transmits an infectious pathogen b into another living organism</obo:IAO_0000119>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000112>Anopheles is a vector for Plasmodium</obo:IAO_0000112>
+        <owl:inverseOf rdf:resource="&obo;RO_0002460"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002574"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002460 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002460">
+        <rdfs:label>has vector</rdfs:label>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002459"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002461 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002461">
+        <rdfs:label>partner in</rdfs:label>
+        <obo:IAO_0000232>Experimental: relation used for defining interaction relations. An interaction relation holds when there is an interaction event with two partners. In a directional interaction, one partner is deemed the subject, the other the target</obo:IAO_0000232>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0000056"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002462 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002462">
+        <rdfs:label>subject participant in</rdfs:label>
+        <obo:IAO_0000232>Experimental: relation used for defining interaction relations; the meaning of s &apos;subject participant in&apos; p is determined by the type of p, where p must be a directional interaction process. For example, in a predator-prey interaction process the subject is the predator. We can imagine a reciprocal prey-predatory process with subject and object reversed.</obo:IAO_0000232>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002461"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002463 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002463">
+        <rdfs:label>target participant in</rdfs:label>
+        <obo:IAO_0000232>Experimental: relation used for defining interaction relations; the meaning of s &apos;target participant in&apos; p is determined by the type of p, where p must be a directional interaction process. For example, in a predator-prey interaction process the target is the prey. We can imagine a reciprocal prey-predatory process with subject and object reversed.</obo:IAO_0000232>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002461"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002464 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002464">
+        <rdfs:label>helper property</rdfs:label>
+        <obo:IAO_0000232>This property or its subproperties is not to be used directly. These properties exist as helper properties that are used to support OWL reasoning.</obo:IAO_0000232>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000428"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002465 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002465">
+        <rdfs:label>is symbiosis</rdfs:label>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002563"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002466 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002466">
+        <rdfs:label>is commensalism</rdfs:label>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002465"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002467 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002467">
+        <rdfs:label>is mutualism</rdfs:label>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002465"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002468 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002468">
+        <rdfs:label>is parasitism</rdfs:label>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002465"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002469 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002469">
+        <rdfs:label>provides nutrients for</rdfs:label>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002438"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002470 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002470">
+        <rdfs:label>eats</rdfs:label>
+        <obo:IAO_0000118>is subject of eating interaction with</obo:IAO_0000118>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002438"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002471 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002471">
+        <rdfs:label>is eaten by</rdfs:label>
+        <obo:IAO_0000118>is target of eating interaction with</obo:IAO_0000118>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000118>eaten by</obo:IAO_0000118>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002438"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002553 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002553">
+        <rdfs:label>hyperparasite of</rdfs:label>
+        <obo:IAO_0000119>http://eol.org/schema/terms/hyperparasitoidOf</obo:IAO_0000119>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Hyperparasite</obo:IAO_0000119>
+        <oboInOwl:hasRelatedSynonym>epiparasite of</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000115>x is a hyperparasite of y iff x is a parasite of a parasite of the target organism y</obo:IAO_0000115>
+        <obo:IAO_0000116>Note that parasite-of is a diret relationship, so hyperparasite-of is not considered a sub-relation, even though hyperparasitism can be considered a form of parasitism</obo:IAO_0000116>
+        <oboInOwl:hasRelatedSynonym>hyperparasitoid of</oboInOwl:hasRelatedSynonym>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002454"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002554"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;RO_0002444"/>
+            <rdf:Description rdf:about="&obo;RO_0002444"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002554 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002554">
+        <rdfs:label>hyperparasitized by</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>has epiparasite</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>has hyperparasite</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>hyperparasitoidized by</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002453"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;RO_0002445"/>
+            <rdf:Description rdf:about="&obo;RO_0002445"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002555 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002555">
+        <rdfs:label>allelopath of</rdfs:label>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:seeAlso>x is an allelopath of y iff  xis an organism produces one or more biochemicals that influence the growth, survival, and reproduction of y</rdfs:seeAlso>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Allelopathy</obo:IAO_0000119>
+        <rdfs:seeAlso>http://eol.org/schema/terms/allelopathyYes</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002574"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002556 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002556">
+        <rdfs:label>pathogen of</rdfs:label>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002454"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002557"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002557 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002557">
+        <rdfs:label>has pathogen</rdfs:label>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002453"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002563 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002563">
+        <rdfs:label>interaction relation helper property</rdfs:label>
+        <foaf:page rdf:datatype="&xsd;anyURI">https://github.com/oborel/obo-relations/wiki/InteractionRelations</foaf:page>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:N-Ary_Relation_Pattern_%28OWL_2%29"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002464"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002574 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002574">
+        <rdfs:label>participates in a biotic-biotic interaction with</rdfs:label>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <rdfs:seeAlso rdf:resource="http://dx.doi.org/10.1016/j.ecoinf.2014.08.005"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002437"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <oboInOwl:inSubset rdf:resource="&obo;ro/subsets#ro-eco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002618 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002618">
+        <rdfs:label>visits</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">https://github.com/oborel/obo-relations/issues/74</rdfs:seeAlso>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002574"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002619"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002619 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002619">
+        <rdfs:label>visited by</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002574"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002622 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002622">
+        <rdfs:label>visits flowers of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002618"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002623"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002623 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002623">
+        <rdfs:label>has flowers visited by</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002619"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002624 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002624">
+        <rdfs:label>lays eggs in</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002444"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002618"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002625"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002625 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002625">
+        <rdfs:label>has eggs laid in by</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002445"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002619"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002626 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002626">
+        <rdfs:label>kills</rdfs:label>
+        <obo:IAO_0000119>https://github.com/jhpoelen/eol-globi-data/issues/143</obo:IAO_0000119>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002574"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002627"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002627 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002627">
+        <rdfs:label>is killed by</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002574"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002632 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002632">
+        <rdfs:label>ectoparasite of</rdfs:label>
+        <obo:IAO_0000115>A sub-relation of parasite-of in which the parasite lives on or in the integumental system of the host</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002444"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002633"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Parasitism#Types"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002633 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002633">
+        <rdfs:label>has ectoparasite</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002445"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002634 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002634">
+        <rdfs:label>endoparasite of</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>lives inside of</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000119>A sub-relation of parasite-of in which the parasite lives inside the host, beneath the integumental system</obo:IAO_0000119>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002444"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002635"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Parasitism#Types"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002635 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002635">
+        <rdfs:label>has endoparasite</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002445"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002636 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002636">
+        <rdfs:label>mesoparasite of</rdfs:label>
+        <obo:IAO_0000115>A sub-relation of parasite-of in which the parasite is partially an endoparasite and partially an ectoparasite</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002444"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002637"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002637 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002637">
+        <rdfs:label>has mesoparasite</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002445"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002638 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002638">
+        <rdfs:label>intercellular endoparasite of</rdfs:label>
+        <obo:IAO_0000115>A sub-relation of endoparasite-of in which the parasite inhabits the spaces between host cells.</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002634"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002639"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Parasitism#Types"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002639 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002639">
+        <rdfs:label>has intercellular endoparasite</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002635"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002640 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002640">
+        <rdfs:label>intracellular endoparasite of</rdfs:label>
+        <obo:IAO_0000115>A sub-relation of endoparasite-of in which the parasite inhabits host cells.</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002634"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0002641"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Parasitism#Types"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002641 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0002641">
+        <rdfs:label>has intracellular endoparasite</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002635"/>
+        <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+
+    <owl:Class rdf:about="&obo;BFO_0000040"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
