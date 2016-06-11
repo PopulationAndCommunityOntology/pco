@@ -1,0 +1,26 @@
+[URI of the OWL(RDF/XML) output file]
+https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/envo_imports.owl
+
+[Source ontology]
+ENVO
+
+[Low level source term URIs]
+http://purl.obolibrary.org/obo/ENVO_01000744 #human dwelling
+http://purl.obolibrary.org/obo/ENVO_00000070 #constructed feature
+http://purl.obolibrary.org/obo/ENVO_00000002 #anthropogenic geographic feature
+http://purl.obolibrary.org/obo/ENVO_00000000 #geographic feature
+http://purl.obolibrary.org/obo/ENVO_00002297 #environmental feature
+
+
+[Top level source term URIs and target direct superclass URIs]
+http://purl.obolibrary.org/obo/ENVO_00002297 #environmental feature
+subClassOf http://purl.obolibrary.org/obo/BFO_0000040
+
+
+[Source term retrieval setting]
+includeComputedIntermediates
+
+[Source annotation URIs]
+includeAllAxiomsRecursively
+
+[Source annotation URIs to be excluded]
