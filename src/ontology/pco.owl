@@ -250,5 +250,5 @@ AnnotationAssertion(rdfs:label obo:PCO_0001001 "pair of interacting organisms of
 EquivalentClasses(obo:PCO_0001001 ObjectIntersectionOf(ObjectAllValuesFrom(obo:RO_0002351 ObjectExactCardinality(1 obo:RO_0002350 obo:PCO_0000017)) obo:PCO_0001000))
 AnnotationAssertion(rdfs:label pco:PCO_0000030 "organismal entity"@en)
 AnnotationAssertion(obo:IAO_0000115 pco:PCO_0000030 "A material entity that is one or more organisms, viruses or viroids.")
-EquivalentClasses(pco:PCO_0000030 ObjectUnionOf(obo:CARO_0010004 obo:CARO_0001010))
+EquivalentClasses(pco:PCO_0000030 ObjectUnionOf(obo:PCO_0000000 obo:CARO_0001010))
 )
