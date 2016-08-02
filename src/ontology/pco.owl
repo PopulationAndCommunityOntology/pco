@@ -1,254 +1,796 @@
-Prefix(:=<http://purl.obolibrary.org/obo/pco.owl#>)
-Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
-Prefix(obo:=<http://purl.obolibrary.org/obo/>)
-Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
-Prefix(pco:=<http://purl.obolibrary.org/obo/pco.owl/>)
-Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
-Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
-Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+@prefix : <http://purl.obolibrary.org/obo/pco.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pco: <http://purl.obolibrary.org/obo/pco.owl/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.obolibrary.org/obo/pco.owl> .
+
+<http://purl.obolibrary.org/obo/pco.owl> rdf:type owl:Ontology ;
+                                         
+                                         dc:creator "Jie Zheng" ,
+                                                    "David Osumi-Sutherland" ;
+                                         
+                                         dc:license "http://creativecommons.org/publicdomain/zero/1.0/" ;
+                                         
+                                         dc:creator "Ramona Walls" ;
+                                         
+                                         rdfs:comment "The Population and Community Ontology (PCO) is licensed under a Creative Commons zero (CC0) license - http://creativecommons.org/publicdomain/zero/1.0/. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. We ask that anyone using this ontology follow the standards of the scientific ontology community by re-using ontology identifiers whenever possible and properly citing the ontology and its creators." ;
+                                         
+                                         owl:imports obo:bfo.owl ,
+                                                     <http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl> ,
+                                                     <http://purl.obolibrary.org/obo/ro/core.owl> ,
+                                                     <https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/envo_imports.owl> ,
+                                                     <https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/go_imports.owl> ,
+                                                     <https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/ncbitaxon_imports.owl> ,
+                                                     <https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/pato_imports.owl> ,
+                                                     <https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/ro_imports.owl> .
 
 
-Ontology(<http://purl.obolibrary.org/obo/pco.owl>
-Import(<http://purl.obolibrary.org/obo/ro/core.owl>)
-Import(<http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl>)
-Import(<https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/envo_imports.owl>)
-Import(<https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/go_imports.owl>)
-Import(<https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/ro_imports.owl>)
-Import(<http://purl.obolibrary.org/obo/bfo.owl>)
-Import(<https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/pato_imports.owl>)
-Import(<https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/ncbitaxon_imports.owl>)
-Annotation(rdfs:comment "The Population and Community Ontology (PCO) is licensed under a Creative Commons zero (CC0) license - http://creativecommons.org/publicdomain/zero/1.0/. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. We ask that anyone using this ontology follow the standards of the scientific ontology community by re-using ontology identifiers whenever possible and properly citing the ontology and its creators.")
-Annotation(dc:creator "Ramona Walls")
-Annotation(dc:creator "David Osumi-Sutherland")
-Annotation(dc:license "http://creativecommons.org/publicdomain/zero/1.0/")
-Annotation(dc:creator "Jie Zheng")
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
 
-Declaration(Class(obo:CARO_0001010))
-Declaration(Class(obo:CARO_0010004))
-Declaration(Class(obo:GO_0051704))
-Declaration(Class(obo:PCO_0000000))
-Declaration(Class(obo:PCO_0000001))
-Declaration(Class(obo:PCO_0000002))
-Declaration(Class(obo:PCO_0000003))
-Declaration(Class(obo:PCO_0000004))
-Declaration(Class(obo:PCO_0000005))
-Declaration(Class(obo:PCO_0000006))
-Declaration(Class(obo:PCO_0000007))
-Declaration(Class(obo:PCO_0000008))
-Declaration(Class(obo:PCO_0000009))
-Declaration(Class(obo:PCO_0000010))
-Declaration(Class(obo:PCO_0000011))
-Declaration(Class(obo:PCO_0000012))
-Declaration(Class(obo:PCO_0000013))
-Declaration(Class(obo:PCO_0000014))
-Declaration(Class(obo:PCO_0000015))
-Declaration(Class(obo:PCO_0000016))
-Declaration(Class(obo:PCO_0000017))
-Declaration(Class(obo:PCO_0000018))
-Declaration(Class(obo:PCO_0000019))
-Declaration(Class(obo:PCO_0000020))
-Declaration(Class(obo:PCO_0000021))
-Declaration(Class(obo:PCO_0000022))
-Declaration(Class(obo:PCO_0000023))
-Declaration(Class(obo:PCO_0000024))
-Declaration(Class(obo:PCO_0000025))
-Declaration(Class(obo:PCO_0000026))
-Declaration(Class(obo:PCO_0000027))
-Declaration(Class(obo:PCO_0000028))
-Declaration(Class(obo:PCO_0000029))
-Declaration(Class(obo:PCO_0000030))
-Declaration(Class(obo:PCO_0001000))
-Declaration(Class(obo:PCO_0001001))
-Declaration(Class(pco:PCO_0000030))
-Declaration(ObjectProperty(obo:BFO_0000051))
-Declaration(AnnotationProperty(obo:IAO_created_by))
-Declaration(AnnotationProperty(obo:IAO_creation_date))
-AnnotationAssertion(obo:IAO_created_by obo:CARO_0001010 "Melissa Haendel"^^xsd:string)
-AnnotationAssertion(obo:IAO_0000589 obo:CARO_0001010 "organism or virus"@en)
-AnnotationAssertion(obo:IAO_0000115 obo:CARO_0001010 "Material anatomical entity that is a member of an individual species or is a viral or viroid particle."^^xsd:string)
-AnnotationAssertion(rdfs:label obo:CARO_0001010 "organism or virus or viroid"^^xsd:string)
-AnnotationAssertion(obo:IAO_creation_date obo:CARO_0001010 "9/18/11"^^xsd:string)
-SubClassOf(obo:CARO_0001010 obo:BFO_0000040)
-AnnotationAssertion(obo:IAO_0000115 obo:CARO_0010004 "An individual member of a clade."^^xsd:string)
-AnnotationAssertion(obo:IAO_created_by obo:CARO_0010004 "mah"^^xsd:string)
-AnnotationAssertion(obo:IAO_creation_date obo:CARO_0010004 "7.16.2011"^^xsd:string)
-AnnotationAssertion(obo:IAO_0000589 obo:CARO_0010004 "organism"@en)
-AnnotationAssertion(rdfs:comment obo:CARO_0010004 "A general term for organism that is agnostic about single cell vs multi-cellular.  Note that this is a subclass of 'anatomical structure', meaning that an organism must be a connected structure.  So, if I take one plant and make a rooted cutting from a it, I now have two (clonally related) organisms. "^^xsd:string)
-AnnotationAssertion(rdfs:label obo:CARO_0010004 "organism"^^xsd:string)
-SubClassOf(obo:CARO_0010004 obo:CARO_0001010)
-SubClassOf(obo:GO_0051704 obo:BFO_0000015)
-SubClassOf(obo:IAO_0000030 obo:BFO_0000031)
-AnnotationAssertion(obo:IAO_0000118 obo:PCO_0000000 "group of organism")
-AnnotationAssertion(obo:IAO_0000118 obo:PCO_0000000 "organism collection")
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000000 "A material entity that consists of two or more organisms, viruses, or viroids."@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000000 obo:IAO_0000125)
-AnnotationAssertion(rdfs:comment obo:PCO_0000000 "May be of the same or different species.")
-AnnotationAssertion(obo:IAO_0000112 obo:PCO_0000000 "Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family.")
-AnnotationAssertion(rdfs:label obo:PCO_0000000 "collection of organisms"@en)
-EquivalentClasses(obo:PCO_0000000 ObjectIntersectionOf(ObjectMinCardinality(2 obo:RO_0002351 obo:CARO_0001010) ObjectAllValuesFrom(obo:RO_0002351 obo:CARO_0001010)))
-SubClassOf(obo:PCO_0000000 obo:BFO_0000027)
-AnnotationAssertion(obo:IAO_0000119 obo:PCO_0000001 "ISBN:0878932739")
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000001 "A collection of organisms, all of the same species, that live in the same place."@en)
-AnnotationAssertion(obo:IAO_0000112 obo:PCO_0000001 "This a general term that can include every organism of a species living in an area or any subset of them.  Subclasses can be more specific as needed."@en)
-AnnotationAssertion(rdfs:label obo:PCO_0000001 "population of organisms"@en)
-AnnotationAssertion(rdfs:comment obo:PCO_0000001 "It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. 'Community', as often used to describe a group of humans, is a type of population. 
 
-Classes for population already  exist in IDO ('organism population', IDO_0000509) and OBI ('population', OBI_0000181). The definitions should be standardized across OBO Foundry ontologies and only one term used."@en)
-AnnotationAssertion(obo:IAO_0000112 obo:PCO_0000001 ""@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000001 obo:IAO_0000125)
-SubClassOf(obo:PCO_0000001 obo:PCO_0000018)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000002 obo:IAO_0000125)
-AnnotationAssertion(obo:IAO_0000118 obo:PCO_0000002 "multispecies community"@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000002 "A community of at least two different species, living in a particular area. Must have at least two populations of different species as members."@en)
-AnnotationAssertion(rdfs:label obo:PCO_0000002 "ecological community"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:PCO_0000002 "ISBN:0865423504")
-AnnotationAssertion(rdfs:comment obo:PCO_0000002 "Ecological community is defined broadly here. It may be used to describe every organisms living in an area, but is often used to refer only to organisms of a particular taxon or guild (e.g., the plant community, the insect community, the herbivore community). The word community, as it often used to describe a group of humans living together, is a type of single-species collection of organisms."@en)
-EquivalentClasses(obo:PCO_0000002 ObjectIntersectionOf(ObjectMinCardinality(2 obo:RO_0002351 obo:PCO_0000001) obo:PCO_0000028))
-SubClassOf(obo:PCO_0000002 obo:PCO_0000029)
-AnnotationAssertion(rdfs:label obo:PCO_0000003 "quality of a population"@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000003 "A quality that inheres in a biological population."@en)
-AnnotationAssertion(obo:IAO_0000116 obo:PCO_0000003 "See Chris's comments on population qualities at: http://code.google.com/p/popcomm-ontology/issues/detail?id=4. These may not belong under BFO:quality. May be better to call them population characteristics, and classify as specifically dependent continuants. Need to look at process profiles in BFO2."@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000003 obo:IAO_0000428)
-AnnotationAssertion(rdfs:comment obo:PCO_0000003 "Includes qualities like population size, population growth rate, carrying capacity, immigration rate, emigration rate, fecundity, and death rate. A population quality may depend on the qualities of individual organisms in the population, but cannot be measured or described for a single organism. This term may be replaced by a PATO term."@en)
-EquivalentClasses(obo:PCO_0000003 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:RO_0000052 obo:PCO_0000001) obo:PATO_0002003))
-AnnotationAssertion(rdfs:label obo:PCO_0000004 "quality of an ecological community"@en)
-AnnotationAssertion(obo:IAO_0000116 obo:PCO_0000004 "These may not belong under BFO:quality. May be better to call them community characteristics, and classify as specifically dependent continuants. Need to look at process profiles in BFO2."@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000004 obo:IAO_0000428)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000004 "A quality that inheres in a community."@en)
-AnnotationAssertion(rdfs:comment obo:PCO_0000004 "Includes qualities like diversity, species richness, stability, resilience, community structure, number of trophic levels. A community quality may depend on the qualities of individual organism in the community, but cannot be measured or described for a single individual."@en)
-EquivalentClasses(obo:PCO_0000004 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:RO_0000052 obo:PCO_0000002) obo:PATO_0002003))
-AnnotationAssertion(rdfs:comment obo:PCO_0000005 "Includes processes such as population growth, extinction, evolution, selection, and adaptation. Population processes may depend on the processes of individual organisms {e.g., population growth reflects the cumulative multicellular organism reproduction (GO:0032504) and death (GO:0016265) of all individuals in a population}, but cannot be described for an individual organism. Some of these processes (e.g., evolution, extinction) can also occur at the species level, so PCO distinguishes between, for example, population extinction and species extinction. The GO has the terms 'multi-organism process' (GO:0051704) and 'intraspecies interactions between organisms' (GO:0051703), but tPCOhese categories are only defined for interactions between two individuals. It is unclear at this point if 'biological process' (GO:0008150) encompasses population processes. "@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000005 "A process that has as primary participant a population. "@en)
-AnnotationAssertion(rdfs:label obo:PCO_0000005 "population process"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000005 obo:IAO_0000123)
-SubClassOf(obo:PCO_0000005 obo:BFO_0000015)
-AnnotationAssertion(rdfs:label obo:PCO_0000006 "population birth rate"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000006 obo:IAO_0000123)
-SubClassOf(obo:PCO_0000006 obo:PCO_0000003)
-AnnotationAssertion(rdfs:label obo:PCO_0000007 "population death rate"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000007 obo:IAO_0000123)
-SubClassOf(obo:PCO_0000007 obo:PCO_0000003)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000008 obo:IAO_0000123)
-AnnotationAssertion(obo:IAO_0000116 obo:PCO_0000008 "Is a rate a quality? Population growth rate may be better classified as a process profile."@en)
-AnnotationAssertion(rdfs:label obo:PCO_0000008 "population growth rate"@en)
-SubClassOf(obo:PCO_0000008 obo:PCO_0000003)
-AnnotationAssertion(rdfs:label obo:PCO_0000009 "carrying capacity"@en)
-AnnotationAssertion(obo:IAO_0000116 obo:PCO_0000009 "Might be better to add this as a data property."@en)
-AnnotationAssertion(obo:IAO_0000119 obo:PCO_0000009 "ISBN:0878932739")
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000009 obo:IAO_0000428)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000009 "The maximum number of individuals that can be supported in  a population that is growing according to logistic growth.")
-SubClassOf(obo:PCO_0000009 obo:PCO_0000003)
-AnnotationAssertion(obo:IAO_0000119 obo:PCO_0000010 "adapted from http://en.wikipedia.org/wiki/Species_richness")
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000010 "The number of different species represented in an ecological community."@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000010 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000116 obo:PCO_0000010 "This is a quality of an ecological community (PCO_0000002). If your metric includes the abundances of species (evenness) as well as the number, you should use community species diversity (PCO_0000019)."@en)
-AnnotationAssertion(rdfs:label obo:PCO_0000010 "community species richness"@en)
-SubClassOf(obo:PCO_0000010 obo:PCO_0000004)
-AnnotationAssertion(rdfs:label obo:PCO_0000011 "population growth")
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000011 "A process that leads to a change in the number of individuals (positive or negative) in a population.")
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000011 obo:IAO_0000123)
-SubClassOf(obo:PCO_0000011 obo:PCO_0000005)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000012 "A population process that leads to an increase in the numbers of individuals in a population following a logistic (S-shaped) curve. Generally occurs when the population has a carrying capacity in a particular habitat.")
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000012 obo:IAO_0000123)
-AnnotationAssertion(rdfs:label obo:PCO_0000012 "logistic population growth")
-SubClassOf(obo:PCO_0000012 obo:PCO_0000011)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000013 obo:IAO_0000123)
-AnnotationAssertion(rdfs:label obo:PCO_0000013 "exponential population growth")
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000013 "A population growth process that leads to an exponential increase in the number of individuals in a population.")
-SubClassOf(obo:PCO_0000013 obo:PCO_0000011)
-AnnotationAssertion(rdfs:label obo:PCO_0000014 "predator role"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000014 obo:IAO_0000124)
-SubClassOf(obo:PCO_0000014 obo:BFO_0000023)
-AnnotationAssertion(rdfs:label obo:PCO_0000015 "prey role"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000015 obo:IAO_0000124)
-SubClassOf(obo:PCO_0000015 obo:BFO_0000023)
-AnnotationAssertion(rdfs:label obo:PCO_0000016 "symbiont role"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000016 obo:IAO_0000124)
-SubClassOf(obo:PCO_0000016 obo:BFO_0000023)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000017 "A collection of organisms that has as parts every organism of given species and no organisms of any other species."@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000017 obo:IAO_0000120)
-AnnotationAssertion(rdfs:comment obo:PCO_0000017 "This term is neutral with respect to which organisms are included in a species. Membership will depend on the species concept and the taxonomic assertions used to define the species. These criteria must be specified by the user."@en)
-AnnotationAssertion(rdfs:label obo:PCO_0000017 "species as a collection of organisms"@en)
-AnnotationAssertion(obo:IAO_0000116 obo:PCO_0000017 "At the moment there is no way to specify in an OWL axiom that the collection includes every individual of a species. This should be added, if possible."@en)
-SubClassOf(obo:PCO_0000017 obo:PCO_0000018)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000018 "A material entity that has as parts two or more organisms, viruses, or viroids of the same species and no members of any other species."@en)
-AnnotationAssertion(obo:IAO_0000118 obo:PCO_0000018 "collection of organisms of the same species"@en)
-AnnotationAssertion(rdfs:label obo:PCO_0000018 "single-species collection of organisms"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000018 obo:IAO_0000120)
-EquivalentClasses(obo:PCO_0000018 ObjectIntersectionOf(ObjectAllValuesFrom(obo:RO_0002351 obo:CARO_0001010) ObjectAllValuesFrom(obo:RO_0002351 ObjectExactCardinality(1 obo:RO_0002350 obo:PCO_0000017)) ObjectMinCardinality(2 obo:RO_0002351 obo:CARO_0001010)))
-AnnotationAssertion(rdfs:comment obo:PCO_0000019 "The Shannon Index and Simpson Index are examples of ways in which species diversity is quantified."@en)
-AnnotationAssertion(rdfs:label obo:PCO_0000019 "community species diversity"@en)
-AnnotationAssertion(obo:IAO_0000119 obo:PCO_0000019 "adapted from http://en.wikipedia.org/wiki/Species_diversity")
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000019 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000019 "The number of different species that are represented in a given community, weighted by their abundance. Community species diversity can be calculated in different ways, but consists of two components: species richness and species evenness."@en)
-AnnotationAssertion(obo:IAO_0000116 obo:PCO_0000019 "If your metric does not include the abundances of different species, but rather just the numer of species, you should use community species richness (PCO_0000010). More specific subclasses or instances of this class may be created to describe specific ways of measuring diversity.")
-SubClassOf(obo:PCO_0000019 obo:PCO_0000004)
-AnnotationAssertion(rdfs:label obo:PCO_0000020 "family"@en)
-AnnotationAssertion(obo:IAO_0000116 obo:PCO_0000020 "Needs axioms for family relationships."@en)
-AnnotationAssertion(rdfs:comment obo:PCO_0000020 "Family membership through marriage or adoption apply primarily to human families. In most species, family membership is defined by common anscestry.")
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000020 "A domestic group, or a number of domestic groups linked through descent (demonstrated or stipulated) from a common ancestor, marriage, or adoption."@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000020 obo:IAO_0000123)
-AnnotationAssertion(obo:IAO_0000119 obo:PCO_0000020 "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25173"@en)
-SubClassOf(obo:PCO_0000020 obo:PCO_0000018)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000021 obo:IAO_0000123)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000021 "A population process that ultimately leads to the death of all individuals in a population."@en)
-AnnotationAssertion(rdfs:label obo:PCO_0000021 "population extinction"@en)
-SubClassOf(obo:PCO_0000021 obo:PCO_0000005)
-AnnotationAssertion(rdfs:label obo:PCO_0000022 "species extinction"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000022 obo:IAO_0000123)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000022 "A process that ultimately leads to the death of all individuals in a population."@en)
-SubClassOf(obo:PCO_0000022 obo:BFO_0000015)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000023 obo:IAO_0000120)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000023 "A quality of a community that reflects how close in abundance all species in a community are."@en)
-AnnotationAssertion(obo:IAO_0000112 obo:PCO_0000023 "If there are 40 foxes, and 1000 dogs, the community is not very even, but if there are 40 foxes and 42 dogs, the community is quite even."@en)
-AnnotationAssertion(obo:IAO_0000119 obo:PCO_0000023 "adapted from http://en.wikipedia.org/wiki/Species_evenness"@en)
-AnnotationAssertion(rdfs:label obo:PCO_0000023 "community species evenness"@en)
-SubClassOf(obo:PCO_0000023 obo:PCO_0000004)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000024 "A material entity that consists of one or more people who live in the same dwelling and also share at meals or living accommodation, and may consist of a single family or some other grouping of people.
-")
-AnnotationAssertion(obo:IAO_0000119 obo:PCO_0000024 "WEB: http://en.wikipedia.org/wiki/Household")
-AnnotationAssertion(rdfs:label obo:PCO_0000024 "household"@en)
-AnnotationAssertion(obo:IAO_0000117 obo:PCO_0000024 "Person: Jie Zheng")
-SubClassOf(obo:PCO_0000024 ObjectIntersectionOf(ObjectMinCardinality(1 obo:RO_0002351 obo:NCBITaxon_9606) ObjectAllValuesFrom(obo:RO_0002351 obo:NCBITaxon_9606)))
-SubClassOf(obo:PCO_0000024 ObjectUnionOf(obo:PCO_0000000 obo:CARO_0001010))
-AnnotationAssertion(owl:deprecated obo:PCO_0000025 "true"^^xsd:boolean)
-AnnotationAssertion(obo:IAO_0000231 obo:PCO_0000025 obo:IAO_0000002)
-AnnotationAssertion(rdfs:label obo:PCO_0000025 "red population"@en)
-AnnotationAssertion(rdfs:comment obo:PCO_0000025 "This is an example population added to demonstrate the modeling pattern for collections of organisms.")
-AnnotationAssertion(rdfs:label obo:PCO_0000026 "red organism"@en)
-AnnotationAssertion(owl:deprecated obo:PCO_0000026 "true"^^xsd:boolean)
-AnnotationAssertion(rdfs:comment obo:PCO_0000026 "An example class added to demonstrate the design pattern for collections of organism. Red organism should be automatically classified as a member of red population when the reasoner is synchronized using a DL query.")
-AnnotationAssertion(obo:IAO_0000231 obo:PCO_0000026 obo:IAO_0000002)
-AnnotationAssertion(obo:IAO_0000118 obo:PCO_0000027 "human population"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000027 obo:IAO_0000125)
-AnnotationAssertion(obo:IAO_0000118 obo:PCO_0000027 "human community"@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000027 "A collection of organisms of the same species that has as members only humans."^^xsd:string)
-AnnotationAssertion(rdfs:label obo:PCO_0000027 "collection of humans"@en)
-EquivalentClasses(obo:PCO_0000027 ObjectIntersectionOf(obo:PCO_0000018 ObjectAllValuesFrom(obo:RO_0002351 obo:NCBITaxon_9606) ObjectMinCardinality(2 obo:RO_0002351 obo:NCBITaxon_9606)))
-AnnotationAssertion(rdfs:label obo:PCO_0000028 "community"@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000028 obo:IAO_0000123)
-AnnotationAssertion(rdfs:comment obo:PCO_0000028 "These relations can include shared values, occupying the same spatial relation. A community be be a single species collection of organsisms (as in a  human community) or a  or multi-species collection of organisms (as in an ecological community)."@en)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000028 "A collection of organisms connected by social or biological relations (biotic interactions)."@en)
-AnnotationAssertion(obo:IAO_0000116 obo:PCO_0000028 "Need to specify axioms for the biological or social relations, once the relations are specified in the Relation Ontology."@en)
-SubClassOf(obo:PCO_0000028 ObjectIntersectionOf(ObjectMinCardinality(2 obo:RO_0002351 obo:CARO_0001010) ObjectAllValuesFrom(obo:RO_0002351 obo:CARO_0001010)))
-AnnotationAssertion(obo:IAO_0000116 obo:PCO_0000029 "Need to add axiom to specify that it has at a mimum members of two different species."@en)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000029 obo:IAO_0000123)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000029 "A collection of organisms that consists of two or more organisms from at least two species."@en)
-AnnotationAssertion(rdfs:label obo:PCO_0000029 "multi-species collection of organisms"@en)
-AnnotationAssertion(rdfs:comment obo:PCO_0000029 ""@en)
-SubClassOf(obo:PCO_0000029 obo:PCO_0000000)
-AnnotationAssertion(obo:IAO_0000114 obo:PCO_0000030 obo:IAO_0000123)
-AnnotationAssertion(obo:IAO_0000115 obo:PCO_0000030 "A household in which the majority of the income of its members is derived from agricultural activities.")
-AnnotationAssertion(rdfs:label obo:PCO_0000030 "agricultural household"@en)
-AnnotationAssertion(obo:IAO_0000116 obo:PCO_0000030 "This is a more narrow definition in which the majority of income of a house comes from agricultural activities, as opposed to the broad definition in which any income comes from agricultural activities. The narrow definition was chosen to be consistent with the SDGIO (UN Sustainable Development Goals) which requested this term.")
-SubClassOf(obo:PCO_0000030 obo:PCO_0000024)
-AnnotationAssertion(rdfs:label obo:PCO_0001000 "pair of interacting organisms"@en)
-SubClassOf(obo:PCO_0001000 ObjectAllValuesFrom(obo:RO_0002351 obo:CARO_0001010))
-SubClassOf(obo:PCO_0001000 ObjectExactCardinality(2 obo:RO_0002351 obo:CARO_0001010))
-AnnotationAssertion(rdfs:label obo:PCO_0001001 "pair of interacting organisms of the same species"@en)
-EquivalentClasses(obo:PCO_0001001 ObjectIntersectionOf(ObjectAllValuesFrom(obo:RO_0002351 ObjectExactCardinality(1 obo:RO_0002350 obo:PCO_0000017)) obo:PCO_0001000))
-AnnotationAssertion(rdfs:label pco:PCO_0000030 "organismal entity"@en)
-AnnotationAssertion(obo:IAO_0000115 pco:PCO_0000030 "A material entity that is one or more organisms, viruses or viroids.")
-EquivalentClasses(pco:PCO_0000030 ObjectUnionOf(obo:PCO_0000000 obo:CARO_0001010))
-)
+###  http://purl.obolibrary.org/obo/IAO_created_by
+
+obo:IAO_created_by rdf:type owl:AnnotationProperty .
+
+
+
+###  http://purl.obolibrary.org/obo/IAO_creation_date
+
+obo:IAO_creation_date rdf:type owl:AnnotationProperty .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000051
+
+obo:BFO_0000051 rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://purl.obolibrary.org/obo/CARO_0001010
+
+obo:CARO_0001010 rdf:type owl:Class ;
+                 
+                 rdfs:label "organism or virus or viroid"^^xsd:string ;
+                 
+                 rdfs:subClassOf obo:BFO_0000040 ;
+                 
+                 obo:IAO_creation_date "9/18/11"^^xsd:string ;
+                 
+                 obo:IAO_0000115 "Material anatomical entity that is a member of an individual species or is a viral or viroid particle."^^xsd:string ;
+                 
+                 obo:IAO_created_by "Melissa Haendel"^^xsd:string ;
+                 
+                 obo:IAO_0000589 "organism or virus"@en .
+
+
+
+###  http://purl.obolibrary.org/obo/CARO_0010004
+
+obo:CARO_0010004 rdf:type owl:Class ;
+                 
+                 rdfs:label "organism"^^xsd:string ;
+                 
+                 rdfs:subClassOf obo:CARO_0001010 ;
+                 
+                 obo:IAO_creation_date "7.16.2011"^^xsd:string ;
+                 
+                 rdfs:comment "A general term for organism that is agnostic about single cell vs multi-cellular.  Note that this is a subclass of 'anatomical structure', meaning that an organism must be a connected structure.  So, if I take one plant and make a rooted cutting from a it, I now have two (clonally related) organisms. "^^xsd:string ;
+                 
+                 obo:IAO_0000115 "An individual member of a clade."^^xsd:string ;
+                 
+                 obo:IAO_created_by "mah"^^xsd:string ;
+                 
+                 obo:IAO_0000589 "organism"@en .
+
+
+
+###  http://purl.obolibrary.org/obo/GO_0051704
+
+obo:GO_0051704 rdf:type owl:Class ;
+               
+               rdfs:subClassOf obo:BFO_0000015 .
+
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000030
+
+obo:IAO_0000030 rdfs:subClassOf obo:BFO_0000031 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000000
+
+obo:PCO_0000000 rdf:type owl:Class ;
+                
+                rdfs:label "collection of organisms"@en ;
+                
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:allValuesFrom obo:CARO_0001010
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:onClass obo:CARO_0001010 ;
+                                                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                           ]
+                                                         )
+                                    ] ;
+                
+                rdfs:subClassOf obo:BFO_0000027 ;
+                
+                obo:IAO_0000118 "group of organism" ,
+                                "organism collection" ;
+                
+                obo:IAO_0000115 "A material entity that consists of two or more organisms, viruses, or viroids."@en ;
+                
+                obo:IAO_0000112 "Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family." ;
+                
+                rdfs:comment "May be of the same or different species." ;
+                
+                obo:IAO_0000114 obo:IAO_0000125 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000001
+
+obo:PCO_0000001 rdf:type owl:Class ;
+                
+                rdfs:label "population of organisms"@en ;
+                
+                rdfs:subClassOf obo:PCO_0000018 ;
+                
+                obo:IAO_0000112 ""@en ;
+                
+                obo:IAO_0000115 "A collection of organisms, all of the same species, that live in the same place."@en ;
+                
+                obo:IAO_0000119 "ISBN:0878932739" ;
+                
+                rdfs:comment """It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. 'Community', as often used to describe a group of humans, is a type of population. 
+
+Classes for population already  exist in IDO ('organism population', IDO_0000509) and OBI ('population', OBI_0000181). The definitions should be standardized across OBO Foundry ontologies and only one term used."""@en ;
+                
+                obo:IAO_0000112 "This a general term that can include every organism of a species living in an area or any subset of them.  Subclasses can be more specific as needed."@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000125 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000002
+
+obo:PCO_0000002 rdf:type owl:Class ;
+                
+                rdfs:label "ecological community"@en ;
+                
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:intersectionOf ( obo:PCO_0000028
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:onClass [ rdf:type owl:Class ;
+                                                                           owl:intersectionOf ( obo:PCO_0000001
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty obo:RO_0001025 ;
+                                                                                                  owl:someValuesFrom obo:BFO_0000029
+                                                                                                ]
+                                                                                              )
+                                                                         ] ;
+                                                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                           ]
+                                                         )
+                                    ] ;
+                
+                rdfs:subClassOf obo:PCO_0000029 ;
+                
+                obo:IAO_0000119 "ISBN:0865423504" ;
+                
+                obo:IAO_0000116 "Not sure if the equivalancy axiom specifies that both populations are located in the same site." ;
+                
+                obo:IAO_0000115 "A community of at least two different species, living in a particular area. Must have at least two populations of different species as members."@en ;
+                
+                rdfs:comment "Ecological community is defined broadly here, but includes both ecological interactions (inherited from parent term community) and spatial co-existence. It may be used to describe every organisms living in an area, but is often used to refer only to organisms of a particular taxon or guild (e.g., the plant community, the insect community, the herbivore community). The word community, as it often used to describe a group of humans living together, is a type of single-species collection of organisms, not an ecological community."@en ;
+                
+                obo:IAO_0000118 "multispecies community"@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000123 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000003
+
+obo:PCO_0000003 rdf:type owl:Class ;
+                
+                rdfs:label "quality of a population"@en ;
+                
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:intersectionOf ( obo:PATO_0002003
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0000052 ;
+                                                             owl:someValuesFrom obo:PCO_0000001
+                                                           ]
+                                                         )
+                                    ] ;
+                
+                obo:IAO_0000115 "A quality that inheres in a biological population."@en ;
+                
+                rdfs:comment "Includes qualities like population size, population growth rate, carrying capacity, immigration rate, emigration rate, fecundity, and death rate. A population quality may depend on the qualities of individual organisms in the population, but cannot be measured or described for a single organism. This term may be replaced by a PATO term."@en ;
+                
+                obo:IAO_0000116 "See Chris's comments on population qualities at: http://code.google.com/p/popcomm-ontology/issues/detail?id=4. These may not belong under BFO:quality. May be better to call them population characteristics, and classify as specifically dependent continuants. Need to look at process profiles in BFO2."@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000428 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000004
+
+obo:PCO_0000004 rdf:type owl:Class ;
+                
+                rdfs:label "quality of an ecological community"@en ;
+                
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:intersectionOf ( obo:PATO_0002003
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0000052 ;
+                                                             owl:someValuesFrom obo:PCO_0000002
+                                                           ]
+                                                         )
+                                    ] ;
+                
+                obo:IAO_0000115 "A quality that inheres in a community."@en ;
+                
+                rdfs:comment "Includes qualities like diversity, species richness, stability, resilience, community structure, number of trophic levels. A community quality may depend on the qualities of individual organism in the community, but cannot be measured or described for a single individual."@en ;
+                
+                obo:IAO_0000116 "These may not belong under BFO:quality. May be better to call them community characteristics, and classify as specifically dependent continuants. Need to look at process profiles in BFO2."@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000428 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000005
+
+obo:PCO_0000005 rdf:type owl:Class ;
+                
+                rdfs:label "population process"@en ;
+                
+                rdfs:subClassOf obo:BFO_0000015 ;
+                
+                obo:IAO_0000115 "A process that has as primary participant a population. "@en ;
+                
+                rdfs:comment "Includes processes such as population growth, extinction, evolution, selection, and adaptation. Population processes may depend on the processes of individual organisms {e.g., population growth reflects the cumulative multicellular organism reproduction (GO:0032504) and death (GO:0016265) of all individuals in a population}, but cannot be described for an individual organism. Some of these processes (e.g., evolution, extinction) can also occur at the species level, so PCO distinguishes between, for example, population extinction and species extinction. The GO has the terms 'multi-organism process' (GO:0051704) and 'intraspecies interactions between organisms' (GO:0051703), but tPCOhese categories are only defined for interactions between two individuals. It is unclear at this point if 'biological process' (GO:0008150) encompasses population processes. "@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000123 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000006
+
+obo:PCO_0000006 rdf:type owl:Class ;
+                
+                rdfs:label "population birth rate"@en ;
+                
+                rdfs:subClassOf obo:PCO_0000003 ;
+                
+                obo:IAO_0000114 obo:IAO_0000123 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000007
+
+obo:PCO_0000007 rdf:type owl:Class ;
+                
+                rdfs:label "population death rate"@en ;
+                
+                rdfs:subClassOf obo:PCO_0000003 ;
+                
+                obo:IAO_0000114 obo:IAO_0000123 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000008
+
+obo:PCO_0000008 rdf:type owl:Class ;
+                
+                rdfs:label "population growth rate"@en ;
+                
+                rdfs:subClassOf obo:PCO_0000003 ;
+                
+                obo:IAO_0000116 "Is a rate a quality? Population growth rate may be better classified as a process profile."@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000123 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000009
+
+obo:PCO_0000009 rdf:type owl:Class ;
+                
+                rdfs:label "carrying capacity"@en ;
+                
+                rdfs:subClassOf obo:PCO_0000003 ;
+                
+                obo:IAO_0000119 "ISBN:0878932739" ;
+                
+                obo:IAO_0000115 "The maximum number of individuals that can be supported in  a population that is growing according to logistic growth." ;
+                
+                obo:IAO_0000116 "Might be better to add this as a data property."@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000428 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000010
+
+obo:PCO_0000010 rdf:type owl:Class ;
+                
+                rdfs:label "community species richness"@en ;
+                
+                rdfs:subClassOf obo:PCO_0000004 ;
+                
+                obo:IAO_0000119 "adapted from http://en.wikipedia.org/wiki/Species_richness" ;
+                
+                obo:IAO_0000115 "The number of different species represented in an ecological community."@en ;
+                
+                obo:IAO_0000116 "This is a quality of an ecological community (PCO_0000002). If your metric includes the abundances of species (evenness) as well as the number, you should use community species diversity (PCO_0000019)."@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000120 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000011
+
+obo:PCO_0000011 rdf:type owl:Class ;
+                
+                rdfs:label "population growth" ;
+                
+                rdfs:subClassOf obo:PCO_0000005 ;
+                
+                obo:IAO_0000115 "A process that leads to a change in the number of individuals (positive or negative) in a population." ;
+                
+                obo:IAO_0000114 obo:IAO_0000123 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000012
+
+obo:PCO_0000012 rdf:type owl:Class ;
+                
+                rdfs:label "logistic population growth" ;
+                
+                rdfs:subClassOf obo:PCO_0000011 ;
+                
+                obo:IAO_0000115 "A population process that leads to an increase in the numbers of individuals in a population following a logistic (S-shaped) curve. Generally occurs when the population has a carrying capacity in a particular habitat." ;
+                
+                obo:IAO_0000114 obo:IAO_0000123 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000013
+
+obo:PCO_0000013 rdf:type owl:Class ;
+                
+                rdfs:label "exponential population growth" ;
+                
+                rdfs:subClassOf obo:PCO_0000011 ;
+                
+                obo:IAO_0000115 "A population growth process that leads to an exponential increase in the number of individuals in a population." ;
+                
+                obo:IAO_0000114 obo:IAO_0000123 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000014
+
+obo:PCO_0000014 rdf:type owl:Class ;
+                
+                rdfs:label "predator role"@en ;
+                
+                rdfs:subClassOf obo:BFO_0000023 ;
+                
+                obo:IAO_0000114 obo:IAO_0000124 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000015
+
+obo:PCO_0000015 rdf:type owl:Class ;
+                
+                rdfs:label "prey role"@en ;
+                
+                rdfs:subClassOf obo:BFO_0000023 ;
+                
+                obo:IAO_0000114 obo:IAO_0000124 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000016
+
+obo:PCO_0000016 rdf:type owl:Class ;
+                
+                rdfs:label "symbiont role"@en ;
+                
+                rdfs:subClassOf obo:BFO_0000023 ;
+                
+                obo:IAO_0000114 obo:IAO_0000124 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000017
+
+obo:PCO_0000017 rdf:type owl:Class ;
+                
+                rdfs:label "species as a collection of organisms"@en ;
+                
+                rdfs:subClassOf obo:PCO_0000018 ;
+                
+                obo:IAO_0000115 "A collection of organisms that has as parts every organism of given species and no organisms of any other species."@en ;
+                
+                obo:IAO_0000116 "At the moment there is no way to specify in an OWL axiom that the collection includes every individual of a species. This should be added, if possible."@en ;
+                
+                rdfs:comment "This term is neutral with respect to which organisms are included in a species. Membership will depend on the species concept and the taxonomic assertions used to define the species. These criteria must be specified by the user."@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000120 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000018
+
+obo:PCO_0000018 rdf:type owl:Class ;
+                
+                rdfs:label "single-species collection of organisms"@en ;
+                
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:allValuesFrom obo:CARO_0001010
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:allValuesFrom [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty obo:RO_0002350 ;
+                                                                                 owl:onClass obo:PCO_0000017 ;
+                                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                               ]
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:onClass obo:CARO_0001010 ;
+                                                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                           ]
+                                                         )
+                                    ] ;
+                
+                obo:IAO_0000115 "A material entity that has as parts two or more organisms, viruses, or viroids of the same species and no members of any other species."@en ;
+                
+                obo:IAO_0000118 "collection of organisms of the same species"@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000120 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000019
+
+obo:PCO_0000019 rdf:type owl:Class ;
+                
+                rdfs:label "community species diversity"@en ;
+                
+                rdfs:subClassOf obo:PCO_0000004 ;
+                
+                obo:IAO_0000116 "If your metric does not include the abundances of different species, but rather just the numer of species, you should use community species richness (PCO_0000010). More specific subclasses or instances of this class may be created to describe specific ways of measuring diversity." ;
+                
+                rdfs:comment "The Shannon Index and Simpson Index are examples of ways in which species diversity is quantified."@en ;
+                
+                obo:IAO_0000115 "The number of different species that are represented in a given community, weighted by their abundance. Community species diversity can be calculated in different ways, but consists of two components: species richness and species evenness."@en ;
+                
+                obo:IAO_0000119 "adapted from http://en.wikipedia.org/wiki/Species_diversity" ;
+                
+                obo:IAO_0000114 obo:IAO_0000120 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000020
+
+obo:PCO_0000020 rdf:type owl:Class ;
+                
+                rdfs:label "family"@en ;
+                
+                rdfs:subClassOf obo:PCO_0000018 ;
+                
+                obo:IAO_0000115 "A domestic group, or a number of domestic groups linked through descent (demonstrated or stipulated) from a common ancestor, marriage, or adoption."@en ;
+                
+                rdfs:comment "Family membership through marriage or adoption apply primarily to human families. In most species, family membership is defined by common anscestry." ;
+                
+                obo:IAO_0000116 "Needs axioms for family relationships."@en ;
+                
+                obo:IAO_0000119 "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25173"@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000123 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000021
+
+obo:PCO_0000021 rdf:type owl:Class ;
+                
+                rdfs:label "population extinction"@en ;
+                
+                rdfs:subClassOf obo:PCO_0000005 ;
+                
+                obo:IAO_0000115 "A population process that ultimately leads to the death of all individuals in a population."@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000123 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000022
+
+obo:PCO_0000022 rdf:type owl:Class ;
+                
+                rdfs:label "species extinction"@en ;
+                
+                rdfs:subClassOf obo:BFO_0000015 ;
+                
+                obo:IAO_0000115 "A process that ultimately leads to the death of all individuals in a population."@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000123 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000023
+
+obo:PCO_0000023 rdf:type owl:Class ;
+                
+                rdfs:label "community species evenness"@en ;
+                
+                rdfs:subClassOf obo:PCO_0000004 ;
+                
+                obo:IAO_0000115 "A quality of a community that reflects how close in abundance all species in a community are."@en ;
+                
+                obo:IAO_0000112 "If there are 40 foxes, and 1000 dogs, the community is not very even, but if there are 40 foxes and 42 dogs, the community is quite even."@en ;
+                
+                obo:IAO_0000119 "adapted from http://en.wikipedia.org/wiki/Species_evenness"@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000120 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000024
+
+obo:PCO_0000024 rdf:type owl:Class ;
+                
+                rdfs:label "household"@en ;
+                
+                rdfs:subClassOf [ rdf:type owl:Class ;
+                                  owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:RO_0002351 ;
+                                                         owl:allValuesFrom obo:NCBITaxon_9606
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:RO_0002351 ;
+                                                         owl:onClass obo:NCBITaxon_9606 ;
+                                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                       ]
+                                                     )
+                                ] ,
+                                [ rdf:type owl:Class ;
+                                  owl:unionOf ( obo:CARO_0001010
+                                                obo:PCO_0000000
+                                              )
+                                ] ;
+                
+                obo:IAO_0000117 "Person: Jie Zheng" ;
+                
+                obo:IAO_0000115 """A material entity that consists of one or more people who live in the same dwelling and also share at meals or living accommodation, and may consist of a single family or some other grouping of people.
+""" ;
+                
+                obo:IAO_0000119 "WEB: http://en.wikipedia.org/wiki/Household" .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000025
+
+obo:PCO_0000025 rdf:type owl:Class ;
+                
+                rdfs:label "red population"@en ;
+                
+                owl:deprecated "true"^^xsd:boolean ;
+                
+                rdfs:comment "This is an example population added to demonstrate the modeling pattern for collections of organisms." ;
+                
+                obo:IAO_0000231 obo:IAO_0000002 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000026
+
+obo:PCO_0000026 rdf:type owl:Class ;
+                
+                rdfs:label "red organism"@en ;
+                
+                owl:deprecated "true"^^xsd:boolean ;
+                
+                rdfs:comment "An example class added to demonstrate the design pattern for collections of organism. Red organism should be automatically classified as a member of red population when the reasoner is synchronized using a DL query." ;
+                
+                obo:IAO_0000231 obo:IAO_0000002 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000027
+
+obo:PCO_0000027 rdf:type owl:Class ;
+                
+                rdfs:label "collection of humans"@en ;
+                
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:intersectionOf ( obo:PCO_0000018
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:allValuesFrom obo:NCBITaxon_9606
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:onClass obo:NCBITaxon_9606 ;
+                                                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                           ]
+                                                         )
+                                    ] ;
+                
+                obo:IAO_0000115 "A collection of organisms of the same species that has as members only humans."^^xsd:string ;
+                
+                obo:IAO_0000118 "human community"@en ,
+                                "human population"@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000125 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000028
+
+obo:PCO_0000028 rdf:type owl:Class ;
+                
+                rdfs:label "community"@en ;
+                
+                rdfs:subClassOf [ rdf:type owl:Class ;
+                                  owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:RO_0002351 ;
+                                                         owl:allValuesFrom obo:CARO_0001010
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:RO_0002351 ;
+                                                         owl:onClass obo:CARO_0001010 ;
+                                                         owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                       ]
+                                                     )
+                                ] ;
+                
+                obo:IAO_0000115 "A collection of organisms connected by social or biological relations (biotic interactions)."@en ;
+                
+                obo:IAO_0000116 "Biological or social relations are covered by RO_0002437 (biotically interacts with), but that relations does provide an easy way to specify that two entities are interacting with each other (participating in the same interaction). Until that axiom is specified, the logical definition of this term is incomplete."@en ;
+                
+                rdfs:comment "These relations can include shared values, occupying the same spatial regkion. A community be be a single species collection of organsisms (as in a  human community, which is also a type of population) or a  or multi-species collection of organisms (as in an ecological community)."@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000123 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000029
+
+obo:PCO_0000029 rdf:type owl:Class ;
+                
+                rdfs:label "multi-species collection of organisms"@en ;
+                
+                rdfs:subClassOf obo:PCO_0000000 ;
+                
+                rdfs:comment ""@en ;
+                
+                obo:IAO_0000115 "A collection of organisms that consists of two or more organisms from at least two species."@en ;
+                
+                obo:IAO_0000116 "Need to add axiom to specify that it has at a mimum members of two different species."@en ;
+                
+                obo:IAO_0000114 obo:IAO_0000123 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000030
+
+obo:PCO_0000030 rdf:type owl:Class ;
+                
+                rdfs:label "agricultural household"@en ;
+                
+                rdfs:subClassOf obo:PCO_0000024 ;
+                
+                obo:IAO_0000115 "A household in which the majority of the income of its members is derived from agricultural activities." ;
+                
+                obo:IAO_0000116 "This is a more narrow definition in which the majority of income of a house comes from agricultural activities, as opposed to the broad definition in which any income comes from agricultural activities. The narrow definition was chosen to be consistent with the SDGIO (UN Sustainable Development Goals) which requested this term." ;
+                
+                obo:IAO_0000114 obo:IAO_0000123 .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0001000
+
+obo:PCO_0001000 rdf:type owl:Class ;
+                
+                rdfs:label "pair of interacting organisms"@en ;
+                
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002351 ;
+                                  owl:allValuesFrom obo:CARO_0001010
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002351 ;
+                                  owl:onClass obo:CARO_0001010 ;
+                                  owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                ] .
+
+
+
+###  http://purl.obolibrary.org/obo/PCO_0001001
+
+obo:PCO_0001001 rdf:type owl:Class ;
+                
+                rdfs:label "pair of interacting organisms of the same species"@en ;
+                
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:intersectionOf ( obo:PCO_0001000
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:allValuesFrom [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty obo:RO_0002350 ;
+                                                                                 owl:onClass obo:PCO_0000017 ;
+                                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                               ]
+                                                           ]
+                                                         )
+                                    ] .
+
+
+
+###  http://purl.obolibrary.org/obo/pco.owl/PCO_0000030
+
+pco:PCO_0000030 rdf:type owl:Class ;
+                
+                rdfs:label "organismal entity"@en ;
+                
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:unionOf ( obo:CARO_0001010
+                                                    obo:PCO_0000000
+                                                  )
+                                    ] ;
+                
+                obo:IAO_0000116 "Not sure if we need this union class." ;
+                
+                obo:IAO_0000115 "A material entity that is one or more organisms, viruses or viroids." ;
+                
+                obo:IAO_0000114 obo:IAO_0000428 .
+
+
+
+
+###  Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net
+
