@@ -1,8 +1,7 @@
-@prefix : <http://purl.obolibrary.org/obo/pco.owl#> .
+@prefix : <http://purl.obolibrary.org/obo/pco.owl/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix pco: <http://purl.obolibrary.org/obo/pco.owl/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -239,8 +238,13 @@ obo:PCO_0000004 obo:IAO_0000114 obo:IAO_0000428 ;
 # http://purl.obolibrary.org/obo/PCO_0000005
 
 obo:PCO_0000005 a owl:Class ;
-	rdfs:subClassOf obo:BFO_0000015 ;
-	obo:IAO_0000114 obo:IAO_0000123 ;
+	rdfs:subClassOf obo:BFO_0000015 , _:genid22 .
+
+_:genid22 a owl:Restriction ;
+	owl:onProperty obo:RO_0000057 ;
+	owl:someValuesFrom obo:PCO_0000001 .
+
+obo:PCO_0000005 obo:IAO_0000114 obo:IAO_0000123 ;
 	obo:IAO_0000115 "A process that has as primary participant a population. "@en ;
 	rdfs:comment "Includes processes such as population growth, extinction, evolution, selection, and adaptation. Population processes may depend on the processes of individual organisms {e.g., population growth reflects the cumulative multicellular organism reproduction (GO:0032504) and death (GO:0016265) of all individuals in a population}, but cannot be described for an individual organism. Some of these processes (e.g., evolution, extinction) can also occur at the species level, so PCO distinguishes between, for example, population extinction and species extinction. The GO has the terms 'multi-organism process' (GO:0051704) and 'intraspecies interactions between organisms' (GO:0051703), but tPCOhese categories are only defined for interactions between two individuals. It is unclear at this point if 'biological process' (GO:0008150) encompasses population processes. "@en ;
 	rdfs:label "population process"@en .
@@ -345,44 +349,44 @@ obo:PCO_0000017 a owl:Class ;
 # http://purl.obolibrary.org/obo/PCO_0000018
 
 obo:PCO_0000018 a owl:Class ;
-	owl:equivalentClass _:genid22 .
+	owl:equivalentClass _:genid23 .
 
-_:genid22 owl:intersectionOf _:genid28 .
+_:genid23 owl:intersectionOf _:genid29 .
 
-_:genid28 a rdf:List ;
-	rdf:first _:genid29 .
+_:genid29 a rdf:List ;
+	rdf:first _:genid30 .
 
-_:genid29 a owl:Restriction ;
+_:genid30 a owl:Restriction ;
 	owl:onProperty obo:RO_0002351 ;
 	owl:allValuesFrom obo:CARO_0001010 .
 
-_:genid28 rdf:rest _:genid25 .
+_:genid29 rdf:rest _:genid26 .
 
-_:genid25 a rdf:List ;
-	rdf:first _:genid26 .
-
-_:genid26 a owl:Restriction ;
-	owl:onProperty obo:RO_0002351 ;
-	owl:allValuesFrom _:genid27 .
+_:genid26 a rdf:List ;
+	rdf:first _:genid27 .
 
 _:genid27 a owl:Restriction ;
+	owl:onProperty obo:RO_0002351 ;
+	owl:allValuesFrom _:genid28 .
+
+_:genid28 a owl:Restriction ;
 	owl:onProperty obo:RO_0002350 ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass obo:PCO_0000017 .
 
-_:genid25 rdf:rest _:genid23 .
+_:genid26 rdf:rest _:genid24 .
 
-_:genid23 a rdf:List ;
-	rdf:first _:genid24 .
+_:genid24 a rdf:List ;
+	rdf:first _:genid25 .
 
-_:genid24 a owl:Restriction ;
+_:genid25 a owl:Restriction ;
 	owl:onProperty obo:RO_0002351 ;
 	owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
 	owl:onClass obo:CARO_0001010 .
 
-_:genid23 rdf:rest rdf:nil .
+_:genid24 rdf:rest rdf:nil .
 
-_:genid22 a owl:Class .
+_:genid23 a owl:Class .
 
 obo:PCO_0000018 obo:IAO_0000114 obo:IAO_0000120 ;
 	obo:IAO_0000115 "A material entity that has as parts two or more organisms, viruses, or viroids of the same species and no members of any other species."@en ;
@@ -440,41 +444,41 @@ obo:PCO_0000023 a owl:Class ;
 # http://purl.obolibrary.org/obo/PCO_0000024
 
 obo:PCO_0000024 a owl:Class ;
-	rdfs:subClassOf _:genid30 .
+	rdfs:subClassOf _:genid31 .
 
-_:genid30 owl:intersectionOf _:genid33 .
+_:genid31 owl:intersectionOf _:genid34 .
 
-_:genid33 a rdf:List ;
-	rdf:first _:genid34 .
+_:genid34 a rdf:List ;
+	rdf:first _:genid35 .
 
-_:genid34 a owl:Restriction ;
+_:genid35 a owl:Restriction ;
 	owl:onProperty obo:RO_0002351 ;
 	owl:allValuesFrom obo:NCBITaxon_9606 .
 
-_:genid33 rdf:rest _:genid31 .
+_:genid34 rdf:rest _:genid32 .
 
-_:genid31 a rdf:List ;
-	rdf:first _:genid32 .
+_:genid32 a rdf:List ;
+	rdf:first _:genid33 .
 
-_:genid32 a owl:Restriction ;
+_:genid33 a owl:Restriction ;
 	owl:onProperty obo:RO_0002351 ;
 	owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass obo:NCBITaxon_9606 .
 
-_:genid31 rdf:rest rdf:nil .
+_:genid32 rdf:rest rdf:nil .
 
-_:genid30 a owl:Class .
+_:genid31 a owl:Class .
 
-obo:PCO_0000024 rdfs:subClassOf _:genid35 .
+obo:PCO_0000024 rdfs:subClassOf _:genid36 .
 
-_:genid35 a owl:Class ;
-	owl:unionOf _:genid37 .
+_:genid36 a owl:Class ;
+	owl:unionOf _:genid38 .
+
+_:genid38 a rdf:List ;
+	rdf:first obo:CARO_0001010 ;
+	rdf:rest _:genid37 .
 
 _:genid37 a rdf:List ;
-	rdf:first obo:CARO_0001010 ;
-	rdf:rest _:genid36 .
-
-_:genid36 a rdf:List ;
 	rdf:first obo:PCO_0000000 ;
 	rdf:rest rdf:nil .
 
@@ -505,34 +509,34 @@ obo:PCO_0000026 a owl:Class ;
 # http://purl.obolibrary.org/obo/PCO_0000027
 
 obo:PCO_0000027 a owl:Class ;
-	owl:equivalentClass _:genid38 .
+	owl:equivalentClass _:genid39 .
 
-_:genid38 owl:intersectionOf _:genid43 .
+_:genid39 owl:intersectionOf _:genid44 .
 
-_:genid43 a rdf:List ;
+_:genid44 a rdf:List ;
 	rdf:first obo:PCO_0000018 ;
-	rdf:rest _:genid41 .
+	rdf:rest _:genid42 .
 
-_:genid41 a rdf:List ;
-	rdf:first _:genid42 .
+_:genid42 a rdf:List ;
+	rdf:first _:genid43 .
 
-_:genid42 a owl:Restriction ;
+_:genid43 a owl:Restriction ;
 	owl:onProperty obo:RO_0002351 ;
 	owl:allValuesFrom obo:NCBITaxon_9606 .
 
-_:genid41 rdf:rest _:genid39 .
+_:genid42 rdf:rest _:genid40 .
 
-_:genid39 a rdf:List ;
-	rdf:first _:genid40 .
+_:genid40 a rdf:List ;
+	rdf:first _:genid41 .
 
-_:genid40 a owl:Restriction ;
+_:genid41 a owl:Restriction ;
 	owl:onProperty obo:RO_0002351 ;
 	owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
 	owl:onClass obo:NCBITaxon_9606 .
 
-_:genid39 rdf:rest rdf:nil .
+_:genid40 rdf:rest rdf:nil .
 
-_:genid38 a owl:Class .
+_:genid39 a owl:Class .
 
 obo:PCO_0000027 obo:IAO_0000114 obo:IAO_0000125 ;
 	obo:IAO_0000115 "A collection of organisms of the same species that has as members only humans."^^xsd:string ;
@@ -542,30 +546,30 @@ obo:PCO_0000027 obo:IAO_0000114 obo:IAO_0000125 ;
 # http://purl.obolibrary.org/obo/PCO_0000028
 
 obo:PCO_0000028 a owl:Class ;
-	rdfs:subClassOf _:genid44 .
+	rdfs:subClassOf _:genid45 .
 
-_:genid44 owl:intersectionOf _:genid47 .
+_:genid45 owl:intersectionOf _:genid48 .
 
-_:genid47 a rdf:List ;
-	rdf:first _:genid48 .
+_:genid48 a rdf:List ;
+	rdf:first _:genid49 .
 
-_:genid48 a owl:Restriction ;
+_:genid49 a owl:Restriction ;
 	owl:onProperty obo:RO_0002351 ;
 	owl:allValuesFrom obo:CARO_0001010 .
 
-_:genid47 rdf:rest _:genid45 .
+_:genid48 rdf:rest _:genid46 .
 
-_:genid45 a rdf:List ;
-	rdf:first _:genid46 .
+_:genid46 a rdf:List ;
+	rdf:first _:genid47 .
 
-_:genid46 a owl:Restriction ;
+_:genid47 a owl:Restriction ;
 	owl:onProperty obo:RO_0002351 ;
 	owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
 	owl:onClass obo:CARO_0001010 .
 
-_:genid45 rdf:rest rdf:nil .
+_:genid46 rdf:rest rdf:nil .
 
-_:genid44 a owl:Class .
+_:genid45 a owl:Class .
 
 obo:PCO_0000028 obo:IAO_0000114 obo:IAO_0000123 ;
 	obo:IAO_0000115 "A collection of organisms connected by social or biological relations (biotic interactions)."@en ;
@@ -595,16 +599,16 @@ obo:PCO_0000030 a owl:Class ;
 # http://purl.obolibrary.org/obo/PCO_0000031
 
 obo:PCO_0000031 a owl:Class ;
-	owl:equivalentClass _:genid49 .
+	owl:equivalentClass _:genid50 .
 
-_:genid49 a owl:Class ;
-	owl:unionOf _:genid51 .
+_:genid50 a owl:Class ;
+	owl:unionOf _:genid52 .
+
+_:genid52 a rdf:List ;
+	rdf:first obo:CARO_0001010 ;
+	rdf:rest _:genid51 .
 
 _:genid51 a rdf:List ;
-	rdf:first obo:CARO_0001010 ;
-	rdf:rest _:genid50 .
-
-_:genid50 a rdf:List ;
 	rdf:first obo:PCO_0000000 ;
 	rdf:rest rdf:nil .
 
@@ -615,15 +619,15 @@ obo:PCO_0000031 obo:IAO_0000114 obo:IAO_0000125 ;
 # http://purl.obolibrary.org/obo/PCO_0001000
 
 obo:PCO_0001000 a owl:Class ;
-	rdfs:subClassOf _:genid52 .
+	rdfs:subClassOf _:genid53 .
 
-_:genid52 a owl:Restriction ;
+_:genid53 a owl:Restriction ;
 	owl:onProperty obo:RO_0002351 ;
 	owl:allValuesFrom obo:CARO_0001010 .
 
-obo:PCO_0001000 rdfs:subClassOf _:genid53 .
+obo:PCO_0001000 rdfs:subClassOf _:genid54 .
 
-_:genid53 a owl:Restriction ;
+_:genid54 a owl:Restriction ;
 	owl:onProperty obo:RO_0002351 ;
 	owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
 	owl:onClass obo:CARO_0001010 .
@@ -633,35 +637,87 @@ obo:PCO_0001000 rdfs:label "pair of interacting organisms"@en .
 # http://purl.obolibrary.org/obo/PCO_0001001
 
 obo:PCO_0001001 a owl:Class ;
-	owl:equivalentClass _:genid54 .
+	owl:equivalentClass _:genid55 .
 
-_:genid54 owl:intersectionOf _:genid58 .
+_:genid55 owl:intersectionOf _:genid59 .
 
-_:genid58 a rdf:List ;
+_:genid59 a rdf:List ;
 	rdf:first obo:PCO_0001000 ;
-	rdf:rest _:genid55 .
+	rdf:rest _:genid56 .
 
-_:genid55 a rdf:List ;
-	rdf:first _:genid56 .
-
-_:genid56 a owl:Restriction ;
-	owl:onProperty obo:RO_0002351 ;
-	owl:allValuesFrom _:genid57 .
+_:genid56 a rdf:List ;
+	rdf:first _:genid57 .
 
 _:genid57 a owl:Restriction ;
+	owl:onProperty obo:RO_0002351 ;
+	owl:allValuesFrom _:genid58 .
+
+_:genid58 a owl:Restriction ;
 	owl:onProperty obo:RO_0002350 ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass obo:PCO_0000017 .
 
-_:genid55 rdf:rest rdf:nil .
+_:genid56 rdf:rest rdf:nil .
 
-_:genid54 a owl:Class .
+_:genid55 a owl:Class .
 
 obo:PCO_0001001 rdfs:label "pair of interacting organisms of the same species"@en .
 # 
+# http://purl.obolibrary.org/obo/PCO_1000000
+
+obo:PCO_1000000 a owl:Class ;
+	rdfs:subClassOf obo:PCO_0000001 , _:genid60 .
+
+_:genid60 a owl:Restriction ;
+	owl:onProperty obo:RO_0000056 ;
+	owl:someValuesFrom obo:PCO_1000001 .
+
+obo:PCO_1000000 obo:IAO_0000114 obo:IAO_0000123 ;
+	obo:IAO_0000115 "A population which is participating in a migration process." ;
+	rdfs:label "migratory population"@en .
+# 
+# http://purl.obolibrary.org/obo/PCO_1000001
+
+obo:PCO_1000001 a owl:Class ;
+	rdfs:subClassOf obo:PCO_0000005 ;
+	obo:IAO_0000114 obo:IAO_0000123 ;
+	obo:IAO_0000115 "A population process during which a population moves from one area to another." ;
+	obo:IAO_0000119 "https://en.wikipedia.org/wiki/Migration" ;
+	rdfs:comment "The distance between the areas is not specified here, nor is the minimum distance required for such movements to be considered migrations." ;
+	rdfs:label "population migration"@en .
+# 
+# http://purl.obolibrary.org/obo/PCO_1000002
+
+obo:PCO_1000002 a owl:Class ;
+	rdfs:subClassOf obo:PCO_1000001 , _:genid61 .
+
+_:genid61 a owl:Restriction ;
+	owl:onProperty obo:RO_0000057 ;
+	owl:someValuesFrom obo:PCO_0000027 .
+
+obo:PCO_1000002 obo:IAO_0000114 obo:IAO_0000123 ;
+	obo:IAO_0000115 "A population migration during which a population of humans moves from one area to another with the intention of settling permanently in the new location." ;
+	obo:IAO_0000119 "https://en.wikipedia.org/wiki/Human_migration" ;
+	rdfs:comment "The distance between the areas is not specified here, nor is the minimum distance required for such movements to be considered migrations. \"Nomadic movements are normally not regarded as migrations as there is no intention to settle in the new place and because the movement is generally seasonal. Only a few nomadic people have retained this form of lifestyle in modern times. Also, the temporary movement of people for the purpose of travel, tourism, pilgrimages, or the commute is not regarded as migration, in the absence of an intention to live and settle in the visited places.\" - https://en.wikipedia.org/wiki/Human_migration" ;
+	rdfs:label "human population migration"@en .
+# 
+# http://purl.obolibrary.org/obo/PCO_1000003
+
+obo:PCO_1000003 a owl:Class ;
+	rdfs:subClassOf obo:PCO_0000027 , _:genid62 .
+
+_:genid62 a owl:Restriction ;
+	owl:onProperty obo:RO_0000056 ;
+	owl:someValuesFrom obo:PCO_1000002 .
+
+obo:PCO_1000003 obo:IAO_0000114 obo:IAO_0000123 ;
+	obo:IAO_0000115 "A migratory population of humans, travelling with the intention of settling in a new area." ;
+	obo:IAO_0000119 "https://en.wikipedia.org/wiki/Human_migration" ;
+	rdfs:label "human migratory population"@en .
+# 
 # http://purl.obolibrary.org/obo/pco.owl/PCO_0000030
 
-pco:PCO_0000030 a owl:Class ;
+:PCO_0000030 a owl:Class ;
 	rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
 	obo:IAO_0000115 "A material entity that is one or more organisms, viruses or viroids." ;
 	obo:IAO_0000231 "wrong IRI form" ;
