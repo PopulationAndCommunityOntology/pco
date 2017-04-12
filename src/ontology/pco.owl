@@ -10,6 +10,7 @@
 obo:pco.owl a owl:Ontology ;
 	owl:imports <http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl> , <https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/ro_imports.owl> , <https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/pato_imports.owl> , <http://purl.obolibrary.org/obo/ro/core.owl> , <https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/envo_imports.owl> , <https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/go_imports.owl> , obo:bfo.owl , <https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/ncbitaxon_imports.owl> ;
 	rdfs:comment "The Population and Community Ontology (PCO) is licensed under a Creative Commons zero (CC0) license - http://creativecommons.org/publicdomain/zero/1.0/. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. We ask that anyone using this ontology follow the standards of the scientific ontology community by re-using ontology identifiers whenever possible and properly citing the ontology and its creators." ;
+	dc:contributor "http://orcid.org/0000-0002-4366-3088" ;
 	dc:creator "Ramona Walls" , "David Osumi-Sutherland" , "Jie Zheng" ;
 	dc:license "http://creativecommons.org/publicdomain/zero/1.0/" .
 # 
@@ -714,6 +715,18 @@ obo:PCO_1000003 obo:IAO_0000114 obo:IAO_0000123 ;
 	obo:IAO_0000115 "A migratory population of humans, travelling with the intention of settling in a new area." ;
 	obo:IAO_0000119 "https://en.wikipedia.org/wiki/Human_migration" ;
 	rdfs:label "human migratory population"@en .
+# 
+# http://purl.obolibrary.org/obo/PCO_1000004
+
+obo:PCO_1000004 a owl:Class ;
+	rdfs:subClassOf obo:PCO_0000002 ;
+	obo:IAO_0000114 obo:IAO_0000123 ;
+	obo:IAO_0000115 "An ecological community which is composed of co-existing populations of microbial organisms that interact, directly or indirectly, such that they impact one another's ecological fitness." ;
+	obo:IAO_0000116 "A class for a collection of organisms considered \"microbial\" and an accompanying quality in PATO (e.g. \"microscopic\") would be useful to better axiomatise this class. See https://github.com/PopulationAndCommunityOntology/pco/issues/22" ;
+	obo:IAO_0000117 "http://orcid.org/0000-0002-4366-3088" ;
+	obo:IAO_0000119 "http://dx.doi.org/10.1038/ismej.2009.88" ;
+	rdfs:comment "The definition of a microbial species is deeply debated, however, units of phylogenetic and functional diversity are recognised with respect to their varying roles in an ecosystem. In turn, there exist multiple operational definitions of microbial community, such as local, phenomenological, and indexical communities. This class seeks to capture microbial communities in a very broad sense, as collections of phylogenetically and functionally divergent microbial organisms co-existing, potentially interacting, and competing for niche space in the same ecosystem over a period of time in which their causal footprints overlap one another." ;
+	rdfs:label "microbial community"@en .
 # 
 # http://purl.obolibrary.org/obo/pco.owl/PCO_0000030
 
