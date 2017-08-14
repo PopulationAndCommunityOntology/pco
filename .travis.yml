@@ -1,5 +1,5 @@
 ## REMEMBER TO SET UP YOUR GITHUB REPO FOR TRAVIS
-## Go to: https://travis-ci.org/EcologicalSemantics for details
+## Go to: https://travis-ci.org/PopulationAndCommunityOntology for details
 language: java
 jdk:
   - oraclejdk8
