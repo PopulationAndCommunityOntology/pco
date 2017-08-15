@@ -18,4 +18,4 @@ Please look in the hierarchy in a browser such as [OLS](http://www.ebi.ac.uk/ols
 
 ## Attribution
 
-If you would like a nanoattribution, please indicate your ORCID id
+If you would like a nanoattribution, please indicate your ORCID id.
