@@ -1,10 +1,3 @@
-[URI of the OWL(RDF/XML) output file]
-https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/pato_imports.owl
-
-[Source ontology]
-PATO
-
-[Low level source term URIs]
 http://purl.obolibrary.org/obo/PATO_0000322 #red
 http://purl.obolibrary.org/obo/PATO_0000014 #color
 http://purl.obolibrary.org/obo/PATO_0001018 #physical quality
@@ -15,16 +8,3 @@ http://purl.obolibrary.org/obo/PATO_0002003 #population quality
 http://purl.obolibrary.org/obo/PATO_0001241 #physical object quality
 http://purl.obolibrary.org/obo/PATO_0001338 #mixed sex
 http://purl.obolibrary.org/obo/PATO_0001415 #morbity
-
-[Top level source term URIs and target direct superclass URIs]
-http://purl.obolibrary.org/obo/PATO_0000001 #quality
-subClassOf http://www.w3.org/2002/07/owl#Thing
-
-
-[Source term retrieval setting]
-includeComputedIntermediates
-
-[Source annotation URIs]
-includeAllAxiomsRecursively
-
-[Source annotation URIs to be excluded]
