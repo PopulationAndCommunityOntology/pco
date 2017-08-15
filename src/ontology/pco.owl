@@ -18,6 +18,7 @@
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pco/releases/2017-08-15/pco.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2017-07-19/ro.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/pco/imports/bfo_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/pco/imports/ncbitaxon_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/pco/imports/pato_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/pco/imports/envo_import.owl"/>
@@ -198,7 +199,7 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000027 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000027">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
     </owl:Class>
     
 
@@ -206,7 +207,7 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000029 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000029">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
     </owl:Class>
     
 
@@ -1497,7 +1498,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000031"/>
         <obo:IAO_0000112>Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
