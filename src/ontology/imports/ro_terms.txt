@@ -1,33 +1,7 @@
-[URI of the OWL(RDF/XML) output file]
-https://raw.githubusercontent.com/PopulationAndCommunityOntology/pco/master/src/ontology/ro_imports.owl
-
-[Source ontology]
-RO
-
-[Low level source term URIs]
 http://purl.obolibrary.org/obo/RO_0002434 #interacts with
 http://purl.obolibrary.org/obo/RO_0002437 #biotically interacts with
-includeAllChildren
 http://purl.obolibrary.org/obo/RO_0002465 #is symbiosis
-includeAllChildren
 http://purl.obolibrary.org/obo/RO_0002563 #interaction relation helper property
 http://purl.obolibrary.org/obo/RO_0002461 #partner in
 http://purl.obolibrary.org/obo/RO_0002462 #subject participant in
 http://purl.obolibrary.org/obo/RO_0002463 #target participant in
-
-
-[Top level source term URIs and target direct superclass URIs]
-http://purl.obolibrary.org/obo/RO_0002437 #biotically interacts with
-subPropertyOf http://purl.obolibrary.org/obo/RO_0002434 #interacts with
-http://purl.obolibrary.org/obo/RO_0002465 #is symbiosis
-subPropertyOf http://purl.obolibrary.org/obo/RO_0002563 #interaction relation helper property
-http://purl.obolibrary.org/obo/RO_0002461 #partner in
-subPropertyOf http://purl.obolibrary.org/obo/RO_0000056 #participates in
-
-[Source term retrieval setting]
-includeAllIntermediates
-
-[Source annotation URIs]
-includeAllAxioms
-
-[Source annotation URIs to be excluded]
