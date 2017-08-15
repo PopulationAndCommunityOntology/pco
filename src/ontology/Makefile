@@ -21,7 +21,7 @@ $(ONT).owl: $(SRC)
 	$(ROBOT)  reason -i $< -r ELK relax reduce -r ELK annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
 
 
-IMPORTS = ro pato envo go ncbitaxon bfo ro
+IMPORTS = ro pato envo go ncbitaxon bfo
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS))
 # Make this target to regenerate ALL
 all_imports: $(IMPORTS_OWL)
