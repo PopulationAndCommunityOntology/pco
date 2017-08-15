@@ -12,4 +12,4 @@
 
 4. **For updates to relationships:** Provide details of the current axioms, why you think they are wrong or not sufficient, and what exactly should be added or removed.
 
-On behalf of the ecocore editorial team, Thanks!
+On behalf of the PCO editorial team, Thanks!
