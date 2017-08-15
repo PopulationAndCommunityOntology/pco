@@ -9,11 +9,11 @@
 @base <http://purl.obolibrary.org/obo/pco.owl> .
 
 <http://purl.obolibrary.org/obo/pco.owl> rdf:type owl:Ontology ;
-                                          owl:imports <http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl> ,
+                                          owl:imports <http://purl.obolibrary.org/obo/ro/releases/2017-07-19/ro.owl> ,
+                                                      <http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/ncbitaxon_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/pato_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/envo_import.owl> ,
-                                                      <http://purl.obolibrary.org/obo/pco/imports/ro_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/go_import.owl> ;
                                           rdfs:comment "The Population and Community Ontology (PCO) is licensed under a Creative Commons zero (CC0) license - http://creativecommons.org/publicdomain/zero/1.0/. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. We ask that anyone using this ontology follow the standards of the scientific ontology community by re-using ontology identifiers whenever possible and properly citing the ontology and its creators." ;
                                           dc:contributor "http://orcid.org/0000-0002-4366-3088" ;
