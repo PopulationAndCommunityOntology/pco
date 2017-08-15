@@ -5,12 +5,12 @@ SRC=$(ONT)-edit.owl
 RELEASEDIR=../..
 ROBOT= robot
 OWLTOOLS= owltools
-USECAT= --use-catalog
+# USECAT= --use-catalog
 
-all: all_imports $(ONT).owl $(ONT).obo
+all: all_imports $(ONT).owl
 test: all
 prepare_release: all
-	cp $(ONT).owl $(ONT).obo $(RELEASEDIR) &&\
+	cp $(ONT).owl $(RELEASEDIR) &&\
 	mkdir -p $(RELEASEDIR)/imports &&\
 	cp imports/*{owl,obo} $(RELEASEDIR)/imports &&\
 	git add $(RELEASEDIR)/imports/*{obo,owl} &&\
@@ -19,13 +19,10 @@ prepare_release: all
 
 $(ONT).owl: $(SRC)
 	$(ROBOT)  reason -i $< -r ELK relax reduce -r ELK annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
-$(ONT).obo: $(ONT).owl
-	$(ROBOT) convert -i $< -f obo -o $(ONT).obo.tmp && mv $(ONT).obo.tmp $@
 
 
 IMPORTS = ro bfo pato envo go ncbi_taxon
-IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_import.obo,$(IMPORTS))
-
+IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS))
 # Make this target to regenerate ALL
 all_imports: $(IMPORTS_OWL)
 
@@ -34,13 +31,10 @@ imports/%_import.owl: mirror/%.owl imports/%_terms.txt
 	$(ROBOT) extract -i $< -T imports/$*_terms.txt --method BOT -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/%_import.owl
 
-imports/%_import.obo: imports/%_import.owl
-	$(OWLTOOLS) $(USECAT) $< -o -f obo $@
-
 # clone remote ontology locally, perfoming some excision of relations and annotations
 mirror/%.owl: $(SRC)
 	$(OWLTOOLS) $(OBO)/$*.owl --remove-annotation-assertions -l -s -d --remove-dangling-annotations  -o $@
 .PRECIOUS: mirror/%.owl
 
-release: $(ONT).owl $(ONT).obo
+release: $(ONT).owl
 	cp $^ $(RELEASEDIR) && cp imports/* $(RELEASEDIR)/imports
