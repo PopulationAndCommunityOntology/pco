@@ -29,6 +29,6 @@ branches:
     - test-travis
 
 ### UNCOMMENT THIS AND ADD YOUR DETAILS:
-#notifications:
-#  email:
-#    - YOURNAME@YOU.ORG
+notifications:
+  email:
+    - rlwalls2008@gmail.com
