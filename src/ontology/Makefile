@@ -39,7 +39,5 @@ mirror/%.owl: $(SRC)
 release: merge
 	cp $(ONT).owl $(RELEASEDIR) && cp imports/* $(RELEASEDIR)/imports
 
-### only the imports you want to merge are in the imports directory and match the wilcard pattern below
-IMPORTS_MERGE = $(patsubst %_import.owl, --input %_import.owl, $(wildcard imports/*_import.owl)) 
 merge: $(ONT).owl
-	$(ROBOT) merge --input $< $(IMPORTS_MERGE) --output $<
+	$(ROBOT) merge --input $< --output $<
