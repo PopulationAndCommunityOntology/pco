@@ -338,6 +338,7 @@ obo:PCO_0000018 rdf:type owl:Class ;
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
+                rdfs:subClassOf obo:PCO_0000000 ;
                 obo:IAO_0000114 obo:IAO_0000120 ;
                 obo:IAO_0000115 "A material entity that has as parts two or more organisms, viruses, or viroids of the same species and no members of any other species."@en ;
                 obo:IAO_0000118 "collection of organisms of the same species"@en ;
@@ -451,6 +452,7 @@ obo:PCO_0000027 rdf:type owl:Class ;
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
+                rdfs:subClassOf obo:PCO_0000018 ;
                 obo:IAO_0000114 obo:IAO_0000125 ;
                 obo:IAO_0000115 "A collection of organisms of the same species that has as members only humans."^^xsd:string ;
                 obo:IAO_0000118 "human community"@en ,
@@ -460,18 +462,7 @@ obo:PCO_0000027 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/PCO_0000028
 obo:PCO_0000028 rdf:type owl:Class ;
-                rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:RO_0002351 ;
-                                                         owl:allValuesFrom obo:CARO_0001010
-                                                       ]
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:RO_0002351 ;
-                                                         owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                                                         owl:onClass obo:CARO_0001010
-                                                       ]
-                                                     ) ;
-                                  rdf:type owl:Class
-                                ] ;
+                rdfs:subClassOf obo:PCO_0000000 ;
                 obo:IAO_0000114 obo:IAO_0000123 ;
                 obo:IAO_0000115 "A collection of organisms connected by social or biological relations (biotic interactions)."@en ;
                 obo:IAO_0000116 "Biological or social relations are covered by RO_0002437 (biotically interacts with), but that relations does provide an easy way to specify that two entities are interacting with each other (participating in the same interaction). Until that axiom is specified, the logical definition of this term is incomplete."@en ;
@@ -484,7 +475,7 @@ obo:PCO_0000029 rdf:type owl:Class ;
                 rdfs:subClassOf obo:PCO_0000000 ;
                 obo:IAO_0000114 obo:IAO_0000123 ;
                 obo:IAO_0000115 "A collection of organisms that consists of two or more organisms from at least two species."@en ;
-                obo:IAO_0000116 "Need to add axiom to specify that it has at a mimum members of two different species."@en ;
+                obo:IAO_0000116 "Need to add axiom to specify that it has at a mimum members of two different species, but not sure how to specify that. Can't say \"('has member' only ('member of' min 2 'species as a collection of organisms'))\"."@en ;
                 rdfs:comment ""@en ;
                 rdfs:label "multi-species collection of organisms"@en .
 
