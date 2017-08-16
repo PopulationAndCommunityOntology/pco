@@ -7,7 +7,7 @@ ROBOT= robot
 OWLTOOLS= owltools
 # USECAT= --use-catalog
 
-all: all_imports $(ONT).owl
+all: all_imports merge
 test: all
 prepare_release: all
 	cp $(ONT).owl $(RELEASEDIR) &&\
@@ -36,5 +36,10 @@ mirror/%.owl: $(SRC)
 	$(OWLTOOLS) $(OBO)/$*.owl --remove-annotation-assertions -l -s -d --remove-dangling-annotations  -o $@
 .PRECIOUS: mirror/%.owl
 
-release: $(ONT).owl
-	cp $^ $(RELEASEDIR) && cp imports/* $(RELEASEDIR)/imports
+release: merge
+	cp $(ONT).owl $(RELEASEDIR) && cp imports/* $(RELEASEDIR)/imports
+
+### only the imports you want to merge are in the imports directory and match the wilcard pattern below
+IMPORTS_MERGE = $(patsubst %_import.owl, --input %_import.owl, $(wildcard imports/*_import.owl)) 
+merge: $(ONT).owl
+	$(ROBOT) merge $(IMPORTS_MERGE) --input $< --output $<
