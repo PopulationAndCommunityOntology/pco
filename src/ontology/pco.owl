@@ -305,7 +305,6 @@
     <!-- http://purl.obolibrary.org/obo/CARO_0001010 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0001010">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000031"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Material anatomical entity that is a member of an individual species or is a viral or viroid particle.</obo:IAO_0000115>
         <obo:IAO_0000589 xml:lang="en">organism or virus</obo:IAO_0000589>
@@ -2014,7 +2013,7 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115>A material entity that is one or more organisms, viruses or viroids.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">organismal entity</rdfs:label>
@@ -2025,6 +2024,7 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <!-- http://purl.obolibrary.org/obo/PCO_0001000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0001000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
@@ -2063,7 +2063,7 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0001000"/>
         <rdfs:label xml:lang="en">pair of interacting organisms of the same species</rdfs:label>
     </owl:Class>
     
