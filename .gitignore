@@ -3,3 +3,4 @@ src/ontology/mirror
 src/ontology/mirror/*
 src/ontology/pco.obo
 src/ontology/pco.owl
+src/ontology/imports/catalog-v001.xml
