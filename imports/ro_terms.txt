@@ -1,0 +1,8 @@
+http://purl.obolibrary.org/obo/RO_0002434 #interacts with
+http://purl.obolibrary.org/obo/RO_0002437 #biotically interacts with
+http://purl.obolibrary.org/obo/RO_0002465 #is symbiosis
+http://purl.obolibrary.org/obo/RO_0002563 #interaction relation helper property
+http://purl.obolibrary.org/obo/RO_0002461 #partner in
+http://purl.obolibrary.org/obo/RO_0002462 #subject participant in
+http://purl.obolibrary.org/obo/RO_0002463 #target participant in
+http://purl.obolibrary.org/obo/RO_0002563 #interaction relation helper property

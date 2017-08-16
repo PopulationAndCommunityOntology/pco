@@ -1,0 +1,15 @@
+http://purl.obolibrary.org/obo/NCBITaxon_2157 #Archaea
+http://purl.obolibrary.org/obo/NCBITaxon_2 #Bacteria
+http://purl.obolibrary.org/obo/NCBITaxon_12884 #Viroids
+http://purl.obolibrary.org/obo/NCBITaxon_10239 #Viruses
+http://purl.obolibrary.org/obo/NCBITaxon_2759 #Eukaryota
+http://purl.obolibrary.org/obo/NCBITaxon_33090 #Viridiplantae
+http://purl.obolibrary.org/obo/NCBITaxon_3041 #Chlorophyta
+http://purl.obolibrary.org/obo/NCBITaxon_35493 #Streptophyta
+http://purl.obolibrary.org/obo/NCBITaxon_3193 #Embryophyta
+http://purl.obolibrary.org/obo/NCBITaxon_58023 #Tracheophyta
+http://purl.obolibrary.org/obo/NCBITaxon_58024 #Spermatophyta
+http://purl.obolibrary.org/obo/NCBITaxon_3398 #Magnoliophyta
+http://purl.obolibrary.org/obo/NCBITaxon_1437180 #Acrogymnospermae
+http://purl.obolibrary.org/obo/NCBITaxon_33208 #Metazoa
+http://purl.obolibrary.org/obo/NCBITaxon_9606 #Homo sapiens
