@@ -243,12 +243,13 @@ obo:PCO_0000008 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/PCO_0000009
 obo:PCO_0000009 rdf:type owl:Class ;
-                rdfs:subClassOf obo:PCO_0000003 ;
-                obo:IAO_0000114 obo:IAO_0000428 ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 obo:IAO_0000115 "The maximum number of individuals that can be supported in  a population that is growing according to logistic growth." ;
-                obo:IAO_0000116 "Might be better to add this as a data property."@en ;
+                obo:IAO_0000116 "Carrying capacity is better defined as a quality of the environment in which a population lives. This term will be deprecated from PCO and moved to ecoCORE."@en ;
                 obo:IAO_0000119 "ISBN:0878932739" ;
-                rdfs:label "carrying capacity"@en .
+                obo:IAO_0000231 obo:IAO_0000423 ;
+                rdfs:label "obsolete carrying capacity"@en ;
+                owl:deprecated "true"^^xsd:boolean .
 
 
 ###  http://purl.obolibrary.org/obo/PCO_0000010
