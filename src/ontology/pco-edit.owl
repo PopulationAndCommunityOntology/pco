@@ -466,7 +466,7 @@ obo:PCO_0000027 rdf:type owl:Class ;
 obo:PCO_0000028 rdf:type owl:Class ;
                 rdfs:subClassOf obo:PCO_0000000 ;
                 obo:IAO_0000114 obo:IAO_0000123 ;
-                obo:IAO_0000115 "A collection of organisms connected by social or biological relations (biotic interactions)."@en ;
+                obo:IAO_0000115 "A collection of organisms of the same species whose members are all either genealogically related to each other or have mated with each other." ;
                 obo:IAO_0000116 "Biological or social relations are covered by RO_0002437 (biotically interacts with), but that relations does provide an easy way to specify that two entities are interacting with each other (participating in the same interaction). Until that axiom is specified, the logical definition of this term is incomplete."@en ;
                 rdfs:comment "These relations can include shared values, occupying the same spatial regkion. A community be be a single species collection of organsisms (as in a  human community, which is also a type of population) or a  or multi-species collection of organisms (as in an ecological community)."@en ;
                 rdfs:label "community"@en .
@@ -502,6 +502,15 @@ obo:PCO_0000031 rdf:type owl:Class ;
                 obo:IAO_0000114 obo:IAO_0000125 ;
                 obo:IAO_0000115 "A material entity that is one or more organisms, viruses or viroids." ;
                 rdfs:label "organismal entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000032
+obo:PCO_0000032 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000020 ;
+                obo:IAO_0000115 "A collection of organisms of the same species whose members are all either genealogically related to each other or have mated with each other." ;
+                obo:IAO_0000118 "genealogical family" ;
+                obo:IAO_0000119 "Matthew Brush, as part of http://datamodel.clinicalgenome.org/interpretation/" ;
+                rdfs:label "biological family"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PCO_0001000
