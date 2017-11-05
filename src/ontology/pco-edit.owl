@@ -513,6 +513,64 @@ obo:PCO_0000032 rdf:type owl:Class ;
                 rdfs:label "biological family"@en .
 
 
+###  http://purl.obolibrary.org/obo/PCO_0000033
+obo:PCO_0000033 rdf:type owl:Class ;
+                rdfs:subClassOf obo:GO_0035176 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0000057 ;
+                                  owl:someValuesFrom obo:PCO_0000027
+                                ] ;
+                obo:IAO_0000115 "A type of social behavior in which a collection of humans intentionally gathers together on a temporary basis to engage socially."@en ;
+                obo:IAO_0000116 "Intented to replace http://purl.obolibrary.org/obo/GENEPIO_0001029"@en ;
+                obo:IAO_0000119 "GenEpiO curators"@en ;
+                rdfs:label "human social gathering activity"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000034
+obo:PCO_0000034 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000033 ;
+                obo:IAO_0000115 "A human social event in which humans living in the same area or neighborhood gather to carry out activiites relevent to the people living in the area."@en ;
+                obo:IAO_0000116 "Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001034"@en ;
+                obo:IAO_0000119 "GenEpio curators"@en ;
+                rdfs:label "human community event"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000035
+obo:PCO_0000035 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000033 ;
+                obo:IAO_0000115 "A human social gathering in which the intention is to have a good time. Often the intention is to celebrate something like a birthday, anniversary, or holiday, but there is not always a purpose."@en ;
+                obo:IAO_0000116 "Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001030"@en ;
+                obo:IAO_0000119 "GenEpiO curators"@en ;
+                rdfs:label "party"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000037
+obo:PCO_0000037 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000033 ;
+                obo:IAO_0000116 "Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001033"@en ;
+                obo:IAO_0000119 "A human social gathering at which each participant is expected to bring food to share. A potluck also can be party, a social meal, or some other type of social gathering."@en ,
+                                "GenEpio curators"@en ;
+                rdfs:label "potluck"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000038
+obo:PCO_0000038 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000033 ;
+                obo:IAO_0000115 "A human social gathering at which two people are married. May include a legal or social ceremony."@en ;
+                obo:IAO_0000116 "Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001031"@en ;
+                obo:IAO_0000119 "GenEpio curators"@en ;
+                rdfs:label "wedding"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000039
+obo:PCO_0000039 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000033 ;
+                obo:IAO_0000115 "A human social gathering at which the key participant is an expectant parent and other guests bring presents for the soon to be born baby."@en ;
+                obo:IAO_0000116 "Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001032"@en ;
+                obo:IAO_0000119 "GenEpiO curators"@en ;
+                rdfs:label "baby shower"@en .
+
+
 ###  http://purl.obolibrary.org/obo/PCO_0001000
 obo:PCO_0001000 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000040 ,
