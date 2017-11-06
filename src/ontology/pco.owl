@@ -17,7 +17,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pco.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pco/releases/2017-11-05/pco.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pco/releases/2017-11-06/pco.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2017-07-19/ro.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/pco/imports/bfo_import.owl"/>
@@ -11084,7 +11084,6 @@ resulting from the influence of human beings on nature.</owl:annotatedTarget>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000254"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001110"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -14012,6 +14011,84 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <obo:IAO_0000118>genealogical family</obo:IAO_0000118>
         <obo:IAO_0000119>Matthew Brush, as part of http://datamodel.clinicalgenome.org/interpretation/</obo:IAO_0000119>
         <rdfs:label xml:lang="en">biological family</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0035176"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PCO_0000027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A type of social behavior in which a collection of humans intentionally gathers together on a temporary basis to engage socially.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Intented to replace http://purl.obolibrary.org/obo/GENEPIO_0001029</obo:IAO_0000116>
+        <obo:IAO_0000119 xml:lang="en">GenEpiO curators</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">human social gathering activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000033"/>
+        <obo:IAO_0000115 xml:lang="en">A human social event in which humans living in the same area or neighborhood gather to carry out activiites relevent to the people living in the area.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001034</obo:IAO_0000116>
+        <obo:IAO_0000119 xml:lang="en">GenEpio curators</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">human community event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000033"/>
+        <obo:IAO_0000115 xml:lang="en">A human social gathering in which the intention is to have a good time. Often the intention is to celebrate something like a birthday, anniversary, or holiday, but there is not always a purpose.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001030</obo:IAO_0000116>
+        <obo:IAO_0000119 xml:lang="en">GenEpiO curators</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">party</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000037">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000033"/>
+        <obo:IAO_0000116 xml:lang="en">Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001033</obo:IAO_0000116>
+        <obo:IAO_0000119 xml:lang="en">A human social gathering at which each participant is expected to bring food to share. A potluck also can be party, a social meal, or some other type of social gathering.</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">GenEpio curators</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">potluck</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000033"/>
+        <obo:IAO_0000115 xml:lang="en">A human social gathering at which two people are married. May include a legal or social ceremony.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001031</obo:IAO_0000116>
+        <obo:IAO_0000119 xml:lang="en">GenEpio curators</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">wedding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000039 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000033"/>
+        <obo:IAO_0000115 xml:lang="en">A human social gathering at which the key participant is an expectant parent and other guests bring presents for the soon to be born baby.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001032</obo:IAO_0000116>
+        <obo:IAO_0000119 xml:lang="en">GenEpiO curators</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">baby shower</rdfs:label>
     </owl:Class>
     
 
