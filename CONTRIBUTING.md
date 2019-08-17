@@ -4,9 +4,9 @@
 
 ## Guidelines for creating GitHub tickets with contributions to the ontology:
 
-1. **Write a detailed request:** Please be specific and include as many details as necessary, providing background information, and if possible, suggesting a solution. GOC editors will be better equipped to address your suggestions if you offer details regarding *'what is wrong'*, *'why'*, and *'how to fix it'*.
+1. **Write a detailed request:** Please be specific and include as many details as necessary, providing background information, and if possible, suggesting a solution. PCO editors will be better equipped to address your suggestions if you offer details regarding *'what is wrong'*, *'why'*, and *'how to fix it'*.
 
-2. **Provide examples and references:** Please include PMIDs for new term requests, and include also screenshots, or URLs illustrating the current ontology structure for other types of requests. 
+2. **Provide examples and references:** Please include PMIDs or other citations for new term requests, and include also screenshots, or URLs illustrating the current ontology structure for other types of requests. 
 
 3. **For new term request:** Be sure to provide suggestions for label (name), definition, references, position in hierarchy, etc.
 
