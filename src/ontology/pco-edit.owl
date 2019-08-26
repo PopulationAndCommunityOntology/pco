@@ -417,6 +417,7 @@ obo:PCO_0000024 rdf:type owl:Class ;
                                   owl:onProperty obo:RO_0002321 ;
                                   owl:someValuesFrom obo:ENVO_01000744
                                 ] ;
+                obo:IAO_0000114 obo:IAO_0000123 ;
                 obo:IAO_0000115 "An organismal entity that consists of one or more people who live in the same dwelling and also share at meals or living accommodation, and may consist of a single family or some other grouping of people." ;
                 obo:IAO_0000117 "Person: Jie Zheng" ;
                 obo:IAO_0000119 "WEB: http://en.wikipedia.org/wiki/Household" ;
@@ -501,7 +502,7 @@ obo:PCO_0000031 rdf:type owl:Class ;
                                                   )
                                     ] ;
                 rdfs:subClassOf obo:BFO_0000040 ;
-                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000114 obo:IAO_0000120 ;
                 obo:IAO_0000115 "A material entity that is one or more organisms, viruses or viroids." ;
                 rdfs:label "organismal entity"@en .
 
