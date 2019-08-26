@@ -9,20 +9,20 @@
 @base <http://purl.obolibrary.org/obo/pco.owl> .
 
 <http://purl.obolibrary.org/obo/pco.owl> rdf:type owl:Ontology ;
-                                          owl:imports <http://purl.obolibrary.org/obo/ro/releases/2017-07-19/ro.owl> ,
-                                                      <http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl> ,
+                                          owl:imports <http://purl.obolibrary.org/obo/iao/2015-02-23/ontology-metadata.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/bfo_import.owl> ,
+                                                      <http://purl.obolibrary.org/obo/pco/imports/envo_import.owl> ,
+                                                      <http://purl.obolibrary.org/obo/pco/imports/go_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/ncbitaxon_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/pato_import.owl> ,
-                                                      <http://purl.obolibrary.org/obo/pco/imports/envo_import.owl> ,
-                                                      <http://purl.obolibrary.org/obo/pco/imports/go_import.owl> ;
-                                          rdfs:comment "The Population and Community Ontology (PCO) is licensed under a Creative Commons zero (CC0) license - http://creativecommons.org/publicdomain/zero/1.0/. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. We ask that anyone using this ontology follow the standards of the scientific ontology community by re-using ontology identifiers whenever possible and properly citing the ontology and its creators." ;
+                                                      <http://purl.obolibrary.org/obo/ro/releases/2017-07-19/ro.owl> ;
                                           dc:contributor "http://orcid.org/0000-0002-4366-3088" ;
-                                          dc:creator "Ramona Walls" ,
-                                                     "David Osumi-Sutherland" ,
+                                          dc:creator "David Osumi-Sutherland" ,
                                                      "Jie Zheng" ,
-                                                     "Pier Luigi Buttigieg" ;
-                                          dc:license "http://creativecommons.org/publicdomain/zero/1.0/" .
+                                                     "Pier Luigi Buttigieg" ,
+                                                     "Ramona Walls" ;
+                                          dc:license "http://creativecommons.org/publicdomain/zero/1.0/" ;
+                                          rdfs:comment "The Population and Community Ontology (PCO) is licensed under a Creative Commons zero (CC0) license - http://creativecommons.org/publicdomain/zero/1.0/. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. We ask that anyone using this ontology follow the standards of the scientific ontology community by re-using ontology identifiers whenever possible and properly citing the ontology and its creators." .
 
 #################################################################
 #    Annotation properties
@@ -34,6 +34,10 @@ obo:IAO_created_by rdf:type owl:AnnotationProperty .
 
 ###  http://purl.obolibrary.org/obo/IAO_creation_date
 obo:IAO_creation_date rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+dc:license rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -409,13 +413,11 @@ obo:PCO_0000024 rdf:type owl:Class ;
                                                      ) ;
                                   rdf:type owl:Class
                                 ] ,
-                                [ rdf:type owl:Class ;
-                                  owl:unionOf ( obo:CARO_0001010
-                                                obo:PCO_0000000
-                                              )
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002321 ;
+                                  owl:someValuesFrom obo:ENVO_01000744
                                 ] ;
-                obo:IAO_0000115 """A material entity that consists of one or more people who live in the same dwelling and also share at meals or living accommodation, and may consist of a single family or some other grouping of people.
-""" ;
+                obo:IAO_0000115 "An organismal entity that consists of one or more people who live in the same dwelling and also share at meals or living accommodation, and may consist of a single family or some other grouping of people." ;
                 obo:IAO_0000117 "Person: Jie Zheng" ;
                 obo:IAO_0000119 "WEB: http://en.wikipedia.org/wiki/Household" ;
                 rdfs:label "household"@en .
@@ -679,4 +681,4 @@ obo:PCO_1000004 rdf:type owl:Class ;
 <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> rdf:type owl:Class .
 
 
-###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
