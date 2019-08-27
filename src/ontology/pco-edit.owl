@@ -101,6 +101,10 @@ obo:CARO_0010004 rdf:type owl:Class ;
                  rdfs:label "organism"^^xsd:string .
 
 
+###  http://purl.obolibrary.org/obo/ENVO_01000744
+obo:ENVO_01000744 rdf:type owl:Class .
+
+
 ###  http://purl.obolibrary.org/obo/GO_0051704
 obo:GO_0051704 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000015 .
@@ -142,7 +146,7 @@ obo:PCO_0000001 rdf:type owl:Class ;
                 obo:IAO_0000114 obo:IAO_0000125 ;
                 obo:IAO_0000115 "A collection of organisms, all of the same species, that live in the same place."@en ;
                 obo:IAO_0000119 "ISBN:0878932739" ;
-                rdfs:comment """It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. 'Community', as often used to describe a group of humans, is a type of population. 
+                rdfs:comment """It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. 'Community', as often used to describe a group of humans, is a type of population of organisms. 
 
 Classes for population already  exist in IDO ('organism population', IDO_0000509) and OBI ('population', OBI_0000181). The definitions should be standardized across OBO Foundry ontologies and only one term used."""@en ;
                 rdfs:label "population of organisms"@en .
@@ -150,25 +154,17 @@ Classes for population already  exist in IDO ('organism population', IDO_0000509
 
 ###  http://purl.obolibrary.org/obo/PCO_0000002
 obo:PCO_0000002 rdf:type owl:Class ;
-                owl:equivalentClass [ owl:intersectionOf ( obo:PCO_0000028
+                owl:equivalentClass [ owl:intersectionOf ( obo:PCO_0000029
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty obo:RO_0002351 ;
                                                              owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                                                             owl:onClass [ owl:intersectionOf ( obo:PCO_0000001
-                                                                                                [ rdf:type owl:Restriction ;
-                                                                                                  owl:onProperty obo:RO_0001025 ;
-                                                                                                  owl:someValuesFrom obo:BFO_0000029
-                                                                                                ]
-                                                                                              ) ;
-                                                                           rdf:type owl:Class
-                                                                         ]
+                                                             owl:onClass obo:PCO_0000001
                                                            ]
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                rdfs:subClassOf obo:PCO_0000029 ;
                 obo:IAO_0000114 obo:IAO_0000123 ;
-                obo:IAO_0000115 "A community of at least two different species, living in a particular area. Must have at least two populations of different species as members."@en ;
+                obo:IAO_0000115 "A multi-species collection of organisms of at least two different species, living in a particular area. Must have at least two populations of different species as members."@en ;
                 obo:IAO_0000116 "Not sure if the equivalancy axiom specifies that both populations are located in the same site." ;
                 obo:IAO_0000118 "multispecies community"@en ;
                 obo:IAO_0000119 "ISBN:0865423504" ;
@@ -467,12 +463,13 @@ obo:PCO_0000027 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/PCO_0000028
 obo:PCO_0000028 rdf:type owl:Class ;
-                rdfs:subClassOf obo:PCO_0000000 ;
-                obo:IAO_0000114 obo:IAO_0000123 ;
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 obo:IAO_0000115 "A collection of organisms of the same species whose members are all either genealogically related to each other or have mated with each other." ;
                 obo:IAO_0000116 "Biological or social relations are covered by RO_0002437 (biotically interacts with), but that relations does provide an easy way to specify that two entities are interacting with each other (participating in the same interaction). Until that axiom is specified, the logical definition of this term is incomplete."@en ;
+                obo:IAO_0000231 obo:IAO_0000103 ;
                 rdfs:comment "These relations can include shared values, occupying the same spatial regkion. A community be be a single species collection of organsisms (as in a  human community, which is also a type of population) or a  or multi-species collection of organisms (as in an ecological community)."@en ;
-                rdfs:label "community"@en .
+                rdfs:label "community"@en ;
+                owl:deprecated "true"^^xsd:boolean .
 
 
 ###  http://purl.obolibrary.org/obo/PCO_0000029

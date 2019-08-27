@@ -1,6 +1,2 @@
 http://purl.obolibrary.org/obo/ENVO_01000744 #human dwelling
-http://purl.obolibrary.org/obo/ENVO_00000070 #constructed feature
-http://purl.obolibrary.org/obo/ENVO_00000002 #anthropogenic geographic feature
-http://purl.obolibrary.org/obo/ENVO_00000000 #geographic feature
-http://purl.obolibrary.org/obo/ENVO_00002297 #environmental feature
 http://purl.obolibrary.org/obo/ENVO_01001369 #tidal magrove shrubland
