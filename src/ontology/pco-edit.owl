@@ -14,8 +14,7 @@
                                                       <http://purl.obolibrary.org/obo/pco/imports/envo_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/go_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/ncbitaxon_import.owl> ,
-                                                      <http://purl.obolibrary.org/obo/pco/imports/pato_import.owl> ,
-                                                      <http://purl.obolibrary.org/obo/ro/releases/2017-07-19/ro.owl> ;
+                                                      <http://purl.obolibrary.org/obo/pco/imports/pato_import.owl> ;
                                           dc:contributor "http://orcid.org/0000-0002-4366-3088" ,
                                                          "https://orcid.org/0000-0001-8815-0078" ;
                                           dc:creator "David Osumi-Sutherland" ,
@@ -37,13 +36,25 @@ obo:IAO_created_by rdf:type owl:AnnotationProperty .
 obo:IAO_creation_date rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/elements/1.1/license
 dc:license rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym
+<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000050
+obo:BFO_0000050 rdf:type owl:ObjectProperty .
+
 
 ###  http://purl.obolibrary.org/obo/BFO_0000051
 obo:BFO_0000051 rdf:type owl:ObjectProperty .
@@ -53,8 +64,24 @@ obo:BFO_0000051 rdf:type owl:ObjectProperty .
 obo:RO_0000052 rdf:type owl:ObjectProperty .
 
 
+###  http://purl.obolibrary.org/obo/RO_0000056
+obo:RO_0000056 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000057
+obo:RO_0000057 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000086
+obo:RO_0000086 rdf:type owl:ObjectProperty .
+
+
 ###  http://purl.obolibrary.org/obo/RO_0001025
 obo:RO_0001025 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002321
+obo:RO_0002321 rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0002350
@@ -68,6 +95,10 @@ obo:RO_0002351 rdf:type owl:ObjectProperty .
 #################################################################
 #    Classes
 #################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000015
+obo:BFO_0000015 rdf:type owl:Class .
+
 
 ###  http://purl.obolibrary.org/obo/BFO_0000023
 obo:BFO_0000023 rdf:type owl:Class .
@@ -582,6 +613,7 @@ obo:PCO_0001000 rdf:type owl:Class ;
                                   owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
                                   owl:onClass obo:CARO_0001010
                                 ] ;
+                obo:IAO_0000115 "A collection of organisms that consists of exactly two organism, viruses, or viroids that are interacting with each other."@en ;
                 rdfs:label "pair of interacting organisms"@en .
 
 
@@ -654,12 +686,14 @@ obo:PCO_1000003 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/PCO_1000004
 obo:PCO_1000004 rdf:type owl:Class ;
-                rdfs:subClassOf obo:PCO_0000002 ;
-                obo:IAO_0000114 obo:IAO_0000123 ;
+                rdfs:subClassOf obo:PCO_0000002 ,
+                                <https://purl.obolibrary.org/obo/PCO_0000044> ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
                 obo:IAO_0000115 "An ecological community which is composed of co-existing populations of microbial organisms that interact, directly or indirectly, such that they impact one another's ecological fitness." ;
                 obo:IAO_0000116 "A class for a collection of organisms considered \"microbial\" and an accompanying quality in PATO (e.g. \"microscopic\") would be useful to better axiomatise this class. See https://github.com/PopulationAndCommunityOntology/pco/issues/22" ;
                 obo:IAO_0000117 "http://orcid.org/0000-0002-4366-3088" ;
                 obo:IAO_0000119 "http://dx.doi.org/10.1038/ismej.2009.88" ;
+                <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "microbiota"@en ;
                 rdfs:comment "The definition of a microbial species is deeply debated, however, units of phylogenetic and functional diversity are recognised with respect to their varying roles in an ecosystem. In turn, there exist multiple operational definitions of microbial community, such as local, phenomenological, and indexical communities. This class seeks to capture microbial communities in a very broad sense, as collections of phylogenetically and functionally divergent microbial organisms co-existing, potentially interacting, and competing for niche space in the same ecosystem over a period of time in which their causal footprints overlap one another." ;
                 rdfs:label "microbial community"@en .
 
@@ -710,6 +744,75 @@ obo:PCO_1000004 rdf:type owl:Class ;
                                                               ] ;
                                               <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "microbial organism"@en ;
                                               rdfs:label "microbe"@en .
+
+
+###  https://purl.obolibrary.org/obo/PCO_0000043
+<https://purl.obolibrary.org/obo/PCO_0000043> rdf:type owl:Class ;
+                                              owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty obo:RO_0002351 ;
+                                                                                           owl:allValuesFrom <https://purl.obolibrary.org/obo/PCO_0000042>
+                                                                                         ]
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty obo:RO_0002351 ;
+                                                                                           owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                                           owl:onClass <https://purl.obolibrary.org/obo/PCO_0000042>
+                                                                                         ]
+                                                                                       ) ;
+                                                                    rdf:type owl:Class
+                                                                  ] ;
+                                              rdfs:subClassOf obo:PCO_0000000 ;
+                                              obo:IAO_0000115 "A collection of organisms consisting of two or more microbes."@en ;
+                                              dc:creator "https://orcid.org/0000-0001-8815-0078"@en ;
+                                              rdfs:label "collection of microbial organisms"@en .
+
+
+###  https://purl.obolibrary.org/obo/PCO_0000044
+<https://purl.obolibrary.org/obo/PCO_0000044> rdf:type owl:Class ;
+                                              rdfs:subClassOf obo:PCO_0000029 ,
+                                                              <https://purl.obolibrary.org/obo/PCO_0000043> ;
+                                              obo:IAO_0000115 "A multi-species collection of organisms that consists of two or more microbes from at least two species."@en ;
+                                              dc:creator "https://orcid.org/0000-0001-8815-0078"@en ;
+                                              rdfs:label "multi-species collection of microbes"@en .
+
+
+###  https://purl.obolibrary.org/obo/PCO_0000045
+<https://purl.obolibrary.org/obo/PCO_0000045> rdf:type owl:Class ;
+                                              owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty obo:RO_0002351 ;
+                                                                                           owl:allValuesFrom <https://purl.obolibrary.org/obo/PCO_0000042>
+                                                                                         ]
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty obo:RO_0002351 ;
+                                                                                           owl:allValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                               owl:onProperty obo:RO_0002350 ;
+                                                                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                               owl:onClass obo:PCO_0000017
+                                                                                                             ]
+                                                                                         ]
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty obo:RO_0002351 ;
+                                                                                           owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                                           owl:onClass <https://purl.obolibrary.org/obo/PCO_0000042>
+                                                                                         ]
+                                                                                       ) ;
+                                                                    rdf:type owl:Class
+                                                                  ] ;
+                                              obo:IAO_0000115 "A single-species collection of organisms that consists of two or more microbes of the same species and no members of any other species."@en ;
+                                              dc:creator "https://orcid.org/0000-0001-8815-0078"@en ;
+                                              rdfs:label "single species collection of microbes"@en .
+
+
+###  https://purl.obolibrary.org/obo/PCO_0000046
+<https://purl.obolibrary.org/obo/PCO_0000046> rdf:type owl:Class ;
+                                              rdfs:subClassOf obo:PCO_0000001 ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty obo:RO_0002351 ;
+                                                                owl:allValuesFrom <https://purl.obolibrary.org/obo/PCO_0000042>
+                                                              ] ;
+                                              obo:IAO_0000115 "A population of organisms consisting of only microbes of the same species, that live in the same place."@en ;
+                                              dc:creator "https://orcid.org/0000-0001-8815-0078"@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "microbiota"@en ;
+                                              rdfs:label "microbial population"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
