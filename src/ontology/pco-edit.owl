@@ -735,9 +735,9 @@ obo:PCO_1000004 rdf:type owl:Class ;
                                                               ] ;
                                               obo:IAO_0000115 "An ecological community which is composed primarily of dwarf or short mangroves, often populations of Laguncularia racemosa, Avicennia germinans, Sarcocornia pacifica, or Batis maritima."@en ;
                                               dc:contributor "https://orcid.org/0000-0002-4366-3088"@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://cmecscatalog.org/cmecs/classification/unit/577.html" ;
                                               <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "mangrove community"@en ,
                                                                                                                "tidal shrubland community"@en ;
-                                              rdfs:comment "DBXREF https://cmecscatalog.org/cmecs/classification/unit/577.html"@en ;
                                               rdfs:label "tidal mangrove shrubland community"@en .
 
 
