@@ -774,7 +774,6 @@ obo:PCO_1000004 rdf:type owl:Class ;
                                                                                        ) ;
                                                                     rdf:type owl:Class
                                                                   ] ;
-                                              rdfs:subClassOf obo:PCO_0000000 ;
                                               obo:IAO_0000115 "A collection of organisms consisting of two or more microbes."@en ;
                                               dc:creator "https://orcid.org/0000-0001-8815-0078"@en ;
                                               rdfs:label "collection of microbial organisms"@en .
