@@ -4,3 +4,11 @@ http://purl.obolibrary.org/obo/PATO_0000161 #rate
 http://purl.obolibrary.org/obo/PATO_0002003 #population quality
 http://purl.obolibrary.org/obo/PATO_0001338 #mixed sex
 http://purl.obolibrary.org/obo/PATO_0001415 #morbity
+
+
+  #robot extract --method BOT \
+  #   --input files/pato.owl \
+  #   --term-file pato_terms.txt \
+  #   --annotate-with-source true \
+  #   annotate --ontology-iri "http://purl.obolibrary.org/obo/pco/imports/pato_import.owl" \
+  #   --output pato_import.owl

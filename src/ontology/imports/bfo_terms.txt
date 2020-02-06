@@ -1,2 +1,10 @@
 http://purl.obolibrary.org/obo/BFO_0000029 #site
 http://purl.obolibrary.org/obo/BFO_0000027 #object aggregate
+http://purl.obolibrary.org/obo/BFO_0000023 #role
+
+  #robot extract --method BOT \
+  #   --input files/bfo.owl \
+  #   --term-file bfo_terms.txt \
+  #   --annotate-with-source true \
+  #   annotate --ontology-iri "http://purl.obolibrary.org/obo/pco/imports/bfo_import.owl" \
+  #   --output bfo_import.owl
