@@ -1,0 +1,10 @@
+term
+http://www.w3.org/2002/07/owl#Ontology
+http://purl.obolibrary.org/obo/pco/imports/ro_import.owl
+http://purl.obolibrary.org/obo/pco/imports/bfo_import.owl
+http://purl.obolibrary.org/obo/pco/imports/envo_import.owl
+http://purl.obolibrary.org/obo/pco/imports/pato_import.owl
+http://purl.obolibrary.org/obo/pco/imports/go_import.owl
+http://www.w3.org/2002/07/owl#Class
+http://purl.obolibrary.org/obo/pco.owl
+http://purl.obolibrary.org/obo/PCO_00000000

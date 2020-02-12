@@ -1,0 +1,11 @@
+id: pco
+title: Population and Community Ontology
+github_org: PopulationAndCommunityOntology
+repo: pco
+import_group:
+  products:
+    - id: bfo
+    - id: envo
+    - id: go
+    - id: pato
+    - id: ro
