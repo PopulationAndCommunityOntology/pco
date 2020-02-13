@@ -1,0 +1,97 @@
+format-version: 1.2
+data-version: pco/releases/2020-02-13/pato_import.obo
+ontology: pco/imports/pato_import.obo
+
+[Term]
+id: PATO:0000001
+name: quality
+namespace: quality
+alt_id: PATO:0000072
+def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
+synonym: "trait" EXACT []
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0000161
+name: rate
+namespace: quality
+def: "A quality of a single process inhering in a bearer by virtue of the bearer's occurrence per unit time." [PATOC:melissa]
+subset: attribute_slim
+subset: scalar_slim
+is_a: PATO:0002062 ! physical quality of a process
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0001236
+name: process quality
+namespace: quality
+alt_id: PATO:0001239
+alt_id: PATO:0001240
+def: "A quality which inheres in an process." [PATOC:GVG]
+comment: See comments of relational quality of a physical entity.
+synonym: "quality of a process" EXACT []
+synonym: "quality of occurrent" EXACT []
+synonym: "quality of process" EXACT []
+synonym: "relational quality of occurrent" EXACT []
+is_a: PATO:0000001 ! quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0001241
+name: physical object quality
+namespace: quality
+alt_id: PATO:0001237
+alt_id: PATO:0001238
+def: "A quality which inheres in a continuant." [PATOC:GVG]
+comment: Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles.
+synonym: "monadic quality of a continuant" EXACT []
+synonym: "monadic quality of an object" NARROW []
+synonym: "monadic quality of continuant" NARROW []
+synonym: "multiply inhering quality of a physical entity" EXACT []
+synonym: "quality of a continuant" EXACT []
+synonym: "quality of a single physical entity" EXACT []
+synonym: "quality of an object" EXACT []
+synonym: "quality of continuant" EXACT []
+xref: snap:Quality
+is_a: PATO:0000001 ! quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0001338
+name: mixed sex
+namespace: quality
+def: "A biological sex quality inhering in a population of multiple sexes." [MGED:MGED]
+comment: For example a mixture of females and male or males and hermaphrodites.
+subset: value_slim
+is_a: PATO:0002003 ! population quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0001415
+name: morbidity
+namespace: quality
+def: "A quality inhering in a population by virtue of the proportion of its members that are ill at a given time." [PATOC:GVG]
+subset: attribute_slim
+subset: scalar_slim
+is_a: PATO:0002003 ! population quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0002003
+name: population quality
+namespace: quality
+def: "A quality that inheres in an entire population or part of a population." [PATOC:GVG]
+subset: attribute_slim
+is_a: PATO:0001241 ! physical object quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0002062
+name: physical quality of a process
+namespace: quality
+subset: attribute_slim
+is_a: PATO:0001236 ! process quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+created_by: george
+creation_date: 2009-06-05T09:16:46Z
+

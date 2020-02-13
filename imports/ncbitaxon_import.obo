@@ -1,0 +1,330 @@
+format-version: 1.2
+data-version: pco/releases/2020-02-13/ncbitaxon_import.obo
+ontology: pco/imports/ncbitaxon_import.obo
+
+[Term]
+id: NCBITaxon:1
+name: root
+synonym: "all" RELATED synonym []
+
+[Term]
+id: NCBITaxon:10239
+name: Viruses
+synonym: "Vira" RELATED synonym []
+synonym: "Viridae" RELATED synonym []
+synonym: "viruses" RELATED blast_name []
+is_a: NCBITaxon:1 ! root
+
+[Term]
+id: NCBITaxon:117570
+name: Teleostomi
+is_a: NCBITaxon:7776 ! Gnathostomata <vertebrate>
+
+[Term]
+id: NCBITaxon:117571
+name: Euteleostomi
+synonym: "bony vertebrates" EXACT genbank_common_name []
+is_a: NCBITaxon:117570 ! Teleostomi
+
+[Term]
+id: NCBITaxon:12884
+name: Viroids
+synonym: "Viroid" RELATED synonym []
+synonym: "viroids" RELATED blast_name []
+is_a: NCBITaxon:1 ! root
+
+[Term]
+id: NCBITaxon:131221
+name: Streptophytina
+synonym: "Charophyta/Embryophyta group" RELATED synonym []
+synonym: "charophyte/embryophyte group" RELATED synonym []
+is_a: NCBITaxon:35493 ! Streptophyta
+
+[Term]
+id: NCBITaxon:131567
+name: cellular organisms
+synonym: "biota" RELATED synonym []
+is_a: NCBITaxon:1 ! root
+
+[Term]
+id: NCBITaxon:1338369
+name: Dipnotetrapodomorpha
+is_a: NCBITaxon:8287 ! Sarcopterygii
+
+[Term]
+id: NCBITaxon:1437010
+name: Boreoeutheria
+synonym: "Boreotheria" RELATED synonym []
+is_a: NCBITaxon:9347 ! Eutheria
+
+[Term]
+id: NCBITaxon:1437180
+name: Acrogymnospermae
+is_a: NCBITaxon:58024 ! Spermatophyta
+
+[Term]
+id: NCBITaxon:2
+name: Bacteria
+synonym: "bacteria" RELATED blast_name []
+synonym: "eubacteria" EXACT genbank_common_name []
+synonym: "Monera" RELATED in_part []
+synonym: "not Bacteria Haeckel 1894" RELATED synonym []
+synonym: "Procaryotae" RELATED in_part []
+synonym: "Prokaryota" RELATED in_part []
+synonym: "Prokaryotae" RELATED in_part []
+synonym: "prokaryote" RELATED in_part []
+synonym: "prokaryotes" RELATED in_part []
+is_a: NCBITaxon:131567 ! cellular organisms
+
+[Term]
+id: NCBITaxon:207598
+name: Homininae
+synonym: "Homo/Pan/Gorilla group" RELATED synonym []
+is_a: NCBITaxon:9604 ! Hominidae
+
+[Term]
+id: NCBITaxon:2157
+name: Archaea
+synonym: "archaea" RELATED blast_name []
+synonym: "Archaebacteria" RELATED synonym []
+synonym: "Mendosicutes" RELATED synonym []
+synonym: "Metabacteria" RELATED synonym []
+synonym: "Monera" RELATED in_part []
+synonym: "Procaryotae" RELATED in_part []
+synonym: "Prokaryota" RELATED in_part []
+synonym: "Prokaryotae" RELATED in_part []
+synonym: "prokaryote" RELATED in_part []
+synonym: "prokaryotes" RELATED in_part []
+is_a: NCBITaxon:131567 ! cellular organisms
+
+[Term]
+id: NCBITaxon:2759
+name: Eukaryota
+synonym: "Eucarya" RELATED synonym []
+synonym: "Eucaryotae" RELATED synonym []
+synonym: "eucaryotes" EXACT genbank_common_name []
+synonym: "Eukarya" RELATED synonym []
+synonym: "Eukaryotae" RELATED synonym []
+synonym: "eukaryotes" EXACT common_name []
+synonym: "eukaryotes" RELATED blast_name []
+is_a: NCBITaxon:131567 ! cellular organisms
+
+[Term]
+id: NCBITaxon:3041
+name: Chlorophyta
+synonym: "algae" RELATED in_part []
+synonym: "Chlorophycota" RELATED synonym []
+synonym: "Chlorophyta sensu Bremer 1985" RELATED synonym []
+synonym: "green algae" EXACT genbank_common_name []
+synonym: "green algae" RELATED blast_name []
+is_a: NCBITaxon:33090 ! Viridiplantae
+
+[Term]
+id: NCBITaxon:314146
+name: Euarchontoglires
+is_a: NCBITaxon:1437010 ! Boreoeutheria
+
+[Term]
+id: NCBITaxon:314293
+name: Simiiformes
+synonym: "Anthropoidea" RELATED synonym []
+is_a: NCBITaxon:376913 ! Haplorrhini
+
+[Term]
+id: NCBITaxon:314295
+name: Hominoidea
+synonym: "ape" EXACT common_name []
+synonym: "apes" EXACT genbank_common_name []
+is_a: NCBITaxon:9526 ! Catarrhini
+
+[Term]
+id: NCBITaxon:3193
+name: Embryophyta
+synonym: "higher plants" EXACT common_name []
+synonym: "land plants" EXACT common_name []
+synonym: "land plants" RELATED blast_name []
+synonym: "plants" EXACT common_name []
+is_a: NCBITaxon:131221 ! Streptophytina
+
+[Term]
+id: NCBITaxon:32523
+name: Tetrapoda
+synonym: "tetrapods" EXACT genbank_common_name []
+is_a: NCBITaxon:1338369 ! Dipnotetrapodomorpha
+
+[Term]
+id: NCBITaxon:32524
+name: Amniota
+synonym: "amniotes" EXACT genbank_common_name []
+is_a: NCBITaxon:32523 ! Tetrapoda
+
+[Term]
+id: NCBITaxon:32525
+name: Theria <Mammalia>
+synonym: "Theria" EXACT scientific_name []
+is_a: NCBITaxon:40674 ! Mammalia
+
+[Term]
+id: NCBITaxon:33090
+name: Viridiplantae
+synonym: "Chlorobionta" RELATED synonym []
+synonym: "Chlorophyta/Embryophyta group" RELATED synonym []
+synonym: "chlorophyte/embryophyte group" RELATED synonym []
+synonym: "green plants" EXACT common_name []
+synonym: "green plants" RELATED blast_name []
+is_a: NCBITaxon:2759 ! Eukaryota
+
+[Term]
+id: NCBITaxon:33154
+name: Opisthokonta
+synonym: "Fungi/Metazoa group" RELATED synonym []
+synonym: "opisthokonts" RELATED synonym []
+is_a: NCBITaxon:2759 ! Eukaryota
+
+[Term]
+id: NCBITaxon:33208
+name: Metazoa
+synonym: "Animalia" RELATED synonym []
+synonym: "animals" RELATED blast_name []
+synonym: "metazoans" EXACT genbank_common_name []
+synonym: "multicellular animals" EXACT common_name []
+is_a: NCBITaxon:33154 ! Opisthokonta
+
+[Term]
+id: NCBITaxon:33213
+name: Bilateria
+is_a: NCBITaxon:6072 ! Eumetazoa
+
+[Term]
+id: NCBITaxon:33511
+name: Deuterostomia
+synonym: "deuterostomes" EXACT common_name []
+is_a: NCBITaxon:33213 ! Bilateria
+
+[Term]
+id: NCBITaxon:3398
+name: Magnoliophyta
+synonym: "Angiospermae" RELATED synonym []
+synonym: "angiosperms" EXACT common_name []
+synonym: "flowering plants" EXACT genbank_common_name []
+synonym: "flowering plants" RELATED blast_name []
+is_a: NCBITaxon:58024 ! Spermatophyta
+
+[Term]
+id: NCBITaxon:35493
+name: Streptophyta
+is_a: NCBITaxon:33090 ! Viridiplantae
+
+[Term]
+id: NCBITaxon:376913
+name: Haplorrhini
+is_a: NCBITaxon:9443 ! Primates
+
+[Term]
+id: NCBITaxon:40674
+name: Mammalia
+synonym: "mammals" EXACT genbank_common_name []
+synonym: "mammals" RELATED blast_name []
+is_a: NCBITaxon:32524 ! Amniota
+
+[Term]
+id: NCBITaxon:58023
+name: Tracheophyta
+synonym: "vascular plants" EXACT common_name []
+synonym: "vascular plants" RELATED blast_name []
+is_a: NCBITaxon:3193 ! Embryophyta
+
+[Term]
+id: NCBITaxon:58024
+name: Spermatophyta
+synonym: "seed plants" EXACT common_name []
+synonym: "seed plants" RELATED blast_name []
+is_a: NCBITaxon:78536 ! Euphyllophyta
+
+[Term]
+id: NCBITaxon:6072
+name: Eumetazoa
+is_a: NCBITaxon:33208 ! Metazoa
+
+[Term]
+id: NCBITaxon:7711
+name: Chordata
+synonym: "chordates" EXACT genbank_common_name []
+synonym: "chordates" RELATED blast_name []
+is_a: NCBITaxon:33511 ! Deuterostomia
+
+[Term]
+id: NCBITaxon:7742
+name: Vertebrata <Metazoa>
+synonym: "Vertebrata" EXACT scientific_name []
+synonym: "vertebrates" EXACT genbank_common_name []
+synonym: "vertebrates" RELATED blast_name []
+is_a: NCBITaxon:89593 ! Craniata <chordata>
+
+[Term]
+id: NCBITaxon:7776
+name: Gnathostomata <vertebrate>
+synonym: "Gnathostomata" EXACT scientific_name []
+synonym: "jawed vertebrates" EXACT genbank_common_name []
+is_a: NCBITaxon:7742 ! Vertebrata <Metazoa>
+
+[Term]
+id: NCBITaxon:78536
+name: Euphyllophyta
+synonym: "euphyllophytes" RELATED synonym []
+is_a: NCBITaxon:58023 ! Tracheophyta
+
+[Term]
+id: NCBITaxon:8287
+name: Sarcopterygii
+is_a: NCBITaxon:117571 ! Euteleostomi
+
+[Term]
+id: NCBITaxon:89593
+name: Craniata <chordata>
+synonym: "Craniata" EXACT scientific_name []
+is_a: NCBITaxon:7711 ! Chordata
+
+[Term]
+id: NCBITaxon:9347
+name: Eutheria
+synonym: "eutherian mammals" EXACT common_name []
+synonym: "placental mammals" EXACT common_name []
+synonym: "Placentalia" RELATED synonym []
+synonym: "placentals" EXACT genbank_common_name []
+synonym: "placentals" RELATED blast_name []
+is_a: NCBITaxon:32525 ! Theria <Mammalia>
+
+[Term]
+id: NCBITaxon:9443
+name: Primates
+synonym: "Primata" RELATED synonym []
+synonym: "primate" EXACT equivalent_name []
+synonym: "primates" RELATED blast_name []
+is_a: NCBITaxon:314146 ! Euarchontoglires
+
+[Term]
+id: NCBITaxon:9526
+name: Catarrhini
+is_a: NCBITaxon:314293 ! Simiiformes
+
+[Term]
+id: NCBITaxon:9604
+name: Hominidae
+synonym: "great apes" EXACT genbank_common_name []
+synonym: "Pongidae" RELATED synonym []
+is_a: NCBITaxon:314295 ! Hominoidea
+
+[Term]
+id: NCBITaxon:9605
+name: Homo
+synonym: "humans" EXACT common_name []
+is_a: NCBITaxon:207598 ! Homininae
+
+[Term]
+id: NCBITaxon:9606
+name: Homo sapiens
+synonym: "human" EXACT genbank_common_name []
+synonym: "man" EXACT common_name []
+is_a: NCBITaxon:9605 ! Homo
+

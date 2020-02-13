@@ -1,0 +1,493 @@
+format-version: 1.2
+data-version: pco/releases/2020-02-13/pco-base.owl
+remark: The Population and Community Ontology (PCO) is licensed under a Creative Commons zero (CC0) license - http://creativecommons.org/publicdomain/zero/1.0/. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. We ask that anyone using this ontology follow the standards of the scientific ontology community by re-using ontology identifiers whenever possible and properly citing the ontology and its creators.
+ontology: pco/pco-base
+property_value: http://purl.org/dc/elements/1.1/contributor http://orcid.org/0000-0002-4366-3088 xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor https://orcid.org/0000-0001-8815-0078 xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "David Osumi-Sutherland" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Jie Zheng" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Pier Luigi Buttigieg" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Ramona Walls" xsd:string
+property_value: http://purl.org/dc/elements/1.1/license http://creativecommons.org/publicdomain/zero/1.0/ xsd:string
+property_value: http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 xsd:string
+
+[Term]
+id: CARO:0001010
+name: organism or virus or viroid
+def: "Material anatomical entity that is a member of an individual species or is a viral or viroid particle." []
+is_a: BFO:0000040
+property_value: http://purl.obolibrary.org/obo/IAO_created_by "Melissa Haendel" xsd:string
+property_value: http://purl.obolibrary.org/obo/IAO_creation_date "9/18/11" xsd:string
+property_value: IAO:0000589 "organism or virus" xsd:string
+
+[Term]
+id: CARO:0010004
+name: organism
+def: "An individual member of a clade." []
+comment: A general term for organism that is agnostic about single cell vs multi-cellular.  Note that this is a subclass of 'anatomical structure', meaning that an organism must be a connected structure.  So, if I take one plant and make a rooted cutting from a it, I now have two (clonally related) organisms. 
+is_a: CARO:0001010 ! organism or virus or viroid
+property_value: http://purl.obolibrary.org/obo/IAO_created_by "mah" xsd:string
+property_value: http://purl.obolibrary.org/obo/IAO_creation_date "7.16.2011" xsd:string
+property_value: IAO:0000589 "organism" xsd:string
+
+[Term]
+id: GO:0051704
+is_a: BFO:0000015
+
+[Term]
+id: IAO:0000030
+is_a: BFO:0000031
+
+[Term]
+id: PCO:0000000
+name: collection of organisms
+def: "A material entity that consists of two or more organisms, viruses, or viroids." []
+comment: May be of the same or different species.
+is_a: BFO:0000027
+intersection_of: RO:0002351 CARO:0001010 {all_only="true"} ! organism or virus or viroid
+intersection_of: RO:0002351 CARO:0001010 {minCardinality="2"} ! organism or virus or viroid
+property_value: IAO:0000112 "Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000118 "group of organism" xsd:string
+property_value: IAO:0000118 "organism collection" xsd:string
+
+[Term]
+id: PCO:0000001
+name: population of organisms
+def: "A collection of organisms, all of the same species, that live in the same place." []
+comment: It is sometimes difficult to define the physical boundaries of a population. In the case of sexually reproducing organisms, the individuals within a population have the potential to reproduce with one another during the course of their lifetimes. 'Community', as often used to describe a group of humans, is a type of population of organisms. \n\nClasses for population already  exist in IDO ('organism population', IDO_0000509) and OBI ('population', OBI_0000181). The definitions should be standardized across OBO Foundry ontologies and only one term used.
+is_a: PCO:0000018 ! single-species collection of organisms
+property_value: IAO:0000112 "" xsd:string
+property_value: IAO:0000112 "This a general term that can include every organism of a species living in an area or any subset of them.  Subclasses can be more specific as needed." xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000119 ISBN:0878932739 xsd:string
+
+[Term]
+id: PCO:0000002
+name: ecological community
+def: "A multi-species collection of organisms of at least two different species, living in a particular area. Must have at least two populations of different species as members." []
+comment: Ecological community is defined broadly here, but includes both ecological interactions (inherited from parent term community) and spatial co-existence. It may be used to describe every organisms living in an area, but is often used to refer only to organisms of a particular taxon or guild (e.g., the plant community, the insect community, the herbivore community). The word community, as it often used to describe a group of humans living together, is a type of single-species collection of organisms, not an ecological community.
+property_value: IAO:0000118 "multispecies community" xsd:string
+property_value: IAO:0000119 ISBN:0865423504 xsd:string
+
+[Term]
+id: PCO:0000003
+name: quality of a population
+def: "A quality that inheres in a biological population." []
+comment: Includes qualities like population size, population growth rate, carrying capacity, immigration rate, emigration rate, fecundity, and death rate. A population quality may depend on the qualities of individual organisms in the population, but cannot be measured or described for a single organism. This term may be replaced by a PATO term.
+intersection_of: PATO:0002003
+intersection_of: RO:0000052 PCO:0000001 ! population of organisms
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "See Chris's comments on population qualities at: http://code.google.com/p/popcomm-ontology/issues/detail?id=4. These may not belong under BFO:quality. May be better to call them population characteristics, and classify as specifically dependent continuants. Need to look at process profiles in BFO2." xsd:string
+
+[Term]
+id: PCO:0000004
+name: quality of an ecological community
+def: "A quality that inheres in a community." []
+comment: Includes qualities like diversity, species richness, stability, resilience, community structure, number of trophic levels. A community quality may depend on the qualities of individual organism in the community, but cannot be measured or described for a single individual.
+intersection_of: PATO:0002003
+intersection_of: RO:0000052 PCO:0000002 ! ecological community
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "These may not belong under BFO:quality. May be better to call them community characteristics, and classify as specifically dependent continuants. Need to look at process profiles in BFO2." xsd:string
+
+[Term]
+id: PCO:0000005
+name: population process
+def: "A process that has as primary participant a population. " []
+comment: Includes processes such as population growth, extinction, evolution, selection, and adaptation. Population processes may depend on the processes of individual organisms \{e.g., population growth reflects the cumulative multicellular organism reproduction (GO:0032504) and death (GO:0016265) of all individuals in a population}, but cannot be described for an individual organism. Some of these processes (e.g., evolution, extinction) can also occur at the species level, so PCO distinguishes between, for example, population extinction and species extinction. The GO has the terms 'multi-organism process' (GO:0051704) and 'intraspecies interactions between organisms' (GO:0051703), but tPCOhese categories are only defined for interactions between two individuals. It is unclear at this point if 'biological process' (GO:0008150) encompasses population processes. 
+is_a: BFO:0000015
+relationship: RO:0000057 PCO:0000001 ! population of organisms
+property_value: IAO:0000114 IAO:0000123
+
+[Term]
+id: PCO:0000006
+name: population birth rate
+is_a: PCO:0000003 ! quality of a population
+property_value: IAO:0000114 IAO:0000123
+
+[Term]
+id: PCO:0000007
+name: population death rate
+is_a: PCO:0000003 ! quality of a population
+property_value: IAO:0000114 IAO:0000123
+
+[Term]
+id: PCO:0000008
+name: population growth rate
+is_a: PCO:0000003 ! quality of a population
+property_value: IAO:0000114 IAO:0000123
+property_value: IAO:0000116 "Is a rate a quality? Population growth rate may be better classified as a process profile." xsd:string
+
+[Term]
+id: PCO:0000009
+name: obsolete carrying capacity
+def: "The maximum number of individuals that can be supported in  a population that is growing according to logistic growth." []
+is_a: ObsoleteClass
+property_value: IAO:0000116 "Carrying capacity is better defined as a quality of the environment in which a population lives. This term will be deprecated from PCO and moved to ecoCORE." xsd:string
+property_value: IAO:0000119 ISBN:0878932739 xsd:string
+property_value: IAO:0000231 IAO:0000423
+is_obsolete: true
+
+[Term]
+id: PCO:0000010
+name: community species richness
+def: "The number of different species represented in an ecological community." []
+is_a: PCO:0000004 ! quality of an ecological community
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000116 "This is a quality of an ecological community (PCO_0000002). If your metric includes the abundances of species (evenness) as well as the number, you should use community species diversity (PCO_0000019)." xsd:string
+property_value: IAO:0000119 "adapted from http://en.wikipedia.org/wiki/Species_richness" xsd:string
+
+[Term]
+id: PCO:0000011
+name: population growth
+def: "A process that leads to a change in the number of individuals (positive or negative) in a population." []
+is_a: PCO:0000005 ! population process
+property_value: IAO:0000114 IAO:0000123
+
+[Term]
+id: PCO:0000012
+name: logistic population growth
+def: "A population process that leads to an increase in the numbers of individuals in a population following a logistic (S-shaped) curve. Generally occurs when the population has a carrying capacity in a particular habitat." []
+is_a: PCO:0000011 ! population growth
+property_value: IAO:0000114 IAO:0000123
+
+[Term]
+id: PCO:0000013
+name: exponential population growth
+def: "A population growth process that leads to an exponential increase in the number of individuals in a population." []
+is_a: PCO:0000011 ! population growth
+property_value: IAO:0000114 IAO:0000123
+
+[Term]
+id: PCO:0000014
+name: predator role
+is_a: BFO:0000023
+property_value: IAO:0000114 IAO:0000124
+
+[Term]
+id: PCO:0000015
+name: prey role
+is_a: BFO:0000023
+property_value: IAO:0000114 IAO:0000124
+
+[Term]
+id: PCO:0000016
+name: symbiont role
+is_a: BFO:0000023
+property_value: IAO:0000114 IAO:0000124
+
+[Term]
+id: PCO:0000017
+name: species as a collection of organisms
+def: "A collection of organisms that has as parts every organism of given species and no organisms of any other species." []
+comment: This term is neutral with respect to which organisms are included in a species. Membership will depend on the species concept and the taxonomic assertions used to define the species. These criteria must be specified by the user.
+is_a: PCO:0000018 ! single-species collection of organisms
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000116 "At the moment there is no way to specify in an OWL axiom that the collection includes every individual of a species. This should be added, if possible." xsd:string
+
+[Term]
+id: PCO:0000018
+name: single-species collection of organisms
+def: "A material entity that has as parts two or more organisms, viruses, or viroids of the same species and no members of any other species." []
+is_a: PCO:0000000 ! collection of organisms
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000118 "collection of organisms of the same species" xsd:string
+
+[Term]
+id: PCO:0000019
+name: community species diversity
+def: "The number of different species that are represented in a given community, weighted by their abundance. Community species diversity can be calculated in different ways, but consists of two components: species richness and species evenness." []
+comment: The Shannon Index and Simpson Index are examples of ways in which species diversity is quantified.
+is_a: PCO:0000004 ! quality of an ecological community
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000116 "If your metric does not include the abundances of different species, but rather just the numer of species, you should use community species richness (PCO_0000010). More specific subclasses or instances of this class may be created to describe specific ways of measuring diversity." xsd:string
+property_value: IAO:0000119 "adapted from http://en.wikipedia.org/wiki/Species_diversity" xsd:string
+
+[Term]
+id: PCO:0000020
+name: family
+def: "A domestic group, or a number of domestic groups linked through descent (demonstrated or stipulated) from a common ancestor, marriage, or adoption." []
+comment: Family membership through marriage or adoption apply primarily to human families. In most species, family membership is defined by common anscestry.
+is_a: PCO:0000018 ! single-species collection of organisms
+property_value: IAO:0000114 IAO:0000123
+property_value: IAO:0000116 "Needs axioms for family relationships." xsd:string
+property_value: IAO:0000119 http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25173 xsd:string
+
+[Term]
+id: PCO:0000021
+name: population extinction
+def: "A population process that ultimately leads to the death of all individuals in a population." []
+is_a: PCO:0000005 ! population process
+property_value: IAO:0000114 IAO:0000123
+
+[Term]
+id: PCO:0000022
+name: species extinction
+def: "A process that ultimately leads to the death of all individuals in a population." []
+is_a: BFO:0000015
+property_value: IAO:0000114 IAO:0000123
+
+[Term]
+id: PCO:0000023
+name: community species evenness
+def: "A quality of a community that reflects how close in abundance all species in a community are." []
+is_a: PCO:0000004 ! quality of an ecological community
+property_value: IAO:0000112 "If there are 40 foxes, and 1000 dogs, the community is not very even, but if there are 40 foxes and 42 dogs, the community is quite even." xsd:string
+property_value: IAO:0000114 IAO:0000120
+property_value: IAO:0000119 "adapted from http://en.wikipedia.org/wiki/Species_evenness" xsd:string
+
+[Term]
+id: PCO:0000024
+name: household
+def: "An organismal entity that consists of one or more people who live in the same dwelling and also share at meals or living accommodation, and may consist of a single family or some other grouping of people." []
+is_a: PCO:0000031 ! organismal entity
+relationship: RO:0002321 ENVO:01000744
+relationship: RO:0002351 NCBITaxon:9606 {minCardinality="1"}
+property_value: IAO:0000114 IAO:0000123
+property_value: IAO:0000117 "Person: Jie Zheng" xsd:string
+property_value: IAO:0000119 "WEB: http://en.wikipedia.org/wiki/Household" xsd:string
+
+[Term]
+id: PCO:0000025
+name: red population
+comment: This is an example population added to demonstrate the modeling pattern for collections of organisms.
+is_a: ObsoleteClass
+property_value: IAO:0000231 IAO:0000002
+is_obsolete: true
+
+[Term]
+id: PCO:0000026
+name: red organism
+comment: An example class added to demonstrate the design pattern for collections of organism. Red organism should be automatically classified as a member of red population when the reasoner is synchronized using a DL query.
+is_a: ObsoleteClass
+property_value: IAO:0000231 IAO:0000002
+is_obsolete: true
+
+[Term]
+id: PCO:0000027
+name: collection of humans
+def: "A collection of organisms of the same species that has as members only humans." []
+is_a: PCO:0000018 ! single-species collection of organisms
+intersection_of: PCO:0000018 ! single-species collection of organisms
+intersection_of: RO:0002351 NCBITaxon:9606 {all_only="true"}
+intersection_of: RO:0002351 NCBITaxon:9606 {minCardinality="2"}
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000118 "human community" xsd:string
+property_value: IAO:0000118 "human population" xsd:string
+
+[Term]
+id: PCO:0000028
+name: community
+def: "A collection of organisms of the same species whose members are all either genealogically related to each other or have mated with each other." []
+comment: These relations can include shared values, occupying the same spatial regkion. A community be be a single species collection of organsisms (as in a  human community, which is also a type of population) or a  or multi-species collection of organisms (as in an ecological community).
+is_a: ObsoleteClass
+property_value: IAO:0000116 "Biological or social relations are covered by RO_0002437 (biotically interacts with), but that relations does provide an easy way to specify that two entities are interacting with each other (participating in the same interaction). Until that axiom is specified, the logical definition of this term is incomplete." xsd:string
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
+
+[Term]
+id: PCO:0000029
+name: multi-species collection of organisms
+def: "A collection of organisms that consists of two or more organisms from at least two species." []
+is_a: PCO:0000000 ! collection of organisms
+property_value: IAO:0000114 IAO:0000123
+property_value: IAO:0000116 "Need to add axiom to specify that it has at a mimum members of two different species, but not sure how to specify that. Can't say \"('has member' only ('member of' min 2 'species as a collection of organisms'))\"." xsd:string
+
+[Term]
+id: PCO:0000030
+name: agricultural household
+name: obsolete organismal entity
+def: "A household in which the majority of the income of its members is derived from agricultural activities." []
+def: "A material entity that is one or more organisms, viruses or viroids." []
+is_a: ObsoleteClass
+is_a: PCO:0000024 ! household
+property_value: IAO:0000114 IAO:0000123
+property_value: IAO:0000116 "This is a more narrow definition in which the majority of income of a house comes from agricultural activities, as opposed to the broad definition in which any income comes from agricultural activities. The narrow definition was chosen to be consistent with the SDGIO (UN Sustainable Development Goals) which requested this term." xsd:string
+property_value: IAO:0000231 "wrong IRI form" xsd:string
+is_obsolete: true
+replaced_by: http://purl.obolibrary.org/obo/PCO_0000031
+
+[Term]
+id: PCO:0000031
+name: organismal entity
+def: "A material entity that is one or more organisms, viruses or viroids." []
+is_a: BFO:0000040
+union_of: CARO:0001010 ! organism or virus or viroid
+union_of: PCO:0000000 ! collection of organisms
+property_value: IAO:0000114 IAO:0000120
+
+[Term]
+id: PCO:0000032
+name: biological family
+def: "A collection of organisms of the same species whose members are all either genealogically related to each other or have mated with each other." []
+is_a: PCO:0000020 ! family
+property_value: IAO:0000118 "genealogical family" xsd:string
+property_value: IAO:0000119 "Matthew Brush, as part of http://datamodel.clinicalgenome.org/interpretation/" xsd:string
+
+[Term]
+id: PCO:0000033
+name: human social gathering activity
+def: "A type of social behavior in which a collection of humans intentionally gathers together on a temporary basis to engage socially." []
+is_a: GO:0035176
+relationship: RO:0000057 PCO:0000027 ! collection of humans
+property_value: IAO:0000116 "Intented to replace http://purl.obolibrary.org/obo/GENEPIO_0001029" xsd:string
+property_value: IAO:0000119 "GenEpiO curators" xsd:string
+
+[Term]
+id: PCO:0000034
+name: human community event
+def: "A human social event in which humans living in the same area or neighborhood gather to carry out activiites relevent to the people living in the area." []
+is_a: PCO:0000033 ! human social gathering activity
+property_value: IAO:0000116 "Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001034" xsd:string
+property_value: IAO:0000119 "GenEpio curators" xsd:string
+
+[Term]
+id: PCO:0000035
+name: party
+def: "A human social gathering in which the intention is to have a good time. Often the intention is to celebrate something like a birthday, anniversary, or holiday, but there is not always a purpose." []
+is_a: PCO:0000033 ! human social gathering activity
+property_value: IAO:0000116 "Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001030" xsd:string
+property_value: IAO:0000119 "GenEpiO curators" xsd:string
+
+[Term]
+id: PCO:0000037
+name: potluck
+is_a: PCO:0000033 ! human social gathering activity
+property_value: IAO:0000116 "Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001033" xsd:string
+property_value: IAO:0000119 "A human social gathering at which each participant is expected to bring food to share. A potluck also can be party, a social meal, or some other type of social gathering." xsd:string
+property_value: IAO:0000119 "GenEpio curators" xsd:string
+
+[Term]
+id: PCO:0000038
+name: wedding
+def: "A human social gathering at which two people are married. May include a legal or social ceremony." []
+is_a: PCO:0000033 ! human social gathering activity
+property_value: IAO:0000116 "Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001031" xsd:string
+property_value: IAO:0000119 "GenEpio curators" xsd:string
+
+[Term]
+id: PCO:0000039
+name: baby shower
+def: "A human social gathering at which the key participant is an expectant parent and other guests bring presents for the soon to be born baby." []
+is_a: PCO:0000033 ! human social gathering activity
+property_value: IAO:0000116 "Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001032" xsd:string
+property_value: IAO:0000119 "GenEpiO curators" xsd:string
+
+[Term]
+id: PCO:0000040
+name: tidal mangrove shrubland community
+def: "An ecological community which is composed primarily of dwarf or short mangroves, often populations of Laguncularia racemosa, Avicennia germinans, Sarcocornia pacifica, or Batis maritima." []
+synonym: "mangrove community" RELATED []
+synonym: "tidal shrubland community" RELATED []
+xref: https://cmecscatalog.org/cmecs/classification/unit/577.html
+is_a: PCO:0000002 ! ecological community
+relationship: BFO:0000050 ENVO:01001369
+property_value: http://purl.org/dc/elements/1.1/contributor https://orcid.org/0000-0002-4366-3088 xsd:string
+
+[Term]
+id: PCO:0000041
+name: invisible to unaided eye
+def: "A physical object quality that is inhered in a material entity that is too small to be viewed by the unaided eye." []
+comment: should move to PATO
+is_a: PATO:0001241
+
+[Term]
+id: PCO:0000042
+name: microbe
+synonym: "microbial organism" EXACT []
+is_a: CARO:0001010 ! organism or virus or viroid
+relationship: RO:0000086 PCO:0000041 ! invisible to unaided eye
+
+[Term]
+id: PCO:0000043
+name: collection of microbial organisms
+def: "A collection of organisms consisting of two or more microbes." []
+intersection_of: RO:0002351 PCO:0000042 {all_only="true"} ! microbe
+intersection_of: RO:0002351 PCO:0000042 {minCardinality="2"} ! microbe
+property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0001-8815-0078 xsd:string
+
+[Term]
+id: PCO:0000044
+name: multi-species collection of microbes
+def: "A multi-species collection of organisms that consists of two or more microbes from at least two species." []
+is_a: PCO:0000029 ! multi-species collection of organisms
+is_a: PCO:0000043 ! collection of microbial organisms
+property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0001-8815-0078 xsd:string
+
+[Term]
+id: PCO:0000045
+name: single species collection of microbes
+def: "A single-species collection of organisms that consists of two or more microbes of the same species and no members of any other species." []
+property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0001-8815-0078 xsd:string
+
+[Term]
+id: PCO:0000046
+name: microbial population
+def: "A population of organisms consisting of only microbes of the same species, that live in the same place." []
+synonym: "microbiota" BROAD []
+is_a: PCO:0000001 ! population of organisms
+relationship: RO:0002351 PCO:0000042 ! microbe
+property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0001-8815-0078 xsd:string
+
+[Term]
+id: PCO:0001000
+name: pair of interacting organisms
+def: "A collection of organisms that consists of exactly two organism, viruses, or viroids that are interacting with each other." []
+is_a: BFO:0000040
+relationship: RO:0002351 CARO:0001010 {cardinality="2"} ! organism or virus or viroid
+relationship: RO:0002351 CARO:0001010 ! organism or virus or viroid
+
+[Term]
+id: PCO:0001001
+name: pair of interacting organisms of the same species
+is_a: PCO:0001000 ! pair of interacting organisms
+
+[Term]
+id: PCO:1000000
+name: migratory population
+def: "A population which is participating in a migration process." []
+is_a: PCO:0000001 ! population of organisms
+relationship: RO:0000056 PCO:1000001 ! population migration
+property_value: IAO:0000114 IAO:0000123
+
+[Term]
+id: PCO:1000001
+name: population migration
+def: "A population process during which a population moves from one area to another." []
+comment: The distance between the areas is not specified here, nor is the minimum distance required for such movements to be considered migrations.
+is_a: PCO:0000005 ! population process
+property_value: IAO:0000114 IAO:0000123
+property_value: IAO:0000119 https://en.wikipedia.org/wiki/Migration xsd:string
+
+[Term]
+id: PCO:1000002
+name: human population migration
+def: "A population migration during which a population of humans moves from one area to another with the intention of settling permanently in the new location." []
+comment: The distance between the areas is not specified here, nor is the minimum distance required for such movements to be considered migrations. "Nomadic movements are normally not regarded as migrations as there is no intention to settle in the new place and because the movement is generally seasonal. Only a few nomadic people have retained this form of lifestyle in modern times. Also, the temporary movement of people for the purpose of travel, tourism, pilgrimages, or the commute is not regarded as migration, in the absence of an intention to live and settle in the visited places." - https://en.wikipedia.org/wiki/Human_migration
+is_a: PCO:1000001 ! population migration
+relationship: RO:0000057 PCO:0000027 ! collection of humans
+property_value: IAO:0000114 IAO:0000123
+property_value: IAO:0000119 https://en.wikipedia.org/wiki/Human_migration xsd:string
+
+[Term]
+id: PCO:1000003
+name: human migratory population
+def: "A migratory population of humans, travelling with the intention of settling in a new area." []
+is_a: PCO:0000027 ! collection of humans
+relationship: RO:0000056 PCO:1000002 ! human population migration
+property_value: IAO:0000114 IAO:0000123
+property_value: IAO:0000119 https://en.wikipedia.org/wiki/Human_migration xsd:string
+
+[Term]
+id: PCO:1000004
+name: microbial community
+def: "An ecological community which is composed of co-existing populations of microbial organisms that interact, directly or indirectly, such that they impact one another's ecological fitness." []
+comment: The definition of a microbial species is deeply debated, however, units of phylogenetic and functional diversity are recognised with respect to their varying roles in an ecosystem. In turn, there exist multiple operational definitions of microbial community, such as local, phenomenological, and indexical communities. This class seeks to capture microbial communities in a very broad sense, as collections of phylogenetically and functionally divergent microbial organisms co-existing, potentially interacting, and competing for niche space in the same ecosystem over a period of time in which their causal footprints overlap one another.
+synonym: "microbiota" BROAD []
+is_a: PCO:0000002 ! ecological community
+is_a: PCO:0000044 ! multi-species collection of microbes
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "A class for a collection of organisms considered \"microbial\" and an accompanying quality in PATO (e.g. \"microscopic\") would be useful to better axiomatise this class. See https://github.com/PopulationAndCommunityOntology/pco/issues/22" xsd:string
+property_value: IAO:0000117 http://orcid.org/0000-0002-4366-3088 xsd:string
+property_value: IAO:0000119 http://dx.doi.org/10.1038/ismej.2009.88 xsd:string
+

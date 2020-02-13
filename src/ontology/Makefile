@@ -43,7 +43,7 @@ RELEASE_ARTEFACTS = $(sort  full base base full)
 .PHONY: .FORCE
 all: odkversion all_imports all_main all_subsets sparql_test all_reports all_assets
 test: odkversion sparql_test all_reports
-	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed all --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
+	$(ROBOT) reason --input $(SRC) --reasoner hermit  --equivalent-classes-allowed all --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
 
 odkversion:
 	echo "ODK Makefile version: $(ODK_VERSION) (this is the version of the ODK with which this Makefile was generated, not the version of the ODK you are running)" &&\
@@ -77,7 +77,7 @@ all_imports: $(IMPORT_FILES)
 
 all_imports_owl: $(foreach n,$(IMPORT_ROOTS), $(n).owl)
 
-all_imports_obo: $(foreach n,$(IMPORT_ROOTS), $(n).obo)
+# all_imports_obo: $(foreach n,$(IMPORT_ROOTS), $(n).obo)
 
 
 ## -- subset targets --
@@ -194,9 +194,9 @@ $(ONT)-base.owl: $(SRC) $(OTHER_SRC)
 # Full: The full artefacts with imports merged, reasoned
 $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 	$(ROBOT) merge --input $< \
-		reason --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural \
+		reason --reasoner hermit --equivalent-classes-allowed all --exclude-tautologies structural \
 		relax \
-		reduce -r ELK \
+		reduce -r hermit \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
 
 # ----------------------------------------
@@ -239,8 +239,8 @@ imports/%_import.obo: imports/%_import.owl
 # ----------------------------------------
 #
 
-IMP=true # Global parameter to bypass import generation
-MIR=true # Global parameter to bypass mirror generation
+IMP=false # Global parameter to bypass import generation
+MIR=false # Global parameter to bypass mirror generation
 
 
 ## ONTOLOGY: bfo

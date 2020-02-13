@@ -1,0 +1,119 @@
+format-version: 1.2
+data-version: pco/releases/2020-02-13/go_import.obo
+ontology: pco/imports/go_import.obo
+
+[Term]
+id: GO:0007610
+name: behavior
+namespace: biological_process
+alt_id: GO:0044708
+def: "The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity." [GOC:ems, GOC:jl, ISBN:0395448956, PMID:20160973]
+comment: 1. Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation reviews.\n2. While a broader definition of behavior encompassing plants and single cell organisms would be justified on the basis of some usage (see PMID:20160973 for discussion), GO uses a tight definition that limits behavior to animals and to responses involving the nervous system, excluding plant responses that GO classifies under development, and responses of unicellular organisms that has general classifications for covering the responses of cells in multicellular organisms (e.g. cell chemotaxis).
+subset: gocheck_do_not_manually_annotate
+subset: goslim_agr
+subset: goslim_flybase_ribbon
+synonym: "behavioral response to stimulus" EXACT []
+synonym: "behaviour" EXACT []
+synonym: "behavioural response to stimulus" EXACT []
+synonym: "single-organism behavior" RELATED []
+xref: Wikipedia:Behavior
+is_a: GO:0008150 ! biological_process
+property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
+created_by: janelomax
+creation_date: 2012-09-20T14:06:08Z
+
+[Term]
+id: GO:0008150
+name: biological_process
+namespace: biological_process
+alt_id: GO:0000004
+alt_id: GO:0007582
+alt_id: GO:0044699
+def: "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
+comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_pombe
+subset: goslim_yeast
+synonym: "biological process" EXACT []
+synonym: "physiological process" EXACT []
+synonym: "single organism process" RELATED []
+synonym: "single-organism process" RELATED []
+xref: Wikipedia:Biological_process
+property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
+created_by: janelomax
+creation_date: 2012-09-19T15:05:24Z
+
+[Term]
+id: GO:0035176
+name: social behavior
+namespace: biological_process
+def: "Behavior directed towards society, or taking place between members of the same species. Occurs predominantly, or only, in individuals that are part of a group." [GOC:jh2, PMID:12848939, Wikipedia:Social_behavior]
+comment: Behavior such as predation which involves members of different species is not social. Communication between members of different species is also not social behavior.
+synonym: "cooperative behavior" RELATED []
+synonym: "social behaviour" EXACT []
+xref: Wikipedia:Social_behavior
+is_a: GO:0051703 ! intraspecies interaction between organisms
+is_a: GO:0051705 ! multi-organism behavior
+property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0044419
+name: interspecies interaction between organisms
+namespace: biological_process
+def: "Any process in which an organism has an effect on an organism of a different species." [GOC:cc]
+subset: goslim_candida
+subset: goslim_pir
+synonym: "interaction with another species" EXACT []
+synonym: "interspecies interaction" EXACT []
+synonym: "interspecies interaction with other organisms" EXACT []
+is_a: GO:0051704 ! multi-organism process
+property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0051703
+name: intraspecies interaction between organisms
+namespace: biological_process
+def: "Any process in which an organism has an effect on an organism of the same species." [GOC:ai]
+subset: goslim_pir
+synonym: "intraspecies interaction with other organisms" EXACT []
+is_a: GO:0051704 ! multi-organism process
+property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0051704
+name: multi-organism process
+namespace: biological_process
+alt_id: GO:0051706
+def: "A biological process which involves another organism of the same or different species." [GOC:jl]
+subset: gocheck_do_not_annotate
+subset: goslim_pir
+synonym: "interaction between organisms" EXACT []
+synonym: "physiological interaction between organisms" EXACT []
+synonym: "physiological interaction with other organism" EXACT []
+is_a: GO:0008150 ! biological_process
+property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0051705
+name: multi-organism behavior
+namespace: biological_process
+alt_id: GO:0023032
+alt_id: GO:0044709
+def: "Any process in which an organism has a behavioral effect on another organism of the same or different species." [GOC:ai]
+subset: goslim_pir
+synonym: "behavioral interaction between organisms" EXACT []
+synonym: "behavioral interaction with other organism" EXACT []
+synonym: "behavioral signaling" NARROW []
+synonym: "behavioral signalling" NARROW [GOC:mah]
+synonym: "behavioural interaction between organisms" EXACT []
+synonym: "behavioural interaction with other organism" EXACT []
+is_a: GO:0007610 ! behavior
+is_a: GO:0051704 ! multi-organism process
+property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
+
