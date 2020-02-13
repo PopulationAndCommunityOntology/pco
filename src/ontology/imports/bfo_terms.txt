@@ -3,9 +3,11 @@ http://purl.obolibrary.org/obo/BFO_0000029 #site
 http://purl.obolibrary.org/obo/BFO_0000027 #object aggregate
 http://purl.obolibrary.org/obo/BFO_0000023 #role
 http://purl.obolibrary.org/obo/BFO_0000031 #generically dependent continuant
+http://purl.obolibrary.org/obo/BFO_0000015 #process
+
 
   #robot extract --method BOT \
-  #   --input files/bfo.owl \
+  #   --input input_files/bfo.owl \
   #   --term-file bfo_terms.txt \
   #   --annotate-with-source true \
   #   annotate --ontology-iri "http://purl.obolibrary.org/obo/pco/imports/bfo_import.owl" \
