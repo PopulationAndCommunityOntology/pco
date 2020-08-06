@@ -468,7 +468,7 @@ obo:PCO_0000025 rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 obo:IAO_0000231 obo:IAO_0000002 ;
                 rdfs:comment "This is an example population added to demonstrate the modeling pattern for collections of organisms." ;
-                rdfs:label "red population"@en ;
+                rdfs:label "obsolete red population"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -477,7 +477,7 @@ obo:PCO_0000026 rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                 obo:IAO_0000231 obo:IAO_0000002 ;
                 rdfs:comment "An example class added to demonstrate the design pattern for collections of organism. Red organism should be automatically classified as a member of red population when the reasoner is synchronized using a DL query." ;
-                rdfs:label "red organism"@en ;
+                rdfs:label "obsolete red organism"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
@@ -511,7 +511,7 @@ obo:PCO_0000028 rdf:type owl:Class ;
                 obo:IAO_0000116 "Biological or social relations are covered by RO_0002437 (biotically interacts with), but that relations does provide an easy way to specify that two entities are interacting with each other (participating in the same interaction). Until that axiom is specified, the logical definition of this term is incomplete."@en ;
                 obo:IAO_0000231 obo:IAO_0000103 ;
                 rdfs:comment "These relations can include shared values, occupying the same spatial regkion. A community be be a single species collection of organsisms (as in a  human community, which is also a type of population) or a  or multi-species collection of organisms (as in an ecological community)."@en ;
-                rdfs:label "community"@en ;
+                rdfs:label "obsolete community"@en ;
                 owl:deprecated "true"^^xsd:boolean .
 
 
