@@ -259,7 +259,7 @@ obo:PCO_0000005 rdf:type owl:Class ;
                                   owl:someValuesFrom obo:PCO_0000001
                                 ] ;
                 obo:IAO_0000114 obo:IAO_0000123 ;
-                obo:IAO_0000115 "A process that has as primary participant a population. "@en ;
+                obo:IAO_0000115 "A process that has as primary participant a population."@en ;
                 rdfs:comment "Includes processes such as population growth, extinction, evolution, selection, and adaptation. Population processes may depend on the processes of individual organisms {e.g., population growth reflects the cumulative multicellular organism reproduction (GO:0032504) and death (GO:0016265) of all individuals in a population}, but cannot be described for an individual organism. Some of these processes (e.g., evolution, extinction) can also occur at the species level, so PCO distinguishes between, for example, population extinction and species extinction. The GO has the terms 'multi-organism process' (GO:0051704) and 'intraspecies interactions between organisms' (GO:0051703), but tPCOhese categories are only defined for interactions between two individuals. It is unclear at this point if 'biological process' (GO:0008150) encompasses population processes. "@en ;
                 rdfs:label "population process"@en .
 
@@ -333,23 +333,47 @@ obo:PCO_0000013 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/PCO_0000014
 obo:PCO_0000014 rdf:type owl:Class ;
-                rdfs:subClassOf obo:BFO_0000023 ;
-                obo:IAO_0000114 obo:IAO_0000124 ;
-                rdfs:label "predator role"@en .
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                obo:IAO_0000116 "Interactions are now covered in EcoCore ontology." ;
+                rdfs:label "obsolete predator role"@en ;
+                owl:deprecated "true"^^xsd:boolean .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:PCO_0000014 ;
+   owl:annotatedProperty owl:deprecated ;
+   owl:annotatedTarget "true"^^xsd:boolean ;
+   obo:IAO_0000231 obo:IAO_0000103
+ ] .
 
 
 ###  http://purl.obolibrary.org/obo/PCO_0000015
 obo:PCO_0000015 rdf:type owl:Class ;
-                rdfs:subClassOf obo:BFO_0000023 ;
-                obo:IAO_0000114 obo:IAO_0000124 ;
-                rdfs:label "prey role"@en .
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                obo:IAO_0000116 "Interactions are now covered in EcoCore ontology." ;
+                rdfs:label "obsolete prey role"@en ;
+                owl:deprecated "true"^^xsd:boolean .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:PCO_0000015 ;
+   owl:annotatedProperty owl:deprecated ;
+   owl:annotatedTarget "true"^^xsd:boolean ;
+   obo:IAO_0000231 obo:IAO_0000103
+ ] .
 
 
 ###  http://purl.obolibrary.org/obo/PCO_0000016
 obo:PCO_0000016 rdf:type owl:Class ;
-                rdfs:subClassOf obo:BFO_0000023 ;
-                obo:IAO_0000114 obo:IAO_0000124 ;
-                rdfs:label "symbiont role"@en .
+                rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                obo:IAO_0000116 "Interactions are now covered in EcoCore ontology." ;
+                rdfs:label "obsolete symbiont role"@en ;
+                owl:deprecated "true"^^xsd:boolean .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:PCO_0000016 ;
+   owl:annotatedProperty owl:deprecated ;
+   owl:annotatedTarget "true"^^xsd:boolean ;
+   obo:IAO_0000231 obo:IAO_0000103
+ ] .
 
 
 ###  http://purl.obolibrary.org/obo/PCO_0000017
