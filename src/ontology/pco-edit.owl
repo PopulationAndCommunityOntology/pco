@@ -21,7 +21,9 @@
                                                      "Jie Zheng" ,
                                                      "Pier Luigi Buttigieg" ,
                                                      "Ramona Walls" ;
-                                          dc:license "http://creativecommons.org/publicdomain/zero/1.0/" ;
+                                          dc:description "The Population and Community Ontology (PCO) describes material entities, qualities, and processes related to collections of interacting organisms such as populations and communities. It is taxon neutral, and can be used for any species, including humans. The classes in the PCO are useful for describing evolutionary processes, organismal interactions, and ecological experiments. Practical applications of the PCO include community health care, plant pathology, behavioral studies, sociology, and ecology." ;
+                                          dc:title "Population and Community Ontology" ;
+                                          <http://purl.org/dc/terms/license> "http://creativecommons.org/publicdomain/zero/1.0/" ;
                                           rdfs:comment "The Population and Community Ontology (PCO) is licensed under a Creative Commons zero (CC0) license - http://creativecommons.org/publicdomain/zero/1.0/. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. We ask that anyone using this ontology follow the standards of the scientific ontology community by re-using ontology identifiers whenever possible and properly citing the ontology and its creators." .
 
 #################################################################
