@@ -640,6 +640,99 @@ obo:PCO_0000039 rdf:type owl:Class ;
                 rdfs:label "baby shower"@en .
 
 
+###  http://purl.obolibrary.org/obo/PCO_0000047
+obo:PCO_0000047 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000002 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000050 ;
+                                  owl:someValuesFrom obo:ENVO_01001369
+                                ] ;
+                obo:IAO_0000115 "An ecological community which is composed primarily of dwarf or short mangroves, often populations of Laguncularia racemosa, Avicennia germinans, Sarcocornia pacifica, or Batis maritima."@en ;
+                dc:contributor "https://orcid.org/0000-0002-4366-3088"@en ;
+                <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://cmecscatalog.org/cmecs/classification/unit/577.html" ;
+                <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "mangrove community"@en ,
+                                                                                 "tidal shrubland community"@en ;
+                rdfs:label "tidal mangrove shrubland community"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000048
+obo:PCO_0000048 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PATO_0001241 ;
+                obo:IAO_0000115 "A physical object quality that is inhered in a material entity that is too small to be viewed by the unaided eye."@en ;
+                rdfs:comment "should move to PATO"@en ;
+                rdfs:label "invisible to unaided eye"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000049
+obo:PCO_0000049 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CARO_0001010 ;
+                <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "microbial organism"@en ;
+                rdfs:label "microbe"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000050
+obo:PCO_0000050 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:allValuesFrom obo:PCO_0000049
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass obo:PCO_0000049
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                obo:IAO_0000115 "A collection of organisms consisting of two or more microbes."@en ;
+                dc:creator "https://orcid.org/0000-0001-8815-0078"@en ;
+                rdfs:label "collection of microbial organisms"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000051
+obo:PCO_0000051 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000029 ;
+                obo:IAO_0000115 "A multi-species collection of organisms that consists of two or more microbes from at least two species."@en ;
+                dc:creator "https://orcid.org/0000-0001-8815-0078"@en ;
+                rdfs:label "multi-species collection of microbes"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000052
+obo:PCO_0000052 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:allValuesFrom obo:PCO_0000049
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:allValuesFrom [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty obo:RO_0002350 ;
+                                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                 owl:onClass obo:PCO_0000017
+                                                                               ]
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass obo:PCO_0000049
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                obo:IAO_0000115 "A single-species collection of organisms that consists of two or more microbes of the same species and no members of any other species."@en ;
+                dc:creator "https://orcid.org/0000-0001-8815-0078"@en ;
+                rdfs:label "single species collection of microbes"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000053
+obo:PCO_0000053 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000001 ;
+                obo:IAO_0000115 "A population of organisms consisting of only microbes of the same species, that live in the same place."@en ;
+                dc:creator "https://orcid.org/0000-0001-8815-0078"@en ;
+                <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "microbiota"@en ;
+                rdfs:label "microbial population"@en .
+
+
 ###  http://purl.obolibrary.org/obo/PCO_0001000
 obo:PCO_0001000 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000040 ,
@@ -726,7 +819,7 @@ obo:PCO_1000003 rdf:type owl:Class ;
 ###  http://purl.obolibrary.org/obo/PCO_1000004
 obo:PCO_1000004 rdf:type owl:Class ;
                 rdfs:subClassOf obo:PCO_0000002 ,
-                                <https://purl.obolibrary.org/obo/PCO_0000044> ;
+                                obo:PCO_0000051 ;
                 obo:IAO_0000114 obo:IAO_0000125 ;
                 obo:IAO_0000115 "An ecological community which is composed of co-existing populations of microbial organisms that interact, directly or indirectly, such that they impact one another's ecological fitness." ;
                 obo:IAO_0000116 "A class for a collection of organisms considered \"microbial\" and an accompanying quality in PATO (e.g. \"microscopic\") would be useful to better axiomatise this class. See https://github.com/PopulationAndCommunityOntology/pco/issues/22" ;
@@ -753,104 +846,75 @@ obo:PCO_1000004 rdf:type owl:Class ;
 
 ###  https://purl.obolibrary.org/obo/PCO_0000040
 <https://purl.obolibrary.org/obo/PCO_0000040> rdf:type owl:Class ;
-                                              rdfs:subClassOf obo:PCO_0000002 ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty obo:BFO_0000050 ;
-                                                                owl:someValuesFrom obo:ENVO_01001369
-                                                              ] ;
+                                              rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                                               obo:IAO_0000115 "An ecological community which is composed primarily of dwarf or short mangroves, often populations of Laguncularia racemosa, Avicennia germinans, Sarcocornia pacifica, or Batis maritima."@en ;
+                                              obo:IAO_0000231 obo:IAO_0000103 ;
                                               dc:contributor "https://orcid.org/0000-0002-4366-3088"@en ;
                                               <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://cmecscatalog.org/cmecs/classification/unit/577.html" ;
                                               <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "mangrove community"@en ,
                                                                                                                "tidal shrubland community"@en ;
-                                              rdfs:label "tidal mangrove shrubland community"@en .
+                                              rdfs:label "obsolete tidal mangrove shrubland community"@en ;
+                                              owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.obolibrary.org/obo/PCO_0000041
 <https://purl.obolibrary.org/obo/PCO_0000041> rdf:type owl:Class ;
-                                              rdfs:subClassOf obo:PATO_0001241 ;
+                                              rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                                               obo:IAO_0000115 "A physical object quality that is inhered in a material entity that is too small to be viewed by the unaided eye."@en ;
+                                              obo:IAO_0000231 obo:IAO_0000103 ;
                                               rdfs:comment "should move to PATO"@en ;
-                                              rdfs:label "invisible to unaided eye"@en .
+                                              rdfs:label "obsolete invisible to unaided eye"@en ;
+                                              owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.obolibrary.org/obo/PCO_0000042
 <https://purl.obolibrary.org/obo/PCO_0000042> rdf:type owl:Class ;
-                                              rdfs:subClassOf obo:CARO_0001010 ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty obo:RO_0000086 ;
-                                                                owl:someValuesFrom <https://purl.obolibrary.org/obo/PCO_0000041>
-                                                              ] ;
+                                              rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
+                                              obo:IAO_0000231 obo:IAO_0000103 ;
                                               <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "microbial organism"@en ;
-                                              rdfs:label "microbe"@en .
+                                              rdfs:label "obsolete microbe"@en ;
+                                              owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.obolibrary.org/obo/PCO_0000043
 <https://purl.obolibrary.org/obo/PCO_0000043> rdf:type owl:Class ;
-                                              owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                           owl:onProperty obo:RO_0002351 ;
-                                                                                           owl:allValuesFrom <https://purl.obolibrary.org/obo/PCO_0000042>
-                                                                                         ]
-                                                                                         [ rdf:type owl:Restriction ;
-                                                                                           owl:onProperty obo:RO_0002351 ;
-                                                                                           owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                                                                                           owl:onClass <https://purl.obolibrary.org/obo/PCO_0000042>
-                                                                                         ]
-                                                                                       ) ;
-                                                                    rdf:type owl:Class
-                                                                  ] ;
+                                              rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                                               obo:IAO_0000115 "A collection of organisms consisting of two or more microbes."@en ;
+                                              obo:IAO_0000231 obo:IAO_0000103 ;
                                               dc:creator "https://orcid.org/0000-0001-8815-0078"@en ;
-                                              rdfs:label "collection of microbial organisms"@en .
+                                              rdfs:label "obsolete collection of microbial organisms"@en ;
+                                              owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.obolibrary.org/obo/PCO_0000044
 <https://purl.obolibrary.org/obo/PCO_0000044> rdf:type owl:Class ;
-                                              rdfs:subClassOf obo:PCO_0000029 ,
-                                                              <https://purl.obolibrary.org/obo/PCO_0000043> ;
+                                              rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                                               obo:IAO_0000115 "A multi-species collection of organisms that consists of two or more microbes from at least two species."@en ;
+                                              obo:IAO_0000231 obo:IAO_0000103 ;
                                               dc:creator "https://orcid.org/0000-0001-8815-0078"@en ;
-                                              rdfs:label "multi-species collection of microbes"@en .
+                                              rdfs:label "obsolete multi-species collection of microbes"@en ;
+                                              owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.obolibrary.org/obo/PCO_0000045
 <https://purl.obolibrary.org/obo/PCO_0000045> rdf:type owl:Class ;
-                                              owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                           owl:onProperty obo:RO_0002351 ;
-                                                                                           owl:allValuesFrom <https://purl.obolibrary.org/obo/PCO_0000042>
-                                                                                         ]
-                                                                                         [ rdf:type owl:Restriction ;
-                                                                                           owl:onProperty obo:RO_0002351 ;
-                                                                                           owl:allValuesFrom [ rdf:type owl:Restriction ;
-                                                                                                               owl:onProperty obo:RO_0002350 ;
-                                                                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                                               owl:onClass obo:PCO_0000017
-                                                                                                             ]
-                                                                                         ]
-                                                                                         [ rdf:type owl:Restriction ;
-                                                                                           owl:onProperty obo:RO_0002351 ;
-                                                                                           owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                                                                                           owl:onClass <https://purl.obolibrary.org/obo/PCO_0000042>
-                                                                                         ]
-                                                                                       ) ;
-                                                                    rdf:type owl:Class
-                                                                  ] ;
+                                              rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                                               obo:IAO_0000115 "A single-species collection of organisms that consists of two or more microbes of the same species and no members of any other species."@en ;
+                                              obo:IAO_0000231 obo:IAO_0000103 ;
                                               dc:creator "https://orcid.org/0000-0001-8815-0078"@en ;
-                                              rdfs:label "single species collection of microbes"@en .
+                                              rdfs:label "obsolete single species collection of microbes"@en ;
+                                              owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.obolibrary.org/obo/PCO_0000046
 <https://purl.obolibrary.org/obo/PCO_0000046> rdf:type owl:Class ;
-                                              rdfs:subClassOf obo:PCO_0000001 ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty obo:RO_0002351 ;
-                                                                owl:allValuesFrom <https://purl.obolibrary.org/obo/PCO_0000042>
-                                                              ] ;
+                                              rdfs:subClassOf <http://www.geneontology.org/formats/oboInOwl#ObsoleteClass> ;
                                               obo:IAO_0000115 "A population of organisms consisting of only microbes of the same species, that live in the same place."@en ;
+                                              obo:IAO_0000231 obo:IAO_0000103 ;
                                               dc:creator "https://orcid.org/0000-0001-8815-0078"@en ;
                                               <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "microbiota"@en ;
-                                              rdfs:label "microbial population"@en .
+                                              rdfs:label "obsolete microbial population"@en ;
+                                              owl:deprecated "true"^^xsd:boolean .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
