@@ -56,21 +56,11 @@ For now, consult the [GO Tutorial on configuring Protege](http://go-protege-tuto
 
 ## Imports
 
-All import modules are in the [imports/](imports/) folder.
+All import modules for release are in the [imports/](imports/) folder.
 
-There are two ways to include new classes in an import module
+Editors versions of the import files are at src/ontology/imports.
 
- 1. Reference an external ontology class in the edit ontology. In Protege: "add new entity", then paste in the PURL
- 2. Add to the imports/pco_terms.txt file
-
-After doing this, you can run
-
-`./run.sh make all_imports`
-
-to regenerate imports.
-
-Note: the pco_terms.txt file may include 'starter' classes seeded from
-the ontology starter kit. It is safe to remove these.
+We are currently using Robot to create imports. See https://github.com/PopulationAndCommunityOntology/pco/wiki/Making-imports
 
 ## Design patterns
 
@@ -105,6 +95,8 @@ To compile design patterns to terms run:
 This generates a file (`src/patterns/definitions.owl`).  You then need
 to add an import statement to the editor's file to import the
 definitions file.
+
+PCO currently uses on design pattern for collections of organisms. See XXX
 
 
 ## Release Manager notes
