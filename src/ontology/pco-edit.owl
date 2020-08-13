@@ -9,7 +9,7 @@
 @base <http://purl.obolibrary.org/obo/pco.owl> .
 
 <http://purl.obolibrary.org/obo/pco.owl> rdf:type owl:Ontology ;
-                                          owl:imports <http://purl.obolibrary.org/obo/iao/2019-08-26/ontology-metadata.owl> ,
+                                          owl:imports <http://purl.obolibrary.org/obo/omo/2020-06-08/omo.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/bfo_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/envo_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/go_import.owl> ,
