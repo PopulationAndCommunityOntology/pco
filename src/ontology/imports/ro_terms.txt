@@ -21,7 +21,7 @@ http://purl.obolibrary.org/obo/RO_0002351 #has member
 #http://purl.obolibrary.org/obo/RO_0002563 #interaction relation helper property
 
   #robot extract --method BOT \
-  #   --input files/ro.owl \
+  #   --input input_files/ro.owl \
   #   --term-file ro_terms.txt \
   #   --annotate-with-source true \
   #   annotate --ontology-iri "http://purl.obolibrary.org/obo/pco/imports/ro_import.owl" \
