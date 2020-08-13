@@ -4,7 +4,7 @@ http://purl.obolibrary.org/obo/GO_0051703 #intraspecies interaction between orga
 http://purl.obolibrary.org/obo/GO_0035176 #social behavior
 
   #robot extract --method BOT \
-  #   --input files/go.owl \
+  #   --input input_files/go.owl \
   #   --term-file go_terms.txt \
   #   --annotate-with-source true \
   #   annotate --ontology-iri "http://purl.obolibrary.org/obo/pco/imports/go_import.owl" \
