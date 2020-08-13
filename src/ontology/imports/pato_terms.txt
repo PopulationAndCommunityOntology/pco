@@ -8,7 +8,7 @@ http://purl.obolibrary.org/obo/PATO_0000070 #amount
 
 
   #robot extract --method BOT \
-  #   --input files/pato.owl \
+  #   --input input_files/pato.owl \
   #   --term-file pato_terms.txt \
   #   --annotate-with-source true \
   #   annotate --ontology-iri "http://purl.obolibrary.org/obo/pco/imports/pato_import.owl" \
