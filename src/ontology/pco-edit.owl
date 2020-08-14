@@ -201,15 +201,7 @@ Classes for population already  exist in IDO ('organism population', IDO_0000509
 
 ###  http://purl.obolibrary.org/obo/PCO_0000002
 obo:PCO_0000002 rdf:type owl:Class ;
-                rdfs:subClassOf [ owl:intersectionOf ( obo:PCO_0000029
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:RO_0002351 ;
-                                                         owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                                                         owl:onClass obo:PCO_0000001
-                                                       ]
-                                                     ) ;
-                                  rdf:type owl:Class
-                                ] ;
+                rdfs:subClassOf obo:PCO_0000029 ;
                 obo:IAO_0000115 "A multi-species collection of organisms of at least two different species, living in a particular area. Must have at least two populations of different species as members."@en ;
                 obo:IAO_0000118 "multispecies community"@en ;
                 obo:IAO_0000119 "ISBN:0865423504" ;
@@ -543,7 +535,12 @@ obo:PCO_0000028 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/PCO_0000029
 obo:PCO_0000029 rdf:type owl:Class ;
-                rdfs:subClassOf obo:PCO_0000000 ;
+                rdfs:subClassOf obo:PCO_0000000 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002351 ;
+                                  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                  owl:onClass obo:PCO_0000001
+                                ] ;
                 obo:IAO_0000114 obo:IAO_0000123 ;
                 obo:IAO_0000115 "A collection of organisms that consists of two or more organisms from at least two species."@en ;
                 obo:IAO_0000116 "Need to add axiom to specify that it has at a mimum members of two different species, but not sure how to specify that. Can't say \"('has member' only ('member of' min 2 'species as a collection of organisms'))\"."@en ;
