@@ -1,2 +1,13 @@
 http://purl.obolibrary.org/obo/ENVO_01000744 #human dwelling
 http://purl.obolibrary.org/obo/ENVO_01001369 #tidal magrove shrubland
+
+#robot extract --method MIREOT \
+#--input input_files/envo.owl \
+#--upper-term "http://purl.obolibrary.org/obo/BFO_0000040" \
+#--lower-term "http://purl.obolibrary.org/obo/ENVO_01000744" \
+#--lower-term "http://purl.obolibrary.org/obo/ENVO_01001369" \
+#--intermediates minimal \
+#--annotate-with-source true \
+#--copy-ontology-annotations true \
+#annotate --ontology-iri "http://purl.obolibrary.org/obo/pco/imports/envo_import.owl" \
+#--output envo_import.owl
