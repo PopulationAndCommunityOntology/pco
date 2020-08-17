@@ -1,0 +1,8 @@
+http://purl.obolibrary.org/obo/STATO_0000047 #count
+
+  #robot extract --method BOT \
+  #   --input input_files/stato.owl \
+  #   --term-file stato_terms.txt \
+  #   --annotate-with-source true \
+  #   annotate --ontology-iri "http://purl.obolibrary.org/obo/pco/imports/stato_import.owl" \
+  #   --output stato_import.owl
