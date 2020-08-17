@@ -6,3 +6,5 @@ http://purl.obolibrary.org/obo/IAO_0000136 #is about
 #--intermediates none \
 #annotate --ontology-iri "http://purl.obolibrary.org/obo/pco/imports/iao_import.owl" \
 #--output iao_import.owl
+
+#For some reason, ROBOT adds the version IRI for RO, but not for any others. Until I figure out how to stop it, it will need to be manually removed.

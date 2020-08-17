@@ -13,9 +13,11 @@
                                                       <http://purl.obolibrary.org/obo/pco/imports/bfo_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/envo_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/go_import.owl> ,
+                                                      <http://purl.obolibrary.org/obo/pco/imports/iao_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/ncbitaxon_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/pato_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/ro_import.owl> ,
+                                                      <http://purl.obolibrary.org/obo/pco/imports/stato_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/ro/core.owl> ;
                                           dc:contributor "http://orcid.org/0000-0002-4366-3088" ,
                                                          "https://orcid.org/0000-0001-8815-0078" ;
@@ -128,6 +130,18 @@ obo:BFO_0000029 rdf:type owl:Class .
 obo:BFO_0000031 rdf:type owl:Class .
 
 
+###  http://purl.obolibrary.org/obo/CARO_0000012
+obo:CARO_0000012 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:CARO_0010004 ;
+                 obo:IAO_0000115 "Anatomical structure that is an individual member of a clade and, at some point in its life-cycle, consists of more than one cell."^^xsd:string ;
+                 obo:IAO_0000589 "multicellular organism"@en ;
+                 obo:IAO_created_by "Melissa Haendel"^^xsd:string ;
+                 obo:IAO_creation_date "9/18/11"^^xsd:string ;
+                 rdfs:comment "MH: Can't define this class based on 2 or more cells because most multi cellular organisms (if not all) have only a single cell at some point in life history."^^xsd:string ,
+                              "MH: sexual subtypes should probably be logically defined based on sexual processes or sex qualities."^^xsd:string ;
+                 rdfs:label "multicellular organism"^^xsd:string .
+
+
 ###  http://purl.obolibrary.org/obo/CARO_0001010
 obo:CARO_0001010 rdf:type owl:Class ;
                  rdfs:subClassOf obo:BFO_0000040 ;
@@ -145,7 +159,7 @@ obo:CARO_0010004 rdf:type owl:Class ;
                  obo:IAO_0000589 "organism"@en ;
                  obo:IAO_created_by "mah"^^xsd:string ;
                  obo:IAO_creation_date "7.16.2011"^^xsd:string ;
-                 rdfs:comment "A general term for organism that is agnostic about single cell vs multi-cellular.  Note that this is a subclass of 'anatomical structure', meaning that an organism must be a connected structure.  So, if I take one plant and make a rooted cutting from a it, I now have two (clonally related) organisms. "^^xsd:string ;
+                 rdfs:comment "A general term for organism that is agnostic about single cell vs multi-cellular.  Note that this is a subclass of 'anatomical structure', meaning that an organism must be a connected structure.  So, if I take one plant and make a rooted cutting from a it, I now have two (clonally related) organisms."^^xsd:string ;
                  rdfs:label "organism"^^xsd:string .
 
 
@@ -478,7 +492,7 @@ obo:PCO_0000024 rdf:type owl:Class ;
                                 ] ;
                 obo:IAO_0000114 obo:IAO_0000123 ;
                 obo:IAO_0000115 "An organismal entity that consists of one or more people who live in the same dwelling and also share at meals or living accommodation, and may consist of a single family or some other grouping of people." ;
-                obo:IAO_0000117 "Person: Jie Zheng" ;
+                obo:IAO_0000117 <https://orcid.org/0000-0002-2999-0103> ;
                 obo:IAO_0000119 "WEB: http://en.wikipedia.org/wiki/Household" ;
                 rdfs:label "household"@en .
 
@@ -730,6 +744,28 @@ obo:PCO_0000053 rdf:type owl:Class ;
                 dc:creator "https://orcid.org/0000-0001-8815-0078"@en ;
                 <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "microbiota"@en ;
                 rdfs:label "microbial population"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000054
+obo:PCO_0000054 rdf:type owl:Class ;
+                rdfs:subClassOf obo:STATO_0000047 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:IAO_0000136 ;
+                                  owl:allValuesFrom obo:CARO_0000012
+                                ] ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A count data item of the number of steps in the line of descent from a common ancestor for a multicellular organism." ;
+                obo:IAO_0000117 <https://orcid.org/0000-0002-2999-0103> ;
+                <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "number of generations" ;
+                rdfs:label "number of generations of multicellular organism"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:PCO_0000054 ;
+   owl:annotatedProperty obo:IAO_0000115 ;
+   owl:annotatedTarget "A count data item of the number of steps in the line of descent from a common ancestor for a multicellular organism." ;
+   rdfs:comment obo:NCIT_C88214 ,
+                <http://www.ebi.ac.uk/efo/EFO_0000507>
+ ] .
 
 
 ###  http://purl.obolibrary.org/obo/PCO_0001000

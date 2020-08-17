@@ -19,4 +19,4 @@ http://purl.obolibrary.org/obo/RO_0002321 #ecologically related to
 #annotate --ontology-iri "http://purl.obolibrary.org/obo/pco/imports/ro_import.owl" \
 #--output ro_import.owl
 
-#For some reason, ROBOT adds the version IRI for RO, but not for any others. Until I figure out how to stop it, it will need to be manually removed.
+#For some reason, ROBOT adds the version IRI for RO and IAO, but not for any others. In these cases, it is importing only properties. Until I figure out how to stop it, it will need to be manually removed.
