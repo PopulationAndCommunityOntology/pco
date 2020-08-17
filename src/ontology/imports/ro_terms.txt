@@ -1,28 +1,22 @@
-#lines below were added jan 2020. testing a limited import of RO to speed up reasoning
-http://purl.obolibrary.org/obo/ #part of
-http://purl.obolibrary.org/obo/BFO_0000051 #has part
-http://purl.obolibrary.org/obo/RO_0000052 #inheres in
-http://purl.obolibrary.org/obo/RO_0000056 #participates in
-http://purl.obolibrary.org/obo/RO_0000057 #has participant
-http://purl.obolibrary.org/obo/RO_0000086 #has quality
-http://purl.obolibrary.org/obo/RO_0001025 #located in
+#lines below were added jan 2020. testing a limited import of RO to speed up reasoning. All relations except ecologically related to are in the RO core, so just MIREOT in that one relation.
+
 http://purl.obolibrary.org/obo/RO_0002321 #ecologically related to
-http://purl.obolibrary.org/obo/RO_0002350 #member of
-http://purl.obolibrary.org/obo/RO_0002351 #has member
+#http://purl.obolibrary.org/obo/ #part of
+#http://purl.obolibrary.org/obo/BFO_0000051 #has part
+#http://purl.obolibrary.org/obo/RO_0000052 #inheres in
+#http://purl.obolibrary.org/obo/RO_0000056 #participates in
+#http://purl.obolibrary.org/obo/RO_0000057 #has participant
+#http://purl.obolibrary.org/obo/RO_0000086 #has quality
+#http://purl.obolibrary.org/obo/RO_0001025 #located in
+#http://purl.obolibrary.org/obo/RO_0002350 #member of
+#http://purl.obolibrary.org/obo/RO_0002351 #has member
 
-#lines below are from a very old import, not sure if we still need them
-#http://purl.obolibrary.org/obo/RO_0002434 #interacts with
-#http://purl.obolibrary.org/obo/RO_0002437 #biotically interacts with
-#http://purl.obolibrary.org/obo/RO_0002465 #is symbiosis
-#http://purl.obolibrary.org/obo/RO_0002563 #interaction relation helper property
-#http://purl.obolibrary.org/obo/RO_0002461 #partner in
-#http://purl.obolibrary.org/obo/RO_0002462 #subject participant in
-#http://purl.obolibrary.org/obo/RO_0002463 #target participant in
-#http://purl.obolibrary.org/obo/RO_0002563 #interaction relation helper property
 
-  #robot extract --method BOT \
-  #   --input input_files/ro.owl \
-  #   --term-file ro_terms.txt \
-  #   --annotate-with-source true \
-  #   annotate --ontology-iri "http://purl.obolibrary.org/obo/pco/imports/ro_import.owl" \
-  #   --output ro_import.owl
+#robot extract --method MIREOT \
+#--input input_files/ro.owl \
+#--lower-term "http://purl.obolibrary.org/obo/RO_0002321" \
+#--intermediates none \
+#--annotate-with-source true \
+#--copy-ontology-annotations true \
+#annotate --ontology-iri "http://purl.obolibrary.org/obo/pco/imports/ro_import.owl" \
+#--output ro_import.owl

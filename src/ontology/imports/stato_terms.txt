@@ -1,8 +1,11 @@
 http://purl.obolibrary.org/obo/STATO_0000047 #count
 
-  #robot extract --method BOT \
-  #   --input input_files/stato.owl \
-  #   --term-file stato_terms.txt \
-  #   --annotate-with-source true \
-  #   annotate --ontology-iri "http://purl.obolibrary.org/obo/pco/imports/stato_import.owl" \
-  #   --output stato_import.owl
+#robot extract --method MIREOT \
+#--input input_files/stato.owl \
+#--upper-term "http://purl.obolibrary.org/obo/IAO_0000027" \
+#--lower-term "http://purl.obolibrary.org/obo/STATO_0000047" \
+#--intermediates all \
+#--annotate-with-source true \
+#--copy-ontology-annotations true \
+#annotate --ontology-iri "http://purl.obolibrary.org/obo/pco/imports/stato_import.owl" \
+#--output stato_import.owl
