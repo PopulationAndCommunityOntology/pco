@@ -74,6 +74,14 @@ obo:BFO_0000050 rdf:type owl:ObjectProperty .
 obo:BFO_0000051 rdf:type owl:ObjectProperty .
 
 
+###  http://purl.obolibrary.org/obo/PCO_0000055
+obo:PCO_0000055 rdf:type owl:ObjectProperty ;
+                rdfs:domain obo:PCO_0000000 ;
+                owl:propertyChainAxiom ( obo:RO_0002351
+                                       ) ;
+                rdfs:label "has member of"@en .
+
+
 ###  http://purl.obolibrary.org/obo/RO_0000052
 obo:RO_0000052 rdf:type owl:ObjectProperty .
 
@@ -191,7 +199,11 @@ obo:PCO_0000000 rdf:type owl:Class ;
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                rdfs:subClassOf obo:BFO_0000027 ;
+                rdfs:subClassOf obo:BFO_0000027 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002351 ;
+                                  owl:allValuesFrom obo:CARO_0001010
+                                ] ;
                 obo:IAO_0000112 "Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family." ;
                 obo:IAO_0000114 obo:IAO_0000125 ;
                 obo:IAO_0000115 "A material entity that consists of two or more organisms, viruses, or viroids."@en ;
@@ -402,16 +414,13 @@ obo:PCO_0000018 rdf:type owl:Class ;
                                                            ]
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty obo:RO_0002351 ;
-                                                             owl:allValuesFrom [ rdf:type owl:Restriction ;
-                                                                                 owl:onProperty obo:RO_0002350 ;
-                                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                 owl:onClass obo:PCO_0000017
-                                                                               ]
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty obo:RO_0002351 ;
                                                              owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
                                                              owl:onClass obo:CARO_0001010
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:PCO_0000055 ;
+                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass obo:PCO_0000017
                                                            ]
                                                          ) ;
                                       rdf:type owl:Class
@@ -773,10 +782,6 @@ obo:PCO_0001000 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000040 ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002351 ;
-                                  owl:allValuesFrom obo:CARO_0001010
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002351 ;
                                   owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
                                   owl:onClass obo:CARO_0001010
                                 ] ;
@@ -786,19 +791,12 @@ obo:PCO_0001000 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/PCO_0001001
 obo:PCO_0001001 rdf:type owl:Class ;
-                owl:equivalentClass [ owl:intersectionOf ( obo:PCO_0001000
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty obo:RO_0002351 ;
-                                                             owl:allValuesFrom [ rdf:type owl:Restriction ;
-                                                                                 owl:onProperty obo:RO_0002350 ;
-                                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                 owl:onClass obo:PCO_0000017
-                                                                               ]
-                                                           ]
-                                                         ) ;
-                                      rdf:type owl:Class
-                                    ] ;
-                rdfs:subClassOf obo:PCO_0001000 ;
+                rdfs:subClassOf obo:PCO_0001000 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:PCO_0000055 ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass obo:PCO_0000017
+                                ] ;
                 rdfs:label "pair of interacting organisms of the same species"@en .
 
 
