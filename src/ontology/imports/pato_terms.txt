@@ -6,6 +6,7 @@ http://purl.obolibrary.org/obo/PATO_0001338 #mixed sex
 http://purl.obolibrary.org/obo/PATO_0001415 #morbity
 http://purl.obolibrary.org/obo/PATO_0000070 #amount
 http://purl.obolibrary.org/obo/PATO_0001019 #mass density
+http://purl.obolibrary.org/obo/PATO_0001788 #increased mass density
 
   #robot extract --method BOT \
   #   --input input_files/pato.owl \
