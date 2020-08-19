@@ -1,0 +1,10 @@
+http://purl.obolibrary.org/obo/ECOCORE_00000045 #symbiotroph
+http://purl.obolibrary.org/obo/ECOCORE_00000146 #parasite
+
+#robot extract --method MIREOT \
+#--input input_files/ecocore.owl \
+#--upper-term "http://purl.obolibrary.org/obo/ECOCORE_00000045" \
+#--lower-term "http://purl.obolibrary.org/obo/ECOCORE_00000146" \
+#--intermediates minimal \
+#annotate --ontology-iri "http://purl.obolibrary.org/obo/pco/imports/ecocore_import.owl" \
+#--output ecocore_import.owl
