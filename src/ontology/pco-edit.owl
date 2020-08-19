@@ -11,6 +11,7 @@
 <http://purl.obolibrary.org/obo/pco.owl> rdf:type owl:Ontology ;
                                           owl:imports <http://purl.obolibrary.org/obo/omo/2020-06-08/omo.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/bfo_import.owl> ,
+                                                      <http://purl.obolibrary.org/obo/pco/imports/ecocore_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/envo_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/go_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/iao_import.owl> ,
@@ -169,6 +170,10 @@ obo:CARO_0010004 rdf:type owl:Class ;
                  obo:IAO_creation_date "7.16.2011"^^xsd:string ;
                  rdfs:comment "A general term for organism that is agnostic about single cell vs multi-cellular.  Note that this is a subclass of 'anatomical structure', meaning that an organism must be a connected structure.  So, if I take one plant and make a rooted cutting from a it, I now have two (clonally related) organisms."^^xsd:string ;
                  rdfs:label "organism"^^xsd:string .
+
+
+###  http://purl.obolibrary.org/obo/ECOCORE_00000045
+obo:ECOCORE_00000045 rdfs:subClassOf obo:CARO_0001010 .
 
 
 ###  http://purl.obolibrary.org/obo/ENVO_01000744
@@ -827,6 +832,31 @@ obo:PCO_0000059 rdf:type owl:Class ;
                 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://edamontology.org/data_1868> ;
                 rdfs:comment "This term is neutral with respect to which organisms are included in a taxon. Membership will depend on the taxon concept and the assertions used to define the taxon. These criteria must be specified by the user. The best practice is to refer to a formal taxon description, rather than informal names \"Genus species\" without an authority." ;
                 rdfs:label "taxon as collection of organisms"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000060
+obo:PCO_0000060 rdf:type owl:Class ;
+                rdfs:subClassOf obo:ECOCORE_00000146 ,
+                                obo:PCO_0000049 ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "An organism or virus or viroid that is a microbe and a parasite." ;
+                obo:IAO_0000117 <https://orcid.org/0000-0001-8815-0078> ;
+                rdfs:label "microbial parasite"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000061
+obo:PCO_0000061 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000053 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002351 ;
+                                  owl:allValuesFrom obo:PCO_0000060
+                                ] ;
+                obo:IAO_0000112 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4811772/> ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A microbial population of parasites that is defined by shared features such as genetic markers reflecting a common origin and distinguishing the population from other related parasite populations." ;
+                obo:IAO_0000117 <https://orcid.org/0000-0001-8815-0078> ,
+                                "VEuPathDB" ;
+                rdfs:label "parasite isolate population"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PCO_0001000
