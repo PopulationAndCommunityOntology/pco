@@ -398,10 +398,16 @@ obo:PCO_0000016 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/PCO_0000017
 obo:PCO_0000017 rdf:type owl:Class ;
-                rdfs:subClassOf obo:PCO_0000018 ;
+                rdfs:subClassOf obo:PCO_0000018 ,
+                                obo:PCO_0000059 ;
                 obo:IAO_0000114 obo:IAO_0000120 ;
-                obo:IAO_0000115 "A collection of organisms that has as parts every organism of given species and no organisms of any other species."@en ;
+                obo:IAO_0000115 "A collection of organisms that has as members every organism of given species and no organisms of any other species."@en ,
+                                "A collection of organisms that has as parts every organism of a species and no organisms of any other species."@en ;
                 obo:IAO_0000116 "At the moment there is no way to specify in an OWL axiom that the collection includes every individual of a species. This should be added, if possible."@en ;
+                <http://www.geneontology.org/formats/oboInOwl#hasDbXref> obo:GENO_0000113 ,
+                                                                         obo:TAXRANK_0000006 ,
+                                                                         <http://rs.tdwg.org/ontology/voc/TaxonRank#Species> ;
+                <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "taxonomic group" ;
                 rdfs:comment "This term is neutral with respect to which organisms are included in a species. Membership will depend on the species concept and the taxonomic assertions used to define the species. These criteria must be specified by the user."@en ;
                 rdfs:label "species as a collection of organisms"@en .
 
@@ -810,6 +816,17 @@ obo:PCO_0000058 rdf:type owl:Class ;
                 obo:IAO_0000115 "A quality of a human population such that the density humans in an area is increased beyond sustainable levels." ;
                 obo:IAO_0000117 <https://orcid.org/0000-0001-8815-0078> ;
                 rdfs:label "overcrowded human population"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000059
+obo:PCO_0000059 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000000 ;
+                obo:IAO_0000114 obo:IAO_0000428 ;
+                obo:IAO_0000115 "A collection of organisms that has as members every organism of a taxon and no organisms of any other equal or higher ranked taxon. The taxon may be at any level. If the taxon is species, then this is the same as the class species as a collection of organisms. When defining a taxon, it is generally understood that members include both living organisms and dead organisms that are known through specimens or observations." ;
+                obo:IAO_0000117 <https://orcid.org/0000-0001-8815-0078> ;
+                <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://edamontology.org/data_1868> ;
+                rdfs:comment "This term is neutral with respect to which organisms are included in a taxon. Membership will depend on the taxon concept and the assertions used to define the taxon. These criteria must be specified by the user. The best practice is to refer to a formal taxon description, rather than informal names \"Genus species\" without an authority." ;
+                rdfs:label "taxon as collection of organisms"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PCO_0001000
