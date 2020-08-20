@@ -291,23 +291,28 @@ obo:PCO_0000005 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/PCO_0000006
 obo:PCO_0000006 rdf:type owl:Class ;
-                rdfs:subClassOf obo:PCO_0000003 ;
+                rdfs:subClassOf obo:PATO_0000161 ,
+                                obo:PCO_0000003 ;
                 obo:IAO_0000114 obo:IAO_0000123 ;
+                obo:IAO_0000115 "The rate of birth of a population of organisms." ;
                 rdfs:label "population birth rate"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PCO_0000007
 obo:PCO_0000007 rdf:type owl:Class ;
-                rdfs:subClassOf obo:PCO_0000003 ;
+                rdfs:subClassOf obo:PATO_0000161 ,
+                                obo:PCO_0000003 ;
                 obo:IAO_0000114 obo:IAO_0000123 ;
+                obo:IAO_0000115 "The rate of death of a population of organsisms." ;
                 rdfs:label "population death rate"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PCO_0000008
 obo:PCO_0000008 rdf:type owl:Class ;
-                rdfs:subClassOf obo:PCO_0000003 ;
+                rdfs:subClassOf obo:PATO_0000161 ,
+                                obo:PCO_0000003 ;
                 obo:IAO_0000114 obo:IAO_0000123 ;
-                obo:IAO_0000116 "Is a rate a quality? Population growth rate may be better classified as a process profile."@en ;
+                obo:IAO_0000115 "The rate of growth of a population." ;
                 rdfs:label "population growth rate"@en .
 
 
@@ -649,9 +654,9 @@ obo:PCO_0000035 rdf:type owl:Class ;
 ###  http://purl.obolibrary.org/obo/PCO_0000037
 obo:PCO_0000037 rdf:type owl:Class ;
                 rdfs:subClassOf obo:PCO_0000033 ;
+                obo:IAO_0000115 "A human social gathering at which each participant is expected to bring food to share. A potluck also can be party, a social meal, or some other type of social gathering."@en ;
                 obo:IAO_0000116 "Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001033"@en ;
-                obo:IAO_0000119 "A human social gathering at which each participant is expected to bring food to share. A potluck also can be party, a social meal, or some other type of social gathering."@en ,
-                                "GenEpio curators"@en ;
+                obo:IAO_0000119 "GenEpio curators"@en ;
                 rdfs:label "potluck"@en .
 
 
@@ -879,6 +884,7 @@ obo:PCO_0001001 rdf:type owl:Class ;
                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onClass obo:PCO_0000017
                                 ] ;
+                obo:IAO_0000115 "A pair of interacting  organisms that consists of exactly two organism, viruses, or viroids of the same species that are interacting with each other." ;
                 rdfs:label "pair of interacting organisms of the same species"@en .
 
 
