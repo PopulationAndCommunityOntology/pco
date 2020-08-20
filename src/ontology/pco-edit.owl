@@ -253,8 +253,9 @@ obo:PCO_0000003 rdf:type owl:Class ;
                                       rdf:type owl:Class
                                     ] ;
                 obo:IAO_0000114 obo:IAO_0000428 ;
-                obo:IAO_0000115 "A quality that inheres in a biological population."@en ;
-                obo:IAO_0000116 "See Chris's comments on population qualities at: http://code.google.com/p/popcomm-ontology/issues/detail?id=4. These may not belong under BFO:quality. May be better to call them population characteristics, and classify as specifically dependent continuants. Need to look at process profiles in BFO2."@en ;
+                obo:IAO_0000115 "A quality that inheres in a population of organisms."@en ;
+                obo:IAO_0000116 "See Chris's comments on population qualities at: http://code.google.com/p/popcomm-ontology/issues/detail?id=4. These may not belong under BFO:quality. May be better to call them population characteristics, and classify as specifically dependent continuants. Need to look at process profiles in BFO2."@en ,
+                                "This class is used only for qualities of PCO:population of organsism, while PATO:population quality can inhere in either a population of organisms or an ecological community." ;
                 rdfs:comment "Includes qualities like population size, population growth rate, carrying capacity, immigration rate, emigration rate, fecundity, and death rate. A population quality may depend on the qualities of individual organisms in the population, but cannot be measured or described for a single organism. This term may be replaced by a PATO term."@en ;
                 rdfs:label "quality of a population"@en .
 
@@ -491,7 +492,7 @@ obo:PCO_0000023 rdf:type owl:Class ;
                 rdfs:subClassOf obo:PCO_0000004 ;
                 obo:IAO_0000112 "If there are 40 foxes, and 1000 dogs, the community is not very even, but if there are 40 foxes and 42 dogs, the community is quite even."@en ;
                 obo:IAO_0000114 obo:IAO_0000120 ;
-                obo:IAO_0000115 "A quality of a community that reflects how close in abundance all species in a community are."@en ;
+                obo:IAO_0000115 "A quality of an ecological community that reflects how close in abundance all species in a community are."@en ;
                 obo:IAO_0000119 "adapted from http://en.wikipedia.org/wiki/Species_evenness"@en ;
                 rdfs:label "community species evenness"@en .
 
@@ -862,6 +863,40 @@ obo:PCO_0000061 rdf:type owl:Class ;
                 obo:IAO_0000117 <https://orcid.org/0000-0001-8815-0078> ,
                                 "VEuPathDB" ;
                 rdfs:label "parasite isolate population"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000062
+obo:PCO_0000062 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000019 ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A community species diversity metric that accounts for both the abundance and evenness of the species present quantified via the following formula: the negative sum of, the product of the proportion of species i relative to the total number of species (pi) multiplied by the natural logarithm of this proportion (ln pi)." ;
+                obo:IAO_0000119 <http://www.tiem.utk.edu/~gross/bioed/bealsmodules/shannonDI.html> ,
+                                <https://en.wikipedia.org/wiki/Diversity_index#Shannon_index> ;
+                <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "Shannon entropy" ,
+                                                                               "Shannon's diversity index" ,
+                                                                               "Shannon-Wiener index" ;
+                rdfs:label "Shannon diversity index"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000063
+obo:PCO_0000063 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000019 ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A community species diversity metric that is quantified via the following formula: the reciprocal of the sum of squared proportion of species i relative to the total number of species (pi)." ;
+                obo:IAO_0000119 <http://www.tiem.utk.edu/~gross/bioed/bealsmodules/simpsonDI.html> ,
+                                <https://en.wikipedia.org/wiki/Diversity_index#Simpson_index> ;
+                <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "Simpson index" ;
+                rdfs:label "Simpson diversity index"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000064
+obo:PCO_0000064 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000019 ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A community species diversity metric that is quantified via the following formula: the sum of squared proportion of species i relative to the total number of species (pi)." ;
+                obo:IAO_0000119 <http://www.tiem.utk.edu/~gross/bioed/bealsmodules/simpsonDI.html> ,
+                                <https://en.wikipedia.org/wiki/Diversity_index#Inverse_Simpson_index> ;
+                rdfs:label "inverse Simpson diversity index"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PCO_0001000
