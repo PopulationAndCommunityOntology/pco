@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pco/releases/2020-02-13/pato_import.obo
+data-version: pco/releases/2020-08-26/imports/pato_import.obo
 ontology: pco/imports/pato_import.obo
 
 [Term]

@@ -1,0 +1,31 @@
+format-version: 1.2
+data-version: pco/releases/2020-08-26/imports/ecocore_import.obo
+ontology: pco/imports/ecocore_import.obo
+
+[Term]
+id: ECOCORE:00000045
+name: symbiotroph
+def: "heterotroph that acquires nutrition from a symbiont" []
+property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
+
+[Term]
+id: ECOCORE:00000146
+name: parasite
+def: "A symbiotroph that reduces the fitness, survival, or growth of its symbiont, often called a host" []
+xref: https://www.wikidata.org/entity/Q10253316
+is_a: ECOCORE:00000045 ! symbiotroph
+property_value: IAO:0000117 http://orcid.org/0000-0002-2908-3327 xsd:string
+
+[Typedef]
+id: editor_note
+name: editor note
+namespace: uberon
+def: "An administrative note intended for its editor. It may not be included in the publication version of the ontology, so it should contain nothing necessary for end users to understand the ontology." []
+xref: IAO:0000116
+property_value: IAO:0000111 "editor note" xsd:string
+property_value: IAO:0000114 IAO:0000122
+property_value: IAO:0000117 "PERSON:Daniel Schober" xsd:string
+property_value: IAO:0000119 GROUP:OBI:<http://purl.obfoundry.org/obo/obi> xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/iao.owl
+is_metadata_tag: true
+

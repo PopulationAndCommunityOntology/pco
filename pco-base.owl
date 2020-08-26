@@ -8,17 +8,20 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pco/pco-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pco/releases/2020-02-13/pco-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pco/releases/2020-08-26/pco-base.owl"/>
         <dc:contributor>http://orcid.org/0000-0002-4366-3088</dc:contributor>
         <dc:contributor>https://orcid.org/0000-0001-8815-0078</dc:contributor>
         <dc:creator>David Osumi-Sutherland</dc:creator>
         <dc:creator>Jie Zheng</dc:creator>
         <dc:creator>Pier Luigi Buttigieg</dc:creator>
         <dc:creator>Ramona Walls</dc:creator>
-        <dc:license>http://creativecommons.org/publicdomain/zero/1.0/</dc:license>
+        <dc:description>The Population and Community Ontology (PCO) describes material entities, qualities, and processes related to collections of interacting organisms such as populations and communities. It is taxon neutral, and can be used for any species, including humans. The classes in the PCO are useful for describing evolutionary processes, organismal interactions, and ecological experiments. Practical applications of the PCO include community health care, plant pathology, behavioral studies, sociology, and ecology.</dc:description>
+        <dc:title>Population and Community Ontology</dc:title>
         <dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/IAO_8000001</dc:type>
+        <terms:license>http://creativecommons.org/publicdomain/zero/1.0/</terms:license>
         <rdfs:comment>The Population and Community Ontology (PCO) is licensed under a Creative Commons zero (CC0) license - http://creativecommons.org/publicdomain/zero/1.0/. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. We ask that anyone using this ontology follow the standards of the scientific ontology community by re-using ontology identifiers whenever possible and properly citing the ontology and its creators.</rdfs:comment>
     </owl:Ontology>
     
@@ -172,6 +175,24 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000055 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PCO_0000055">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PCO_0000000"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002351"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">has member of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052"/>
@@ -267,6 +288,21 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CARO_0000012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0010004"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anatomical structure that is an individual member of a clade and, at some point in its life-cycle, consists of more than one cell.</obo:IAO_0000115>
+        <obo:IAO_0000589 xml:lang="en">multicellular organism</obo:IAO_0000589>
+        <obo:IAO_created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melissa Haendel</obo:IAO_created_by>
+        <obo:IAO_creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9/18/11</obo:IAO_creation_date>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MH: Can&apos;t define this class based on 2 or more cells because most multi cellular organisms (if not all) have only a single cell at some point in life history.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MH: sexual subtypes should probably be logically defined based on sexual processes or sex qualities.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">multicellular organism</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CARO_0001010 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0001010">
@@ -288,9 +324,23 @@
         <obo:IAO_0000589 xml:lang="en">organism</obo:IAO_0000589>
         <obo:IAO_created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mah</obo:IAO_created_by>
         <obo:IAO_creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7.16.2011</obo:IAO_creation_date>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A general term for organism that is agnostic about single cell vs multi-cellular.  Note that this is a subclass of &apos;anatomical structure&apos;, meaning that an organism must be a connected structure.  So, if I take one plant and make a rooted cutting from a it, I now have two (clonally related) organisms. </rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A general term for organism that is agnostic about single cell vs multi-cellular.  Note that this is a subclass of &apos;anatomical structure&apos;, meaning that an organism must be a connected structure.  So, if I take one plant and make a rooted cutting from a it, I now have two (clonally related) organisms.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organism</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000045 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000045">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0001010"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECOCORE_00000146 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECOCORE_00000146"/>
     
 
 
@@ -334,9 +384,21 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0000161 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000161"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0001241 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001241"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001788 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001788"/>
     
 
 
@@ -365,6 +427,12 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CARO_0001010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000112>Examples include: population, community, species (meaning the collection of organisms that makes up a species, not the taxonomic rank), and family.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115 xml:lang="en">A material entity that consists of two or more organisms, viruses, or viroids.</obo:IAO_0000115>
@@ -396,18 +464,7 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <!-- http://purl.obolibrary.org/obo/PCO_0000002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000002">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PCO_0000029"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PCO_0000001"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000029"/>
         <obo:IAO_0000115 xml:lang="en">A multi-species collection of organisms of at least two different species, living in a particular area. Must have at least two populations of different species as members.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">multispecies community</obo:IAO_0000118>
         <obo:IAO_0000119>ISBN:0865423504</obo:IAO_0000119>
@@ -432,8 +489,9 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">A quality that inheres in a biological population.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A quality that inheres in a population of organisms.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">See Chris&apos;s comments on population qualities at: http://code.google.com/p/popcomm-ontology/issues/detail?id=4. These may not belong under BFO:quality. May be better to call them population characteristics, and classify as specifically dependent continuants. Need to look at process profiles in BFO2.</obo:IAO_0000116>
+        <obo:IAO_0000116>This class is used only for qualities of PCO:population of organsism, while PATO:population quality can inhere in either a population of organisms or an ecological community.</obo:IAO_0000116>
         <rdfs:comment xml:lang="en">Includes qualities like population size, population growth rate, carrying capacity, immigration rate, emigration rate, fecundity, and death rate. A population quality may depend on the qualities of individual organisms in the population, but cannot be measured or described for a single organism. This term may be replaced by a PATO term.</rdfs:comment>
         <rdfs:label xml:lang="en">quality of a population</rdfs:label>
     </owl:Class>
@@ -474,8 +532,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A process that has as primary participant a population. </obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Includes processes such as population growth, extinction, evolution, selection, and adaptation. Population processes may depend on the processes of individual organisms {e.g., population growth reflects the cumulative multicellular organism reproduction (GO:0032504) and death (GO:0016265) of all individuals in a population}, but cannot be described for an individual organism. Some of these processes (e.g., evolution, extinction) can also occur at the species level, so PCO distinguishes between, for example, population extinction and species extinction. The GO has the terms &apos;multi-organism process&apos; (GO:0051704) and &apos;intraspecies interactions between organisms&apos; (GO:0051703), but tPCOhese categories are only defined for interactions between two individuals. It is unclear at this point if &apos;biological process&apos; (GO:0008150) encompasses population processes. </rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">A process that has as primary participant a population. Includes processes such as population growth, extinction, evolution, selection, and adaptation. Population processes may depend on the processes of individual organisms {e.g., population growth reflects the cumulative multicellular organism reproduction (GO:0032504) and death (GO:0016265) of all individuals in a population}, but cannot be described for an individual organism. Some of these processes (e.g., evolution, extinction) can also occur at the species level, so PCO distinguishes between, for example, population extinction and species extinction.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">The GO has the terms &apos;multi-organism process&apos; (GO:0051704) and &apos;intraspecies interactions between organisms&apos; (GO:0051703), but these categories are only defined for interactions between two individuals. It is unclear at this point if &apos;biological process&apos; (GO:0008150) encompasses population processes.</rdfs:comment>
         <rdfs:label xml:lang="en">population process</rdfs:label>
     </owl:Class>
     
@@ -484,8 +542,9 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <!-- http://purl.obolibrary.org/obo/PCO_0000006 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000006">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000161"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115>The rate of birth of a population of organisms.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">population birth rate</rdfs:label>
     </owl:Class>
     
@@ -494,8 +553,9 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <!-- http://purl.obolibrary.org/obo/PCO_0000007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000007">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000161"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115>The rate of death of a population of organsisms.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">population death rate</rdfs:label>
     </owl:Class>
     
@@ -504,9 +564,9 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <!-- http://purl.obolibrary.org/obo/PCO_0000008 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000008">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000161"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000116 xml:lang="en">Is a rate a quality? Population growth rate may be better classified as a process profile.</obo:IAO_0000116>
+        <obo:IAO_0000115>The rate of growth of a population.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">population growth rate</rdfs:label>
     </owl:Class>
     
@@ -575,30 +635,51 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <!-- http://purl.obolibrary.org/obo/PCO_0000014 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000014">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000124"/>
-        <rdfs:label xml:lang="en">predator role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000116>Interactions are now covered in EcoCore ontology.</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">obsolete predator role</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PCO_0000014"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#deprecated"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:annotatedTarget>
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
+    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000015 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000015">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000124"/>
-        <rdfs:label xml:lang="en">prey role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000116>Interactions are now covered in EcoCore ontology.</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">obsolete prey role</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PCO_0000015"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#deprecated"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:annotatedTarget>
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
+    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/PCO_0000016 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000016">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000124"/>
-        <rdfs:label xml:lang="en">symbiont role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000116>Interactions are now covered in EcoCore ontology.</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">obsolete symbiont role</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PCO_0000016"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#deprecated"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:annotatedTarget>
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
+    </owl:Axiom>
     
 
 
@@ -606,9 +687,15 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000017">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000018"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000059"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A collection of organisms that has as parts every organism of given species and no organisms of any other species.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A collection of organisms that has as members every organism of given species and no organisms of any other species.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A collection of organisms that has as parts every organism of a species and no organisms of any other species.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">At the moment there is no way to specify in an OWL axiom that the collection includes every individual of a species. This should be added, if possible.</obo:IAO_0000116>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/GENO_0000113"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/TAXRANK_0000006"/>
+        <oboInOwl:hasDbXref rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonRank#Species"/>
+        <oboInOwl:hasExactSynonym>taxonomic group</oboInOwl:hasExactSynonym>
         <rdfs:comment xml:lang="en">This term is neutral with respect to which organisms are included in a species. Membership will depend on the species concept and the taxonomic assertions used to define the species. These criteria must be specified by the user.</rdfs:comment>
         <rdfs:label xml:lang="en">species as a collection of organisms</rdfs:label>
     </owl:Class>
@@ -627,18 +714,13 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                        <owl:allValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
-                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PCO_0000017"/>
-                            </owl:Restriction>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
                         <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/CARO_0001010"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PCO_0000055"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PCO_0000017"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -708,7 +790,7 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000004"/>
         <obo:IAO_0000112 xml:lang="en">If there are 40 foxes, and 1000 dogs, the community is not very even, but if there are 40 foxes and 42 dogs, the community is quite even.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A quality of a community that reflects how close in abundance all species in a community are.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A quality of an ecological community that reflects how close in abundance all species in a community are.</obo:IAO_0000115>
         <obo:IAO_0000119 xml:lang="en">adapted from http://en.wikipedia.org/wiki/Species_evenness</obo:IAO_0000119>
         <rdfs:label xml:lang="en">community species evenness</rdfs:label>
     </owl:Class>
@@ -742,7 +824,7 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         </rdfs:subClassOf>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000115>An organismal entity that consists of one or more people who live in the same dwelling and also share at meals or living accommodation, and may consist of a single family or some other grouping of people.</obo:IAO_0000115>
-        <obo:IAO_0000117>Person: Jie Zheng</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-2999-0103"/>
         <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Household</obo:IAO_0000119>
         <rdfs:label xml:lang="en">household</rdfs:label>
     </owl:Class>
@@ -755,7 +837,7 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000002"/>
         <rdfs:comment>This is an example population added to demonstrate the modeling pattern for collections of organisms.</rdfs:comment>
-        <rdfs:label xml:lang="en">red population</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete red population</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -767,7 +849,7 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000002"/>
         <rdfs:comment>An example class added to demonstrate the design pattern for collections of organism. Red organism should be automatically classified as a member of red population when the reasoner is synchronized using a DL query.</rdfs:comment>
-        <rdfs:label xml:lang="en">red organism</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete red organism</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -810,7 +892,7 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <obo:IAO_0000116 xml:lang="en">Biological or social relations are covered by RO_0002437 (biotically interacts with), but that relations does provide an easy way to specify that two entities are interacting with each other (participating in the same interaction). Until that axiom is specified, the logical definition of this term is incomplete.</obo:IAO_0000116>
         <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <rdfs:comment xml:lang="en">These relations can include shared values, occupying the same spatial regkion. A community be be a single species collection of organsisms (as in a  human community, which is also a type of population) or a  or multi-species collection of organisms (as in an ecological community).</rdfs:comment>
-        <rdfs:label xml:lang="en">community</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete community</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -820,6 +902,13 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000029">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PCO_0000001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000115 xml:lang="en">A collection of organisms that consists of two or more organisms from at least two species.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Need to add axiom to specify that it has at a mimum members of two different species, but not sure how to specify that. Can&apos;t say &quot;(&apos;has member&apos; only (&apos;member of&apos; min 2 &apos;species as a collection of organisms&apos;))&quot;.</obo:IAO_0000116>
@@ -918,8 +1007,8 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000037">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000033"/>
+        <obo:IAO_0000115 xml:lang="en">A human social gathering at which each participant is expected to bring food to share. A potluck also can be party, a social meal, or some other type of social gathering.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Intended to replace http://purl.obolibrary.org/obo/GENEPIO_0001033</obo:IAO_0000116>
-        <obo:IAO_0000119 xml:lang="en">A human social gathering at which each participant is expected to bring food to share. A potluck also can be party, a social meal, or some other type of social gathering.</obo:IAO_0000119>
         <obo:IAO_0000119 xml:lang="en">GenEpio curators</obo:IAO_0000119>
         <rdfs:label xml:lang="en">potluck</rdfs:label>
     </owl:Class>
@@ -950,16 +1039,297 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PCO_0000047 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000047">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001369"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">An ecological community which is composed primarily of dwarf or short mangroves, often populations of Laguncularia racemosa, Avicennia germinans, Sarcocornia pacifica, or Batis maritima.</obo:IAO_0000115>
+        <dc:contributor xml:lang="en">https://orcid.org/0000-0002-4366-3088</dc:contributor>
+        <oboInOwl:hasDbXref>https://cmecscatalog.org/cmecs/classification/unit/577.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">mangrove community</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">tidal shrubland community</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">tidal mangrove shrubland community</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000048 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000048">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+        <obo:IAO_0000115 xml:lang="en">A physical object quality that is inhered in a material entity that is too small to be viewed by the unaided eye.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">should move to PATO</rdfs:comment>
+        <rdfs:label xml:lang="en">invisible to unaided eye</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000049 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000049">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0001010"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">microbial organism</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">microbe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000050 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000050">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PCO_0000049"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PCO_0000049"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 xml:lang="en">A collection of organisms consisting of two or more microbes.</obo:IAO_0000115>
+        <dc:creator xml:lang="en">https://orcid.org/0000-0001-8815-0078</dc:creator>
+        <rdfs:label xml:lang="en">collection of microbial organisms</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000051 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000051">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000029"/>
+        <obo:IAO_0000115 xml:lang="en">A multi-species collection of organisms that consists of two or more microbes from at least two species.</obo:IAO_0000115>
+        <dc:creator xml:lang="en">https://orcid.org/0000-0001-8815-0078</dc:creator>
+        <rdfs:label xml:lang="en">multi-species collection of microbes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000052 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000052">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PCO_0000049"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PCO_0000017"/>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PCO_0000049"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 xml:lang="en">A single-species collection of organisms that consists of two or more microbes of the same species and no members of any other species.</obo:IAO_0000115>
+        <dc:creator xml:lang="en">https://orcid.org/0000-0001-8815-0078</dc:creator>
+        <rdfs:label xml:lang="en">single species collection of microbes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000053 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000053">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000001"/>
+        <obo:IAO_0000115 xml:lang="en">A population of organisms consisting of only microbes of the same species, that live in the same place.</obo:IAO_0000115>
+        <dc:creator xml:lang="en">https://orcid.org/0000-0001-8815-0078</dc:creator>
+        <oboInOwl:hasBroadSynonym xml:lang="en">microbiota</oboInOwl:hasBroadSynonym>
+        <rdfs:label xml:lang="en">microbial population</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000054 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000054">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000047"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CARO_0000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>A count data item of the number of steps in the line of descent from a common ancestor for a multicellular organism.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-2999-0103"/>
+        <oboInOwl:hasBroadSynonym>number of generations</oboInOwl:hasBroadSynonym>
+        <rdfs:label xml:lang="en">number of generations of multicellular organism</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PCO_0000054"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A count data item of the number of steps in the line of descent from a common ancestor for a multicellular organism.</owl:annotatedTarget>
+        <rdfs:comment rdf:resource="http://purl.obolibrary.org/obo/NCIT_C88214"/>
+        <rdfs:comment rdf:resource="http://www.ebi.ac.uk/efo/EFO_0000507"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000057 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000057">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001788"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PCO_0000001"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>An increased mass density of a population of organisms such that the density of organisms in an area is increased beyond sustainable levels.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-8815-0078"/>
+        <oboInOwl:hasExactSynonym>increased density of population</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">overcrowded population</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000058 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000058">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PCO_0000057"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PCO_0000027"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000057"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>A quality of a human population such that the density humans in an area is increased beyond sustainable levels.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-8815-0078"/>
+        <rdfs:label xml:lang="en">overcrowded human population</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000000"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115>A collection of organisms that has as members every organism of a taxon and no organisms of any other equal or higher ranked taxon. The taxon may be at any level. If the taxon is species, then this is the same as the class species as a collection of organisms. When defining a taxon, it is generally understood that members include both living organisms and dead organisms that are known through specimens or observations.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-8815-0078"/>
+        <oboInOwl:hasDbXref rdf:resource="http://edamontology.org/data_1868"/>
+        <rdfs:comment>This term is neutral with respect to which organisms are included in a taxon. Membership will depend on the taxon concept and the assertions used to define the taxon. These criteria must be specified by the user. The best practice is to refer to a formal taxon description, rather than informal names &quot;Genus species&quot; without an authority.</rdfs:comment>
+        <rdfs:label xml:lang="en">taxon as collection of organisms</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000060">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECOCORE_00000146"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000049"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>An organism or virus or viroid that is a microbe and a parasite.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-8815-0078"/>
+        <rdfs:label xml:lang="en">microbial parasite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000061 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000061">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000053"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PCO_0000060"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112 rdf:resource="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4811772/"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>A microbial population of parasites that is defined by shared features such as genetic markers reflecting a common origin and distinguishing the population from other related parasite populations.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-8815-0078"/>
+        <obo:IAO_0000117>VEuPathDB</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">parasite isolate population</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000062 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000062">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000019"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>A community species diversity metric that accounts for both the abundance and evenness of the species present quantified via the following formula: the negative sum of, the product of the proportion of species i relative to the total number of species (pi) multiplied by the natural logarithm of this proportion (ln pi).</obo:IAO_0000115>
+        <obo:IAO_0000119 rdf:resource="http://www.tiem.utk.edu/~gross/bioed/bealsmodules/shannonDI.html"/>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Diversity_index#Shannon_index"/>
+        <oboInOwl:hasExactSynonym>Shannon entropy</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Shannon&apos;s diversity index</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Shannon-Wiener index</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Shannon diversity index</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000063 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000063">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000019"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>A community species diversity metric that is quantified via the following formula: the reciprocal of the sum of squared proportion of species i relative to the total number of species (pi).</obo:IAO_0000115>
+        <obo:IAO_0000119 rdf:resource="http://www.tiem.utk.edu/~gross/bioed/bealsmodules/simpsonDI.html"/>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Diversity_index#Simpson_index"/>
+        <oboInOwl:hasExactSynonym>Simpson index</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Simpson diversity index</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000064 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000064">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000019"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>A community species diversity metric that is quantified via the following formula: the sum of squared proportion of species i relative to the total number of species (pi).</obo:IAO_0000115>
+        <obo:IAO_0000119 rdf:resource="http://www.tiem.utk.edu/~gross/bioed/bealsmodules/simpsonDI.html"/>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Diversity_index#Inverse_Simpson_index"/>
+        <rdfs:label xml:lang="en">inverse Simpson diversity index</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PCO_0001000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0001000">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CARO_0001010"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
@@ -976,24 +1346,15 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <!-- http://purl.obolibrary.org/obo/PCO_0001001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0001001">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PCO_0001000"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                        <owl:allValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
-                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PCO_0000017"/>
-                            </owl:Restriction>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0001000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PCO_0000055"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PCO_0000017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A pair of interacting  organisms that consists of exactly two organism, viruses, or viroids of the same species that are interacting with each other.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">pair of interacting organisms of the same species</rdfs:label>
     </owl:Class>
     
@@ -1070,7 +1431,7 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_1000004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000002"/>
-        <rdfs:subClassOf rdf:resource="https://purl.obolibrary.org/obo/PCO_0000044"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000051"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115>An ecological community which is composed of co-existing populations of microbial organisms that interact, directly or indirectly, such that they impact one another&apos;s ecological fitness.</obo:IAO_0000115>
         <obo:IAO_0000116>A class for a collection of organisms considered &quot;microbial&quot; and an accompanying quality in PATO (e.g. &quot;microscopic&quot;) would be useful to better axiomatise this class. See https://github.com/PopulationAndCommunityOntology/pco/issues/22</obo:IAO_0000116>
@@ -1080,6 +1441,12 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:comment>The definition of a microbial species is deeply debated, however, units of phylogenetic and functional diversity are recognised with respect to their varying roles in an ecosystem. In turn, there exist multiple operational definitions of microbial community, such as local, phenomenological, and indexical communities. This class seeks to capture microbial communities in a very broad sense, as collections of phylogenetically and functionally divergent microbial organisms co-existing, potentially interacting, and competing for niche space in the same ecosystem over a period of time in which their causal footprints overlap one another.</rdfs:comment>
         <rdfs:label xml:lang="en">microbial community</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000047 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000047"/>
     
 
 
@@ -1105,19 +1472,15 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <!-- https://purl.obolibrary.org/obo/PCO_0000040 -->
 
     <owl:Class rdf:about="https://purl.obolibrary.org/obo/PCO_0000040">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000002"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001369"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000115 xml:lang="en">An ecological community which is composed primarily of dwarf or short mangroves, often populations of Laguncularia racemosa, Avicennia germinans, Sarcocornia pacifica, or Batis maritima.</obo:IAO_0000115>
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <dc:contributor xml:lang="en">https://orcid.org/0000-0002-4366-3088</dc:contributor>
         <oboInOwl:hasDbXref>https://cmecscatalog.org/cmecs/classification/unit/577.html</oboInOwl:hasDbXref>
         <oboInOwl:hasRelatedSynonym xml:lang="en">mangrove community</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym xml:lang="en">tidal shrubland community</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">tidal mangrove shrubland community</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete tidal mangrove shrubland community</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1125,10 +1488,12 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <!-- https://purl.obolibrary.org/obo/PCO_0000041 -->
 
     <owl:Class rdf:about="https://purl.obolibrary.org/obo/PCO_0000041">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000115 xml:lang="en">A physical object quality that is inhered in a material entity that is too small to be viewed by the unaided eye.</obo:IAO_0000115>
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <rdfs:comment xml:lang="en">should move to PATO</rdfs:comment>
-        <rdfs:label xml:lang="en">invisible to unaided eye</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete invisible to unaided eye</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1136,15 +1501,11 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <!-- https://purl.obolibrary.org/obo/PCO_0000042 -->
 
     <owl:Class rdf:about="https://purl.obolibrary.org/obo/PCO_0000042">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0001010"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
-                <owl:someValuesFrom rdf:resource="https://purl.obolibrary.org/obo/PCO_0000041"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <oboInOwl:hasExactSynonym xml:lang="en">microbial organism</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">microbe</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete microbe</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1152,24 +1513,12 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <!-- https://purl.obolibrary.org/obo/PCO_0000043 -->
 
     <owl:Class rdf:about="https://purl.obolibrary.org/obo/PCO_0000043">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                        <owl:allValuesFrom rdf:resource="https://purl.obolibrary.org/obo/PCO_0000042"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="https://purl.obolibrary.org/obo/PCO_0000042"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000115 xml:lang="en">A collection of organisms consisting of two or more microbes.</obo:IAO_0000115>
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <dc:creator xml:lang="en">https://orcid.org/0000-0001-8815-0078</dc:creator>
-        <rdfs:label xml:lang="en">collection of microbial organisms</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete collection of microbial organisms</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1177,11 +1526,12 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <!-- https://purl.obolibrary.org/obo/PCO_0000044 -->
 
     <owl:Class rdf:about="https://purl.obolibrary.org/obo/PCO_0000044">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000029"/>
-        <rdfs:subClassOf rdf:resource="https://purl.obolibrary.org/obo/PCO_0000043"/>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000115 xml:lang="en">A multi-species collection of organisms that consists of two or more microbes from at least two species.</obo:IAO_0000115>
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <dc:creator xml:lang="en">https://orcid.org/0000-0001-8815-0078</dc:creator>
-        <rdfs:label xml:lang="en">multi-species collection of microbes</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete multi-species collection of microbes</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1189,34 +1539,12 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <!-- https://purl.obolibrary.org/obo/PCO_0000045 -->
 
     <owl:Class rdf:about="https://purl.obolibrary.org/obo/PCO_0000045">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                        <owl:allValuesFrom rdf:resource="https://purl.obolibrary.org/obo/PCO_0000042"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                        <owl:allValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
-                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PCO_0000017"/>
-                            </owl:Restriction>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="https://purl.obolibrary.org/obo/PCO_0000042"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000115 xml:lang="en">A single-species collection of organisms that consists of two or more microbes of the same species and no members of any other species.</obo:IAO_0000115>
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <dc:creator xml:lang="en">https://orcid.org/0000-0001-8815-0078</dc:creator>
-        <rdfs:label xml:lang="en">single species collection of microbes</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete single species collection of microbes</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1224,18 +1552,28 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <!-- https://purl.obolibrary.org/obo/PCO_0000046 -->
 
     <owl:Class rdf:about="https://purl.obolibrary.org/obo/PCO_0000046">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                <owl:allValuesFrom rdf:resource="https://purl.obolibrary.org/obo/PCO_0000042"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000115 xml:lang="en">A population of organisms consisting of only microbes of the same species, that live in the same place.</obo:IAO_0000115>
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <dc:creator xml:lang="en">https://orcid.org/0000-0001-8815-0078</dc:creator>
         <oboInOwl:hasBroadSynonym xml:lang="en">microbiota</oboInOwl:hasBroadSynonym>
-        <rdfs:label xml:lang="en">microbial population</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete microbial population</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000017">
+        <obo:IAO_0000117>https://orcid.org/0000-0001-8815-0078</obo:IAO_0000117>
+    </rdf:Description>
 </rdf:RDF>
 
 

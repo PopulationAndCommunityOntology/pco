@@ -1,24 +1,17 @@
 Level	Rule Name	Subject	Property	Value
+ERROR	missing_label	BFO:0000017	rdfs:label		
+ERROR	missing_label	ECOCORE:00000045	rdfs:label		
 ERROR	missing_label	GO:0051704	rdfs:label		
 ERROR	missing_label	IAO:0000030	rdfs:label		
-ERROR	missing_ontology_description	pco.owl	dc11:description		
-ERROR	missing_ontology_license	pco.owl	dc:license		
-ERROR	missing_ontology_title	pco.owl	dc11:title		
+ERROR	multiple_definitions	PCO:0000017	IAO:0000115	A collection of organisms that has as members every organism of given species and no organisms of any other species.@en	
+ERROR	multiple_definitions	PCO:0000017	IAO:0000115	A collection of organisms that has as parts every organism of a species and no organisms of any other species.@en	
+WARN	missing_definition	BFO:0000017	IAO:0000115		
+WARN	missing_definition	ECOCORE:00000045	IAO:0000115		
 WARN	missing_definition	GO:0051704	IAO:0000115		
 WARN	missing_definition	IAO:0000030	IAO:0000115		
-WARN	missing_definition	PCO:0000006	IAO:0000115		
-WARN	missing_definition	PCO:0000007	IAO:0000115		
-WARN	missing_definition	PCO:0000008	IAO:0000115		
-WARN	missing_definition	PCO:0000014	IAO:0000115		
-WARN	missing_definition	PCO:0000015	IAO:0000115		
-WARN	missing_definition	PCO:0000016	IAO:0000115		
-WARN	missing_definition	PCO:0000037	IAO:0000115		
-WARN	missing_definition	PCO:0001001	IAO:0000115		
-WARN	missing_definition	https://purl.obolibrary.org/obo/PCO_0000042	IAO:0000115		
-WARN	missing_obsolete_label	PCO:0000025	rdfs:label	red population@en	
-WARN	missing_obsolete_label	PCO:0000026	rdfs:label	red organism@en	
-WARN	missing_obsolete_label	PCO:0000028	rdfs:label	community@en	
+WARN	missing_definition	PCO:0000049	IAO:0000115		
+WARN	missing_definition	PCO:0000055	IAO:0000115		
 INFO	missing_superclass	PCO:0000003	rdfs:subClassOf		
 INFO	missing_superclass	PCO:0000004	rdfs:subClassOf		
-INFO	missing_superclass	https://purl.obolibrary.org/obo/PCO_0000043	rdfs:subClassOf		
-INFO	missing_superclass	https://purl.obolibrary.org/obo/PCO_0000045	rdfs:subClassOf		
+INFO	missing_superclass	PCO:0000050	rdfs:subClassOf		
+INFO	missing_superclass	PCO:0000052	rdfs:subClassOf		
