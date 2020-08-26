@@ -292,8 +292,7 @@ obo:PCO_0000005 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/PCO_0000006
 obo:PCO_0000006 rdf:type owl:Class ;
-                rdfs:subClassOf obo:PATO_0000161 ,
-                                obo:PCO_0000003 ;
+                rdfs:subClassOf obo:PATO_0000161 ;
                 obo:IAO_0000114 obo:IAO_0000123 ;
                 obo:IAO_0000115 "The rate of birth of a population of organisms." ;
                 rdfs:label "population birth rate"@en .
@@ -301,8 +300,7 @@ obo:PCO_0000006 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/PCO_0000007
 obo:PCO_0000007 rdf:type owl:Class ;
-                rdfs:subClassOf obo:PATO_0000161 ,
-                                obo:PCO_0000003 ;
+                rdfs:subClassOf obo:PATO_0000161 ;
                 obo:IAO_0000114 obo:IAO_0000123 ;
                 obo:IAO_0000115 "The rate of death of a population of organsisms." ;
                 rdfs:label "population death rate"@en .
@@ -310,8 +308,7 @@ obo:PCO_0000007 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/PCO_0000008
 obo:PCO_0000008 rdf:type owl:Class ;
-                rdfs:subClassOf obo:PATO_0000161 ,
-                                obo:PCO_0000003 ;
+                rdfs:subClassOf obo:PATO_0000161 ;
                 obo:IAO_0000114 obo:IAO_0000123 ;
                 obo:IAO_0000115 "The rate of growth of a population." ;
                 rdfs:label "population growth rate"@en .

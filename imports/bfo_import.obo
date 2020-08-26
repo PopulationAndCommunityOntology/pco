@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pco/imports/bfo_import/pco/releases/2020-02-13/bfo_import.owl/pco/imports/bfo_import.obo
+data-version: pco/releases/2020-08-26/imports/bfo_import.obo
 ontology: pco/imports/bfo_import.obo
 
 [Term]

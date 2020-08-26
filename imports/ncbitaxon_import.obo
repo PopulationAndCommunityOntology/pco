@@ -1,90 +1,138 @@
 format-version: 1.2
-data-version: pco/releases/2020-02-13/ncbitaxon_import.obo
+data-version: pco/releases/2020-08-26/imports/ncbitaxon_import.obo
 ontology: pco/imports/ncbitaxon_import.obo
-
-[Term]
-id: NCBITaxon:1
-name: root
-synonym: "all" RELATED synonym []
 
 [Term]
 id: NCBITaxon:10239
 name: Viruses
+namespace: ncbi_taxonomy
 synonym: "Vira" RELATED synonym []
 synonym: "Viridae" RELATED synonym []
 synonym: "viruses" RELATED blast_name []
-is_a: NCBITaxon:1 ! root
+xref: GC_ID:1
+property_value: has_rank NCBITaxon:superkingdom
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:117570
 name: Teleostomi
-is_a: NCBITaxon:7776 ! Gnathostomata <vertebrate>
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:7776 ! Gnathostomata <vertebrates>
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:117571
 name: Euteleostomi
+namespace: ncbi_taxonomy
+alt_id: NCBITaxon:40673
 synonym: "bony vertebrates" EXACT genbank_common_name []
+xref: GC_ID:1
 is_a: NCBITaxon:117570 ! Teleostomi
-
-[Term]
-id: NCBITaxon:12884
-name: Viroids
-synonym: "Viroid" RELATED synonym []
-synonym: "viroids" RELATED blast_name []
-is_a: NCBITaxon:1 ! root
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:131221
 name: Streptophytina
+namespace: ncbi_taxonomy
 synonym: "Charophyta/Embryophyta group" RELATED synonym []
-synonym: "charophyte/embryophyte group" RELATED synonym []
+synonym: "charophyte/embryophyte group" EXACT equivalent_name []
+xref: GC_ID:1
 is_a: NCBITaxon:35493 ! Streptophyta
+property_value: has_rank NCBITaxon:subphylum
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:131567
 name: cellular organisms
+namespace: ncbi_taxonomy
 synonym: "biota" RELATED synonym []
-is_a: NCBITaxon:1 ! root
+xref: GC_ID:1
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:1338369
 name: Dipnotetrapodomorpha
+namespace: ncbi_taxonomy
+xref: GC_ID:1
 is_a: NCBITaxon:8287 ! Sarcopterygii
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:1437010
 name: Boreoeutheria
+namespace: ncbi_taxonomy
 synonym: "Boreotheria" RELATED synonym []
+xref: GC_ID:1
+xref: PMID:11743200
+xref: PMID:11791233
 is_a: NCBITaxon:9347 ! Eutheria
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:1437180
 name: Acrogymnospermae
+namespace: ncbi_taxonomy
+xref: GC_ID:1
 is_a: NCBITaxon:58024 ! Spermatophyta
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:2
 name: Bacteria
+namespace: ncbi_taxonomy
 synonym: "bacteria" RELATED blast_name []
 synonym: "eubacteria" EXACT genbank_common_name []
 synonym: "Monera" RELATED in_part []
-synonym: "not Bacteria Haeckel 1894" RELATED synonym []
 synonym: "Procaryotae" RELATED in_part []
 synonym: "Prokaryota" RELATED in_part []
 synonym: "Prokaryotae" RELATED in_part []
 synonym: "prokaryote" RELATED in_part []
 synonym: "prokaryotes" RELATED in_part []
+xref: GC_ID:11
+xref: PMID:10425795
+xref: PMID:10425796
+xref: PMID:10425797
+xref: PMID:10490293
+xref: PMID:10843050
+xref: PMID:10939651
+xref: PMID:10939673
+xref: PMID:10939677
+xref: PMID:11211268
+xref: PMID:11321083
+xref: PMID:11321113
+xref: PMID:11411719
+xref: PMID:11540071
+xref: PMID:11542017
+xref: PMID:11542087
+xref: PMID:11760965
+xref: PMID:12054223
+xref: PMID:2112744
+xref: PMID:270744
+xref: PMID:7520741
+xref: PMID:8123559
+xref: PMID:8186100
+xref: PMID:8590690
+xref: PMID:9103655
+xref: PMID:9336922
 is_a: NCBITaxon:131567 ! cellular organisms
+property_value: has_rank NCBITaxon:superkingdom
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:207598
 name: Homininae
+namespace: ncbi_taxonomy
 synonym: "Homo/Pan/Gorilla group" RELATED synonym []
+xref: GC_ID:1
 is_a: NCBITaxon:9604 ! Hominidae
+property_value: has_rank NCBITaxon:subfamily
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:2157
 name: Archaea
+namespace: ncbi_taxonomy
 synonym: "archaea" RELATED blast_name []
 synonym: "Archaebacteria" RELATED synonym []
 synonym: "Mendosicutes" RELATED synonym []
@@ -95,11 +143,40 @@ synonym: "Prokaryota" RELATED in_part []
 synonym: "Prokaryotae" RELATED in_part []
 synonym: "prokaryote" RELATED in_part []
 synonym: "prokaryotes" RELATED in_part []
+xref: GC_ID:11
+xref: PMID:10425795
+xref: PMID:10425796
+xref: PMID:10425797
+xref: PMID:10490293
+xref: PMID:10843050
+xref: PMID:10939651
+xref: PMID:10939673
+xref: PMID:10939677
+xref: PMID:11211268
+xref: PMID:11321083
+xref: PMID:11321113
+xref: PMID:11411719
+xref: PMID:11540071
+xref: PMID:11541975
+xref: PMID:11542064
+xref: PMID:11542149
+xref: PMID:11760965
+xref: PMID:12054223
+xref: PMID:2112744
+xref: PMID:25527841
+xref: PMID:270744
+xref: PMID:8123559
+xref: PMID:8590690
+xref: PMID:9103655
+xref: PMID:9336922
 is_a: NCBITaxon:131567 ! cellular organisms
+property_value: has_rank NCBITaxon:superkingdom
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:2759
 name: Eukaryota
+namespace: ncbi_taxonomy
 synonym: "Eucarya" RELATED synonym []
 synonym: "Eucaryotae" RELATED synonym []
 synonym: "eucaryotes" EXACT genbank_common_name []
@@ -107,224 +184,367 @@ synonym: "Eukarya" RELATED synonym []
 synonym: "Eukaryotae" RELATED synonym []
 synonym: "eukaryotes" EXACT common_name []
 synonym: "eukaryotes" RELATED blast_name []
+xref: GC_ID:1
+xref: PMID:23020233
+xref: PMID:30257078
 is_a: NCBITaxon:131567 ! cellular organisms
+property_value: has_rank NCBITaxon:superkingdom
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:3041
 name: Chlorophyta
+namespace: ncbi_taxonomy
 synonym: "algae" RELATED in_part []
 synonym: "Chlorophycota" RELATED synonym []
 synonym: "Chlorophyta sensu Bremer 1985" RELATED synonym []
 synonym: "green algae" EXACT genbank_common_name []
 synonym: "green algae" RELATED blast_name []
+xref: GC_ID:1
+xref: PMID:23020233
 is_a: NCBITaxon:33090 ! Viridiplantae
+property_value: has_rank NCBITaxon:phylum
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:314146
 name: Euarchontoglires
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+xref: PMID:11214319
+xref: PMID:12082125
+xref: PMID:12878460
+xref: PMID:15522813
 is_a: NCBITaxon:1437010 ! Boreoeutheria
+property_value: has_rank NCBITaxon:superorder
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:314293
 name: Simiiformes
+namespace: ncbi_taxonomy
 synonym: "Anthropoidea" RELATED synonym []
+xref: GC_ID:1
 is_a: NCBITaxon:376913 ! Haplorrhini
+property_value: has_rank NCBITaxon:infraorder
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:314295
 name: Hominoidea
+namespace: ncbi_taxonomy
 synonym: "ape" EXACT common_name []
 synonym: "apes" EXACT genbank_common_name []
+xref: GC_ID:1
 is_a: NCBITaxon:9526 ! Catarrhini
+property_value: has_rank NCBITaxon:superfamily
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:3193
 name: Embryophyta
+namespace: ncbi_taxonomy
 synonym: "higher plants" EXACT common_name []
 synonym: "land plants" EXACT common_name []
 synonym: "land plants" RELATED blast_name []
 synonym: "plants" EXACT common_name []
+xref: GC_ID:1
 is_a: NCBITaxon:131221 ! Streptophytina
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:32523
 name: Tetrapoda
+namespace: ncbi_taxonomy
 synonym: "tetrapods" EXACT genbank_common_name []
+xref: GC_ID:1
 is_a: NCBITaxon:1338369 ! Dipnotetrapodomorpha
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:32524
 name: Amniota
+namespace: ncbi_taxonomy
 synonym: "amniotes" EXACT genbank_common_name []
+xref: GC_ID:1
 is_a: NCBITaxon:32523 ! Tetrapoda
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:32525
-name: Theria <Mammalia>
+name: Theria <mammals>
+namespace: ncbi_taxonomy
 synonym: "Theria" EXACT scientific_name []
+xref: GC_ID:1
 is_a: NCBITaxon:40674 ! Mammalia
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:33090
 name: Viridiplantae
+namespace: ncbi_taxonomy
 synonym: "Chlorobionta" RELATED synonym []
-synonym: "Chlorophyta/Embryophyta group" RELATED synonym []
-synonym: "chlorophyte/embryophyte group" RELATED synonym []
+synonym: "Chlorophyta/Embryophyta group" EXACT equivalent_name []
+synonym: "chlorophyte/embryophyte group" EXACT equivalent_name []
+synonym: "Chloroplastida" RELATED synonym []
 synonym: "green plants" EXACT common_name []
 synonym: "green plants" RELATED blast_name []
+xref: GC_ID:1
+xref: PMID:16248873
+xref: PMID:30257078
 is_a: NCBITaxon:2759 ! Eukaryota
+property_value: has_rank NCBITaxon:kingdom
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:33154
 name: Opisthokonta
+namespace: ncbi_taxonomy
 synonym: "Fungi/Metazoa group" RELATED synonym []
 synonym: "opisthokonts" RELATED synonym []
+xref: GC_ID:1
 is_a: NCBITaxon:2759 ! Eukaryota
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:33208
 name: Metazoa
+namespace: ncbi_taxonomy
 synonym: "Animalia" RELATED synonym []
 synonym: "animals" RELATED blast_name []
 synonym: "metazoans" EXACT genbank_common_name []
 synonym: "multicellular animals" EXACT common_name []
+xref: GC_ID:1
 is_a: NCBITaxon:33154 ! Opisthokonta
+property_value: has_rank NCBITaxon:kingdom
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:33213
 name: Bilateria
+namespace: ncbi_taxonomy
+xref: GC_ID:1
 is_a: NCBITaxon:6072 ! Eumetazoa
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:33511
 name: Deuterostomia
+namespace: ncbi_taxonomy
 synonym: "deuterostomes" EXACT common_name []
+xref: GC_ID:1
 is_a: NCBITaxon:33213 ! Bilateria
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:3398
-name: Magnoliophyta
+name: Magnoliopsida
+namespace: ncbi_taxonomy
 synonym: "Angiospermae" RELATED synonym []
 synonym: "angiosperms" EXACT common_name []
 synonym: "flowering plants" EXACT genbank_common_name []
 synonym: "flowering plants" RELATED blast_name []
+synonym: "Magnoliophyta" RELATED synonym []
+xref: GC_ID:1
+xref: PMID:25249442
 is_a: NCBITaxon:58024 ! Spermatophyta
+property_value: has_rank NCBITaxon:class
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:35493
 name: Streptophyta
+namespace: ncbi_taxonomy
+xref: GC_ID:1
 is_a: NCBITaxon:33090 ! Viridiplantae
+property_value: has_rank NCBITaxon:phylum
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:376913
 name: Haplorrhini
+namespace: ncbi_taxonomy
+xref: GC_ID:1
 is_a: NCBITaxon:9443 ! Primates
+property_value: has_rank NCBITaxon:suborder
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:40674
 name: Mammalia
+namespace: ncbi_taxonomy
 synonym: "mammals" EXACT genbank_common_name []
 synonym: "mammals" RELATED blast_name []
+xref: GC_ID:1
 is_a: NCBITaxon:32524 ! Amniota
+property_value: has_rank NCBITaxon:class
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
+
+[Term]
+id: NCBITaxon:4751
+name: Fungi
+namespace: ncbi_taxonomy
+synonym: "fungi" RELATED in_part []
+synonym: "fungi" RELATED blast_name []
+synonym: "Mycota" RELATED genbank_synonym []
+xref: GC_ID:1
+xref: PMID:11062127
+xref: PMID:12684019
+is_a: NCBITaxon:33154 ! Opisthokonta
+property_value: has_rank NCBITaxon:kingdom
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:58023
 name: Tracheophyta
+namespace: ncbi_taxonomy
 synonym: "vascular plants" EXACT common_name []
 synonym: "vascular plants" RELATED blast_name []
+xref: GC_ID:1
 is_a: NCBITaxon:3193 ! Embryophyta
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:58024
 name: Spermatophyta
+namespace: ncbi_taxonomy
 synonym: "seed plants" EXACT common_name []
 synonym: "seed plants" RELATED blast_name []
+xref: GC_ID:1
 is_a: NCBITaxon:78536 ! Euphyllophyta
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:6072
 name: Eumetazoa
+namespace: ncbi_taxonomy
+xref: GC_ID:1
 is_a: NCBITaxon:33208 ! Metazoa
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:7711
 name: Chordata
+namespace: ncbi_taxonomy
 synonym: "chordates" EXACT genbank_common_name []
 synonym: "chordates" RELATED blast_name []
+xref: GC_ID:1
 is_a: NCBITaxon:33511 ! Deuterostomia
+property_value: has_rank NCBITaxon:phylum
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:7742
-name: Vertebrata <Metazoa>
+name: Vertebrata <vertebrates>
+namespace: ncbi_taxonomy
 synonym: "Vertebrata" EXACT scientific_name []
 synonym: "vertebrates" EXACT genbank_common_name []
 synonym: "vertebrates" RELATED blast_name []
-is_a: NCBITaxon:89593 ! Craniata <chordata>
+xref: GC_ID:1
+is_a: NCBITaxon:89593 ! Craniata <chordates>
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:7776
-name: Gnathostomata <vertebrate>
+name: Gnathostomata <vertebrates>
+namespace: ncbi_taxonomy
 synonym: "Gnathostomata" EXACT scientific_name []
 synonym: "jawed vertebrates" EXACT genbank_common_name []
-is_a: NCBITaxon:7742 ! Vertebrata <Metazoa>
+xref: GC_ID:1
+is_a: NCBITaxon:7742 ! Vertebrata <vertebrates>
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:78536
 name: Euphyllophyta
-synonym: "euphyllophytes" RELATED synonym []
+namespace: ncbi_taxonomy
+synonym: "euphyllophytes" EXACT equivalent_name []
+xref: GC_ID:1
 is_a: NCBITaxon:58023 ! Tracheophyta
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:8287
 name: Sarcopterygii
+namespace: ncbi_taxonomy
+xref: GC_ID:1
 is_a: NCBITaxon:117571 ! Euteleostomi
+property_value: has_rank NCBITaxon:superclass
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:89593
-name: Craniata <chordata>
+name: Craniata <chordates>
+namespace: ncbi_taxonomy
 synonym: "Craniata" EXACT scientific_name []
+xref: GC_ID:1
 is_a: NCBITaxon:7711 ! Chordata
+property_value: has_rank NCBITaxon:subphylum
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:9347
 name: Eutheria
+namespace: ncbi_taxonomy
 synonym: "eutherian mammals" EXACT common_name []
 synonym: "placental mammals" EXACT common_name []
 synonym: "Placentalia" RELATED synonym []
 synonym: "placentals" EXACT genbank_common_name []
 synonym: "placentals" RELATED blast_name []
-is_a: NCBITaxon:32525 ! Theria <Mammalia>
+xref: GC_ID:1
+is_a: NCBITaxon:32525 ! Theria <mammals>
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:9443
 name: Primates
+namespace: ncbi_taxonomy
 synonym: "Primata" RELATED synonym []
 synonym: "primate" EXACT equivalent_name []
 synonym: "primates" RELATED blast_name []
+xref: GC_ID:1
 is_a: NCBITaxon:314146 ! Euarchontoglires
+property_value: has_rank NCBITaxon:order
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:9526
 name: Catarrhini
+namespace: ncbi_taxonomy
+xref: GC_ID:1
 is_a: NCBITaxon:314293 ! Simiiformes
+property_value: has_rank NCBITaxon:parvorder
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:9604
 name: Hominidae
+namespace: ncbi_taxonomy
 synonym: "great apes" EXACT genbank_common_name []
 synonym: "Pongidae" RELATED synonym []
+xref: GC_ID:1
 is_a: NCBITaxon:314295 ! Hominoidea
+property_value: has_rank NCBITaxon:family
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:9605
 name: Homo
+namespace: ncbi_taxonomy
 synonym: "humans" EXACT common_name []
+xref: GC_ID:1
 is_a: NCBITaxon:207598 ! Homininae
+property_value: has_rank NCBITaxon:genus
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
 [Term]
 id: NCBITaxon:9606
 name: Homo sapiens
+namespace: ncbi_taxonomy
 synonym: "human" EXACT genbank_common_name []
 synonym: "man" EXACT common_name []
+xref: GC_ID:1
 is_a: NCBITaxon:9605 ! Homo
+property_value: has_rank NCBITaxon:species
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ncbitaxon.owl
 
