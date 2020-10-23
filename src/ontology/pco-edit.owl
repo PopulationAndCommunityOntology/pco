@@ -78,8 +78,6 @@ obo:BFO_0000051 rdf:type owl:ObjectProperty .
 ###  http://purl.obolibrary.org/obo/PCO_0000055
 obo:PCO_0000055 rdf:type owl:ObjectProperty ;
                 rdfs:domain obo:PCO_0000000 ;
-                owl:propertyChainAxiom ( obo:RO_0002351
-                                       ) ;
                 rdfs:label "has member of"@en .
 
 
