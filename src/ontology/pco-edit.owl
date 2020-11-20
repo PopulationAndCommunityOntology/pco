@@ -77,8 +77,9 @@ obo:BFO_0000051 rdf:type owl:ObjectProperty .
 
 ###  http://purl.obolibrary.org/obo/PCO_0000055
 obo:PCO_0000055 rdf:type owl:ObjectProperty ;
-                rdfs:domain obo:PCO_0000000 ;
-                rdfs:label "has member of"@en .
+                obo:IAO_0000231 obo:IAO_0000103 ;
+                rdfs:label "obsolete has member of"@en ;
+                owl:deprecated "true"^^xsd:boolean .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0000052
@@ -190,7 +191,8 @@ obo:IAO_0000030 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/PCO_0000000
 obo:PCO_0000000 rdf:type owl:Class ;
-                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000027
+                                                           [ rdf:type owl:Restriction ;
                                                              owl:onProperty obo:RO_0002351 ;
                                                              owl:allValuesFrom obo:CARO_0001010
                                                            ]
@@ -202,8 +204,7 @@ obo:PCO_0000000 rdf:type owl:Class ;
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                rdfs:subClassOf obo:BFO_0000027 ,
-                                [ rdf:type owl:Restriction ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:RO_0002351 ;
                                   owl:allValuesFrom obo:CARO_0001010
                                 ] ;
@@ -420,24 +421,20 @@ obo:PCO_0000017 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/PCO_0000018
 obo:PCO_0000018 rdf:type owl:Class ;
-                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                             owl:onProperty obo:RO_0002351 ;
-                                                             owl:allValuesFrom obo:CARO_0001010
-                                                           ]
+                owl:equivalentClass [ owl:intersectionOf ( obo:PCO_0000000
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty obo:RO_0002351 ;
                                                              owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
                                                              owl:onClass obo:CARO_0001010
                                                            ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty obo:PCO_0000055 ;
-                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                             owl:onClass obo:PCO_0000017
-                                                           ]
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                rdfs:subClassOf obo:PCO_0000000 ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:RO_0002351 ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass obo:PCO_0000017
+                                ] ;
                 obo:IAO_0000114 obo:IAO_0000120 ;
                 obo:IAO_0000115 "A material entity that has as parts two or more organisms, viruses, or viroids of the same species and no members of any other species."@en ;
                 obo:IAO_0000118 "collection of organisms of the same species"@en ;
@@ -894,14 +891,28 @@ obo:PCO_0000064 rdf:type owl:Class ;
                 rdfs:label "inverse Simpson diversity index"@en .
 
 
+###  http://purl.obolibrary.org/obo/PCO_0000073
+obo:PCO_0000073 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CARO_0010004 ;
+                obo:IAO_0000115 "An organism that is part of a polyphyletic group of mostly photosynthetic Eukaryotes  encompassing green plants excluding Embriophyta (land plants). Included organisms range from unicellular microalgae, such as Chlorella and diatoms to multicellular forms such as giant kelp." ;
+                obo:IAO_0000119 <https://en.wikipedia.org/wiki/Algae> ;
+                <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "alga" ,
+                                                                               "algae" ;
+                <http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> "seaweed" ;
+                rdfs:label "alga excluding Cyanobacteria"@en .
+
+
 ###  http://purl.obolibrary.org/obo/PCO_0001000
 obo:PCO_0001000 rdf:type owl:Class ;
-                rdfs:subClassOf obo:BFO_0000040 ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002351 ;
-                                  owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                                  owl:onClass obo:CARO_0001010
-                                ] ;
+                owl:equivalentClass [ owl:intersectionOf ( obo:PCO_0000000
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0002351 ;
+                                                             owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass obo:CARO_0001010
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
                 obo:IAO_0000115 "A collection of organisms that consists of exactly two organism, viruses, or viroids that are interacting with each other."@en ;
                 rdfs:label "pair of interacting organisms"@en .
 
@@ -910,10 +921,11 @@ obo:PCO_0001000 rdf:type owl:Class ;
 obo:PCO_0001001 rdf:type owl:Class ;
                 rdfs:subClassOf obo:PCO_0001000 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:PCO_0000055 ;
+                                  owl:onProperty obo:RO_0002351 ;
                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onClass obo:PCO_0000017
                                 ] ;
+                obo:IAO_0000114 obo:IAO_0000428 ;
                 obo:IAO_0000115 "A pair of interacting  organisms that consists of exactly two organism, viruses, or viroids of the same species that are interacting with each other." ;
                 rdfs:label "pair of interacting organisms of the same species"@en .
 
