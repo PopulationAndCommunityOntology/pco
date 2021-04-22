@@ -902,6 +902,37 @@ obo:PCO_0000073 rdf:type owl:Class ;
                 rdfs:label "alga excluding Cyanobacteria"@en .
 
 
+###  http://purl.obolibrary.org/obo/PCO_0000074
+obo:PCO_0000074 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000019 ;
+                obo:IAO_0000115 "A community species diversity that is the mean species diversity at a site or within a specific habitat." ;
+                obo:IAO_0000117 <https://orcid.org/0000-0001-8815-0078> ;
+                obo:IAO_0000119 <https://en.wikipedia.org/wiki/Alpha_diversity> ;
+                <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "α-diversity" ;
+                rdfs:label "alpha diversity"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000075
+obo:PCO_0000075 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000019 ;
+                obo:IAO_0000115 "A community species diversity that is the ratio between regional and local species diversity." ;
+                obo:IAO_0000117 <https://orcid.org/0000-0001-8815-0078> ;
+                obo:IAO_0000119 <https://en.wikipedia.org/wiki/Beta_diversity> ;
+                <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "true beta diversity" ,
+                                                                               "β-diversity" ;
+                rdfs:label "beta diversity"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000076
+obo:PCO_0000076 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000019 ;
+                obo:IAO_0000115 "A community species diversity that is the total species diversity in a landscape. The area or landscape of interest may be of very different sizes in different situations, but it should encompass multiple sites or habitats as measured by alpha diversity." ;
+                obo:IAO_0000117 <https://orcid.org/0000-0001-8815-0078> ;
+                obo:IAO_0000119 <https://en.wikipedia.org/wiki/Gamma_diversity> ;
+                <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "γ-diversity" ;
+                rdfs:label "gamma diversity"@en .
+
+
 ###  http://purl.obolibrary.org/obo/PCO_0001000
 obo:PCO_0001000 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( obo:PCO_0000000
