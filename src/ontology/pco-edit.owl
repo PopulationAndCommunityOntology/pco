@@ -933,6 +933,70 @@ obo:PCO_0000076 rdf:type owl:Class ;
                 rdfs:label "gamma diversity"@en .
 
 
+###  http://purl.obolibrary.org/obo/PCO_0000077
+obo:PCO_0000077 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PATO_0001019 ;
+                obo:IAO_0000116 "TBD: add logical definition" ;
+                obo:IAO_0000117 <https://orcid.org/0000-0001-6284-4821> ,
+                                <https://orcid.org/0000-0001-8815-0078> ,
+                                "The density of plants in an ecological community or population, often measured as the number of plants per area." ;
+                rdfs:label "plant density"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000078
+obo:PCO_0000078 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000077 ;
+                obo:IAO_0000115 "The density of seedlings in an ecological community or population, often measured as the number of seedlings per area." ;
+                obo:IAO_0000116 "TBD: add logical definition" ;
+                obo:IAO_0000117 <https://orcid.org/0000-0001-6284-4821> ,
+                                <https://orcid.org/0000-0001-8815-0078> ;
+                rdfs:label "seedling density"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000079
+obo:PCO_0000079 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000003 ,
+                                obo:PCO_0000077 ;
+                obo:IAO_0000115 "The density of plants in a population or organisms (a single species), often measured as the number of plants per area." ;
+                obo:IAO_0000116 "TBD: add logical definition" ;
+                obo:IAO_0000117 <https://orcid.org/0000-0001-6284-4821> ,
+                                <https://orcid.org/0000-0001-8815-0078> ;
+                rdfs:label "plant density of a population"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000080
+obo:PCO_0000080 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000004 ,
+                                obo:PCO_0000077 ;
+                obo:IAO_0000115 "The density of plants in an ecological community (multiple species), often measured as the number of plants per area." ;
+                obo:IAO_0000116 "TBD: add logical definition" ;
+                obo:IAO_0000117 <https://orcid.org/0000-0001-6284-4821> ,
+                                <https://orcid.org/0000-0001-8815-0078> ;
+                rdfs:label "plant density of an ecological community"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000081
+obo:PCO_0000081 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000003 ,
+                                obo:PCO_0000078 ;
+                obo:IAO_0000115 "The density of seedlings in a population or organisms (a single species), often measured as the number of seedlings per area." ;
+                obo:IAO_0000116 "TBD: add logical definition" ;
+                obo:IAO_0000117 <https://orcid.org/0000-0001-6284-4821> ,
+                                <https://orcid.org/0000-0001-8815-0078> ;
+                rdfs:label "seedling density of a population"@en .
+
+
+###  http://purl.obolibrary.org/obo/PCO_0000082
+obo:PCO_0000082 rdf:type owl:Class ;
+                rdfs:subClassOf obo:PCO_0000004 ,
+                                obo:PCO_0000078 ;
+                obo:IAO_0000115 "The density of seedlings in an ecological community (multiple species), often measured as the number of plants per area." ;
+                obo:IAO_0000116 "TBD: add logical definition" ;
+                obo:IAO_0000117 <https://orcid.org/0000-0001-6284-4821> ,
+                                <https://orcid.org/0000-0001-8815-0078> ;
+                rdfs:label "seedling density of an ecological community"@en .
+
+
 ###  http://purl.obolibrary.org/obo/PCO_0001000
 obo:PCO_0001000 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( obo:PCO_0000000
