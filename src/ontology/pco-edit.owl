@@ -421,20 +421,7 @@ obo:PCO_0000017 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/PCO_0000018
 obo:PCO_0000018 rdf:type owl:Class ;
-                owl:equivalentClass [ owl:intersectionOf ( obo:PCO_0000000
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty obo:RO_0002351 ;
-                                                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                                                             owl:onClass obo:CARO_0001010
-                                                           ]
-                                                         ) ;
-                                      rdf:type owl:Class
-                                    ] ;
-                rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002351 ;
-                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                  owl:onClass obo:PCO_0000017
-                                ] ;
+                rdfs:subClassOf obo:PCO_0000000 ;
                 obo:IAO_0000114 obo:IAO_0000120 ;
                 obo:IAO_0000115 "A material entity that has as parts two or more organisms, viruses, or viroids of the same species and no members of any other species."@en ;
                 obo:IAO_0000118 "collection of organisms of the same species"@en ;
@@ -1014,12 +1001,8 @@ obo:PCO_0001000 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/PCO_0001001
 obo:PCO_0001001 rdf:type owl:Class ;
-                rdfs:subClassOf obo:PCO_0001000 ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:RO_0002351 ;
-                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                  owl:onClass obo:PCO_0000017
-                                ] ;
+                rdfs:subClassOf obo:PCO_0000018 ,
+                                obo:PCO_0001000 ;
                 obo:IAO_0000114 obo:IAO_0000428 ;
                 obo:IAO_0000115 "A pair of interacting  organisms that consists of exactly two organism, viruses, or viroids of the same species that are interacting with each other." ;
                 rdfs:label "pair of interacting organisms of the same species"@en .
