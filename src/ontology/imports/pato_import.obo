@@ -1,0 +1,1465 @@
+format-version: 1.2
+ontology: pco/imports/pato_import
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000015>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0003674>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0016301>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000056>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002131>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002211>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002212>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002213>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002215>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002233>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002327>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002333>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002404>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002411>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002418>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002447>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002448>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002449>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002450>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002481>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002566>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002578>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002629>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002630>))\nDeclaration(AnnotationProperty(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled>))\n\n\n\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/GO_0016301> (<http://purl.obolibrary.org/obo/GO_0016301>)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0016301> ObjectHasSelf(<http://purl.obolibrary.org/obo/RO_0002481>))\n\n\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002566> <http://purl.obolibrary.org/obo/BFO_0000040>) ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/BFO_0000015>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/BFO_0000015>)))))\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002211> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002448>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002411> <http://purl.obolibrary.org/obo/RO_0002233>) <http://purl.obolibrary.org/obo/RO_0002566>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002411> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002566>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002629> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002450>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002630> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002449>)\nDLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> \"true\"^^xsd:boolean) Annotation(rdfs:comment \"MF(X)-directly_regulates->MF(Y)-enabled_by->GP(Z) => MF(Y)-has_input->GP(Y) e.g. if 'protein kinase activity'(X) directly_regulates 'protein binding activity (Y)and this is enabled by GP(Z) then X has_input Z\"^^xsd:string) Annotation(rdfs:label \"infer input from direct reg\"^^xsd:string) Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<http://purl.obolibrary.org/obo/ro.owl#z>) Variable(<http://purl.obolibrary.org/obo/ro.owl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<http://purl.obolibrary.org/obo/ro.owl#x>) Variable(<http://purl.obolibrary.org/obo/ro.owl#y>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0003674> Variable(<http://purl.obolibrary.org/obo/ro.owl#x>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0003674> Variable(<http://purl.obolibrary.org/obo/ro.owl#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<http://purl.obolibrary.org/obo/ro.owl#x>) Variable(<http://purl.obolibrary.org/obo/ro.owl#z>))))\nDLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#a1>) Variable(<urn:swrl#a2>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0016301> Variable(<urn:swrl#a1>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#a1>) Variable(<urn:swrl#g1>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#a2>) Variable(<urn:swrl#g2>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002447> Variable(<urn:swrl#g1>) Variable(<urn:swrl#g2>))))\nDLSafeRule(Annotation(rdfs:label \"'causally downstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties).\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002404> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002131> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)))Head(ClassAtom(owl:Nothing Variable(<urn:swrl#x>)) ClassAtom(owl:Nothing Variable(<urn:swrl#y>))))\nDLSafeRule(Annotation(rdfs:label \"'causally upstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties).\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002411> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002131> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)))Head(ClassAtom(owl:Nothing Variable(<urn:swrl#x>)) ClassAtom(owl:Nothing Variable(<urn:swrl#y>))))\nDLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002213> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nDLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002213> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nAnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/RO_0002432> \"\")\n)
+
+[Term]
+id: BFO:0000002
+name: continuant
+def: "An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts." []
+disjoint_from: BFO:0000003 ! occurrent
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
+id: BFO:0000003
+name: occurrent
+def: "An entity that has temporal parts and that happens, unfolds or develops through time." []
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
+id: BFO:0000004
+name: independent continuant
+def: "A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything." []
+is_a: BFO:0000002 ! continuant
+disjoint_from: BFO:0000020 ! specifically dependent continuant
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
+id: BFO:0000015
+name: process
+def: "An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t." []
+is_a: BFO:0000003 ! occurrent
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
+id: BFO:0000020
+name: specifically dependent continuant
+def: "A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same." []
+is_a: BFO:0000002 ! continuant
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
+id: BFO:0000040
+name: material entity
+def: "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time." []
+is_a: BFO:0000004 ! independent continuant
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Term]
+id: GO:0003674
+name: molecular_function
+is_a: BFO:0000015 ! process
+property_value: IAO:0000589 "molecular process" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0003824
+name: catalytic activity
+is_a: GO:0003674 ! molecular_function
+property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0008150
+name: biological_process
+namespace: biological_process
+alt_id: GO:0000004
+alt_id: GO:0007582
+alt_id: GO:0044699
+def: "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
+comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_pombe
+subset: goslim_yeast
+synonym: "biological process" EXACT []
+synonym: "physiological process" EXACT []
+synonym: "single organism process" RELATED []
+synonym: "single-organism process" RELATED []
+xref: Wikipedia:Biological_process
+is_a: BFO:0000015 ! process
+property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
+created_by: jl
+creation_date: 2012-09-19T15:05:24Z
+
+[Term]
+id: GO:0016301
+name: kinase activity
+is_a: GO:0016772 ! transferase activity, transferring phosphorus-containing groups
+property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0016740
+name: transferase activity
+is_a: GO:0003824 ! catalytic activity
+property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0016772
+name: transferase activity, transferring phosphorus-containing groups
+is_a: GO:0016740 ! transferase activity
+property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: PATO:0000001
+name: quality
+namespace: quality
+alt_id: PATO:0000072
+def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
+is_a: BFO:0000020 ! specifically dependent continuant
+property_value: IAO:0000589 "quality (PATO)" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0000068
+name: qualitative
+namespace: quality
+comment: TODO: define this or obsolete it and move children somewhere else.
+is_a: PATO:0000001 ! quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0000069
+name: deviation (from_normal)
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the whether the bearer differs from normal or average." [PATOC:GVG]
+subset: attribute_slim
+is_a: PATO:0000068 ! qualitative
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0000070
+name: amount
+namespace: quality
+alt_id: PATO:0000053
+alt_id: PATO:0000071
+alt_id: PATO:0001169
+alt_id: PATO:0001226
+def: "The number of entities of this type that are part of the whole organism." [PATOC:GVG]
+comment: This term was originally named "presence". It has been renamed to reduce ambiguity. Consider annotating with the reciprocal relation,PATO:0001555, has_number_of. For example, rather than E=fin ray Q=count in organism C=10, say E=organism Q=has number of E2= fin ray C=10.
+subset: attribute_slim
+synonym: "count in organism" RELATED []
+synonym: "number" RELATED []
+synonym: "presence" RELATED []
+synonym: "presence or absence in organism" EXACT []
+synonym: "quantitative" EXACT []
+is_a: PATO:0000068 ! qualitative
+relationship: reciprocal_of PATO:0001555 ! has number of
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0000161
+name: rate
+namespace: quality
+def: "A quality of a single process inhering in a bearer by virtue of the bearer's occurrence per unit time." [PATOC:melissa]
+subset: attribute_slim
+subset: scalar_slim
+is_a: PATO:0002062 ! physical quality of a process
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0000461
+name: normal
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's exhibiting no deviation from normal or average." [PATOC:GVG]
+subset: abnormal_slim
+subset: mpath_slim
+subset: value_slim
+synonym: "average" RELATED []
+is_a: PATO:0000068 ! qualitative
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+property_value: RO:0002604 PATO:0000460
+
+[Term]
+id: PATO:0000467
+name: present
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's existence." [PATOC:GVG]
+subset: absent_slim
+subset: value_slim
+synonym: "present in organism" RELATED []
+is_a: PATO:0000070 ! amount
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+property_value: RO:0002604 PATO:0000462
+
+[Term]
+id: PATO:0000470
+name: increased amount
+namespace: quality
+alt_id: PATO:0000420
+alt_id: PATO:0000650
+def: "An amount which is relatively high." [PATOC:GVG]
+subset: value_slim
+synonym: "accessory" RELATED []
+synonym: "increased" RELATED []
+synonym: "increased number" EXACT []
+synonym: "present in greater numbers in organism" EXACT []
+synonym: "supernumerary" EXACT []
+is_a: PATO:0000467 ! present
+is_a: PATO:0002300 ! increased quality
+intersection_of: PATO:0000070 ! amount
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+property_value: RO:0002604 PATO:0001997
+
+[Term]
+id: PATO:0000911
+name: decreased rate
+namespace: quality
+def: "A rate which is relatively low." [PATO:GVG]
+subset: mpath_slim
+subset: value_slim
+synonym: "slow rate" EXACT []
+is_a: PATO:0000161 ! rate
+is_a: PATO:0002302 ! decreased process quality
+intersection_of: PATO:0000161 ! rate
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+property_value: RO:0002604 PATO:0000912
+
+[Term]
+id: PATO:0000912
+name: increased rate
+namespace: quality
+def: "A rate which is relatively high." [PATO:GVG]
+subset: mpath_slim
+subset: value_slim
+synonym: "fast rate" EXACT []
+synonym: "high rate" EXACT []
+is_a: PATO:0000161 ! rate
+is_a: PATO:0002304 ! increased process quality
+intersection_of: PATO:0000161 ! rate
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+property_value: RO:0002604 PATO:0000911
+
+[Term]
+id: PATO:0001018
+name: physical quality
+namespace: quality
+alt_id: PATO:0002079
+def: "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities." [PATOC:GVG]
+subset: attribute_slim
+synonym: "relational physical quality" EXACT []
+xref: Wikipedia:Physical_property
+is_a: PATO:0001241 ! physical object quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0001019
+name: mass density
+namespace: quality
+def: "A physical quality which inheres in a bearer by virtue of some influence is exerted by the bearer's mass per unit size." [WordNet:WordNet]
+subset: attribute_slim
+subset: scalar_slim
+synonym: "density" RELATED []
+is_a: PATO:0001018 ! physical quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0001164
+name: dense
+namespace: quality
+def: "A physical quality which inheres in a bearer by virtue of the bearer's exhibiting density." [PATOC:GVG]
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0001019 ! mass density
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0001236
+name: process quality
+namespace: quality
+alt_id: PATO:0001239
+alt_id: PATO:0001240
+def: "A quality which inheres in an process." [PATOC:GVG]
+comment: See comments of relational quality of a physical entity.
+synonym: "quality of a process" EXACT []
+synonym: "quality of occurrent" EXACT []
+synonym: "quality of process" EXACT []
+synonym: "relational quality of occurrent" EXACT []
+is_a: PATO:0000001 ! quality
+disjoint_from: PATO:0001241 ! physical object quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0001241
+name: physical object quality
+namespace: quality
+alt_id: PATO:0001237
+alt_id: PATO:0001238
+def: "A quality which inheres in a continuant." [PATOC:GVG]
+comment: Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles.
+synonym: "monadic quality of a continuant" EXACT []
+synonym: "monadic quality of an object" NARROW []
+synonym: "monadic quality of continuant" NARROW []
+synonym: "multiply inhering quality of a physical entity" EXACT []
+synonym: "quality of a continuant" EXACT []
+synonym: "quality of a single physical entity" EXACT []
+synonym: "quality of an object" EXACT []
+synonym: "quality of continuant" EXACT []
+xref: snap:Quality
+is_a: PATO:0000001 ! quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0001338
+name: mixed sex
+namespace: quality
+def: "A biological sex quality inhering in a population of multiple sexes." [MGED:MGED]
+comment: For example a mixture of females and male or males and hermaphrodites.
+subset: value_slim
+is_a: PATO:0002003 ! population quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0001415
+name: morbidity
+namespace: quality
+def: "A quality inhering in a population by virtue of the proportion of its members that are ill at a given time." [PATOC:GVG]
+subset: attribute_slim
+subset: scalar_slim
+is_a: PATO:0002003 ! population quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0001555
+name: has number of
+namespace: quality
+def: "The number of parts of a particular type that the bearer entity has. This is a relational quality, and thus holds between two entities: the bearer of the quality, and the type of parts." [PATOC:CJM]
+subset: attribute_slim
+subset: relational_slim
+synonym: "cardinality" RELATED []
+synonym: "extra or missing physical or functional parts" EXACT []
+synonym: "has or lacks parts of type" EXACT []
+synonym: "mereological quality" EXACT []
+synonym: "number" RELATED []
+synonym: "number of" EXACT []
+xref: OBO_REL:has_part
+is_a: PATO:0001241 ! physical object quality
+relationship: reciprocal_of PATO:0000070 ! amount
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0001788
+name: increased mass density
+namespace: quality
+def: "A density which is higher relative to the normal or average." [PATOC:GVG]
+subset: value_slim
+synonym: "high density" EXACT []
+is_a: PATO:0001164 ! dense
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0001164 ! dense
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+property_value: RO:0002604 PATO:0001790
+
+[Term]
+id: PATO:0001790
+name: decreased mass density
+namespace: quality
+def: "A density which is lower relative to the normal or average." [PATOC:GVG]
+subset: value_slim
+synonym: "low density" EXACT []
+is_a: PATO:0001164 ! dense
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0001164 ! dense
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+property_value: RO:0002604 PATO:0001788
+
+[Term]
+id: PATO:0001997
+name: decreased amount
+namespace: quality
+alt_id: PATO:0000419
+alt_id: PATO:0000468
+def: "An amount which is relatively low." [PATOC:GVG]
+subset: value_slim
+synonym: "decreased" RELATED []
+synonym: "decreased number" EXACT []
+synonym: "present in fewer numbers in organism" EXACT []
+synonym: "reduced" RELATED []
+synonym: "subnumerary" RELATED []
+is_a: PATO:0000467 ! present
+is_a: PATO:0002301 ! decreased quality
+intersection_of: PATO:0000070 ! amount
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+property_value: RO:0002604 PATO:0000470
+
+[Term]
+id: PATO:0002003
+name: population quality
+namespace: quality
+def: "A quality that inheres in an entire population or part of a population." [PATOC:GVG]
+subset: attribute_slim
+is_a: PATO:0001241 ! physical object quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
+[Term]
+id: PATO:0002062
+name: physical quality of a process
+namespace: quality
+subset: attribute_slim
+is_a: PATO:0001236 ! process quality
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+created_by: george
+creation_date: 2009-06-05T09:16:46Z
+
+[Term]
+id: PATO:0002300
+name: increased quality
+namespace: quality
+def: "A quality that has a value that is increased compared to normal or average." [PATOC:GVG]
+is_a: PATO:0000069 ! deviation (from_normal)
+intersection_of: PATO:0000001 ! quality
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+property_value: RO:0002604 PATO:0002301
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:39:43Z
+
+[Term]
+id: PATO:0002301
+name: decreased quality
+namespace: quality
+def: "A quality that has a value that is decreased compared to normal or average." [PATOC:GVG]
+is_a: PATO:0000069 ! deviation (from_normal)
+intersection_of: PATO:0000001 ! quality
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+property_value: RO:0002604 PATO:0002300
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:40:15Z
+
+[Term]
+id: PATO:0002302
+name: decreased process quality
+namespace: quality
+def: "A quality of a process that has a value that is decreased compared to normal or average." [PATOC:GVG]
+is_a: PATO:0001236 ! process quality
+is_a: PATO:0002301 ! decreased quality
+intersection_of: PATO:0001236 ! process quality
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+property_value: RO:0002604 PATO:0002304
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:50:59Z
+
+[Term]
+id: PATO:0002303
+name: decreased object quality
+namespace: quality
+def: "A quality of an object that has a value that is decreased compared to normal or average." [PATOC:GVG]
+is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0002301 ! decreased quality
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+property_value: RO:0002604 PATO:0002305
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:51:54Z
+
+[Term]
+id: PATO:0002304
+name: increased process quality
+namespace: quality
+def: "A quality of a process that has a value that is increased compared to normal or average." [PATOC:GVG]
+is_a: PATO:0001236 ! process quality
+is_a: PATO:0002300 ! increased quality
+intersection_of: PATO:0001236 ! process quality
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+property_value: RO:0002604 PATO:0002302
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:53:08Z
+
+[Term]
+id: PATO:0002305
+name: increased object quality
+namespace: quality
+def: "A quality of an object that has a value that is increased compared to normal or average." [PATOC:GVG]
+is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0002300 ! increased quality
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+property_value: RO:0002604 PATO:0002303
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:54:01Z
+
+[Typedef]
+id: BFO:0000062
+name: preceded by
+def: "x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point." []
+subset: ro-eco
+property_value: http://purl.org/dc/elements/1.1/source http://www.obofoundry.org/ro/#OBO_REL:preceded_by xsd:string
+property_value: IAO:0000111 "preceded by" xsd:string
+property_value: IAO:0000116 "An example is: translation preceded_by transcription; aging preceded_by development (not however death preceded_by aging). Where derives_from links classes of continuants, preceded_by links classes of processes. Clearly, however, these two relations are not independent of each other. Thus if cells of type C1 derive_from cells of type C, then any cell division involving an instance of C1 in a given lineage is preceded_by cellular processes involving an instance of C.    The assertion P preceded_by P1 tells us something about Ps in general: that is, it tells us something about what happened earlier, given what we know about what happened later. Thus it does not provide information pointing in the opposite direction, concerning instances of P1 in general; that is, that each is such as to be succeeded by some instance of P. Note that an assertion to the effect that P preceded_by P1 is rather weak; it tells us little about the relations between the underlying instances in virtue of which the preceded_by relation obtains. Typically we will be interested in stronger relations, for example in the relation immediately_preceded_by, or in relations which combine preceded_by with a condition to the effect that the corresponding instances of P and P1 share participants, or that their participants are connected by relations of derivation, or (as a first step along the road to a treatment of causality) that the one process in some way affects (for example, initiates or regulates) the other." xsd:string
+property_value: IAO:0000118 "is preceded by" xsd:string
+property_value: IAO:0000118 "preceded_by" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+domain: BFO:0000003 ! occurrent
+range: BFO:0000003 ! occurrent
+is_transitive: true
+is_a: RO:0002086 ! ends after
+inverse_of: BFO:0000063 ! precedes
+
+[Typedef]
+id: BFO:0000063
+name: precedes
+def: "x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) <= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point." []
+subset: ro-eco
+property_value: IAO:0000111 "precedes" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+domain: BFO:0000003 ! occurrent
+range: BFO:0000003 ! occurrent
+is_transitive: true
+is_a: RO:0002222 ! temporally related to
+
+[Typedef]
+id: BFO:0000066
+name: occurs in
+def: "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t" []
+comment: Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
+property_value: IAO:0000111 "occurs in" xsd:string
+property_value: IAO:0000118 "occurs_in" xsd:string
+property_value: IAO:0000118 "unfolds in" xsd:string
+property_value: IAO:0000118 "unfolds_in" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+domain: BFO:0000003 ! occurrent
+range: BFO:0000004 ! independent continuant
+inverse_of: BFO:0000067 ! contains process
+
+[Typedef]
+id: BFO:0000067
+name: contains process
+def: "[copied from inverse property 'occurs in'] b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t" []
+comment: Paraphrase of definition: a relation between an independent continuant and a process, in which the process takes place entirely within the independent continuant
+property_value: IAO:0000111 "site of" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+
+[Typedef]
+id: RO:0000056
+name: participates in
+def: "a relation between a continuant and a process, in which the continuant is somehow involved in the process" []
+property_value: IAO:0000111 "participates in" xsd:string
+property_value: IAO:0000112 "this blood clot participates in this blood coagulation" xsd:string
+property_value: IAO:0000112 "this input material (or this output material) participates in this process" xsd:string
+property_value: IAO:0000112 "this investigator participates in this investigation" xsd:string
+property_value: IAO:0000118 "participates_in" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000002 ! continuant
+range: BFO:0000003 ! occurrent
+inverse_of: RO:0000057 ! has participant
+
+[Typedef]
+id: RO:0000057
+name: has participant
+def: "a relation between a process and a continuant, in which the continuant is somehow involved in the process" []
+property_value: http://purl.org/dc/elements/1.1/source http://www.obofoundry.org/ro/#OBO_REL:has_participant xsd:string
+property_value: IAO:0000111 "has participant" xsd:string
+property_value: IAO:0000112 "this blood coagulation has participant this blood clot" xsd:string
+property_value: IAO:0000112 "this investigation has participant this investigator" xsd:string
+property_value: IAO:0000112 "this process has participant this input material (or this output material)" xsd:string
+property_value: IAO:0000116 "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time." xsd:string
+property_value: IAO:0000118 "has_participant" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000003 ! occurrent
+range: BFO:0000002 ! continuant
+
+[Typedef]
+id: RO:0002022
+name: directly regulated by
+comment: Process(P2) is directly regulated by process(P1) iff: P1 regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  regulates the kinase activity (P2) of protein B then P1 directly regulates P2. {xref="GOC:dos"}
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002334 ! regulated by
+inverse_of: RO:0002578 ! directly regulates
+created_by: dos
+creation_date: 2017-09-17T13:52:24Z
+
+[Typedef]
+id: RO:0002023
+name: directly negatively regulated by
+def: "Process(P2) is directly negatively regulated by process(P1) iff: P1 negatively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  negatively regulates the kinase activity (P2) of protein B then P2 directly negatively regulated by P1." [GOC:dos]
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002022 ! directly regulated by
+inverse_of: RO:0002630 ! directly negatively regulates
+created_by: dos
+creation_date: 2017-09-17T13:52:38Z
+
+[Typedef]
+id: RO:0002024
+name: directly positively regulated by
+def: "Process(P2) is directly postively regulated by process(P1) iff: P1 positively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding positively regulates the kinase activity (P2) of protein B then P2 is directly postively regulated by P1." [GOC:dos]
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002022 ! directly regulated by
+inverse_of: RO:0002629 ! directly positively regulates
+created_by: dos
+creation_date: 2017-09-17T13:52:47Z
+
+[Typedef]
+id: RO:0002086
+name: ends after
+comment: X ends_after Y iff: end(Y) before_or_simultaneous_with end(X)
+subset: ro-eco
+property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_transitive: true
+is_a: RO:0002222 ! temporally related to
+
+[Typedef]
+id: RO:0002087
+name: immediately preceded by
+comment: X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)
+property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: IAO:0000118 "starts_at_end_of" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: BFO:0000062 ! preceded by
+inverse_of: RO:0002090 ! immediately precedes
+
+[Typedef]
+id: RO:0002090
+name: immediately precedes
+comment: X immediately_precedes_Y iff: end(X) simultaneous_with start(Y)
+subset: ro-eco
+property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: IAO:0000118 "ends_at_start_of" xsd:string
+property_value: IAO:0000118 "meets" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0002575 BFO:0000063
+is_a: BFO:0000063 ! precedes
+
+[Typedef]
+id: RO:0002131
+name: overlaps
+def: "x overlaps y if and only if there exists some z such that x has part z and z part of y" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
+subset: ro-eco
+property_value: IAO:0000114 IAO:0000125
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0001900 RO:0001901
+is_a: RO:0002323 ! mereotopologically related to
+expand_expression_to: "http://purl.obolibrary.org/obo/BFO_0000051 some (http://purl.obolibrary.org/obo/BFO_0000050 some ?Y)" []
+
+[Typedef]
+id: RO:0002211
+name: regulates
+def: "process(P1) regulates process(P2) iff: P1 results in the initiation or termination of P2 OR affects the frequency of its initiation or termination OR affects the magnitude or rate of output of P2." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "We use 'regulates' here to specifically imply control. However, many colloquial usages of the term correctly correspond to the weaker relation of 'causally upstream of or within' (aka influences). Consider relabeling to make things more explicit" xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000117 "David Hill" xsd:string
+property_value: IAO:0000117 "Tanya Berardini" xsd:string
+property_value: IAO:0000119 "GO" xsd:string
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: IAO:0000232 "Regulation precludes parthood; the regulatory process may not be within the regulated process." xsd:string
+property_value: IAO:0000589 "regulates (processual)" xsd:string
+property_value: IAO:0000600 "false" xsd:boolean
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000015 ! process
+range: BFO:0000015 ! process
+holds_over_chain: RO:0002578 RO:0002578
+is_transitive: true
+is_a: RO:0002411 ! causally upstream of
+inverse_of: RO:0002334 ! regulated by
+
+[Typedef]
+id: RO:0002212
+name: negatively regulates
+def: "Process(P1) negatively regulates process(P2) iff: P1 terminates P2, or P1 descreases the the frequency of initiation of P2 or the magnitude or rate of output of P2." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: IAO:0000589 "negatively regulates (process to process)" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0004050 RO:0002211
+is_a: RO:0002211 ! regulates
+is_a: RO:0002305 ! causally upstream of, negative effect
+inverse_of: RO:0002335 ! negatively regulated by
+
+[Typedef]
+id: RO:0002213
+name: positively regulates
+def: "Process(P1) postively regulates process(P2) iff: P1 initiates P2, or P1 increases the the frequency of initiation of P2 or the magnitude or rate of output of P2." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: IAO:0000589 "positively regulates (process to process)" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0004049 RO:0002211
+holds_over_chain: RO:0002212 RO:0002212
+is_transitive: true
+is_a: RO:0002211 ! regulates
+is_a: RO:0002304 ! causally upstream of, positive effect
+inverse_of: RO:0002336 ! positively regulated by
+
+[Typedef]
+id: RO:0002215
+name: capable of
+def: "A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. " []
+subset: ro-eco
+property_value: IAO:0000112 "mechanosensory neuron capable of detection of mechanical stimulus involved in sensory perception (GO:0050974)" xsd:string
+property_value: IAO:0000112 "osteoclast SubClassOf 'capable of' some 'bone resorption'" xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "has function realized in" xsd:string
+property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20123131
+property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/21208450
+property_value: IAO:0000232 "For compatibility with BFO, this relation has a shortcut definition in which the expression \"capable of some P\" expands to \"bearer_of (some realized_by only P)\"." xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000004 ! independent continuant
+range: BFO:0000015 ! process
+is_a: RO:0002216 ! capable of part of
+
+[Typedef]
+id: RO:0002216
+name: capable of part of
+def: "c stands in this relationship to p if and only if there exists some p' such that c is capable_of p', and p' is part_of p." []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "has function in" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: seeAlso "defining-property-chains-involving-reflexivity"
+is_a: RO:0002328 ! functionally related to
+is_a: RO:0002500 ! causal agent in process
+
+[Typedef]
+id: RO:0002222
+name: temporally related to
+comment: A relation that holds between two occurrents. This is a grouping relation that collects together all the Allen relations.
+subset: ro-eco
+property_value: http://purl.org/dc/terms/source https://docs.google.com/document/d/1kBv1ep_9g3sTR-SD3jqzFqhuwo9TPNF-l-9fUDbO6rM/edit?pli=1 xsd:anyURI
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 https://en.wikipedia.org/wiki/Allen%27s_interval_algebra
+property_value: IAO:0000232 "Do not use this relation directly. It is ended as a grouping for relations between occurrents involving the relative timing of their starts and ends." xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000003 ! occurrent
+range: BFO:0000003 ! occurrent
+
+[Typedef]
+id: RO:0002233
+name: has input
+def: "p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
+subset: ro-eco
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "consumes" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000015 ! process
+is_a: RO:0000057 ! has participant
+inverse_of: RO:0002352 ! input of
+
+[Typedef]
+id: RO:0002263
+name: acts upstream of
+def: "c acts upstream of p if and only if c enables some f that is involved in p' and p' occurs chronologically before p, is not part of p, and affects the execution of p. c is a material entity and f, p, p' are processes." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
+property_value: IAO:0000112 "A faulty traffic light (material entity) whose malfunctioning (a process) is causally upstream of a traffic collision (a process): the traffic light acts upstream of the collision." xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of
+holds_over_chain: RO:0002327 RO:0002411
+is_a: RO:0002264 ! acts upstream of or within
+
+[Typedef]
+id: RO:0002264
+name: acts upstream of or within
+def: "c acts upstream of or within p if c is enables f, and f is causally upstream of or within p. c is a material entity and p is an process." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
+synonym: "affects" RELATED []
+property_value: IAO:0000112 "A gene product that has some activity, where that activity may be a part of a pathway or upstream of the pathway." xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of_or_within
+holds_over_chain: RO:0002327 RO:0002418
+is_a: RO:0002500 ! causal agent in process
+
+[Typedef]
+id: RO:0002304
+name: causally upstream of, positive effect
+comment: holds between x and y if and only if x is causally upstream of y and the progression of x increases the frequency, rate or extent of y
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
+property_value: http://purl.org/dc/terms/creator "cjm" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0004049 RO:0002411
+is_a: RO:0002411 ! causally upstream of
+is_a: RO:0004047 ! causally upstream of or within, positive effect
+
+[Typedef]
+id: RO:0002305
+name: causally upstream of, negative effect
+comment: holds between x and y if and only if x is causally upstream of y and the progression of x decreases the frequency, rate or extent of y
+property_value: http://purl.org/dc/terms/creator "cjm" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0004050 RO:0002411
+is_a: RO:0002411 ! causally upstream of
+is_a: RO:0004046 ! causally upstream of or within, negative effect
+
+[Typedef]
+id: RO:0002323
+name: mereotopologically related to
+def: "A mereological relationship or a topological relationship" []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000232 "Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving parthood or connectivity relationships" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0001900 RO:0001901
+
+[Typedef]
+id: RO:0002327
+name: enables
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
+property_value: IAO:0000112 "a particular instances of akt-2 enables some instance of protein kinase activity" xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "catalyzes" xsd:string
+property_value: IAO:0000118 "executes" xsd:string
+property_value: IAO:0000118 "has" xsd:string
+property_value: IAO:0000118 "is catalyzing" xsd:string
+property_value: IAO:0000118 "is executing" xsd:string
+property_value: IAO:0000232 "This relation differs from the parent relation 'capable of' in that the parent is weaker and only expresses a capability that may not be actually realized, whereas this relation is always realized." xsd:string
+property_value: IAO:0000232 "This relation is currently used experimentally by the Gene Ontology Consortium. It may not be stable and may be obsoleted at some future time." xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002215 ! capable of
+inverse_of: RO:0002333 ! enabled by
+
+[Typedef]
+id: RO:0002328
+name: functionally related to
+def: "A grouping relationship for any relationship directly involving a function, or that holds because of a function of one of the related entities." []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000232 "This is a grouping relation that collects relations used for the purpose of connecting structure and function" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+
+[Typedef]
+id: RO:0002329
+name: part of structure that is capable of
+def: "this relation holds between c and p when c is part of some c', and c' is capable of p." []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "false" xsd:boolean
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002328 ! functionally related to
+
+[Typedef]
+id: RO:0002331
+name: involved in
+def: "c involved_in p if and only if c enables some process p', and p' is part of p" []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "actively involved in" xsd:string
+property_value: IAO:0000118 "enables part of" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: seeAlso Involved:in
+is_a: RO:0000056 ! participates in
+is_a: RO:0002431 ! involved in or involved in regulation of
+
+[Typedef]
+id: RO:0002333
+name: enabled by
+def: "inverse of enables" []
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0000057 ! has participant
+is_a: RO:0002328 ! functionally related to
+
+[Typedef]
+id: RO:0002334
+name: regulated by
+def: "inverse of regulates" []
+subset: RO:0002259
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000589 "regulated by (processual)" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000015 ! process
+range: BFO:0000015 ! process
+is_transitive: true
+is_a: RO:0002427 ! causally downstream of or within
+
+[Typedef]
+id: RO:0002335
+name: negatively regulated by
+def: "inverse of negatively regulates" []
+subset: RO:0002259
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002334 ! regulated by
+
+[Typedef]
+id: RO:0002336
+name: positively regulated by
+def: "inverse of positively regulates" []
+subset: RO:0002259
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002334 ! regulated by
+
+[Typedef]
+id: RO:0002352
+name: input of
+def: "inverse of has input" []
+subset: ro-eco
+subset: RO:0002259
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0000056 ! participates in
+is_a: RO:0002328 ! functionally related to
+
+[Typedef]
+id: RO:0002404
+name: causally downstream of
+def: "inverse of upstream of" []
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: BFO:0000062 ! preceded by
+is_a: RO:0002427 ! causally downstream of or within
+inverse_of: RO:0002411 ! causally upstream of
+
+[Typedef]
+id: RO:0002405
+name: immediately causally downstream of
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002087 ! immediately preceded by
+is_a: RO:0002404 ! causally downstream of
+inverse_of: RO:0002412 ! immediately causally upstream of
+
+[Typedef]
+id: RO:0002410
+name: causally related to
+def: "This relation groups causal relations between material entities and causal relations between processes" []
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000116 "This branch of the ontology deals with causal relations between entities. It is divided into two branches: causal relations between occurrents/processes, and causal relations between material entities. We take an 'activity flow-centric approach', with the former as primary, and define causal relations between material entities in terms of causal relations between occurrents.\n\nTo define causal relations in an activity-flow type network, we make use of 3 primitives:\n\n * Temporal: how do the intervals of the two occurrents relate? \n * Is the causal relation regulatory?\n * Is the influence positive or negative\n\nThe first of these can be formalized in terms of the Allen Interval Algebra. Informally, the 3 bins we care about are 'direct', 'indirect' or overlapping. Note that all causal relations should be classified under a RO temporal relation (see the branch under 'temporally related to'). Note that all causal relations are temporal, but not all temporal relations are causal. Two occurrents can be related in time without being causally connected. We take causal influence to be primitive, elucidated as being such that has the upstream changed, some qualities of the donwstream would necessarily be modified.\n\nFor the second, we consider a relationship to be regulatory if the system in which the activities occur is capable of altering the relationship to achieve some objective. This could include changing the rate of production of a molecule.\n\nFor the third, we consider the effect of the upstream process on the output(s) of the downstream process. If the level of output is increased, or the rate of production of the output is increased, then the direction is increased. Direction can be positive, negative or neutral or capable of either direction. Two positives in succession yield a positive, two negatives in succession yield a positive, otherwise the default assumption is that the net effect is canceled and the influence is neutral.\n\nEach of these 3 primitives can be composed to yield a cross-product of different relation types." xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000232 "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect." xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+
+[Typedef]
+id: RO:0002411
+name: causally upstream of
+def: "p is causally upstream of q if and only if p precedes q and p and q are linked in a causal chain" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_transitive: true
+is_a: BFO:0000063 ! precedes
+is_a: RO:0002418 ! causally upstream of or within
+
+[Typedef]
+id: RO:0002412
+name: immediately causally upstream of
+def: "p is immediately causally upstream of q iff both (a) p immediately precedes q and (b) p is causally upstream of q. In addition, the output of p  must be an input of q." []
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0002575 RO:0002411
+is_a: RO:0002090 ! immediately precedes
+is_a: RO:0002411 ! causally upstream of
+
+[Typedef]
+id: RO:0002418
+name: causally upstream of or within
+def: "p 'causally upstream or within' q iff (1) the end of p is before the end of q and (2) the execution of p exerts some causal influence over the outputs of q; i.e. if p was abolished or the outputs of p were to be modified, this would necessarily affect q." []
+synonym: "affects" RELATED []
+property_value: IAO:0000116 "We would like to make this disjoint with 'preceded by', but this is prohibited in OWL2" xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "influences (processual)" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_transitive: true
+is_a: RO:0002501 ! causal relation between processes
+inverse_of: RO:0002427 ! causally downstream of or within
+
+[Typedef]
+id: RO:0002427
+name: causally downstream of or within
+def: "inverse of causally upstream of or within" []
+subset: RO:0002259
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_transitive: true
+is_a: RO:0002501 ! causal relation between processes
+
+[Typedef]
+id: RO:0002428
+name: involved in regulation of
+def: "c involved in regulation of p if c is involved in some p' and p' regulates some p" []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+holds_over_chain: RO:0002327 RO:0002211
+holds_over_chain: RO:0002331 RO:0002211
+is_a: RO:0002263 ! acts upstream of
+is_a: RO:0002431 ! involved in or involved in regulation of
+
+[Typedef]
+id: RO:0002429
+name: involved in positive regulation of
+def: "c involved in regulation of p if c is involved in some p' and p' positively regulates some p" []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0004049 RO:0002428
+holds_over_chain: RO:0002327 RO:0002213
+holds_over_chain: RO:0002331 RO:0002213
+is_a: RO:0002428 ! involved in regulation of
+
+[Typedef]
+id: RO:0002430
+name: involved in negative regulation of
+def: "c involved in regulation of p if c is involved in some p' and p' negatively regulates some p" []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0004050 RO:0002428
+holds_over_chain: RO:0002327 RO:0002212
+holds_over_chain: RO:0002331 RO:0002212
+is_a: RO:0002428 ! involved in regulation of
+
+[Typedef]
+id: RO:0002431
+name: involved in or involved in regulation of
+def: "c involved in or regulates p if and only if either (i) c is involved in p or (ii) c is involved in regulation of p" []
+property_value: IAO:0000116 "OWL does not allow defining object properties via a Union" xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "involved in or reguates" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002264 ! acts upstream of or within
+is_a: RO:0002328 ! functionally related to
+is_a: RO:0002500 ! causal agent in process
+
+[Typedef]
+id: RO:0002432
+name: is active in
+def: "c executes activity in d if and only if c enables p and p occurs_in d.  Assuming no action at a distance by gene products, if a gene product enables (is capable of) a process that occurs in some structure, it must have at least some part in that structure." [GOC:cjm, GOC:dos]
+synonym: "enables activity in" EXACT []
+property_value: IAO:0000112 "A protein that enables activity in a cytosol." xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "executes activity in" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+holds_over_chain: RO:0002327 BFO:0000066 {http://purl.obolibrary.org/obo/RO_0002581="true"}
+is_a: RO:0002131 ! overlaps
+is_a: RO:0002328 ! functionally related to
+
+[Typedef]
+id: RO:0002434
+name: interacts with
+def: "A relationship that holds between two entities in which the processes executed by the two entities are causally connected." []
+subset: ro-eco
+synonym: "in pairwise interaction with" EXACT []
+property_value: http://xmlns.com/foaf/0.1/page https://github.com/oborel/obo-relations/wiki/InteractionRelations xsd:anyURI
+property_value: IAO:0000116 "Considering relabeling as 'pairwise interacts with'" xsd:anyURI
+property_value: IAO:0000116 "This relation and all sub-relations can be applied to either (1) pairs of entities that are interacting at any moment of time (2) populations or species of entity whose members have the disposition to interact (3) classes whose members have the disposition to interact." xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000232 "Note that this relationship type, and sub-relationship types may be redundant with process terms from other ontologies. For example, the symbiotic relationship hierarchy parallels GO. The relations are provided as a convenient shortcut. Consider using the more expressive processual form to capture your data. In the future, these relations will be linked to their cognate processes through rules." xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: seeAlso http://purl.obolibrary.org/obo/MI_0914 xsd:anyURI
+domain: BFO:0000040 ! material entity
+range: BFO:0000040 ! material entity
+is_symmetric: true
+
+[Typedef]
+id: RO:0002436
+name: molecularly interacts with
+def: "An interaction relationship in which the two partners are molecular entities that directly physically interact with each other for example via a stable binding interaction or a brief interaction during which one modifies the other." []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "binds" xsd:string
+property_value: IAO:0000118 "molecularly binds with" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: seeAlso ECO:0000353
+property_value: seeAlso http://purl.obolibrary.org/obo/MI_0915 xsd:anyURI
+is_symmetric: true
+is_a: RO:0002434 ! interacts with
+
+[Typedef]
+id: RO:0002447
+name: phosphorylates
+property_value: IAO:0000116 "Axiomatization to GO to be added later" xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "An interaction relation between x and y in which x catalyzes a reaction in which a phosphate group is added to y." xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002436 ! molecularly interacts with
+
+[Typedef]
+id: RO:0002448
+name: directly regulates activity of
+def: "The entity A, immediately upstream of the entity B, has an activity that regulates an activity performed by B. For example, A and B may be gene products and binding of B by A regulates the kinase activity of B.\n\nA and B can be physically interacting but not necessarily. Immediately upstream means there are no intermediate entity between A and B." []
+synonym: "molecularly controls" EXACT []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000117 "Vasundra Touré" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000040 ! material entity
+range: BFO:0000040 ! material entity
+is_a: RO:0002436 ! molecularly interacts with
+is_a: RO:0011002 ! regulates activity of
+
+[Typedef]
+id: RO:0002449
+name: directly negatively regulates activity of
+def: "The entity A, immediately upstream of the entity B, has an activity that negatively regulates an activity performed by B. \nFor example, A and B may be gene products and binding of B by A negatively regulates the kinase activity of B." []
+synonym: "molecularly decreases activity of" EXACT []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000117 "Vasundra Touré" xsd:string
+property_value: IAO:0000118 "directly inhibits" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000040 ! material entity
+range: BFO:0000040 ! material entity
+is_a: RO:0002448 ! directly regulates activity of
+
+[Typedef]
+id: RO:0002450
+name: directly positively regulates activity of
+def: "The entity A, immediately upstream of the entity B, has an activity that positively regulates an activity performed by B. \nFor example, A and B may be gene products and binding of B by A positively regulates the kinase activity of B." []
+synonym: "molecularly increases activity of" EXACT []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000117 "Vasundra Touré" xsd:string
+property_value: IAO:0000118 "directly activates" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000040 ! material entity
+range: BFO:0000040 ! material entity
+is_a: RO:0002448 ! directly regulates activity of
+
+[Typedef]
+id: RO:0002464
+name: helper property (not for use in curation)
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000232 "This property or its subproperties is not to be used directly. These properties exist as helper properties that are used to support OWL reasoning." xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+
+[Typedef]
+id: RO:0002479
+name: has part that occurs in
+def: "p has part that occurs in c if and only if there exists some p1, such that p has_part p1, and p1 occurs in c." []
+subset: ro-eco
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000003 ! occurrent
+range: BFO:0000004 ! independent continuant
+
+[Typedef]
+id: RO:0002481
+name: is kinase activity
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002564 ! molecular interaction relation helper property
+
+[Typedef]
+id: RO:0002500
+name: causal agent in process
+def: "A relationship between a material entity and a process where the material entity has some causal role that influences the process" []
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002595 ! causal relation between material entity and a process
+inverse_of: RO:0002608 ! process has causal agent
+
+[Typedef]
+id: RO:0002501
+name: causal relation between processes
+def: "p is causally related to q if and only if p or any part of p and q or any part of q are linked by a chain of events where each event pair is one of direct activation or direct inhibition. p may be upstream, downstream, part of or a container of q." []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: IAO:0000232 "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect." xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000003 ! occurrent
+range: BFO:0000003 ! occurrent
+is_a: RO:0002410 ! causally related to
+
+[Typedef]
+id: RO:0002506
+name: causal relation between entities
+property_value: IAO:0000116 "The intent is that the process branch of the causal property hierarchy is primary (causal relations hold between occurrents/processes), and that the material branch is defined in terms of the process branch" xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: IAO:0000232 "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect." xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000002 ! continuant
+range: BFO:0000002 ! continuant
+is_a: RO:0002410 ! causally related to
+
+[Typedef]
+id: RO:0002559
+name: causally influenced by
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: IAO:0000589 "causally influenced by (entity-centric)" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002506 ! causal relation between entities
+inverse_of: RO:0002566 ! causally influences
+
+[Typedef]
+id: RO:0002563
+name: interaction relation helper property
+property_value: http://xmlns.com/foaf/0.1/page https://github.com/oborel/obo-relations/wiki/InteractionRelations xsd:anyURI
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:N-Ary_Relation_Pattern_%28OWL_2%29
+is_a: RO:0002464 ! helper property (not for use in curation)
+
+[Typedef]
+id: RO:0002564
+name: molecular interaction relation helper property
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002563 ! interaction relation helper property
+
+[Typedef]
+id: RO:0002566
+name: causally influences
+def: "The entity or characteristic A is causally upstream of the entity or characteristic B, A having an effect on B. An entity corresponds to any biological type of entity as long as a mass is measurable. A characteristic corresponds to a particular specificity of an entity (e.g., phenotype, shape, size)." []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000117 "Vasundra Touré" xsd:string
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: IAO:0000589 "causally influences (entity-centric)" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000002 ! continuant
+range: BFO:0000002 ! continuant
+is_a: RO:0002506 ! causal relation between entities
+
+[Typedef]
+id: RO:0002578
+name: directly regulates
+def: "Process(P1) directly regulates process(P2) iff: P1 regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  regulates the kinase activity (P2) of protein B then P1 directly regulates P2." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: IAO:0000589 "directly regulates (processual)" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0002575 RO:0002211
+is_a: RO:0002211 ! regulates
+is_a: RO:0002412 ! immediately causally upstream of
+
+[Typedef]
+id: RO:0002584
+name: has part structure that is capable of
+def: "s 'has part structure that is capable of' p if and only if there exists some part x such that s 'has part' x and x 'capable of' p" []
+property_value: IAO:0000112 "gland SubClassOf 'has part structure that is capable of' some 'secretion by cell'" xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002328 ! functionally related to
+is_a: RO:0002595 ! causal relation between material entity and a process
+
+[Typedef]
+id: RO:0002595
+name: causal relation between material entity and a process
+def: "A relationship that holds between a material entity and a process in which causality is involved, with either the material entity or some part of the material entity exerting some influence over the process, or the process influencing some aspect of the material entity." []
+property_value: IAO:0000116 "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect." xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000040 ! material entity
+range: BFO:0000015 ! process
+is_a: RO:0002410 ! causally related to
+
+[Typedef]
+id: RO:0002596
+name: capable of regulating
+def: "Holds between c and p if and only if c is capable of some activity a, and a regulates p." []
+property_value: IAO:0000112 "pyrethroid -> growth" xsd:string
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+holds_over_chain: RO:0002215 RO:0002211
+is_a: RO:0002500 ! causal agent in process
+
+[Typedef]
+id: RO:0002597
+name: capable of negatively regulating
+def: "Holds between c and p if and only if c is capable of some activity a, and a negatively regulates p." []
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+holds_over_chain: RO:0002215 RO:0002212
+is_a: RO:0002596 ! capable of regulating
+
+[Typedef]
+id: RO:0002598
+name: capable of positively regulating
+def: "Holds between c and p if and only if c is capable of some activity a, and a positively regulates p." []
+property_value: IAO:0000112 "renin -> arteriolar smooth muscle contraction" xsd:string
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+holds_over_chain: RO:0002215 RO:0002213
+is_a: RO:0002596 ! capable of regulating
+
+[Typedef]
+id: RO:0002608
+name: process has causal agent
+def: "Inverse of 'causal agent in process'" []
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002410 ! causally related to
+
+[Typedef]
+id: RO:0002629
+name: directly positively regulates
+def: "Process(P1) directly postively regulates process(P2) iff: P1 positively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding positively regulates the kinase activity (P2) of protein B then P1 directly positively regulates P2." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: IAO:0000589 "directly positively regulates (process to process)" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0004049 RO:0002578
+is_a: RO:0002213 ! positively regulates
+is_a: RO:0002578 ! directly regulates
+
+[Typedef]
+id: RO:0002630
+name: directly negatively regulates
+def: "Process(P1) directly negatively regulates process(P2) iff: P1 negatively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  negatively regulates the kinase activity (P2) of protein B then P1 directly negatively regulates P2." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: IAO:0000589 "directly negatively regulates (process to process)" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0004050 RO:0002578
+is_a: RO:0002212 ! negatively regulates
+is_a: RO:0002578 ! directly regulates
+
+[Typedef]
+id: RO:0004031
+name: enables subfunction
+def: "Holds between an entity and an process P where the entity enables some larger compound process, and that larger process has-part P." []
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+is_a: RO:0002328 ! functionally related to
+created_by: cjm
+creation_date: 2018-01-25T23:20:13Z
+
+[Typedef]
+id: RO:0004032
+name: acts upstream of or within, positive effect
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0004049 RO:0002264
+property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of_or_within,_positive_effect
+holds_over_chain: RO:0002327 RO:0004047
+is_a: RO:0002264 ! acts upstream of or within
+created_by: cjm
+creation_date: 2018-01-26T23:49:30Z
+
+[Typedef]
+id: RO:0004033
+name: acts upstream of or within, negative effect
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0004050 RO:0002264
+holds_over_chain: RO:0002327 RO:0004046
+is_a: RO:0002264 ! acts upstream of or within
+created_by: cjm
+creation_date: 2018-01-26T23:49:51Z
+
+[Typedef]
+id: RO:0004034
+name: acts upstream of, positive effect
+def: "c 'acts upstream of, positive effect' p if c is enables f, and f is causally upstream of p, and the direction of f is positive" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0004049 RO:0002263
+property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of,_positive_effect
+holds_over_chain: RO:0002327 RO:0002304
+is_a: RO:0002263 ! acts upstream of
+is_a: RO:0004032 ! acts upstream of or within, positive effect
+created_by: cjm
+creation_date: 2018-01-26T23:53:14Z
+
+[Typedef]
+id: RO:0004035
+name: acts upstream of, negative effect
+def: "c 'acts upstream of, negative effect' p if c is enables f, and f is causally upstream of p, and the direction of f is negative" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0004050 RO:0002263
+property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of,_negative_effect
+holds_over_chain: RO:0002327 RO:0002305
+is_a: RO:0002263 ! acts upstream of
+is_a: RO:0004033 ! acts upstream of or within, negative effect
+created_by: cjm
+creation_date: 2018-01-26T23:53:22Z
+
+[Typedef]
+id: RO:0004046
+name: causally upstream of or within, negative effect
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0004050 RO:0002418
+is_a: RO:0002418 ! causally upstream of or within
+created_by: cjm
+creation_date: 2018-03-13T23:55:05Z
+
+[Typedef]
+id: RO:0004047
+name: causally upstream of or within, positive effect
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+property_value: RO:0004049 RO:0002418
+is_a: RO:0002418 ! causally upstream of or within
+created_by: cjm
+creation_date: 2018-03-13T23:55:19Z
+
+[Typedef]
+id: RO:0011002
+name: regulates activity of
+def: "The entity A has an activity that regulates an activity of the entity B. For example, A and B are gene products where the catalytic activity of A regulates the kinase activity of B." []
+property_value: IAO:0000117 "Vasundra Touré" xsd:string
+property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
+domain: BFO:0000040 ! material entity
+range: BFO:0000040 ! material entity
+is_a: RO:0002566 ! causally influences
+
+[Typedef]
+id: decreased_in_magnitude_relative_to
+name: decreased_in_magnitude_relative_to
+namespace: quality
+def: "q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+comment: This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'.
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+domain: PATO:0000001 ! quality
+range: PATO:0000001 ! quality
+is_transitive: true
+is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
+
+[Typedef]
+id: different_in_magnitude_relative_to
+name: different_in_magnitude_relative_to
+namespace: quality
+def: "q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+domain: PATO:0000001 ! quality
+range: PATO:0000001 ! quality
+
+[Typedef]
+id: increased_in_magnitude_relative_to
+name: increased_in_magnitude_relative_to
+namespace: quality
+def: "q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+comment: This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'.
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+domain: PATO:0000001 ! quality
+range: PATO:0000001 ! quality
+is_transitive: true
+is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
+
+[Typedef]
+id: reciprocal_of
+name: reciprocal_of
+namespace: quality
+def: "q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e." [PATOC:CJM]
+comment: There are frequently two ways to state the same thing: we can say 'spermatocyte lacks asters' or 'asters absent from spermatocyte'. In this case the quality is 'lacking all parts of type' - it is a (relational) quality of the spermatocyte, and it is with respect to instances of 'aster'. One of the popular requirements of PATO is that it continue to support 'absent', so we need to relate statements which use this quality to the 'lacking all parts of type' quality.
+property_value: isDefinedBy http://purl.obolibrary.org/obo/pato.owl
+
