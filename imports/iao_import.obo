@@ -1,6 +1,5 @@
 format-version: 1.2
-data-version: pco/releases/2020-08-26/imports/iao_import.obo
-ontology: pco/imports/iao_import.obo
+ontology: pco/imports/iao_import
 
 [Typedef]
 id: IAO:0000136

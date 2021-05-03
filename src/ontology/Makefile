@@ -58,7 +58,7 @@ $TMPDIR:
 
 MAIN_PRODUCTS = $(sort $(foreach r,$(RELEASE_ARTEFACTS), $(ONT)-$(r)) $(ONT))
 MAIN_GZIPPED = 
-MAIN_FILES = $(foreach n,$(MAIN_PRODUCTS), $(foreach f,$(FORMATS), $(n).$(f))) $(MAIN_GZIPPED)
+MAIN_FILES = $(foreach n,$(MAIN_PRODUCTS), $(foreach f,$(FORMATS), $(n).$(f))) #$(MAIN_GZIPPED)
 
 all_main: $(MAIN_FILES)
 

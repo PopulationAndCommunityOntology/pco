@@ -11,7 +11,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pco/pco-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pco/releases/2020-08-26/pco-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pco/releases/2021-05-03/pco-base.owl"/>
         <dc:contributor>http://orcid.org/0000-0002-4366-3088</dc:contributor>
         <dc:contributor>https://orcid.org/0000-0001-8815-0078</dc:contributor>
         <dc:creator>David Osumi-Sutherland</dc:creator>
@@ -146,6 +146,12 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
@@ -184,11 +190,9 @@
     <!-- http://purl.obolibrary.org/obo/PCO_0000055 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PCO_0000055">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PCO_0000000"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002351"/>
-        </owl:propertyChainAxiom>
-        <rdfs:label xml:lang="en">has member of</rdfs:label>
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
+        <rdfs:label xml:lang="en">obsolete has member of</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -390,6 +394,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0001019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001019"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0001241 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001241"/>
@@ -414,6 +424,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000027"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
                         <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CARO_0001010"/>
@@ -426,7 +437,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
@@ -705,26 +715,6 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <!-- http://purl.obolibrary.org/obo/PCO_0000018 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000018">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CARO_0001010"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/CARO_0001010"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PCO_0000055"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PCO_0000017"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000000"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
         <obo:IAO_0000115 xml:lang="en">A material entity that has as parts two or more organisms, viruses, or viroids of the same species and no members of any other species.</obo:IAO_0000115>
@@ -1326,17 +1316,157 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PCO_0000073 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000073">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0010004"/>
+        <obo:IAO_0000115>An organism that is part of a polyphyletic group of mostly photosynthetic Eukaryotes  encompassing green plants excluding Embriophyta (land plants). Included organisms range from unicellular microalgae, such as Chlorella and diatoms to multicellular forms such as giant kelp.</obo:IAO_0000115>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Algae"/>
+        <oboInOwl:hasExactSynonym>alga</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>algae</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>seaweed</oboInOwl:hasNarrowSynonym>
+        <rdfs:label xml:lang="en">alga excluding Cyanobacteria</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000074 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000074">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000019"/>
+        <obo:IAO_0000115>A community species diversity that is the mean species diversity at a site or within a specific habitat.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-8815-0078"/>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Alpha_diversity"/>
+        <oboInOwl:hasExactSynonym>α-diversity</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">alpha diversity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000075 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000075">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000019"/>
+        <obo:IAO_0000115>A community species diversity that is the ratio between regional and local species diversity.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-8815-0078"/>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Beta_diversity"/>
+        <oboInOwl:hasExactSynonym>true beta diversity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>β-diversity</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">beta diversity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000076 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000076">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000019"/>
+        <obo:IAO_0000115>A community species diversity that is the total species diversity in a landscape. The area or landscape of interest may be of very different sizes in different situations, but it should encompass multiple sites or habitats as measured by alpha diversity.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-8815-0078"/>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Gamma_diversity"/>
+        <oboInOwl:hasExactSynonym>γ-diversity</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">gamma diversity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000077 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000077">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001019"/>
+        <obo:IAO_0000116>TBD: add logical definition</obo:IAO_0000116>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-6284-4821"/>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-8815-0078"/>
+        <obo:IAO_0000117>The density of plants in an ecological community or population, often measured as the number of plants per area.</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">plant density</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000078 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000078">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000077"/>
+        <obo:IAO_0000115>The density of seedlings in an ecological community or population, often measured as the number of seedlings per area.</obo:IAO_0000115>
+        <obo:IAO_0000116>TBD: add logical definition</obo:IAO_0000116>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-6284-4821"/>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-8815-0078"/>
+        <rdfs:label xml:lang="en">seedling density</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000079 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000079">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000077"/>
+        <obo:IAO_0000115>The density of plants in a population or organisms (a single species), often measured as the number of plants per area.</obo:IAO_0000115>
+        <obo:IAO_0000116>TBD: add logical definition</obo:IAO_0000116>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-6284-4821"/>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-8815-0078"/>
+        <rdfs:label xml:lang="en">plant density of a population</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000080 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000080">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000077"/>
+        <obo:IAO_0000115>The density of plants in an ecological community (multiple species), often measured as the number of plants per area.</obo:IAO_0000115>
+        <obo:IAO_0000116>TBD: add logical definition</obo:IAO_0000116>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-6284-4821"/>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-8815-0078"/>
+        <rdfs:label xml:lang="en">plant density of an ecological community</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000081 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000081">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000078"/>
+        <obo:IAO_0000115>The density of seedlings in a population or organisms (a single species), often measured as the number of seedlings per area.</obo:IAO_0000115>
+        <obo:IAO_0000116>TBD: add logical definition</obo:IAO_0000116>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-6284-4821"/>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-8815-0078"/>
+        <rdfs:label xml:lang="en">seedling density of a population</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000082 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000082">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000078"/>
+        <obo:IAO_0000115>The density of seedlings in an ecological community (multiple species), often measured as the number of plants per area.</obo:IAO_0000115>
+        <obo:IAO_0000116>TBD: add logical definition</obo:IAO_0000116>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-6284-4821"/>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-8815-0078"/>
+        <rdfs:label xml:lang="en">seedling density of an ecological community</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PCO_0001000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0001000">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/CARO_0001010"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PCO_0000000"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/CARO_0001010"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <obo:IAO_0000115 xml:lang="en">A collection of organisms that consists of exactly two organism, viruses, or viroids that are interacting with each other.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">pair of interacting organisms</rdfs:label>
     </owl:Class>
@@ -1346,14 +1476,9 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     <!-- http://purl.obolibrary.org/obo/PCO_0001001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0001001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000018"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0001000"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PCO_0000055"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PCO_0000017"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000115>A pair of interacting  organisms that consists of exactly two organism, viruses, or viroids of the same species that are interacting with each other.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">pair of interacting organisms of the same species</rdfs:label>
     </owl:Class>

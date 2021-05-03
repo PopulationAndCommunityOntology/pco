@@ -1,6 +1,5 @@
 format-version: 1.2
-data-version: pco/releases/2020-08-26/imports/go_import.obo
-ontology: pco/imports/go_import.obo
+ontology: pco/imports/go_import
 
 [Term]
 id: GO:0007610
@@ -61,31 +60,37 @@ synonym: "cooperative behavior" RELATED []
 synonym: "social behaviour" EXACT []
 xref: Wikipedia:Social_behavior
 is_a: GO:0007610 ! behavior
-is_a: GO:0051703 ! intraspecies interaction between organisms
+is_a: GO:0051703 ! biological process involved in intraspecies interaction between organisms
 property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
 
 [Term]
 id: GO:0044419
-name: interspecies interaction between organisms
+name: biological process involved in interspecies interaction between organisms
 namespace: biological_process
-def: "Any process in which an organism has an effect on an organism of a different species." [GOC:cc]
+def: "Any process evolved to enable an interaction with an organism of a different species." [GOC:cc]
+subset: gocheck_do_not_annotate
 subset: goslim_candida
 subset: goslim_pir
 synonym: "interaction with another species" EXACT []
 synonym: "interspecies interaction" EXACT []
+synonym: "interspecies interaction between organisms" EXACT []
 synonym: "interspecies interaction with other organisms" EXACT []
 is_a: GO:0008150 ! biological_process
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/20191 xsd:anyURI
 property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
 property_value: RO:0002161 NCBITaxon:4895
 
 [Term]
 id: GO:0051703
-name: intraspecies interaction between organisms
+name: biological process involved in intraspecies interaction between organisms
 namespace: biological_process
 def: "Any process in which an organism has an effect on an organism of the same species." [GOC:ai]
+subset: gocheck_do_not_annotate
 subset: goslim_pir
+synonym: "intraspecies interaction between organisms" EXACT []
 synonym: "intraspecies interaction with other organisms" EXACT []
 is_a: GO:0008150 ! biological_process
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/20191 xsd:anyURI
 property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
 
 [Term]

@@ -1,6 +1,5 @@
 format-version: 1.2
-data-version: pco/releases/2020-08-26/imports/ro_import.obo
-ontology: pco/imports/ro_import.obo
+ontology: pco/imports/ro_import
 
 [Typedef]
 id: RO:0002321

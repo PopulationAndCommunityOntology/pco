@@ -6,9 +6,9 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.obolibrary.org/obo/pco.owl> .
+@base <http://purl.obolibrary.org/obo/pco.obo> .
 
-<http://purl.obolibrary.org/obo/pco.owl> rdf:type owl:Ontology ;
+<http://purl.obolibrary.org/obo/pco.obo> rdf:type owl:Ontology ;
                                           owl:imports <http://purl.obolibrary.org/obo/omo/2020-06-08/omo.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/bfo_import.owl> ,
                                                       <http://purl.obolibrary.org/obo/pco/imports/ecocore_import.owl> ,

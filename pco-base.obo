@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pco/releases/2020-08-26/pco-base.owl
+data-version: pco/releases/2021-05-03/pco-base.owl
 remark: The Population and Community Ontology (PCO) is licensed under a Creative Commons zero (CC0) license - http://creativecommons.org/publicdomain/zero/1.0/. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. We ask that anyone using this ontology follow the standards of the scientific ontology community by re-using ontology identifiers whenever possible and properly citing the ontology and its creators.
 ontology: pco/pco-base
 property_value: http://purl.org/dc/elements/1.1/contributor http://orcid.org/0000-0002-4366-3088 xsd:string
@@ -60,7 +60,7 @@ id: PCO:0000000
 name: collection of organisms
 def: "A material entity that consists of two or more organisms, viruses, or viroids." []
 comment: May be of the same or different species.
-is_a: BFO:0000027
+intersection_of: BFO:0000027
 intersection_of: RO:0002351 CARO:0001010 {all_only="true"} ! organism or virus or viroid
 intersection_of: RO:0002351 CARO:0001010 {minCardinality="2"} ! organism or virus or viroid
 relationship: RO:0002351 CARO:0001010 ! organism or virus or viroid
@@ -221,9 +221,6 @@ id: PCO:0000018
 name: single-species collection of organisms
 def: "A material entity that has as parts two or more organisms, viruses, or viroids of the same species and no members of any other species." []
 is_a: PCO:0000000 ! collection of organisms
-intersection_of: PCO:0000055 PCO:0000017 {cardinality="1"} ! has member of species as a collection of organisms
-intersection_of: RO:0002351 CARO:0001010 {all_only="true"} ! organism or virus or viroid
-intersection_of: RO:0002351 CARO:0001010 {minCardinality="2"} ! organism or virus or viroid
 property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000118 "collection of organisms of the same species" xsd:string
 
@@ -618,18 +615,115 @@ property_value: IAO:0000119 http://www.tiem.utk.edu/~gross/bioed/bealsmodules/si
 property_value: IAO:0000119 "Inverse_Simpson_index"
 
 [Term]
+id: PCO:0000073
+name: alga excluding Cyanobacteria
+def: "An organism that is part of a polyphyletic group of mostly photosynthetic Eukaryotes  encompassing green plants excluding Embriophyta (land plants). Included organisms range from unicellular microalgae, such as Chlorella and diatoms to multicellular forms such as giant kelp." []
+synonym: "alga" EXACT []
+synonym: "algae" EXACT []
+synonym: "seaweed" NARROW []
+is_a: CARO:0010004 ! organism
+property_value: IAO:0000119 https://en.wikipedia.org/wiki/Algae
+
+[Term]
+id: PCO:0000074
+name: alpha diversity
+def: "A community species diversity that is the mean species diversity at a site or within a specific habitat." []
+synonym: "α-diversity" EXACT []
+is_a: PCO:0000019 ! community species diversity
+property_value: IAO:0000117 https://orcid.org/0000-0001-8815-0078
+property_value: IAO:0000119 Alpha:diversity
+
+[Term]
+id: PCO:0000075
+name: beta diversity
+def: "A community species diversity that is the ratio between regional and local species diversity." []
+synonym: "true beta diversity" EXACT []
+synonym: "β-diversity" EXACT []
+is_a: PCO:0000019 ! community species diversity
+property_value: IAO:0000117 https://orcid.org/0000-0001-8815-0078
+property_value: IAO:0000119 Beta:diversity
+
+[Term]
+id: PCO:0000076
+name: gamma diversity
+def: "A community species diversity that is the total species diversity in a landscape. The area or landscape of interest may be of very different sizes in different situations, but it should encompass multiple sites or habitats as measured by alpha diversity." []
+synonym: "γ-diversity" EXACT []
+is_a: PCO:0000019 ! community species diversity
+property_value: IAO:0000117 https://orcid.org/0000-0001-8815-0078
+property_value: IAO:0000119 Gamma:diversity
+
+[Term]
+id: PCO:0000077
+name: plant density
+is_a: PATO:0001019
+property_value: IAO:0000116 "TBD: add logical definition" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0001-6284-4821
+property_value: IAO:0000117 https://orcid.org/0000-0001-8815-0078
+property_value: IAO:0000117 "The density of plants in an ecological community or population, often measured as the number of plants per area." xsd:string
+
+[Term]
+id: PCO:0000078
+name: seedling density
+def: "The density of seedlings in an ecological community or population, often measured as the number of seedlings per area." []
+is_a: PCO:0000077 ! plant density
+property_value: IAO:0000116 "TBD: add logical definition" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0001-6284-4821
+property_value: IAO:0000117 https://orcid.org/0000-0001-8815-0078
+
+[Term]
+id: PCO:0000079
+name: plant density of a population
+def: "The density of plants in a population or organisms (a single species), often measured as the number of plants per area." []
+is_a: PCO:0000003 ! quality of a population
+is_a: PCO:0000077 ! plant density
+property_value: IAO:0000116 "TBD: add logical definition" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0001-6284-4821
+property_value: IAO:0000117 https://orcid.org/0000-0001-8815-0078
+
+[Term]
+id: PCO:0000080
+name: plant density of an ecological community
+def: "The density of plants in an ecological community (multiple species), often measured as the number of plants per area." []
+is_a: PCO:0000004 ! quality of an ecological community
+is_a: PCO:0000077 ! plant density
+property_value: IAO:0000116 "TBD: add logical definition" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0001-6284-4821
+property_value: IAO:0000117 https://orcid.org/0000-0001-8815-0078
+
+[Term]
+id: PCO:0000081
+name: seedling density of a population
+def: "The density of seedlings in a population or organisms (a single species), often measured as the number of seedlings per area." []
+is_a: PCO:0000003 ! quality of a population
+is_a: PCO:0000078 ! seedling density
+property_value: IAO:0000116 "TBD: add logical definition" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0001-6284-4821
+property_value: IAO:0000117 https://orcid.org/0000-0001-8815-0078
+
+[Term]
+id: PCO:0000082
+name: seedling density of an ecological community
+def: "The density of seedlings in an ecological community (multiple species), often measured as the number of plants per area." []
+is_a: PCO:0000004 ! quality of an ecological community
+is_a: PCO:0000078 ! seedling density
+property_value: IAO:0000116 "TBD: add logical definition" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0001-6284-4821
+property_value: IAO:0000117 https://orcid.org/0000-0001-8815-0078
+
+[Term]
 id: PCO:0001000
 name: pair of interacting organisms
 def: "A collection of organisms that consists of exactly two organism, viruses, or viroids that are interacting with each other." []
-is_a: BFO:0000040
-relationship: RO:0002351 CARO:0001010 {cardinality="2"} ! organism or virus or viroid
+intersection_of: PCO:0000000 ! collection of organisms
+intersection_of: RO:0002351 CARO:0001010 {cardinality="2"} ! organism or virus or viroid
 
 [Term]
 id: PCO:0001001
 name: pair of interacting organisms of the same species
 def: "A pair of interacting  organisms that consists of exactly two organism, viruses, or viroids of the same species that are interacting with each other." []
+is_a: PCO:0000018 ! single-species collection of organisms
 is_a: PCO:0001000 ! pair of interacting organisms
-relationship: PCO:0000055 PCO:0000017 {cardinality="1"} ! has member of species as a collection of organisms
+property_value: IAO:0000114 IAO:0000428
 
 [Term]
 id: PCO:1000000
@@ -682,6 +776,7 @@ property_value: IAO:0000119 http://dx.doi.org/10.1038/ismej.2009.88 xsd:string
 
 [Typedef]
 id: PCO:0000055
-name: has member of
-domain: PCO:0000000 ! collection of organisms
+name: obsolete has member of
+property_value: IAO:0000231 IAO:0000103
+is_obsolete: true
 
